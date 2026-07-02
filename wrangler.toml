@@ -4,3 +4,11 @@ compatibility_date = "2025-06-01"
 [assets]
 directory = "."
 not_found_handling = "single-page-application"
+
+[[routes]]
+pattern = "convene.md"
+custom_domain = true
+
+[[routes]]
+pattern = "www.convene.md"
+custom_domain = true
