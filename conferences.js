@@ -1374,5 +1374,47 @@ const CONFERENCES = [
     url: "https://www.surgery.org.tw/en/",
     organizer: "Taiwan Surgical Association",
     description: "TSA annual meeting at the Taipei International Convention Center. Theme: 'Surgical Excellence for Healthy World'."
+  },
+  {
+    name: "24th Caribbean College of Surgeons Annual Scientific Conference",
+    specialty: "General Surgery",
+    year: 2026,
+    startDate: "2026-07-01",
+    endDate: "2026-07-04",
+    city: "Scarborough, Tobago",
+    country: "Trinidad and Tobago",
+    lat: 11.1897,
+    lng: -60.7392,
+    url: "https://www.caribbeancollegeofsurgeons.com/24th-annual-scientific-conference/",
+    organizer: "Caribbean College of Surgeons",
+    description: "Annual scientific conference of the Caribbean College of Surgeons, rotating across the Caribbean — 2026 edition in Tobago."
+  },
+  {
+    name: "43º Congreso Internacional de Cirugía — Colegio Dominicano de Cirujanos",
+    specialty: "General Surgery",
+    year: 2026,
+    startDate: "2026-07-02",
+    endDate: "2026-07-05",
+    city: "Punta Cana",
+    country: "Dominican Republic",
+    lat: 18.5601,
+    lng: -68.3725,
+    url: "https://cdc.org.do/",
+    organizer: "Colegio Dominicano de Cirujanos (CDC)",
+    description: "43rd international surgical congress of the Dominican College of Surgeons at the Hard Rock Punta Cana Convention Center."
+  },
+  {
+    name: "XLVIII Congreso Nacional de Cirugía — Ecuador",
+    specialty: "General Surgery",
+    year: 2026,
+    startDate: "2026-05-20",
+    endDate: "2026-05-22",
+    city: "Guayaquil",
+    country: "Ecuador",
+    lat: -2.1710,
+    lng: -79.9224,
+    url: "https://www.dmccongresos.com/congresonacionaldecirugia",
+    organizer: "Sociedad Ecuatoriana de Cirugía",
+    description: "48th Ecuadorian national surgery congress at Hotel Hilton Colón, Guayaquil, with pre-congress courses May 19."
   }
 ];
