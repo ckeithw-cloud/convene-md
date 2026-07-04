@@ -1038,5 +1038,33 @@ const CONFERENCES = [
     url: "https://www.facs.org/for-medical-professionals/conferences-and-meetings/future-clinical-congress/",
     organizer: "American College of Surgeons",
     description: "Annual flagship meeting of the American College of Surgeons covering all surgical specialties."
+  },
+  {
+    name: "Kirurgveckan 2026 — Swedish Surgical Week",
+    specialty: "General Surgery",
+    year: 2026,
+    startDate: "2026-08-17",
+    endDate: "2026-08-21",
+    city: "Malmö",
+    country: "Sweden",
+    lat: 55.6050,
+    lng: 13.0038,
+    url: "https://www.kirurgveckan.se/",
+    organizer: "Svensk Kirurgisk Förening (Swedish Surgical Society)",
+    description: "Annual Swedish surgery week at Clarion Hotel & Congress Malmö Live — the flagship national gathering for Swedish surgeons."
+  },
+  {
+    name: "Kirurgveckan 2027 — Swedish Surgical Week",
+    specialty: "General Surgery",
+    year: 2027,
+    startDate: "2027-08-23",
+    endDate: "2027-08-27",
+    city: "Gothenburg",
+    country: "Sweden",
+    lat: 57.7089,
+    lng: 11.9746,
+    url: "https://www.kirurgveckan.se/",
+    organizer: "Svensk Kirurgisk Förening (Swedish Surgical Society)",
+    description: "Annual Swedish surgery week held in Gothenburg (week 34; exact dates to be confirmed by organizers)."
   }
 ];
