@@ -80,7 +80,8 @@ const map = L.map("map", {
   worldCopyJump: true,
   minZoom: 2,
   maxZoom: 10,
-  zoomControl: true
+  zoomControl: true,
+  fadeAnimation: false
 }).setView([25, 10], 2);
 window.map = map;
 
