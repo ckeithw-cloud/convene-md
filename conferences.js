@@ -1318,5 +1318,61 @@ const CONFERENCES = [
     url: "https://cncirugia2026.es/",
     organizer: "Asociación Española de Cirujanos (AEC)",
     description: "36th Spanish National Surgical Congress in Madrid. Theme: 'Sustainable excellence for the surgery of the future'."
+  },
+  {
+    name: "RCSEd / CSHK Conjoint Scientific Congress 2026",
+    specialty: "General Surgery",
+    year: 2026,
+    startDate: "2026-11-14",
+    endDate: "2026-11-14",
+    city: "Hong Kong",
+    country: "Hong Kong SAR",
+    lat: 22.2480,
+    lng: 114.1680,
+    url: "https://csc.cshk.org/",
+    organizer: "Royal College of Surgeons of Edinburgh & College of Surgeons of Hong Kong",
+    description: "Conjoint scientific congress at the Hong Kong Academy of Medicine Jockey Club Building, Aberdeen."
+  },
+  {
+    name: "PCS 82nd Annual Clinical Congress 2026",
+    specialty: "General Surgery",
+    year: 2026,
+    startDate: "2026-12-05",
+    endDate: "2026-12-09",
+    city: "Manila",
+    country: "Philippines",
+    lat: 14.5794,
+    lng: 121.0359,
+    url: "https://pcs.org.ph/",
+    organizer: "Philippine College of Surgeons",
+    description: "82nd Annual Clinical Congress at the EDSA Shangri-La Manila, Mandaluyong City."
+  },
+  {
+    name: "CSAMM 52nd Annual Scientific Congress 2026",
+    specialty: "General Surgery",
+    year: 2026,
+    startDate: "2026-06-12",
+    endDate: "2026-06-14",
+    city: "Kuala Lumpur",
+    country: "Malaysia",
+    lat: 3.1390,
+    lng: 101.6869,
+    url: "https://csamm.org.my/",
+    organizer: "College of Surgeons, Academy of Medicine of Malaysia",
+    description: "52nd Annual Scientific Congress at Shangri-La Kuala Lumpur."
+  },
+  {
+    name: "2026 TSA Annual Meeting & International Joint Surgical Conference",
+    specialty: "General Surgery",
+    year: 2026,
+    startDate: "2026-03-25",
+    endDate: "2026-03-25",
+    city: "Taipei",
+    country: "Taiwan",
+    lat: 25.0330,
+    lng: 121.5654,
+    url: "https://www.surgery.org.tw/en/",
+    organizer: "Taiwan Surgical Association",
+    description: "TSA annual meeting at the Taipei International Convention Center. Theme: 'Surgical Excellence for Healthy World'."
   }
 ];
