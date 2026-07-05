@@ -51,6 +51,78 @@ function escapeHtml(str) {
   }[c]));
 }
 
+function slugify(c) {
+  const base = c.name.includes(String(c.year)) ? c.name : c.name + "-" + c.year;
+  return base
+    .toLowerCase()
+    .normalize("NFD").replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 60);
+}
+
+function icsEscape(s) {
+  return String(s).replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\r?\n/g, "\\n");
+}
+
+function icsDate(iso) {
+  return iso.replace(/-/g, "");
+}
+
+function icsDateExclusiveEnd(iso) {
+  const d = new Date(iso + "T00:00:00Z");
+  d.setUTCDate(d.getUTCDate() + 1);
+  return d.toISOString().slice(0, 10).replace(/-/g, "");
+}
+
+function icsFold(line) {
+  if (line.length <= 74) return line;
+  const parts = [];
+  let s = line;
+  while (s.length > 74) {
+    parts.push(s.slice(0, 74));
+    s = " " + s.slice(74);
+  }
+  parts.push(s);
+  return parts.join("\r\n");
+}
+
+function buildIcs(c) {
+  const stamp = new Date().toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+  const desc = `${c.organizer}. ${c.description} ${c.url}`;
+  const lines = [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//convene.md//Conferences//EN",
+    "CALSCALE:GREGORIAN",
+    "METHOD:PUBLISH",
+    "BEGIN:VEVENT",
+    "UID:" + slugify(c) + "@convene.md",
+    "DTSTAMP:" + stamp,
+    "DTSTART;VALUE=DATE:" + icsDate(c.startDate),
+    "DTEND;VALUE=DATE:" + icsDateExclusiveEnd(c.endDate),
+    "SUMMARY:" + icsEscape(c.name),
+    "LOCATION:" + icsEscape(c.city + ", " + c.country),
+    "DESCRIPTION:" + icsEscape(desc),
+    "URL:" + icsEscape(c.url),
+    "END:VEVENT",
+    "END:VCALENDAR"
+  ];
+  return lines.map(icsFold).join("\r\n") + "\r\n";
+}
+
+function downloadIcs(c) {
+  const blob = new Blob([buildIcs(c)], { type: "text/calendar;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = slugify(c) + ".ics";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
 function buildPopupHtml(c) {
   return `
     <div class="popup">
@@ -60,7 +132,10 @@ function buildPopupHtml(c) {
       <div class="meta"><span class="icon">📍</span><span>${escapeHtml(c.city)}, ${escapeHtml(c.country)}</span></div>
       <div class="meta"><span class="icon">🏛️</span><span>${escapeHtml(c.organizer)}</span></div>
       <p class="desc">${escapeHtml(c.description)}</p>
-      <a class="website" href="${escapeHtml(c.url)}" target="_blank" rel="noopener noreferrer">Visit conference site →</a>
+      <div class="popup-actions">
+        <a class="website" href="${escapeHtml(c.url)}" target="_blank" rel="noopener noreferrer">Visit site →</a>
+        <button type="button" class="cal-btn" data-ics="${c._id}">📅 Add to calendar</button>
+      </div>
     </div>
   `;
 }
@@ -140,6 +215,7 @@ function listRowHtml(c) {
       <div class="list-loc">${escapeHtml(c.city)}, ${escapeHtml(c.country)} · ${escapeHtml(c.organizer)}</div>
     </div>
     <span class="list-badge" style="background:${color}22;color:${color}">${escapeHtml(c.specialty)}</span>
+    <span class="list-ics" data-ics="${c._id}" role="button" tabindex="0" aria-label="Add to calendar" title="Add to calendar">📅</span>
     <span class="list-link" aria-hidden="true">↗</span>
   </a>`;
 }
@@ -216,6 +292,17 @@ legend.onAdd = function() {
   return div;
 };
 legend.addTo(map);
+
+CONFERENCES.forEach((c, i) => { c._id = i; });
+
+document.addEventListener("click", (e) => {
+  const t = e.target.closest("[data-ics]");
+  if (!t) return;
+  e.preventDefault();
+  e.stopPropagation();
+  const c = CONFERENCES[parseInt(t.getAttribute("data-ics"), 10)];
+  if (c) downloadIcs(c);
+});
 
 populateFilters();
 document.getElementById("specialty").addEventListener("change", applyFilters);

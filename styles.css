@@ -341,6 +341,46 @@ h1 {
   background: #36b3a8;
 }
 
+.popup-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cal-btn {
+  background: #fff;
+  color: #0f2942;
+  border: 1px solid #d6dee7;
+  border-radius: 6px;
+  padding: 7px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.cal-btn:hover {
+  border-color: #36b3a8;
+  background: #f0faf8;
+}
+
+.list-ics {
+  color: #b0bcca;
+  font-size: 15px;
+  flex-shrink: 0;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 5px;
+  line-height: 1;
+}
+
+.list-ics:hover {
+  color: #0f2942;
+  background: #e4e9f0;
+}
+
 .leaflet-container a.leaflet-popup-close-button {
   color: #6a7a90;
   font-size: 22px;
