@@ -33,6 +33,7 @@ const SPECIALTY_COLOR = {
 };
 
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const MONTHS_FULL = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
 function formatDateRange(start, end) {
   const s = new Date(start + "T00:00:00");
@@ -115,7 +116,72 @@ function render(filtered) {
       m.addTo(markerLayer);
     });
   });
-  document.getElementById("count").innerHTML = `Showing <strong>${filtered.length}</strong> of ${CONFERENCES.length}`;
+}
+
+function listDateChip(c) {
+  const s = new Date(c.startDate + "T00:00:00");
+  const e = new Date(c.endDate + "T00:00:00");
+  let d;
+  if (s.getMonth() === e.getMonth() && s.getFullYear() === e.getFullYear()) {
+    d = s.getDate() === e.getDate() ? `${s.getDate()}` : `${s.getDate()}–${e.getDate()}`;
+  } else {
+    d = `${s.getDate()} – ${MONTHS[e.getMonth()]} ${e.getDate()}`;
+  }
+  return { m: MONTHS[s.getMonth()], d };
+}
+
+function listRowHtml(c) {
+  const color = SPECIALTY_COLOR[c.specialty] || "#888";
+  const chip = listDateChip(c);
+  return `<a class="list-row" href="${escapeHtml(c.url)}" target="_blank" rel="noopener noreferrer">
+    <div class="list-date"><div class="m">${chip.m}</div><div class="d">${chip.d}</div></div>
+    <div class="list-main">
+      <div class="list-name">${escapeHtml(c.name)}</div>
+      <div class="list-loc">${escapeHtml(c.city)}, ${escapeHtml(c.country)} · ${escapeHtml(c.organizer)}</div>
+    </div>
+    <span class="list-badge" style="background:${color}22;color:${color}">${escapeHtml(c.specialty)}</span>
+    <span class="list-link" aria-hidden="true">↗</span>
+  </a>`;
+}
+
+function renderList(filtered) {
+  const el = document.getElementById("list");
+  if (!filtered.length) {
+    el.innerHTML = `<div class="list-inner"><div class="list-empty">No conferences match these filters.</div></div>`;
+    return;
+  }
+  const sorted = filtered.slice().sort((a, b) => a.startDate.localeCompare(b.startDate));
+  let html = `<div class="list-inner">`;
+  let currentKey = "";
+  sorted.forEach(c => {
+    const s = new Date(c.startDate + "T00:00:00");
+    const key = `${s.getFullYear()}-${s.getMonth()}`;
+    if (key !== currentKey) {
+      currentKey = key;
+      html += `<div class="month-head">${MONTHS_FULL[s.getMonth()]} ${s.getFullYear()}</div>`;
+    }
+    html += listRowHtml(c);
+  });
+  html += `</div>`;
+  el.innerHTML = html;
+}
+
+let currentView = "map";
+
+function setView(v) {
+  currentView = v;
+  const mapEl = document.getElementById("map");
+  const listEl = document.getElementById("list");
+  const mapBtn = document.getElementById("view-map");
+  const listBtn = document.getElementById("view-list");
+  const showMap = v === "map";
+  mapEl.hidden = !showMap;
+  listEl.hidden = showMap;
+  mapBtn.classList.toggle("active", showMap);
+  listBtn.classList.toggle("active", !showMap);
+  mapBtn.setAttribute("aria-selected", String(showMap));
+  listBtn.setAttribute("aria-selected", String(!showMap));
+  if (showMap) map.invalidateSize();
 }
 
 function populateFilters() {
@@ -138,6 +204,8 @@ function applyFilters() {
     (!hidePast || c.endDate >= todayIso)
   );
   render(filtered);
+  renderList(filtered);
+  document.getElementById("count").innerHTML = `Showing <strong>${filtered.length}</strong> of ${CONFERENCES.length}`;
 }
 
 const legend = L.control({ position: "bottomright" });
@@ -153,4 +221,6 @@ populateFilters();
 document.getElementById("specialty").addEventListener("change", applyFilters);
 document.getElementById("year").addEventListener("change", applyFilters);
 document.getElementById("hidePast").addEventListener("change", applyFilters);
+document.getElementById("view-map").addEventListener("click", () => setView("map"));
+document.getElementById("view-list").addEventListener("click", () => setView("list"));
 applyFilters();

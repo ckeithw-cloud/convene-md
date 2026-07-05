@@ -40,6 +40,14 @@
         </div>
       </div>
       <div class="controls">
+        <div class="viewtoggle" role="tablist" aria-label="View mode">
+          <button id="view-map" class="active" role="tab" aria-selected="true">
+            <span class="vi" aria-hidden="true">◉</span> Map
+          </button>
+          <button id="view-list" role="tab" aria-selected="false">
+            <span class="vi" aria-hidden="true">≡</span> List
+          </button>
+        </div>
         <div class="control">
           <label for="specialty">Specialty</label>
           <select id="specialty"></select>
@@ -56,6 +64,7 @@
       </div>
     </header>
     <div id="map"></div>
+    <div id="list" hidden></div>
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"

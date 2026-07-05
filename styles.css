@@ -113,10 +113,155 @@ h1 {
   color: #36b3a8;
 }
 
+.viewtoggle {
+  display: flex;
+  background: rgba(255,255,255,0.10);
+  border-radius: 8px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.viewtoggle button {
+  background: transparent;
+  border: none;
+  color: #a8c0d8;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: inherit;
+  transition: background 0.12s, color 0.12s;
+}
+
+.viewtoggle button .vi {
+  font-size: 12px;
+}
+
+.viewtoggle button:hover {
+  color: #fff;
+}
+
+.viewtoggle button.active {
+  background: #fff;
+  color: #0f2942;
+}
+
 #map {
   flex: 1;
   width: 100%;
   background: #0e1726;
+}
+
+#list {
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
+  background: #f4f6f9;
+  padding: 0 0 40px;
+}
+
+.list-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.month-head {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #6a7a90;
+  padding: 22px 4px 8px;
+  position: sticky;
+  top: 0;
+  background: #f4f6f9;
+}
+
+.list-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 12px;
+  border-bottom: 1px solid #e4e9f0;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 8px;
+  transition: background 0.12s;
+}
+
+.list-row:hover {
+  background: #eaeef4;
+}
+
+.list-date {
+  width: 62px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.list-date .m {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #8a99ac;
+  letter-spacing: 0.5px;
+}
+
+.list-date .d {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f2942;
+  line-height: 1.15;
+}
+
+.list-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.list-name {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #0f2942;
+  line-height: 1.35;
+}
+
+.list-loc {
+  font-size: 12.5px;
+  color: #6a7a90;
+  margin-top: 3px;
+}
+
+.list-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.list-link {
+  color: #b0bcca;
+  font-size: 18px;
+  flex-shrink: 0;
+  text-decoration: none;
+  padding: 0 4px;
+}
+
+.list-row:hover .list-link {
+  color: #36b3a8;
+}
+
+.list-empty {
+  text-align: center;
+  color: #6a7a90;
+  padding: 60px 20px;
+  font-size: 15px;
 }
 
 /* Leaflet popup styling */
@@ -286,4 +431,13 @@ h1 {
   }
   h1 { font-size: 16px; }
   .control select { min-width: 140px; font-size: 13px; }
+
+  .list-row {
+    flex-wrap: wrap;
+    gap: 6px 14px;
+  }
+  .list-date { width: 52px; }
+  .list-main { order: 1; flex: 1 1 auto; }
+  .list-link { order: 2; }
+  .list-badge { order: 3; flex-basis: 100%; max-width: max-content; margin-left: 66px; }
 }
