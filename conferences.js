@@ -1556,5 +1556,19 @@ const CONFERENCES = [
     url: "https://scgp.org/jornada-internacional-de-cirugia-general-2026/",
     organizer: "Sociedad de Cirujanos Generales del Perú / ACS Peru Chapter",
     description: "International general surgery days at the Sheraton Lima, held with the XX Congress of the ACS Peruvian chapter."
+  },
+  {
+    name: "Mayo Clinic Interactive Surgery Symposium 2027",
+    specialty: "General Surgery",
+    year: 2027,
+    startDate: "2027-01-31",
+    endDate: "2027-02-05",
+    city: "Waikoloa, Big Island",
+    country: "USA",
+    lat: 19.9172,
+    lng: -155.8875,
+    url: "https://ce.mayo.edu/surgical-specialties/content/mayo-clinic-interactive-surgery-symposium-2027",
+    organizer: "Mayo Clinic School of Continuous Professional Development",
+    description: "General surgery CME symposium at Hilton Waikoloa Village covering everyday surgical practice updates."
   }
 ];
