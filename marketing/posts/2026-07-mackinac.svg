@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FDEBCB"/>
+      <stop offset="1" stop-color="#F8B87E"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="640" fill="url(#sky)"/>
+
+  <circle cx="820" cy="640" r="200" fill="#FFCE8A" opacity="0.35"/>
+  <circle cx="820" cy="640" r="125" fill="#FFDFA0"/>
+
+  <rect y="640" width="1080" height="140" fill="#4A93AD"/>
+  <rect x="90" y="672" width="150" height="10" rx="5" fill="#6FB0C6" opacity="0.6"/>
+  <rect x="330" y="706" width="110" height="10" rx="5" fill="#6FB0C6" opacity="0.5"/>
+  <rect x="600" y="740" width="170" height="10" rx="5" fill="#6FB0C6" opacity="0.5"/>
+  <rect x="880" y="690" width="120" height="10" rx="5" fill="#6FB0C6" opacity="0.6"/>
+
+  <polygon points="700,695 740,610 740,695" fill="#FFFFFF"/>
+  <polygon points="748,620 748,695 784,695" fill="#F4EFE6"/>
+  <polygon points="692,700 792,700 776,722 706,722" fill="#0f2942"/>
+
+  <polygon points="130,780 190,780 178,570 142,570" fill="#0f2942"/>
+  <rect x="134" y="538" width="52" height="34" fill="#0f2942"/>
+  <circle cx="160" cy="555" r="9" fill="#FFD98A"/>
+  <polygon points="130,538 190,538 160,502" fill="#0f2942"/>
+
+  <rect y="780" width="1080" height="300" fill="#0f2942"/>
+
+  <g transform="translate(64,56) scale(0.85)">
+    <path d="M 64 6 C 38 6, 18 24, 18 50 C 18 92, 64 124, 64 124 C 64 124, 110 92, 110 50 C 110 24, 90 6, 64 6 Z" fill="#36b3a8"/>
+    <line x1="26" y1="50" x2="102" y2="50" stroke="white" stroke-width="1.6" opacity="0.55"/>
+    <path d="M 64 10 Q 34 50 64 90" fill="none" stroke="white" stroke-width="1.6" opacity="0.55"/>
+    <rect x="57" y="24" width="14" height="42" fill="white" rx="2"/>
+    <rect x="43" y="38" width="42" height="14" fill="white" rx="2"/>
+  </g>
+  <text x="180" y="130" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="46" font-weight="700" fill="#0f2942">convene.md</text>
+
+  <text x="70" y="330" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="82" font-weight="800" fill="#0f2942">No cars.</text>
+  <text x="70" y="425" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="82" font-weight="800" fill="#0f2942">No traffic.</text>
+  <text x="70" y="520" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="82" font-weight="800" fill="#36b3a8">Just CME.</text>
+
+  <text x="70" y="882" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28" font-weight="600" letter-spacing="2" fill="#36b3a8">MIDWEST SURGICAL ASSOCIATION · ANNUAL MEETING</text>
+  <text x="70" y="952" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="56" font-weight="700" fill="#FFFFFF">Mackinac Island, Michigan</text>
+  <text x="70" y="1016" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="40" font-weight="500" fill="#FFFFFF" opacity="0.85">August 2–4, 2026</text>
+  <text x="1010" y="1016" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="40" font-weight="700" fill="#36b3a8" text-anchor="end">convene.md</text>
+</svg>
