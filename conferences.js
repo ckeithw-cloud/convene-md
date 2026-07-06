@@ -1850,5 +1850,61 @@ const CONFERENCES = [
     url: "https://worldextrememedicine.com/world-extreme-medicine-conference/",
     organizer: "World Extreme Medicine",
     description: "Expedition, extreme, and humanitarian medicine conference at Dynamic Earth, Edinburgh."
+  },
+  {
+    name: "ASSH 81st Annual Meeting 2026 — American Society for Surgery of the Hand",
+    specialty: "Orthopedic Surgery",
+    year: 2026,
+    startDate: "2026-09-17",
+    endDate: "2026-09-19",
+    city: "Boston",
+    country: "USA",
+    lat: 42.3601,
+    lng: -71.0589,
+    url: "https://www.assh.org/annualmeeting",
+    organizer: "American Society for Surgery of the Hand",
+    description: "81st annual meeting of the ASSH, the premier US hand and upper extremity surgery society."
+  },
+  {
+    name: "AAES Annual Meeting 2026 — American Association of Endocrine Surgeons",
+    specialty: "Endocrine / ENT Surgery",
+    year: 2026,
+    startDate: "2026-04-18",
+    endDate: "2026-04-20",
+    city: "Lexington, Kentucky",
+    country: "USA",
+    lat: 38.0406,
+    lng: -84.5037,
+    url: "https://www.endocrinesurgery.org/2026-annual-meeting-home",
+    organizer: "American Association of Endocrine Surgeons",
+    description: "Annual meeting of the AAES, the leading US endocrine (thyroid, parathyroid, adrenal) surgery society."
+  },
+  {
+    name: "American Hernia Society Annual Meeting 2026",
+    specialty: "General Surgery",
+    year: 2026,
+    startDate: "2026-08-27",
+    endDate: "2026-08-29",
+    city: "Denver",
+    country: "USA",
+    lat: 39.7392,
+    lng: -104.9903,
+    url: "https://www.americanherniasociety.org/meetings",
+    organizer: "American Hernia Society",
+    description: "Annual meeting focused on abdominal wall and hernia surgery at the Hyatt Regency Denver."
+  },
+  {
+    name: "NASS 41st Annual Meeting 2026 — North American Spine Society",
+    specialty: "Orthopedic Surgery",
+    year: 2026,
+    startDate: "2026-10-14",
+    endDate: "2026-10-17",
+    city: "San Antonio",
+    country: "USA",
+    lat: 29.4241,
+    lng: -98.4936,
+    url: "https://www.spine.org/AM",
+    organizer: "North American Spine Society",
+    description: "Multidisciplinary spine surgery convention at the Henry B. González Convention Center."
   }
 ];
