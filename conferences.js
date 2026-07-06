@@ -1950,6 +1950,20 @@ const CONFERENCES = [
     description: "The premier North American transplantation meeting, at the Westin Seaport Boston."
   },
   {
+    name: "Santa Rosa Regional Trauma Conference 2026",
+    specialty: "Trauma Surgery",
+    year: 2026,
+    startDate: "2026-08-06",
+    endDate: "2026-08-06",
+    city: "Windsor, California",
+    country: "USA",
+    lat: 38.5471,
+    lng: -122.8164,
+    url: "https://qr1.be/JTP5N7",
+    organizer: "Providence Santa Rosa Memorial Hospital & Santa Rosa Junior College",
+    description: "One-day regional trauma conference at the SRJC Public Safety Training Center — 8 CE credits, speakers on hemorrhage care, pediatric trauma, MCI management, and prehospital resuscitation."
+  },
+  {
     name: "Mattox Vegas TCCACS 2027 — Trauma, Critical Care & Acute Care Surgery",
     specialty: "Trauma Surgery",
     year: 2027,

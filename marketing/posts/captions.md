@@ -79,3 +79,20 @@ The Mayfield Winter Clinics for cranial & spinal surgery run Feb 28 – Mar 4, 2
 Every ski-CME meeting is pinned → convene.md (link in bio)
 
 *First comment:* #Neurosurgery #SpineSurgery #SkiCME #CME #CMEtravel #Snowmass #Aspen #MedEd #SurgeonLife #WinterCME
+
+---
+
+## 7 · Santa Rosa Regional Trauma Conference — PERSONAL POST (post by late July)
+**Image:** `2026-07-santarosa.png`
+
+Wine country. Trauma care. 🍇
+
+On August 6 we're not just mapping the conference — we're speaking at it. Catch "Current Issues and Trends in Trauma Care" at the Santa Rosa Regional Trauma Conference, hosted by Providence Santa Rosa Memorial Hospital & Santa Rosa Junior College.
+
+One day · 8 CE credits · $40, breakfast and lunch included. Nurses, medics, and every trauma-adjacent clinician welcome.
+
+Register + 140 more conferences on the map → convene.md (link in bio)
+
+*First comment:* #TraumaSurgery #TraumaConference #CE #CME #SonomaCounty #SantaRosa #EmergencyMedicine #TraumaNurse #EMS #MedEd
+
+*Note: personal angle — consider adding a photo of yourself presenting (carousel: graphic first, photo second). Personal posts outperform brand posts early on.*
