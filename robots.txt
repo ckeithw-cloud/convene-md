@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://convene.md/sitemap.xml

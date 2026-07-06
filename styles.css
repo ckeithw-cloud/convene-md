@@ -466,6 +466,136 @@ h1 {
   flex-shrink: 0;
 }
 
+/* Crawlable SEO content — present in DOM, off-screen for sighted users */
+.seo-index {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+  padding: 0;
+  margin: -1px;
+}
+
+/* Subscribe FAB */
+.subscribe-fab {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  z-index: 1000;
+  background: #0f2942;
+  color: #fff;
+  border: none;
+  border-radius: 22px;
+  padding: 11px 18px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.subscribe-fab:hover { background: #36b3a8; }
+.subscribe-fab:active { transform: scale(0.97); }
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(14,23,38,0.55);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 14px;
+  padding: 30px 30px 26px;
+  max-width: 420px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 26px;
+  line-height: 1;
+  color: #9aa8b8;
+  cursor: pointer;
+}
+.modal-close:hover { color: #0f2942; }
+
+.modal h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  color: #0f2942;
+}
+
+.modal-sub {
+  margin: 0 0 18px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #5a6a7e;
+}
+
+#subscribe-form {
+  display: flex;
+  gap: 8px;
+}
+
+#subscribe-email {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #d0d9e2;
+  border-radius: 8px;
+  padding: 11px 14px;
+  font-size: 15px;
+  font-family: inherit;
+}
+#subscribe-email:focus {
+  outline: none;
+  border-color: #36b3a8;
+  box-shadow: 0 0 0 3px rgba(54,179,168,0.18);
+}
+
+.modal-submit {
+  background: #36b3a8;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 11px 18px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.modal-submit:hover { background: #2c9488; }
+
+.modal-success {
+  margin-top: 14px;
+  padding: 12px 14px;
+  background: #e8f7f4;
+  color: #1e6961;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
 @media (max-width: 700px) {
   header {
     padding: 10px 14px;
@@ -481,4 +611,6 @@ h1 {
   .list-main { order: 1; flex: 1 1 auto; }
   .list-link { order: 2; }
   .list-badge { order: 3; flex-basis: 100%; max-width: max-content; margin-left: 66px; }
+
+  .subscribe-fab { left: 12px; bottom: 12px; padding: 10px 15px; font-size: 13px; }
 }

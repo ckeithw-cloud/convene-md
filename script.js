@@ -312,4 +312,15 @@ document.getElementById("year").addEventListener("change", applyFilters);
 document.getElementById("hidePast").addEventListener("change", applyFilters);
 document.getElementById("view-map").addEventListener("click", () => setView("map"));
 document.getElementById("view-list").addEventListener("click", () => setView("list"));
+
+const subModal = document.getElementById("subscribe-modal");
+document.getElementById("subscribe-open").addEventListener("click", () => { subModal.hidden = false; document.getElementById("subscribe-email").focus(); });
+document.getElementById("subscribe-close").addEventListener("click", () => { subModal.hidden = true; });
+subModal.addEventListener("click", (e) => { if (e.target === subModal) subModal.hidden = true; });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") subModal.hidden = true; });
+document.getElementById("subscribe-form").addEventListener("submit", () => {
+  document.getElementById("subscribe-form").hidden = true;
+  document.getElementById("subscribe-success").hidden = false;
+});
+
 applyFilters();

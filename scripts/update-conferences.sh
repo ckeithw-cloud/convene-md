@@ -38,6 +38,19 @@ mkdir -p "$PROJECT_DIR/logs"
     --allowed-tools "Read,Edit,Write,WebSearch,WebFetch,Bash" \
     "$(cat "$PROMPT_FILE")"
 
+  # If the agent added/changed conferences, regenerate SEO artifacts and deploy.
+  if ! git diff --quiet -- conferences.js; then
+    echo "conferences.js changed — regenerating SEO and deploying."
+    node scripts/build-seo.js
+    git add conferences.js index.html sitemap.xml robots.txt
+    git commit -m "Weekly auto-update: new conferences + refreshed SEO" \
+      -m "Automated by scripts/update-conferences.sh" \
+      -m "Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>"
+    git push
+  else
+    echo "No changes to conferences.js — nothing to deploy."
+  fi
+
   echo ""
   echo "Run finished: $(date '+%Y-%m-%d %H:%M:%S %Z')"
 } >> "$LOG_FILE" 2>&1
