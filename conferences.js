@@ -1906,5 +1906,61 @@ const CONFERENCES = [
     url: "https://www.spine.org/AM",
     organizer: "North American Spine Society",
     description: "Multidisciplinary spine surgery convention at the Henry B. González Convention Center."
+  },
+  {
+    name: "ICSES 2026 — International Congress of Shoulder and Elbow Surgery",
+    specialty: "Orthopedic Surgery",
+    year: 2026,
+    startDate: "2026-09-22",
+    endDate: "2026-09-25",
+    city: "Vancouver",
+    country: "Canada",
+    lat: 49.2827,
+    lng: -123.1207,
+    url: "https://icses2026.org/",
+    organizer: "International Congress of Shoulder and Elbow Surgery / ASES host",
+    description: "Triennial world congress of shoulder and elbow surgery, hosted in Vancouver, BC."
+  },
+  {
+    name: "AOFAS Annual Meeting & IFFAS 9th Biennial 2026",
+    specialty: "Orthopedic Surgery",
+    year: 2026,
+    startDate: "2026-09-16",
+    endDate: "2026-09-19",
+    city: "Seattle, Washington",
+    country: "USA",
+    lat: 47.6062,
+    lng: -122.3321,
+    url: "https://www.aofas.org/annual-meeting",
+    organizer: "American Orthopaedic Foot & Ankle Society / IFFAS",
+    description: "Joint AOFAS annual meeting and IFFAS biennial world congress on foot and ankle surgery, Seattle."
+  },
+  {
+    name: "American Transplant Congress 2026",
+    specialty: "HPB / Transplant Surgery",
+    year: 2026,
+    startDate: "2026-06-20",
+    endDate: "2026-06-24",
+    city: "Boston",
+    country: "USA",
+    lat: 42.3601,
+    lng: -71.0589,
+    url: "https://www.atcmeeting.org/",
+    organizer: "AST / ASTS (American Transplant Congress)",
+    description: "The premier North American transplantation meeting, at the Westin Seaport Boston."
+  },
+  {
+    name: "EHS Annual International Congress 2026 — European Hernia Society",
+    specialty: "General Surgery",
+    year: 2026,
+    startDate: "2026-06-03",
+    endDate: "2026-06-05",
+    city: "Porto",
+    country: "Portugal",
+    lat: 41.1579,
+    lng: -8.6291,
+    url: "https://ehsporto2026.com/",
+    organizer: "European Hernia Society",
+    description: "EHS annual congress in Porto. Theme: 'Bridging the Future of Hernia Repair'."
   }
 ];
