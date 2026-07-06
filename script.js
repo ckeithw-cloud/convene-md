@@ -223,7 +223,7 @@ function listRowHtml(c) {
 }
 
 function renderList(filtered) {
-  const el = document.getElementById("list");
+  const el = document.getElementById("list-body");
   if (!filtered.length) {
     el.innerHTML = `<div class="list-inner"><div class="list-empty">No conferences match these filters.</div></div>`;
     return;
@@ -313,14 +313,9 @@ document.getElementById("hidePast").addEventListener("change", applyFilters);
 document.getElementById("view-map").addEventListener("click", () => setView("map"));
 document.getElementById("view-list").addEventListener("click", () => setView("list"));
 
-const subModal = document.getElementById("subscribe-modal");
-document.getElementById("subscribe-open").addEventListener("click", () => { subModal.hidden = false; document.getElementById("subscribe-email").focus(); });
-document.getElementById("subscribe-close").addEventListener("click", () => { subModal.hidden = true; });
-subModal.addEventListener("click", (e) => { if (e.target === subModal) subModal.hidden = true; });
-document.addEventListener("keydown", (e) => { if (e.key === "Escape") subModal.hidden = true; });
-document.getElementById("subscribe-form").addEventListener("submit", () => {
-  document.getElementById("subscribe-form").hidden = true;
-  document.getElementById("subscribe-success").hidden = false;
+document.getElementById("list-signup-form").addEventListener("submit", () => {
+  document.getElementById("list-signup-form").hidden = true;
+  document.getElementById("list-signup-success").hidden = false;
 });
 
 applyFilters();

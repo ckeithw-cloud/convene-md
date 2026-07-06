@@ -1981,23 +1981,19 @@
       </div>
     </header>
     <div id="map"></div>
-    <div id="list" hidden></div>
-  </div>
-
-  <button id="subscribe-open" class="subscribe-fab" type="button" aria-haspopup="dialog">
-    <span aria-hidden="true">✉</span> Get updates
-  </button>
-
-  <div id="subscribe-modal" class="modal-overlay" hidden>
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="subscribe-title">
-      <button class="modal-close" id="subscribe-close" type="button" aria-label="Close">×</button>
-      <h2 id="subscribe-title">New conferences, in your inbox</h2>
-      <p class="modal-sub">One email a month with newly added surgical conferences and destination CME. No spam. Unsubscribe anytime.</p>
-      <form id="subscribe-form" action="https://buttondown.com/api/emails/embed-subscribe/convenemd" method="post" target="_blank">
-        <input type="email" name="email" id="subscribe-email" placeholder="you@hospital.org" required autocomplete="email" />
-        <button type="submit" class="modal-submit">Subscribe</button>
-      </form>
-      <div id="subscribe-success" class="modal-success" hidden>Thanks — check your inbox to confirm. 🎉</div>
+    <div id="list" hidden>
+      <div class="list-signup">
+        <div class="ls-copy">
+          <strong>New conferences, monthly</strong>
+          <span>Newly added surgical meetings and destination CME — one email a month, no spam.</span>
+        </div>
+        <form id="list-signup-form" action="https://buttondown.com/api/emails/embed-subscribe/convenemd" method="post" target="_blank">
+          <input type="email" name="email" placeholder="you@hospital.org" required autocomplete="email" aria-label="Email address" />
+          <button type="submit">Subscribe</button>
+        </form>
+        <div class="ls-success" id="list-signup-success" hidden>Thanks — check your inbox to confirm. 🎉</div>
+      </div>
+      <div id="list-body"></div>
     </div>
   </div>
 
