@@ -424,6 +424,7 @@ h1 {
 .conf-pin.onc { background: #283593; }
 .conf-pin.ped { background: #00838f; }
 .conf-pin.hpb { background: #558b2f; }
+.conf-pin.spw { background: #00bcd4; }
 
 .toggle {
   display: flex;

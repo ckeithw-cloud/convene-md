@@ -12,7 +12,8 @@ const SPECIALTY_CLASS = {
   "Trauma Surgery": "tra",
   "Surgical Oncology": "onc",
   "Pediatric Surgery": "ped",
-  "HPB / Transplant Surgery": "hpb"
+  "HPB / Transplant Surgery": "hpb",
+  "Sports & Wilderness Medicine": "spw"
 };
 
 const SPECIALTY_COLOR = {
@@ -29,7 +30,8 @@ const SPECIALTY_COLOR = {
   "Trauma Surgery": "#37474f",
   "Surgical Oncology": "#283593",
   "Pediatric Surgery": "#00838f",
-  "HPB / Transplant Surgery": "#558b2f"
+  "HPB / Transplant Surgery": "#558b2f",
+  "Sports & Wilderness Medicine": "#00bcd4"
 };
 
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
