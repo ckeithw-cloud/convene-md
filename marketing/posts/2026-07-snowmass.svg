@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#DFEBF7"/>
+      <stop offset="1" stop-color="#B9D5EC"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="680" fill="url(#sky)"/>
+  <circle cx="880" cy="170" r="120" fill="#FFF6D8" opacity="0.6"/>
+  <circle cx="880" cy="170" r="72" fill="#FFF1C4"/>
+
+  <polygon points="60,680 400,300 740,680" fill="#E9F1F8"/>
+  <polygon points="400,300 740,680 400,680" fill="#CCDDEE"/>
+  <polygon points="330,380 400,300 470,380 430,380 400,345 370,380" fill="#FFFFFF"/>
+  <polygon points="560,680 830,390 1080,680" fill="#E9F1F8"/>
+  <polygon points="830,390 1080,680 830,680" fill="#CCDDEE"/>
+  <polygon points="770,455 830,390 890,455 855,455 830,428 805,455" fill="#FFFFFF"/>
+
+  <line x1="60" y1="240" x2="1020" y2="420" stroke="#4a5a70" stroke-width="5"/>
+  <line x1="330" y1="291" x2="330" y2="330" stroke="#4a5a70" stroke-width="5"/>
+  <rect x="308" y="330" width="44" height="30" rx="4" fill="#0f2942"/>
+  <line x1="700" y1="360" x2="700" y2="399" stroke="#4a5a70" stroke-width="5"/>
+  <rect x="678" y="399" width="44" height="30" rx="4" fill="#0f2942"/>
+
+  <rect y="680" width="1080" height="100" fill="#F4F8FB"/>
+  <polygon points="150,700 190,610 230,700" fill="#1D5B4F"/>
+  <polygon points="158,660 190,585 222,660" fill="#247061"/>
+  <rect x="184" y="700" width="12" height="20" fill="#5D4037"/>
+  <polygon points="250,710 282,640 314,710" fill="#1D5B4F"/>
+  <rect x="276" y="710" width="10" height="16" fill="#5D4037"/>
+
+  <rect y="780" width="1080" height="300" fill="#0f2942"/>
+
+  <g transform="translate(64,56) scale(0.85)">
+    <path d="M 64 6 C 38 6, 18 24, 18 50 C 18 92, 64 124, 64 124 C 64 124, 110 92, 110 50 C 110 24, 90 6, 64 6 Z" fill="#36b3a8"/>
+    <line x1="26" y1="50" x2="102" y2="50" stroke="white" stroke-width="1.6" opacity="0.55"/>
+    <path d="M 64 10 Q 34 50 64 90" fill="none" stroke="white" stroke-width="1.6" opacity="0.55"/>
+    <rect x="57" y="24" width="14" height="42" fill="white" rx="2"/>
+    <rect x="43" y="38" width="42" height="14" fill="white" rx="2"/>
+  </g>
+  <text x="180" y="130" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="46" font-weight="700" fill="#0f2942">convene.md</text>
+
+  <text x="70" y="500" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="82" font-weight="800" fill="#0f2942">First chair.</text>
+  <text x="70" y="595" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="82" font-weight="800" fill="#36b3a8">Then first assist.</text>
+
+  <text x="70" y="882" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28" font-weight="600" letter-spacing="2" fill="#36b3a8">MAYFIELD WINTER CLINICS · NEUROSURGERY</text>
+  <text x="70" y="952" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="56" font-weight="700" fill="#FFFFFF">Snowmass Village, Colorado</text>
+  <text x="70" y="1016" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="40" font-weight="500" fill="#FFFFFF" opacity="0.85">Feb 28 – Mar 4, 2027</text>
+  <text x="1010" y="1016" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="40" font-weight="700" fill="#36b3a8" text-anchor="end">convene.md</text>
+</svg>

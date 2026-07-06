@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFD9A8"/>
+      <stop offset="1" stop-color="#FF8E6B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="620" fill="url(#sky)"/>
+  <circle cx="300" cy="620" r="190" fill="#FFC077" opacity="0.4"/>
+  <circle cx="300" cy="620" r="115" fill="#FFDF9E"/>
+
+  <rect y="620" width="1080" height="160" fill="#2E7D95"/>
+  <path d="M 0 640 Q 140 600 280 640 T 560 640 T 840 640 T 1080 640 L 1080 660 Q 940 700 800 660 T 520 660 T 240 660 T 0 660 Z" fill="#FFFFFF" opacity="0.5"/>
+  <rect x="150" y="700" width="150" height="9" rx="4.5" fill="#5FA8C2" opacity="0.6"/>
+  <rect x="500" y="730" width="120" height="9" rx="4.5" fill="#5FA8C2" opacity="0.5"/>
+  <rect x="840" y="705" width="140" height="9" rx="4.5" fill="#5FA8C2" opacity="0.6"/>
+
+  <path d="M 905 320 C 890 420, 890 540, 900 780" stroke="#0f2942" stroke-width="26" fill="none" stroke-linecap="round"/>
+  <path d="M 905 330 C 850 290, 790 285, 740 310 C 800 320, 860 330, 905 340 Z" fill="#0f2942"/>
+  <path d="M 905 330 C 960 285, 1025 282, 1070 305 C 1010 318, 950 330, 905 340 Z" fill="#0f2942"/>
+  <path d="M 905 328 C 870 270, 855 230, 860 190 C 890 240, 902 285, 908 325 Z" fill="#0f2942"/>
+  <path d="M 908 328 C 945 275, 990 245, 1035 240 C 985 280, 940 312, 910 335 Z" fill="#0f2942"/>
+  <path d="M 903 326 C 900 265, 912 215, 945 180 C 930 235, 915 290, 906 325 Z" fill="#0f2942"/>
+
+  <path d="M 620 780 C 600 640, 610 560, 640 520 C 670 560, 680 640, 660 780 Z" fill="#E76F51"/>
+  <line x1="640" y1="560" x2="640" y2="770" stroke="#F4EFE6" stroke-width="7"/>
+
+  <rect y="780" width="1080" height="300" fill="#0f2942"/>
+
+  <g transform="translate(64,56) scale(0.85)">
+    <path d="M 64 6 C 38 6, 18 24, 18 50 C 18 92, 64 124, 64 124 C 64 124, 110 92, 110 50 C 110 24, 90 6, 64 6 Z" fill="#36b3a8"/>
+    <line x1="26" y1="50" x2="102" y2="50" stroke="white" stroke-width="1.6" opacity="0.55"/>
+    <path d="M 64 10 Q 34 50 64 90" fill="none" stroke="white" stroke-width="1.6" opacity="0.55"/>
+    <rect x="57" y="24" width="14" height="42" fill="white" rx="2"/>
+    <rect x="43" y="38" width="42" height="14" fill="white" rx="2"/>
+  </g>
+  <text x="180" y="130" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="46" font-weight="700" fill="#0f2942">convene.md</text>
+
+  <text x="70" y="360" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="82" font-weight="800" fill="#0f2942">Dawn patrol.</text>
+  <text x="70" y="455" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="82" font-weight="800" fill="#FFFFFF">Then didactics.</text>
+
+  <text x="70" y="882" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28" font-weight="600" letter-spacing="2" fill="#36b3a8">SURFERS MEDICAL ASSOCIATION · CONFERENCE</text>
+  <text x="70" y="952" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="56" font-weight="700" fill="#FFFFFF">Pacific Coast, Nicaragua</text>
+  <text x="70" y="1016" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="40" font-weight="500" fill="#FFFFFF" opacity="0.85">September 3–10, 2026</text>
+  <text x="1010" y="1016" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="40" font-weight="700" fill="#36b3a8" text-anchor="end">convene.md</text>
+</svg>

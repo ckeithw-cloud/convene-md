@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FBE3B0"/>
+      <stop offset="1" stop-color="#F2B36E"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="700" fill="url(#sky)"/>
+  <circle cx="250" cy="330" r="130" fill="#FFE0A0" opacity="0.5"/>
+  <circle cx="250" cy="330" r="80" fill="#FFEDBE"/>
+
+  <polygon points="480,700 730,380 980,700" fill="#C98A4B"/>
+  <polygon points="730,380 980,700 730,700" fill="#B47438"/>
+  <polygon points="330,700 500,500 670,700" fill="#C98A4B"/>
+  <polygon points="500,500 670,700 500,700" fill="#B47438"/>
+
+  <rect y="700" width="1080" height="80" fill="#D9A863"/>
+  <path d="M 0 720 Q 200 706 400 720 T 800 720 T 1080 714 L 1080 780 L 0 780 Z" fill="#CE9C55"/>
+
+  <rect y="780" width="1080" height="300" fill="#0f2942"/>
+
+  <g transform="translate(64,56) scale(0.85)">
+    <path d="M 64 6 C 38 6, 18 24, 18 50 C 18 92, 64 124, 64 124 C 64 124, 110 92, 110 50 C 110 24, 90 6, 64 6 Z" fill="#36b3a8"/>
+    <line x1="26" y1="50" x2="102" y2="50" stroke="white" stroke-width="1.6" opacity="0.55"/>
+    <path d="M 64 10 Q 34 50 64 90" fill="none" stroke="white" stroke-width="1.6" opacity="0.55"/>
+    <rect x="57" y="24" width="14" height="42" fill="white" rx="2"/>
+    <rect x="43" y="38" width="42" height="14" fill="white" rx="2"/>
+  </g>
+  <text x="180" y="130" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="46" font-weight="700" fill="#0f2942">convene.md</text>
+
+  <text x="70" y="330" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="82" font-weight="800" fill="#0f2942">Ancient city.</text>
+  <text x="70" y="425" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="82" font-weight="800" fill="#FFFFFF">Modern surgery.</text>
+
+  <text x="70" y="882" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28" font-weight="600" letter-spacing="2" fill="#36b3a8">ISPN 52ND ANNUAL MEETING · NEUROSURGERY</text>
+  <text x="70" y="952" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="56" font-weight="700" fill="#FFFFFF">Cairo, Egypt</text>
+  <text x="70" y="1016" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="40" font-weight="500" fill="#FFFFFF" opacity="0.85">October 7–11, 2026</text>
+  <text x="1010" y="1016" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="40" font-weight="700" fill="#36b3a8" text-anchor="end">convene.md</text>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D8EEF7"/>
+      <stop offset="1" stop-color="#A9DAEE"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="600" fill="url(#sky)"/>
+  <circle cx="880" cy="180" r="150" fill="#FFF3C9" opacity="0.5"/>
+  <circle cx="880" cy="180" r="95" fill="#FFE9A8"/>
+
+  <rect y="600" width="1080" height="90" fill="#3E8CA8"/>
+  <rect x="80" y="622" width="150" height="9" rx="4.5" fill="#6FB0C6" opacity="0.6"/>
+  <rect x="420" y="648" width="120" height="9" rx="4.5" fill="#6FB0C6" opacity="0.5"/>
+  <rect x="850" y="630" width="140" height="9" rx="4.5" fill="#6FB0C6" opacity="0.6"/>
+
+  <rect y="690" width="1080" height="90" fill="#F2E2C4"/>
+
+  <path d="M 700 742 A 95 95 0 0 1 890 742 Z" fill="#E76F51"/>
+  <path d="M 731 674 A 95 95 0 0 1 791 659 L 791 742 L 731 742 Z" fill="#F4EFE6" opacity="0.85"/>
+  <rect x="791" y="742" width="8" height="33" fill="#0f2942"/>
+  <rect x="614" y="736" width="64" height="9" rx="4.5" fill="#0f2942"/>
+  <rect x="620" y="745" width="8" height="28" fill="#0f2942"/>
+  <rect x="662" y="745" width="8" height="28" fill="#0f2942"/>
+
+  <rect y="780" width="1080" height="300" fill="#0f2942"/>
+
+  <g transform="translate(64,56) scale(0.85)">
+    <path d="M 64 6 C 38 6, 18 24, 18 50 C 18 92, 64 124, 64 124 C 64 124, 110 92, 110 50 C 110 24, 90 6, 64 6 Z" fill="#36b3a8"/>
+    <line x1="26" y1="50" x2="102" y2="50" stroke="white" stroke-width="1.6" opacity="0.55"/>
+    <path d="M 64 10 Q 34 50 64 90" fill="none" stroke="white" stroke-width="1.6" opacity="0.55"/>
+    <rect x="57" y="24" width="14" height="42" fill="white" rx="2"/>
+    <rect x="43" y="38" width="42" height="14" fill="white" rx="2"/>
+  </g>
+  <text x="180" y="130" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="46" font-weight="700" fill="#0f2942">convene.md</text>
+
+  <text x="70" y="330" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="82" font-weight="800" fill="#0f2942">Out of office.</text>
+  <text x="70" y="425" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="82" font-weight="800" fill="#0f2942">On the beach.</text>
+  <text x="70" y="520" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="82" font-weight="800" fill="#36b3a8">Earning CME.</text>
+
+  <text x="70" y="882" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28" font-weight="600" letter-spacing="2" fill="#36b3a8">SC &amp; NC ACS CHAPTERS · JOINT ANNUAL MEETING</text>
+  <text x="70" y="952" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="56" font-weight="700" fill="#FFFFFF">Isle of Palms, South Carolina</text>
+  <text x="70" y="1016" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="40" font-weight="500" fill="#FFFFFF" opacity="0.85">August 14–16, 2026</text>
+  <text x="1010" y="1016" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="40" font-weight="700" fill="#36b3a8" text-anchor="end">convene.md</text>
+</svg>
