@@ -1950,6 +1950,20 @@ const CONFERENCES = [
     description: "The premier North American transplantation meeting, at the Westin Seaport Boston."
   },
   {
+    name: "Mattox Vegas TCCACS 2027 — Trauma, Critical Care & Acute Care Surgery",
+    specialty: "Trauma Surgery",
+    year: 2027,
+    startDate: "2027-03-15",
+    endDate: "2027-03-17",
+    city: "Las Vegas",
+    country: "USA",
+    lat: 36.1699,
+    lng: -115.1398,
+    url: "https://www.trauma-criticalcare.com/",
+    organizer: "Mattox Vegas TCCACS",
+    description: "The Mattox conference — annual trauma, critical care, and acute care surgery meeting at Caesars Palace, Las Vegas."
+  },
+  {
     name: "EHS Annual International Congress 2026 — European Hernia Society",
     specialty: "General Surgery",
     year: 2026,
