@@ -269,6 +269,13 @@ function populateFilters() {
   const years = Array.from(new Set(CONFERENCES.map(c => c.year))).sort();
   specialtySel.innerHTML = `<option value="all">All specialties</option>` + specialties.map(s => `<option value="${escapeHtml(s)}">${escapeHtml(s)}</option>`).join("");
   yearSel.innerHTML = `<option value="all">All years</option>` + years.map(y => `<option value="${y}">${y}</option>`).join("");
+
+  const submitSel = document.getElementById("submit-specialty");
+  if (submitSel) {
+    submitSel.innerHTML = `<option value="" disabled selected>Select…</option>` +
+      specialties.map(s => `<option value="${escapeHtml(s)}">${escapeHtml(s)}</option>`).join("") +
+      `<option value="Other / not sure">Other / not sure</option>`;
+  }
 }
 
 function applyFilters() {
@@ -316,6 +323,37 @@ document.getElementById("view-list").addEventListener("click", () => setView("li
 document.getElementById("list-signup-form").addEventListener("submit", () => {
   document.getElementById("list-signup-form").hidden = true;
   document.getElementById("list-signup-success").hidden = false;
+});
+
+const submitModal = document.getElementById("submit-modal");
+function openSubmit() { submitModal.hidden = false; document.querySelector('#submit-form input[name="name"]').focus(); }
+function closeSubmit() { submitModal.hidden = true; }
+document.getElementById("submit-open").addEventListener("click", openSubmit);
+document.getElementById("submit-close").addEventListener("click", closeSubmit);
+document.getElementById("submit-cancel").addEventListener("click", closeSubmit);
+submitModal.addEventListener("click", (e) => { if (e.target === submitModal) closeSubmit(); });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !submitModal.hidden) closeSubmit(); });
+
+document.getElementById("submit-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const errEl = document.getElementById("submit-error");
+  errEl.hidden = true;
+  try {
+    const res = await fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { Accept: "application/json" }
+    });
+    if (res.ok) {
+      form.hidden = true;
+      document.getElementById("submit-success").hidden = false;
+    } else {
+      errEl.hidden = false;
+    }
+  } catch (_) {
+    errEl.hidden = false;
+  }
 });
 
 applyFilters();
