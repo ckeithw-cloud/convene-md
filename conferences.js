@@ -1990,5 +1990,61 @@ const CONFERENCES = [
     url: "https://ehsporto2026.com/",
     organizer: "European Hernia Society",
     description: "EHS annual congress in Porto. Theme: 'Bridging the Future of Hernia Repair'."
+  },
+  {
+    name: "AOA 86th Annual Scientific Meeting 2026 — Australian Orthopaedic Association",
+    specialty: "Orthopedic Surgery",
+    year: 2026,
+    startDate: "2026-10-11",
+    endDate: "2026-10-15",
+    city: "Cairns",
+    country: "Australia",
+    lat: -16.9186,
+    lng: 145.7781,
+    url: "https://aoa.org.au/events/key-aoa-events",
+    organizer: "Australian Orthopaedic Association",
+    description: "86th annual scientific meeting of the AOA at the Cairns Convention Centre, Queensland."
+  },
+  {
+    name: "NSA Annual Scientific Meeting 2026 — Neurosurgical Society of Australasia",
+    specialty: "Neurosurgery",
+    year: 2026,
+    startDate: "2026-08-26",
+    endDate: "2026-08-28",
+    city: "Adelaide",
+    country: "Australia",
+    lat: -34.9285,
+    lng: 138.6007,
+    url: "https://nsa.org.au/",
+    organizer: "Neurosurgical Society of Australasia",
+    description: "Annual scientific meeting of the NSA at the Adelaide Convention Centre, South Australia."
+  },
+  {
+    name: "ANZMOSS Annual Scientific Meeting 2026",
+    specialty: "Bariatric Surgery",
+    year: 2026,
+    startDate: "2026-08-13",
+    endDate: "2026-08-14",
+    city: "Hobart",
+    country: "Australia",
+    lat: -42.8821,
+    lng: 147.3272,
+    url: "https://anzmossconference.com.au/",
+    organizer: "Australian & New Zealand Metabolic and Obesity Surgery Society",
+    description: "Annual meeting of ANZMOSS (formerly OSSANZ) — bariatric and metabolic surgery, in Hobart, Tasmania."
+  },
+  {
+    name: "ANZSVS Annual Scientific Meeting 2026 — Vascular Surgery",
+    specialty: "Vascular Surgery",
+    year: 2026,
+    startDate: "2026-09-10",
+    endDate: "2026-09-13",
+    city: "Queenstown",
+    country: "New Zealand",
+    lat: -45.0312,
+    lng: 168.6626,
+    url: "https://www.anzsvs.com/au",
+    organizer: "Australian & New Zealand Society for Vascular Surgery",
+    description: "ANZSVS conference in Queenstown. Theme: 'New Peaks: Shaping the Future of Vascular Surgery'."
   }
 ];
