@@ -311,7 +311,18 @@ const legend = L.control({ position: "bottomright" });
 legend.onAdd = function() {
   const div = L.DomUtil.create("div", "legend");
   const specialties = Array.from(new Set(CONFERENCES.map(c => c.specialty))).sort();
-  div.innerHTML = specialties.map(s => `<div class="row"><span class="dot" style="background:${SPECIALTY_COLOR[s] || "#888"}"></span>${escapeHtml(s)}</div>`).join("");
+  const rows = specialties.map(s => `<div class="row"><span class="dot" style="background:${SPECIALTY_COLOR[s] || "#888"}"></span>${escapeHtml(s)}</div>`).join("");
+  div.innerHTML =
+    `<button class="legend-toggle" type="button">Legend <span class="legend-chevron" aria-hidden="true">▾</span></button>` +
+    `<div class="legend-body">${rows}</div>`;
+  if (window.innerWidth <= 700) div.classList.add("collapsed");
+  const toggle = div.querySelector(".legend-toggle");
+  toggle.setAttribute("aria-expanded", String(!div.classList.contains("collapsed")));
+  toggle.addEventListener("click", () => {
+    const collapsed = div.classList.toggle("collapsed");
+    toggle.setAttribute("aria-expanded", String(!collapsed));
+  });
+  L.DomEvent.disableClickPropagation(div);
   return div;
 };
 legend.addTo(map);
