@@ -155,18 +155,20 @@ function makeMarker(c) {
 }
 
 const map = L.map("map", {
-  worldCopyJump: true,
   minZoom: 2,
   maxZoom: 10,
   zoomControl: true,
-  fadeAnimation: false
+  fadeAnimation: false,
+  maxBounds: [[-85, -180], [85, 180]],
+  maxBoundsViscosity: 1.0
 }).setView([25, 10], 2);
 window.map = map;
 
 L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
   attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · © <a href="https://carto.com/attributions">CARTO</a>',
   subdomains: "abcd",
-  maxZoom: 19
+  maxZoom: 19,
+  noWrap: true
 }).addTo(map);
 
 const markerLayer = L.layerGroup().addTo(map);
