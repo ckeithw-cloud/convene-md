@@ -154,15 +154,27 @@ function makeMarker(c) {
   return L.marker([c.lat, c.lng], { icon }).bindPopup(buildPopupHtml(c), { maxWidth: 320 });
 }
 
+// Latitude/longitude band that contains the conferences — the map fits this
+// on load so it fills the viewport width at any screen size (no side margins).
+const INITIAL_BOUNDS = [[-48, -168], [64, 170]];
+
 const map = L.map("map", {
   minZoom: 2,
   maxZoom: 10,
   zoomControl: true,
   fadeAnimation: false,
+  zoomSnap: 0,
   maxBounds: [[-85, -180], [85, 180]],
   maxBoundsViscosity: 1.0
-}).setView([25, 10], 2);
+});
+map.fitBounds(INITIAL_BOUNDS, { animate: false });
 window.map = map;
+
+let fitTimer;
+window.addEventListener("resize", () => {
+  clearTimeout(fitTimer);
+  fitTimer = setTimeout(() => map.fitBounds(INITIAL_BOUNDS, { animate: false }), 200);
+});
 
 L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
   attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · © <a href="https://carto.com/attributions">CARTO</a>',
