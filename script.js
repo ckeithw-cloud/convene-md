@@ -325,16 +325,26 @@ document.getElementById("list-signup-form").addEventListener("submit", () => {
   document.getElementById("list-signup-success").hidden = false;
 });
 
-const submitModal = document.getElementById("submit-modal");
-function openSubmit() { submitModal.hidden = false; document.querySelector('#submit-form input[name="name"]').focus(); }
-function closeSubmit() { submitModal.hidden = true; }
-document.getElementById("submit-open").addEventListener("click", openSubmit);
-document.getElementById("submit-close").addEventListener("click", closeSubmit);
-document.getElementById("submit-cancel").addEventListener("click", closeSubmit);
-submitModal.addEventListener("click", (e) => { if (e.target === submitModal) closeSubmit(); });
-document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !submitModal.hidden) closeSubmit(); });
+const submitForm = document.getElementById("submit-form");
+const submitToggle = document.getElementById("submit-toggle");
+function expandSubmit(expand) {
+  submitToggle.setAttribute("aria-expanded", String(expand));
+  submitForm.hidden = !expand;
+}
+submitToggle.addEventListener("click", () => {
+  expandSubmit(submitToggle.getAttribute("aria-expanded") !== "true");
+});
+document.getElementById("submit-open").addEventListener("click", () => {
+  setView("list");
+  expandSubmit(true);
+  requestAnimationFrame(() => {
+    document.getElementById("list-submit").scrollIntoView({ behavior: "smooth", block: "start" });
+    const nameField = submitForm.querySelector('input[name="name"]');
+    if (nameField) nameField.focus();
+  });
+});
 
-document.getElementById("submit-form").addEventListener("submit", async (e) => {
+submitForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   const form = e.target;
   const errEl = document.getElementById("submit-error");
