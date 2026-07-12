@@ -35,6 +35,13 @@ Do this once per vendor below. Re-check in ~1–2 weeks.
 | Trellix / McAfee (TrustedSource) | https://trustedsource.org | Check reputation → categorize |
 | Cloudflare Radar (its own filter) | https://radar.cloudflare.com/domains/feedback | Suggest "Health" |
 
+## Status checked (2026-07-09)
+
+- **Symantec / Blue Coat (WebPulse):** already categorized **"Health"** ✓ — correct, no action needed. This is a top-3 enterprise filter, so the corporate block the colleague hit is most likely the **newly-registered-domain (NRD) rule**, not miscategorization.
+- **Palo Alto, Fortinet:** their lookup pages block automated browsers, and the submit step is CAPTCHA-gated → must be done by a human in a normal browser.
+
+**Key implication:** an NRD block is a *reputation/age* filter, separate from category. Recategorizing won't clear it — only time (30–90 days) or an IT allowlist will. So the fastest real fix for a specific hospital is to ask their IT to allowlist convene.md; categorization submissions mainly help the broader long tail of networks.
+
 ## Priority order (if short on time)
 Do the top 5 — they cover the majority of hospital/enterprise networks:
 Cisco Talos, Zscaler, Palo Alto, Blue Coat, Fortinet.
