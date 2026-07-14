@@ -2102,5 +2102,47 @@ const CONFERENCES = [
     url: "https://www.swissneuro.ch/",
     organizer: "Swiss neuroscience societies (incl. Swiss Society of Neurosurgery)",
     description: "2nd Swiss NeuroWeek — joint neurosurgery and neuroscience meeting at the SwissTech Convention Center, Lausanne."
+  },
+  {
+    name: "DKOU 2026 — Deutscher Kongress für Orthopädie und Unfallchirurgie",
+    specialty: "Orthopedic Surgery",
+    year: 2026,
+    startDate: "2026-10-20",
+    endDate: "2026-10-23",
+    city: "Berlin",
+    country: "Germany",
+    lat: 52.5200,
+    lng: 13.4050,
+    url: "https://dkou.org/en/",
+    organizer: "DGOU / DGOOC / BVOU",
+    description: "Europe's largest orthopaedics and trauma surgery congress, at the CityCube Berlin. Motto: 'Neue Wege gehen' (Breaking New Ground)."
+  },
+  {
+    name: "78th DGU Congress 2026 — German Society of Urology",
+    specialty: "Urology",
+    year: 2026,
+    startDate: "2026-09-16",
+    endDate: "2026-09-19",
+    city: "Düsseldorf",
+    country: "Germany",
+    lat: 51.2277,
+    lng: 6.7735,
+    url: "https://www.urologenportal.de/",
+    organizer: "Deutsche Gesellschaft für Urologie (DGU)",
+    description: "78th annual congress of the German Society of Urology in Düsseldorf."
+  },
+  {
+    name: "Viszeralmedizin 2026 — DGVS & DGAV",
+    specialty: "General Surgery",
+    year: 2026,
+    startDate: "2026-09-14",
+    endDate: "2026-09-19",
+    city: "Hamburg",
+    country: "Germany",
+    lat: 53.5511,
+    lng: 9.9937,
+    url: "https://www.viszeralmedizin.com/",
+    organizer: "DGVS & DGAV (German visceral medicine and general/visceral surgery societies)",
+    description: "Germany's joint congress of gastroenterology and general/visceral surgery, held in Hamburg."
   }
 ];
