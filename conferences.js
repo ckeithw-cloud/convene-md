@@ -2046,5 +2046,19 @@ const CONFERENCES = [
     url: "https://www.anzsvs.com/au",
     organizer: "Australian & New Zealand Society for Vascular Surgery",
     description: "ANZSVS conference in Queenstown. Theme: 'New Peaks: Shaping the Future of Vascular Surgery'."
+  },
+  {
+    name: "Annual Congress of the Croatian Society for Vascular Surgery 2026",
+    specialty: "Vascular Surgery",
+    year: 2026,
+    startDate: "2026-10-22",
+    endDate: "2026-10-24",
+    city: "Opatija",
+    country: "Croatia",
+    lat: 45.3378,
+    lng: 14.3053,
+    url: "https://vascularsurgerycroatia.com/",
+    organizer: "Croatian Society for Vascular Surgery (Croatian Medical Association)",
+    description: "Annual congress of the Croatian Society for Vascular Surgery, with international participation, at Conference Park 25/7 in Opatija."
   }
 ];
