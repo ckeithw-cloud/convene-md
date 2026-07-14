@@ -2060,5 +2060,47 @@ const CONFERENCES = [
     url: "https://vascularsurgerycroatia.com/",
     organizer: "Croatian Society for Vascular Surgery (Croatian Medical Association)",
     description: "Annual congress of the Croatian Society for Vascular Surgery, with international participation, at Conference Park 25/7 in Opatija."
+  },
+  {
+    name: "AO Davos Courses 2026",
+    specialty: "Orthopedic Surgery",
+    year: 2026,
+    startDate: "2026-11-29",
+    endDate: "2026-12-11",
+    city: "Davos",
+    country: "Switzerland",
+    lat: 46.8027,
+    lng: 9.8360,
+    url: "https://www.aofoundation.org/davos-courses",
+    organizer: "AO Foundation",
+    description: "The AO Foundation's flagship fracture-management and musculoskeletal trauma education — two weeks of courses at the AO Head Office in Davos, in the Swiss Alps."
+  },
+  {
+    name: "Swiss College of Surgeons Annual Meeting 2027",
+    specialty: "General Surgery",
+    year: 2027,
+    startDate: "2027-06-02",
+    endDate: "2027-06-04",
+    city: "Lucerne",
+    country: "Switzerland",
+    lat: 47.0502,
+    lng: 8.3093,
+    url: "https://scs-congress.ch/2027/",
+    organizer: "Swiss College of Surgeons (SGC-SSC)",
+    description: "Annual multidisciplinary Swiss surgery congress at KKL Luzern."
+  },
+  {
+    name: "Swiss NeuroWeek 2027",
+    specialty: "Neurosurgery",
+    year: 2027,
+    startDate: "2027-11-17",
+    endDate: "2027-11-19",
+    city: "Lausanne",
+    country: "Switzerland",
+    lat: 46.5197,
+    lng: 6.6323,
+    url: "https://www.swissneuro.ch/",
+    organizer: "Swiss neuroscience societies (incl. Swiss Society of Neurosurgery)",
+    description: "2nd Swiss NeuroWeek — joint neurosurgery and neuroscience meeting at the SwissTech Convention Center, Lausanne."
   }
 ];
