@@ -2186,5 +2186,33 @@ const CONFERENCES = [
     url: "https://congreso.secot.es/",
     organizer: "Sociedad Española de Cirugía Ortopédica y Traumatología (SECOT)",
     description: "63rd national congress of the Spanish orthopaedic and trauma surgery society in Córdoba."
+  },
+  {
+    name: "Vascular Society ASM 2026 — Great Britain & Ireland",
+    specialty: "Vascular Surgery",
+    year: 2026,
+    startDate: "2026-11-25",
+    endDate: "2026-11-27",
+    city: "Liverpool",
+    country: "United Kingdom",
+    lat: 53.4084,
+    lng: -2.9916,
+    url: "https://vascularsociety.org.uk/events/",
+    organizer: "Vascular Society of Great Britain and Ireland",
+    description: "Annual Scientific Meeting of the Vascular Society of Great Britain & Ireland at the Liverpool ACC."
+  },
+  {
+    name: "109th SIOT Congress 2026 — Italian Orthopaedics & Traumatology",
+    specialty: "Orthopedic Surgery",
+    year: 2026,
+    startDate: "2026-11-26",
+    endDate: "2026-11-28",
+    city: "Milan",
+    country: "Italy",
+    lat: 45.4642,
+    lng: 9.1900,
+    url: "https://congressosiot.it/en/",
+    organizer: "Società Italiana di Ortopedia e Traumatologia (SIOT)",
+    description: "109th national congress of the Italian orthopaedic and trauma surgery society at the Allianz MiCo, Milan."
   }
 ];
