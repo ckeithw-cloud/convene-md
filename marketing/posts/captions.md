@@ -96,3 +96,16 @@ Register + 140 more conferences on the map → convene.md (link in bio)
 *First comment:* #TraumaSurgery #TraumaConference #CE #CME #SonomaCounty #SantaRosa #EmergencyMedicine #TraumaNurse #EMS #MedEd
 
 *Note: personal angle — consider adding a photo of yourself presenting (carousel: graphic first, photo second). Personal posts outperform brand posts early on.*
+
+---
+
+## 8 · Milestone — 160 conferences (post anytime; good "momentum" beat)
+**Image:** `2026-07-milestone-160.png`
+
+160 conferences. Every continent. 🌍
+
+Your CME budget is a passport. Use it to travel the world — and earn CME wherever you land, from a Swiss ski resort to a Baja surf break to the pyramids of Cairo.
+
+convene.md is the map of what's out there: 160 surgical meetings and counting, on one screen. Find your next one (link in bio).
+
+*First comment:* #CME #CMEtravel #ContinuingMedicalEducation #MedEd #SurgeonLife #MedTwitter #ConferenceTravel #Surgery #MedicalConference #DoctorsOfInstagram

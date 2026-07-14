@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#12406a"/>
+      <stop offset="100%" stop-color="#0f2942"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#glow)"/>
+
+  <g transform="translate(56 50) scale(0.62)">
+    <path d="M 64 6 C 38 6, 18 24, 18 50 C 18 92, 64 124, 64 124 C 64 124, 110 92, 110 50 C 110 24, 90 6, 64 6 Z" fill="#36b3a8"/>
+    <line x1="26" y1="50" x2="102" y2="50" stroke="white" stroke-width="1.6" opacity="0.55"/>
+    <path d="M 64 10 Q 34 50 64 90" fill="none" stroke="white" stroke-width="1.6" opacity="0.55"/>
+    <rect x="57" y="24" width="14" height="42" fill="white" rx="2"/>
+    <rect x="43" y="38" width="42" height="14" fill="white" rx="2"/>
+  </g>
+  <text x="150" y="98" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="40" font-weight="700" fill="#FFFFFF">convene.md</text>
+
+  <g stroke="#FFFFFF" fill="none" opacity="0.12" stroke-width="1.5">
+    <circle cx="540" cy="430" r="250"/>
+    <ellipse cx="540" cy="430" rx="90" ry="250"/>
+    <ellipse cx="540" cy="430" rx="180" ry="250"/>
+    <ellipse cx="540" cy="430" rx="250" ry="90"/>
+    <ellipse cx="540" cy="430" rx="250" ry="180"/>
+    <line x1="290" y1="430" x2="790" y2="430"/>
+  </g>
+
+  <g stroke="#FFFFFF" stroke-width="2">
+    <circle cx="420" cy="300" r="11" fill="#e74c3c"/>
+    <circle cx="540" cy="255" r="11" fill="#1abc9c"/>
+    <circle cx="662" cy="300" r="11" fill="#3498db"/>
+    <circle cx="338" cy="378" r="11" fill="#9b59b6"/>
+    <circle cx="742" cy="378" r="11" fill="#f39c12"/>
+    <circle cx="322" cy="470" r="11" fill="#00bcd4"/>
+    <circle cx="756" cy="470" r="11" fill="#2ecc71"/>
+    <circle cx="512" cy="298" r="11" fill="#37474f"/>
+    <circle cx="300" cy="392" r="11" fill="#d81b60"/>
+    <circle cx="778" cy="392" r="11" fill="#fbc02d"/>
+  </g>
+
+  <text x="540" y="500" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="230" font-weight="800" fill="#36b3a8" text-anchor="middle">160</text>
+  <text x="540" y="578" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="42" font-weight="500" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">surgical conferences · every continent</text>
+
+  <text x="540" y="772" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="46" font-weight="700" fill="#FFFFFF" text-anchor="middle">Your CME budget is a passport.</text>
+  <text x="540" y="828" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="31" font-weight="400" fill="#a8c0d8" text-anchor="middle">Travel the world — and earn CME wherever you go.</text>
+
+  <text x="540" y="948" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="62" font-weight="800" fill="#36b3a8" text-anchor="middle">convene.md</text>
+  <text x="540" y="1000" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="26" font-weight="400" fill="#7d93ab" text-anchor="middle">see what's out there</text>
+</svg>
