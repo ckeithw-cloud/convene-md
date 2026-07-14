@@ -2214,5 +2214,33 @@ const CONFERENCES = [
     url: "https://congressosiot.it/en/",
     organizer: "Società Italiana di Ortopedia e Traumatologia (SIOT)",
     description: "109th national congress of the Italian orthopaedic and trauma surgery society at the Allianz MiCo, Milan."
+  },
+  {
+    name: "Congrès National de Chirurgie 2026 — Société Marocaine de Chirurgie",
+    specialty: "General Surgery",
+    year: 2026,
+    startDate: "2026-12-03",
+    endDate: "2026-12-05",
+    city: "Tangier",
+    country: "Morocco",
+    lat: 35.7595,
+    lng: -5.8340,
+    url: "https://www.somachir.ma/",
+    organizer: "Société Marocaine de Chirurgie (SOMACHIR)",
+    description: "National surgery congress of the Moroccan Surgical Society at Hôtel Idou Malabata, Tangier."
+  },
+  {
+    name: "SYNAPSE Innovation 2026 — Robotic Surgery & Medical AI",
+    specialty: "General Surgery",
+    year: 2026,
+    startDate: "2026-10-15",
+    endDate: "2026-10-17",
+    city: "Tunis",
+    country: "Tunisia",
+    lat: 36.8065,
+    lng: 10.1815,
+    url: "https://www.synapse-innovation.org/en/",
+    organizer: "Synapse by Meds Link",
+    description: "International congress on robotic surgery and medical AI — live robotic demonstrations, VR simulation, and surgical decision-support sessions, in Tunis."
   }
 ];
