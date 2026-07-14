@@ -2144,5 +2144,47 @@ const CONFERENCES = [
     url: "https://www.viszeralmedizin.com/",
     organizer: "DGVS & DGAV (German visceral medicine and general/visceral surgery societies)",
     description: "Germany's joint congress of gastroenterology and general/visceral surgery, held in Hamburg."
+  },
+  {
+    name: "100th SOFCOT Congress 2026 — French Orthopaedic & Trauma Surgery",
+    specialty: "Orthopedic Surgery",
+    year: 2026,
+    startDate: "2026-11-11",
+    endDate: "2026-11-13",
+    city: "Cannes",
+    country: "France",
+    lat: 43.5528,
+    lng: 7.0174,
+    url: "https://sofcot-congres.fr/en/homepage/",
+    organizer: "Société Française de Chirurgie Orthopédique et Traumatologique (SOFCOT)",
+    description: "100th anniversary congress of the French orthopaedic and trauma surgery society at the Palais des Festivals, Cannes."
+  },
+  {
+    name: "120th Congrès Français d'Urologie (CFU) 2026",
+    specialty: "Urology",
+    year: 2026,
+    startDate: "2026-11-18",
+    endDate: "2026-11-21",
+    city: "Paris",
+    country: "France",
+    lat: 48.8566,
+    lng: 2.3522,
+    url: "https://cfu-congres.com/",
+    organizer: "Association Française d'Urologie (AFU)",
+    description: "120th French Urology Congress at the Palais des Congrès de Paris."
+  },
+  {
+    name: "63rd SECOT Congress 2026 — Spanish Orthopaedic & Trauma Surgery",
+    specialty: "Orthopedic Surgery",
+    year: 2026,
+    startDate: "2026-09-30",
+    endDate: "2026-10-02",
+    city: "Córdoba",
+    country: "Spain",
+    lat: 37.8882,
+    lng: -4.7794,
+    url: "https://congreso.secot.es/",
+    organizer: "Sociedad Española de Cirugía Ortopédica y Traumatología (SECOT)",
+    description: "63rd national congress of the Spanish orthopaedic and trauma surgery society in Córdoba."
   }
 ];
