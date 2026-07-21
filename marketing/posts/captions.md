@@ -109,3 +109,21 @@ Your CME budget is a passport. Use it to travel the world — and earn CME where
 convene.md is the map of what's out there: 160 surgical meetings and counting, on one screen. Find your next one (link in bio).
 
 *First comment:* #CME #CMEtravel #ContinuingMedicalEducation #MedEd #SurgeonLife #MedTwitter #ConferenceTravel #Surgery #MedicalConference #DoctorsOfInstagram
+
+---
+
+## 9 · REEL A — "POV: CME budget" (post as a REEL, not a photo)
+**Video:** `reel-a.mp4` (18.5s, 1080×1920) · **Cover:** `reel-a-cover.png`
+
+POV: the hospital gives you a CME budget and nobody tells you it works in Nicaragua. 🌍
+
+160+ surgical conferences on one map — ski weeks, surf camps, island symposiums, world congresses. Filter your specialty, pick a place you've never been, add it to your calendar.
+
+Free, no login → convene.md (link in bio)
+
+*First comment:* #CME #CMEtravel #MedEd #SurgeonLife #MedTwitter #ResidencyLife #ConferenceTravel #Surgery #DoctorsOfInstagram #MedicalConference
+
+*Posting notes:*
+- Post via Reels (not a feed photo). Add a **trending upbeat audio** in the IG editor at low volume — the video is intentionally silent so you can attach trending audio (better for the algorithm than baked-in music).
+- Use `reel-a-cover.png` as the cover so the grid shows the hook text.
+- Best window: 7–9am or 6–8pm ET.
