@@ -447,6 +447,21 @@ h1 {
   cursor: pointer;
 }
 
+/* Marker clusters */
+.cluster {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #0f2942;
+  color: #fff;
+  border: 3px solid #36b3a8;
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
 /* Legend */
 .legend {
   background: rgba(255,255,255,0.95);

@@ -183,29 +183,23 @@ L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
   noWrap: true
 }).addTo(map);
 
-const markerLayer = L.layerGroup().addTo(map);
-
-function offsetForOverlap(lat, lng, idx, total) {
-  if (total <= 1) return [lat, lng];
-  const radius = 0.6;
-  const angle = (idx / total) * Math.PI * 2;
-  return [lat + Math.cos(angle) * radius, lng + Math.sin(angle) * radius];
-}
+const markerLayer = L.markerClusterGroup({
+  maxClusterRadius: 34,
+  showCoverageOnHover: false,
+  spiderfyOnMaxZoom: true,
+  spiderfyDistanceMultiplier: 1.4,
+  iconCreateFunction: (cluster) => L.divIcon({
+    className: "",
+    html: `<div class="cluster">${cluster.getChildCount()}</div>`,
+    iconSize: [42, 42],
+    iconAnchor: [21, 21]
+  })
+}).addTo(map);
 
 function render(filtered) {
   markerLayer.clearLayers();
-  const groups = new Map();
   filtered.forEach(c => {
-    const key = `${c.lat.toFixed(2)},${c.lng.toFixed(2)}`;
-    if (!groups.has(key)) groups.set(key, []);
-    groups.get(key).push(c);
-  });
-  groups.forEach(list => {
-    list.forEach((c, i) => {
-      const [lat, lng] = offsetForOverlap(c.lat, c.lng, i, list.length);
-      const m = L.marker([lat, lng], makeMarker({ ...c, lat, lng }).options).bindPopup(buildPopupHtml(c), { maxWidth: 320 });
-      m.addTo(markerLayer);
-    });
+    markerLayer.addLayer(makeMarker(c));
   });
 }
 
