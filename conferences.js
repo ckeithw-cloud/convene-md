@@ -2201,7 +2201,6 @@ const CONFERENCES = [
     organizer: "Synapse by Meds Link",
     description: "International congress on robotic surgery and medical AI — live robotic demonstrations, VR simulation, and surgical decision-support sessions, in Tunis."
   },
-
   // ---- Non-surgical specialties (v2 expansion) ----
   {
     name: "ACC.27 — American College of Cardiology Annual Scientific Session",
@@ -3436,34 +3435,6 @@ const CONFERENCES = [
     description: "Meeting on CGM, AI and diabetes devices, at the Hyatt Regency Crystal City."
   },
   {
-    name: "ASCO 2027 Annual Meeting",
-    specialty: "Medical Oncology",
-    year: 2027,
-    startDate: "2027-06-04",
-    endDate: "2027-06-08",
-    city: "Chicago",
-    country: "USA",
-    lat: 41.8781,
-    lng: -87.6298,
-    url: "https://www.asco.org/annual-meeting",
-    organizer: "American Society of Clinical Oncology",
-    description: "The world's largest clinical oncology meeting, at McCormick Place."
-  },
-  {
-    name: "RSNA 2026 — 112th Scientific Assembly and Annual Meeting",
-    specialty: "Radiology",
-    year: 2026,
-    startDate: "2026-11-29",
-    endDate: "2026-12-03",
-    city: "Chicago",
-    country: "USA",
-    lat: 41.8781,
-    lng: -87.6298,
-    url: "https://www.rsna.org/annual-meeting",
-    organizer: "Radiological Society of North America",
-    description: "The world's largest radiology meeting, held annually at McCormick Place."
-  },
-  {
     name: "RSNA 2027 Scientific Assembly and Annual Meeting",
     specialty: "Radiology",
     year: 2027,
@@ -3476,20 +3447,6 @@ const CONFERENCES = [
     url: "https://www.rsna.org/annual-meeting",
     organizer: "Radiological Society of North America",
     description: "RSNA's annual meeting at McCormick Place, scheduled the week before Thanksgiving."
-  },
-  {
-    name: "ASH 2026 — 68th Annual Meeting and Exposition",
-    specialty: "Hematology",
-    year: 2026,
-    startDate: "2026-12-12",
-    endDate: "2026-12-15",
-    city: "New Orleans",
-    country: "USA",
-    lat: 29.9511,
-    lng: -90.0715,
-    url: "https://www.hematology.org/meetings/annual-meeting",
-    organizer: "American Society of Hematology",
-    description: "The premier hematology meeting, at the Ernest N. Morial Convention Center."
   },
   {
     name: "ANESTHESIOLOGY 2026 — ASA Annual Meeting",
@@ -3520,20 +3477,6 @@ const CONFERENCES = [
     description: "The ASA's annual meeting, bringing the anesthesiology community to Boston."
   },
   {
-    name: "ACEP26 Scientific Assembly",
-    specialty: "Emergency Medicine",
-    year: 2026,
-    startDate: "2026-10-05",
-    endDate: "2026-10-08",
-    city: "Chicago",
-    country: "USA",
-    lat: 41.8781,
-    lng: -87.6298,
-    url: "https://www.acep.org/sa",
-    organizer: "American College of Emergency Physicians",
-    description: "The world's largest emergency medicine educational conference."
-  },
-  {
     name: "ACEP27 Scientific Assembly",
     specialty: "Emergency Medicine",
     year: 2027,
@@ -3548,48 +3491,6 @@ const CONFERENCES = [
     description: "ACEP's flagship annual assembly for the global emergency medicine community."
   },
   {
-    name: "AAN 2027 Annual Meeting",
-    specialty: "Neurology",
-    year: 2027,
-    startDate: "2027-05-01",
-    endDate: "2027-05-05",
-    city: "Washington, DC",
-    country: "USA",
-    lat: 38.9072,
-    lng: -77.0369,
-    url: "https://www.aan.com/events/annual-meeting",
-    organizer: "American Academy of Neurology",
-    description: "The world's premier neurology meeting, offered in person and online."
-  },
-  {
-    name: "AAP 2026 National Conference & Exhibition",
-    specialty: "Pediatrics",
-    year: 2026,
-    startDate: "2026-10-02",
-    endDate: "2026-10-06",
-    city: "San Diego",
-    country: "USA",
-    lat: 32.7157,
-    lng: -117.1611,
-    url: "https://www.aap.org/",
-    organizer: "American Academy of Pediatrics",
-    description: "More than 350 educational sessions and the largest pediatrics-focused exhibit of its kind."
-  },
-  {
-    name: "ACOG 2027 Annual Clinical & Scientific Meeting",
-    specialty: "Obstetrics & Gynecology",
-    year: 2027,
-    startDate: "2027-05-21",
-    endDate: "2027-05-23",
-    city: "Los Angeles",
-    country: "USA",
-    lat: 34.0522,
-    lng: -118.2437,
-    url: "https://annualmeeting.acog.org/",
-    organizer: "American College of Obstetricians and Gynecologists",
-    description: "The leading US women's health meeting for obstetrician-gynecologists."
-  },
-  {
     name: "ACOG 2028 Annual Clinical & Scientific Meeting",
     specialty: "Obstetrics & Gynecology",
     year: 2028,
@@ -3602,20 +3503,6 @@ const CONFERENCES = [
     url: "https://annualmeeting.acog.org/",
     organizer: "American College of Obstetricians and Gynecologists",
     description: "ACOG's annual clinical and scientific meeting, held in Boston."
-  },
-  {
-    name: "AAFP FMX 2026 — Family Medicine Experience",
-    specialty: "Family Medicine",
-    year: 2026,
-    startDate: "2026-10-20",
-    endDate: "2026-10-24",
-    city: "Nashville",
-    country: "USA",
-    lat: 36.1627,
-    lng: -86.7816,
-    url: "https://www.aafp.org/events/fmx.html",
-    organizer: "American Academy of Family Physicians",
-    description: "The AAFP's flagship annual conference, at Music City Center in Nashville."
   },
   {
     name: "LM2026 — Lifestyle Medicine Conference",
