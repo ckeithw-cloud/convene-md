@@ -1,13 +1,13 @@
 You are running a weekly auto-update for the convene.md website at `/Users/ckeithw/Documents/Claude projects/medconf/`.
 
-**Goal:** Find newly announced surgical conferences and append them to `conferences.js`. Do not modify existing entries.
+**Goal:** Find newly announced medical conferences (ALL specialties, not just surgery) and append them to `conferences.js`. Do not modify existing entries.
 
 **File schema** — `conferences.js` exports `const CONFERENCES = [ ... ]`. Each entry has these fields (all required):
 
 ```js
 {
   name: "...",
-  specialty: "General Surgery" | "Cardiothoracic Surgery" | "Neurosurgery" | "Orthopedic Surgery" | "Plastic Surgery" | "Bariatric Surgery" | "Endocrine / ENT Surgery" | "Vascular Surgery" | "Urology" | "Colorectal Surgery" | "Trauma Surgery" | "Surgical Oncology" | "Pediatric Surgery" | "HPB / Transplant Surgery",
+  specialty: "<one of the 46 values below>",
   year: 2026 | 2027 | 2028,
   startDate: "YYYY-MM-DD",
   endDate: "YYYY-MM-DD",
@@ -21,15 +21,33 @@ You are running a weekly auto-update for the convene.md website at `/Users/ckeit
 }
 ```
 
-If a candidate doesn't fit any of the 14 specialty values above, skip it — don't invent a new specialty.
+**Valid `specialty` values** (46, grouped — the group determines pin color, defined in `script.js` as `SPECIALTY_GROUPS`):
+
+- **Surgical:** General Surgery, Cardiothoracic Surgery, Neurosurgery, Orthopedic Surgery, Plastic Surgery, Bariatric Surgery, Vascular Surgery, Urology, Colorectal Surgery, Trauma Surgery, Surgical Oncology, Pediatric Surgery, HPB / Transplant Surgery, Endocrine / ENT Surgery
+- **Medicine & subspecialties:** Internal Medicine, Cardiology, Gastroenterology, Pulmonology, Nephrology, Endocrinology, Rheumatology, Infectious Disease, Hematology, Allergy & Immunology
+- **Oncology:** Medical Oncology, Radiation Oncology, Palliative & Supportive Care
+- **Neuro & psych:** Neurology, Psychiatry, Physical Medicine & Rehabilitation, Pain Medicine
+- **Acute & hospital-based:** Emergency Medicine, Anesthesiology, Critical Care, Hospital Medicine, Radiology
+- **Primary care & family:** Family Medicine, Pediatrics, Obstetrics & Gynecology, Geriatrics
+- **Lifestyle & sports:** Sports & Wilderness Medicine, Sports Medicine, Lifestyle & Preventive Medicine
+- **Diagnostic & other:** Pathology, Dermatology, Ophthalmology
+
+If a candidate doesn't fit any of the 46 specialty values above, skip it — don't invent a new specialty. (Adding a genuinely new specialty requires also editing `SPECIALTY_GROUPS` in `script.js`, which is a human decision.)
 
 **Steps:**
 
 1. Read `/Users/ckeithw/Documents/Claude projects/medconf/conferences.js` to load existing entries.
-2. Use WebSearch to look for newly announced surgical conferences in 2026, 2027, and 2028 across the 14 specialties. Useful query patterns:
+2. Use WebSearch to look for newly announced medical conferences in 2026, 2027, and 2028 across the 46 specialties. Rotate focus each week so coverage stays even — don't only search surgery. Useful query patterns:
    - `"{specialty} congress 2027 location dates"` for each specialty
-   - `"{society acronym} annual meeting 2027"` — e.g. ACS, AATS, EACTS, AAOS, CNS, AANS, IFSO, EAES, SICOT, AUA, EAU, ASCRS, ESCP, AAST, SSO, APSA, IHPBA, JSS, ASI, RACS, WACS, COSECSA
-   - Regional sweeps: `"surgical conference 2027 Asia"` / `"... Africa"` / `"... Latin America"` to catch coverage gaps
+   - `"{society acronym} annual meeting 2027"` — e.g.
+     - Surgical: ACS, AATS, EACTS, AAOS, CNS, AANS, IFSO, EAES, SICOT, AUA, EAU, ASCRS, ESCP, AAST, SSO, APSA, IHPBA, JSS, ASI, RACS, WACS, COSECSA
+     - Medicine: ACC, AHA, ESC, ACP, DDW, ACG, UEG, CHEST, ATS, ERS, ASN, ERA, ENDO, ADA, EASD, ACR, EULAR, IDWeek, ESCMID, ASH, EHA, AAAAI, EAACI
+     - Oncology: ASCO, ESMO, ASTRO, ESTRO, AACR, SITC, AAHPM, EAPC
+     - Neuro/psych: AAN, EAN, WCN, APA, EPA, WPA, AAPM&R, IASP
+     - Acute/hospital: ACEP, EUSEM, ICEM, ASA, ESAIC, WFSA, SCCM, ESICM, SHM, RSNA, ECR, ISR
+     - Primary care: AAFP, WONCA, AAP, IPA, ESPGHAN, ACOG, FIGO, ESHRE, AGS
+     - Diagnostic/other: USCAP, CAP, ECP, AAD, EADV, AAO, ESCRS, ICO
+   - Regional sweeps: `"{specialty} conference 2027 Asia"` / `"... Africa"` / `"... Latin America"` / `"... Middle East"` to catch coverage gaps
 3. For each candidate, **dedupe**:
    - Skip if existing list already has an entry with the same `name` (case-insensitive) AND same `year`.
    - Skip if same `city` + `startDate` + `specialty` combo already exists.
