@@ -2417,8 +2417,20 @@
           </button>
         </div>
         <div class="control">
-          <label for="specialty">Specialty</label>
-          <select id="specialty"></select>
+          <label id="spec-label">Specialty</label>
+          <div class="spec-drop" id="spec-drop">
+            <button type="button" id="spec-btn" class="spec-btn" aria-expanded="false" aria-haspopup="true" aria-labelledby="spec-label">
+              <span id="spec-summary">All specialties</span>
+              <span class="spec-caret" aria-hidden="true">▾</span>
+            </button>
+            <div class="spec-menu">
+              <div class="spec-actions">
+                <button type="button" id="spec-all">Select all</button>
+                <button type="button" id="spec-none">Clear</button>
+              </div>
+              <div id="spec-panel"></div>
+            </div>
+          </div>
         </div>
         <div class="control">
           <label for="year">Year</label>

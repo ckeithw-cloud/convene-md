@@ -1,38 +1,77 @@
-const SPECIALTY_CLASS = {
-  "General Surgery": "gen",
-  "Cardiothoracic Surgery": "crd",
-  "Neurosurgery": "neu",
-  "Orthopedic Surgery": "ort",
-  "Plastic Surgery": "pls",
-  "Bariatric Surgery": "bar",
-  "Endocrine / ENT Surgery": "ent",
-  "Vascular Surgery": "vas",
-  "Urology": "uro",
-  "Colorectal Surgery": "col",
-  "Trauma Surgery": "tra",
-  "Surgical Oncology": "onc",
-  "Pediatric Surgery": "ped",
-  "HPB / Transplant Surgery": "hpb",
-  "Sports & Wilderness Medicine": "spw"
-};
+// Specialty groups — pin color is assigned by GROUP so the legend stays readable
+// while the filter stays granular. Adding a specialty = add it to the right group.
+const SPECIALTY_GROUPS = [
+  {
+    name: "Surgical",
+    color: "#e74c3c",
+    cls: "g-surg",
+    specialties: [
+      "General Surgery", "Cardiothoracic Surgery", "Neurosurgery", "Orthopedic Surgery",
+      "Plastic Surgery", "Bariatric Surgery", "Vascular Surgery", "Urology",
+      "Colorectal Surgery", "Trauma Surgery", "Surgical Oncology", "Pediatric Surgery",
+      "HPB / Transplant Surgery", "Endocrine / ENT Surgery"
+    ]
+  },
+  {
+    name: "Medicine & subspecialties",
+    color: "#3498db",
+    cls: "g-med",
+    specialties: [
+      "Internal Medicine", "Cardiology", "Gastroenterology", "Pulmonology", "Nephrology",
+      "Endocrinology", "Rheumatology", "Infectious Disease", "Hematology", "Allergy & Immunology"
+    ]
+  },
+  {
+    name: "Oncology",
+    color: "#9b59b6",
+    cls: "g-onc",
+    specialties: ["Medical Oncology", "Radiation Oncology", "Palliative & Supportive Care"]
+  },
+  {
+    name: "Neuro & psych",
+    color: "#16a085",
+    cls: "g-neuro",
+    specialties: ["Neurology", "Psychiatry", "Physical Medicine & Rehabilitation", "Pain Medicine"]
+  },
+  {
+    name: "Acute & hospital-based",
+    color: "#e67e22",
+    cls: "g-acute",
+    specialties: [
+      "Emergency Medicine", "Anesthesiology", "Critical Care", "Hospital Medicine", "Radiology"
+    ]
+  },
+  {
+    name: "Primary care & family",
+    color: "#f39c12",
+    cls: "g-prim",
+    specialties: ["Family Medicine", "Pediatrics", "Obstetrics & Gynecology", "Geriatrics"]
+  },
+  {
+    name: "Lifestyle & sports",
+    color: "#00bcd4",
+    cls: "g-life",
+    specialties: ["Sports & Wilderness Medicine", "Sports Medicine", "Lifestyle & Preventive Medicine"]
+  },
+  {
+    name: "Diagnostic & other",
+    color: "#7f8c8d",
+    cls: "g-diag",
+    specialties: ["Pathology", "Dermatology", "Ophthalmology"]
+  }
+];
 
-const SPECIALTY_COLOR = {
-  "General Surgery": "#e74c3c",
-  "Cardiothoracic Surgery": "#9b59b6",
-  "Neurosurgery": "#3498db",
-  "Orthopedic Surgery": "#f39c12",
-  "Plastic Surgery": "#1abc9c",
-  "Bariatric Surgery": "#e67e22",
-  "Endocrine / ENT Surgery": "#2ecc71",
-  "Vascular Surgery": "#d81b60",
-  "Urology": "#fbc02d",
-  "Colorectal Surgery": "#5d4037",
-  "Trauma Surgery": "#37474f",
-  "Surgical Oncology": "#283593",
-  "Pediatric Surgery": "#00838f",
-  "HPB / Transplant Surgery": "#558b2f",
-  "Sports & Wilderness Medicine": "#00bcd4"
-};
+const SPECIALTY_GROUP = {};   // specialty -> group object
+const SPECIALTY_COLOR = {};   // specialty -> group color
+const SPECIALTY_CLASS = {};   // specialty -> group css class
+SPECIALTY_GROUPS.forEach(g => {
+  g.specialties.forEach(s => {
+    SPECIALTY_GROUP[s] = g;
+    SPECIALTY_COLOR[s] = g.color;
+    SPECIALTY_CLASS[s] = g.cls;
+  });
+});
+const ALL_SPECIALTIES = SPECIALTY_GROUPS.flatMap(g => g.specialties);
 
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const MONTHS_FULL = ["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -270,12 +309,95 @@ function setView(v) {
   if (showMap) map.invalidateSize();
 }
 
+// ---- specialty selection (persisted to localStorage) ----
+const STORE_KEY = "convene.selectedSpecialties";
+let selected = new Set();
+
+function specialtiesInData() {
+  return new Set(CONFERENCES.map(c => c.specialty));
+}
+
+function loadSelection() {
+  const present = specialtiesInData();
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORE_KEY) || "null");
+    if (Array.isArray(saved) && saved.length) {
+      const valid = saved.filter(s => present.has(s));
+      if (valid.length) { selected = new Set(valid); return; }
+    }
+  } catch (_) { /* ignore malformed storage */ }
+  selected = new Set(present); // first visit: everything on
+}
+
+function saveSelection() {
+  try { localStorage.setItem(STORE_KEY, JSON.stringify([...selected])); } catch (_) {}
+}
+
+function buildSpecialtyPanel() {
+  const panel = document.getElementById("spec-panel");
+  const present = specialtiesInData();
+  const counts = {};
+  CONFERENCES.forEach(c => { counts[c.specialty] = (counts[c.specialty] || 0) + 1; });
+
+  panel.innerHTML = SPECIALTY_GROUPS.map(g => {
+    const items = g.specialties.filter(s => present.has(s));
+    if (!items.length) return "";
+    return `<div class="spec-group" data-group="${escapeHtml(g.name)}">
+      <label class="spec-grouphead">
+        <input type="checkbox" class="grp-box" data-group="${escapeHtml(g.name)}" />
+        <span class="grp-dot" style="background:${g.color}"></span>
+        <span class="grp-name">${escapeHtml(g.name)}</span>
+      </label>
+      <div class="spec-items">
+        ${items.map(s => `<label class="spec-item">
+          <input type="checkbox" class="spec-box" value="${escapeHtml(s)}" />
+          <span>${escapeHtml(s)}</span><span class="spec-count">${counts[s]}</span>
+        </label>`).join("")}
+      </div>
+    </div>`;
+  }).join("");
+
+  panel.addEventListener("change", (e) => {
+    const t = e.target;
+    if (t.classList.contains("spec-box")) {
+      if (t.checked) selected.add(t.value); else selected.delete(t.value);
+    } else if (t.classList.contains("grp-box")) {
+      const g = SPECIALTY_GROUPS.find(x => x.name === t.dataset.group);
+      g.specialties.filter(s => present.has(s)).forEach(s => {
+        if (t.checked) selected.add(s); else selected.delete(s);
+      });
+    } else return;
+    saveSelection();
+    syncPanelBoxes();
+    applyFilters();
+  });
+}
+
+function syncPanelBoxes() {
+  const present = specialtiesInData();
+  document.querySelectorAll(".spec-box").forEach(b => { b.checked = selected.has(b.value); });
+  document.querySelectorAll(".grp-box").forEach(b => {
+    const g = SPECIALTY_GROUPS.find(x => x.name === b.dataset.group);
+    const items = g.specialties.filter(s => present.has(s));
+    const on = items.filter(s => selected.has(s)).length;
+    b.checked = on === items.length && items.length > 0;
+    b.indeterminate = on > 0 && on < items.length;
+  });
+  const total = present.size;
+  const label = document.getElementById("spec-summary");
+  if (label) {
+    label.textContent = selected.size === total
+      ? "All specialties"
+      : selected.size === 0 ? "None selected"
+      : selected.size === 1 ? [...selected][0]
+      : `${selected.size} specialties`;
+  }
+}
+
 function populateFilters() {
-  const specialtySel = document.getElementById("specialty");
   const yearSel = document.getElementById("year");
-  const specialties = Array.from(new Set(CONFERENCES.map(c => c.specialty))).sort();
+  const specialties = Array.from(specialtiesInData()).sort();
   const years = Array.from(new Set(CONFERENCES.map(c => c.year))).sort();
-  specialtySel.innerHTML = `<option value="all">All specialties</option>` + specialties.map(s => `<option value="${escapeHtml(s)}">${escapeHtml(s)}</option>`).join("");
   yearSel.innerHTML = `<option value="all">All years</option>` + years.map(y => `<option value="${y}">${y}</option>`).join("");
 
   const submitSel = document.getElementById("submit-specialty");
@@ -284,15 +406,18 @@ function populateFilters() {
       specialties.map(s => `<option value="${escapeHtml(s)}">${escapeHtml(s)}</option>`).join("") +
       `<option value="Other / not sure">Other / not sure</option>`;
   }
+
+  loadSelection();
+  buildSpecialtyPanel();
+  syncPanelBoxes();
 }
 
 function applyFilters() {
-  const sp = document.getElementById("specialty").value;
   const yr = document.getElementById("year").value;
   const hidePast = document.getElementById("hidePast").checked;
   const todayIso = new Date().toISOString().slice(0, 10);
   const filtered = CONFERENCES.filter(c =>
-    (sp === "all" || c.specialty === sp) &&
+    selected.has(c.specialty) &&
     (yr === "all" || String(c.year) === yr) &&
     (!hidePast || c.endDate >= todayIso)
   );
@@ -304,8 +429,11 @@ function applyFilters() {
 const legend = L.control({ position: "bottomright" });
 legend.onAdd = function() {
   const div = L.DomUtil.create("div", "legend");
-  const specialties = Array.from(new Set(CONFERENCES.map(c => c.specialty))).sort();
-  const rows = specialties.map(s => `<div class="row"><span class="dot" style="background:${SPECIALTY_COLOR[s] || "#888"}"></span>${escapeHtml(s)}</div>`).join("");
+  const present = new Set(CONFERENCES.map(c => c.specialty));
+  const rows = SPECIALTY_GROUPS
+    .filter(g => g.specialties.some(s => present.has(s)))
+    .map(g => `<div class="row"><span class="dot" style="background:${g.color}"></span>${escapeHtml(g.name)}</div>`)
+    .join("");
   div.innerHTML =
     `<button class="legend-toggle" type="button">Legend <span class="legend-chevron" aria-hidden="true">▾</span></button>` +
     `<div class="legend-body">${rows}</div>`;
@@ -333,7 +461,29 @@ document.addEventListener("click", (e) => {
 });
 
 populateFilters();
-document.getElementById("specialty").addEventListener("change", applyFilters);
+
+const specDrop = document.getElementById("spec-drop");
+const specBtn = document.getElementById("spec-btn");
+specBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  const open = specDrop.classList.toggle("open");
+  specBtn.setAttribute("aria-expanded", String(open));
+});
+document.addEventListener("click", (e) => {
+  if (!specDrop.contains(e.target)) {
+    specDrop.classList.remove("open");
+    specBtn.setAttribute("aria-expanded", "false");
+  }
+});
+document.getElementById("spec-all").addEventListener("click", () => {
+  selected = new Set(specialtiesInData());
+  saveSelection(); syncPanelBoxes(); applyFilters();
+});
+document.getElementById("spec-none").addEventListener("click", () => {
+  selected = new Set();
+  saveSelection(); syncPanelBoxes(); applyFilters();
+});
+
 document.getElementById("year").addEventListener("change", applyFilters);
 document.getElementById("hidePast").addEventListener("change", applyFilters);
 document.getElementById("view-map").addEventListener("click", () => setView("map"));
