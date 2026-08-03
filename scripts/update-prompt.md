@@ -50,10 +50,27 @@ If a candidate doesn't fit any of the 46 specialty values above, skip it — don
    - Regional sweeps: `"{specialty} conference 2027 Asia"` / `"... Africa"` / `"... Latin America"` / `"... Middle East"` to catch coverage gaps
 3. For each candidate, **dedupe**:
    - Skip if existing list already has an entry with the same `name` (case-insensitive) AND same `year`.
-   - Skip if same `city` + `startDate` + `specialty` combo already exists.
+   - Skip if same `city` + `startDate` + `specialty` combo already exists. This is the key
+     `scripts/validate.js` enforces — a collision there fails the build, so check it yourself first.
+   - **Joint congresses count as ONE entry.** Societies frequently co-host (e.g. APSC 2027 was held
+     jointly with JCS 2027 at the same venue on the same days). Two pins on one venue is a bug —
+     add a single entry naming both societies in `organizer`.
+
+3a. **Beware acronym collisions between unrelated societies.** Two different societies often share
+   an acronym, and getting this wrong silently mislabels the specialty. Confirm which society owns
+   the URL before trusting a search result. Known traps:
+   - **ASCRS** = American Society of *Cataract and Refractive Surgery* (`annualmeeting.ascrs.org`,
+     Ophthalmology) **and** American Society of *Colon and Rectal Surgeons* (`fascrs.org`,
+     Colorectal Surgery). These are different meetings in different cities.
+   - **ACR** = American College of Radiology **and** American College of Rheumatology.
+   - **AAP** = American Academy of Pediatrics **and** American Academy of Pain Medicine.
+   - **ASA** = American Society of Anesthesiologists **and** American Stroke Association.
+   When in doubt, open the URL and read whose branding is on it.
 4. For new entries, supply `lat`/`lng` from your knowledge for the city. Confirm dates and URL from the official society site where possible.
 5. Append ONLY new entries to the array in `conferences.js`. **Do not reformat or modify existing entries.** Insert before the closing `];`.
-6. After saving, print a short summary: count of new entries added and their names. If zero, say so.
+6. Run `node scripts/validate.js`. It must exit 0. If it reports errors, fix your own additions
+   until it passes — do not delete pre-existing entries to make it pass.
+7. After saving, print a short summary: count of new entries added and their names. If zero, say so.
 
 **Aggregator workaround — IMPORTANT:**
 
@@ -74,7 +91,10 @@ Many parent-organization "meetings" pages (e.g. ACS chapter meetings, FELAC, IFS
 **Quality rules:**
 
 - Be conservative — only add conferences you're confident about (clear date, clear location, real organizing society with an official site).
-- Skip vague "global conference on surgery" listings from generic aggregator sites (allconferencealert, conferenceindex, magnusgroup, etc.) unless they have a confirmed venue, dates, and a known organizer.
+- Skip vague "global conference on surgery"/"international conference on X" listings from predatory
+  conference mills (magnusgroup, conferenceseries, allconferencealert, conferenceindex, etc.) — no
+  exceptions, even if they list a venue and dates. Tell-tale sign: several differently-named events
+  in different cities all pointing at one generic URL. `scripts/validate.js` hard-fails on these hosts.
 - Skip past conferences (those whose `endDate` is before today). The site filters them out anyway, but they bloat the dataset.
 - If a search summary mentions specific dates but you can't find a primary source confirming them, treat it as a hallucination and skip. Better to miss an event than to add a wrong one.
 

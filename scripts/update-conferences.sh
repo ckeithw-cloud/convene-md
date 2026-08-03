@@ -40,7 +40,16 @@ mkdir -p "$PROJECT_DIR/logs"
 
   # If the agent added/changed conferences, regenerate SEO artifacts and deploy.
   if ! git diff --quiet -- conferences.js; then
-    echo "conferences.js changed — regenerating SEO and deploying."
+    echo "conferences.js changed — validating before deploy."
+
+    # Refuse to publish bad data: unknown specialties, duplicates, broken dates,
+    # or entries sourced from known-fabricating aggregators.
+    if ! node scripts/validate.js; then
+      echo "ERROR: validation failed — reverting conferences.js and skipping deploy."
+      git checkout -- conferences.js
+      exit 1
+    fi
+
     node scripts/build-seo.js
     git add conferences.js index.html sitemap.xml robots.txt
     git commit -m "Weekly auto-update: new conferences + refreshed SEO" \
