@@ -2582,7 +2582,7 @@ const CONFERENCES = [
     description: "The global women's health congress, at the Palais des congrès de Montréal."
   },
   {
-    name: "APSC 2027 — Asian Pacific Society of Cardiology Congress",
+    name: "APSC 2027 / JCS 2027 — Asian Pacific Society of Cardiology Congress with the 91st Japanese Circulation Society Meeting",
     specialty: "Cardiology",
     year: 2027,
     startDate: "2027-03-26",
@@ -2592,22 +2592,8 @@ const CONFERENCES = [
     lat: 35.4437,
     lng: 139.6380,
     url: "https://www.apsccongress.com/",
-    organizer: "Asian Pacific Society of Cardiology, with the Japanese Circulation Society",
-    description: "Joint APSC/JCS cardiology congress bringing together Asia-Pacific cardiologists at Pacifico Yokohama."
-  },
-  {
-    name: "JCS 2027 — 91st Annual Scientific Meeting of the Japanese Circulation Society",
-    specialty: "Cardiology",
-    year: 2027,
-    startDate: "2027-03-26",
-    endDate: "2027-03-28",
-    city: "Yokohama",
-    country: "Japan",
-    lat: 35.4437,
-    lng: 139.6380,
-    url: "https://www.congre.co.jp/jcs2027/",
-    organizer: "Japanese Circulation Society",
-    description: "Japan's national cardiology meeting, held jointly with APSC 2027 at Pacifico Yokohama."
+    organizer: "Asian Pacific Society of Cardiology & Japanese Circulation Society",
+    description: "Asia-Pacific's regional cardiology congress, held jointly with Japan's national meeting at Pacifico Yokohama."
   },
   {
     name: "APHRS 2026 — 19th Asia Pacific Heart Rhythm Society Scientific Sessions",
@@ -3000,5 +2986,89 @@ const CONFERENCES = [
     url: "https://dermacon2027.com/",
     organizer: "Indian Association of Dermatologists, Venereologists & Leprologists",
     description: "India's national dermatology conference, at the Helipad Exhibition Centre in Gandhinagar."
+  },
+  {
+    name: "APCCMI 2027 — 21st Asia Pacific Congress of Clinical Microbiology and Infection",
+    specialty: "Infectious Disease",
+    year: 2027,
+    startDate: "2027-11-21",
+    endDate: "2027-11-23",
+    city: "Nagasaki",
+    country: "Japan",
+    lat: 32.7503,
+    lng: 129.8777,
+    url: "https://www.apccmi2027.com/",
+    organizer: "Asia Pacific Society of Clinical Microbiology and Infection",
+    description: "The region's leading clinical microbiology and infectious disease congress, returning to Japan after 20 years."
+  },
+  {
+    name: "JSICM 2027 — 54th Annual Meeting of the Japanese Society of Intensive Care Medicine",
+    specialty: "Critical Care",
+    year: 2027,
+    startDate: "2027-05-12",
+    endDate: "2027-05-14",
+    city: "Kyoto",
+    country: "Japan",
+    lat: 35.0116,
+    lng: 135.7681,
+    url: "https://www.jsicm.org/meeting/jsicm54/",
+    organizer: "Japanese Society of Intensive Care Medicine",
+    description: "Japan's national intensive care congress, at the Kyoto International Conference Center."
+  },
+  {
+    name: "APICS 2027 — Asia Pacific Intensive Care Symposium",
+    specialty: "Critical Care",
+    year: 2027,
+    startDate: "2027-08-18",
+    endDate: "2027-08-23",
+    city: "Singapore",
+    country: "Singapore",
+    lat: 1.3521,
+    lng: 103.8198,
+    url: "https://sg-apics.com/",
+    organizer: "Society of Intensive Care Medicine Singapore, with ISICM and ANZICS",
+    description: "Regional intensive care symposium rotating among Asia-Pacific host societies, held at Singapore Expo."
+  },
+  {
+    name: "MCCRC 2027 — Multicenter Critical Care Research Conference",
+    specialty: "Critical Care",
+    year: 2027,
+    startDate: "2027-03-26",
+    endDate: "2027-03-28",
+    city: "Surabaya",
+    country: "Indonesia",
+    lat: -7.2575,
+    lng: 112.7521,
+    url: "https://www.perdici.org/",
+    organizer: "PERDICI — Indonesian Society of Intensive Care Medicine",
+    description: "Indonesia's national critical care research conference, held in Surabaya."
+  },
+  {
+    name: "75th JAID East Japan Regional Conference & 73rd Japanese Society of Chemotherapy East Japan Meeting",
+    specialty: "Infectious Disease",
+    year: 2026,
+    startDate: "2026-10-28",
+    endDate: "2026-10-30",
+    city: "Tokyo",
+    country: "Japan",
+    lat: 35.6762,
+    lng: 139.6503,
+    url: "https://godo2026.umin.jp/",
+    organizer: "Japanese Association for Infectious Diseases & Japanese Society of Chemotherapy",
+    description: "Joint regional meeting of Japan's infectious disease and chemotherapy societies, at the Tokyo Dome Hotel."
+  },
+  {
+    name: "CIDSCON 2026 — 16th Annual Conference of the Clinical Infectious Diseases Society",
+    specialty: "Infectious Disease",
+    year: 2026,
+    startDate: "2026-08-21",
+    endDate: "2026-08-23",
+    city: "Gandhinagar",
+    country: "India",
+    lat: 23.2156,
+    lng: 72.6369,
+    url: "https://cidsindia.org/",
+    organizer: "Clinical Infectious Diseases Society, India",
+    description: "India's national infectious disease conference, themed on antimicrobial resistance, at Mahatma Mandir."
   }
 ];
