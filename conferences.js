@@ -8697,5 +8697,19 @@ const CONFERENCES = [
     url: "https://meded.ucsf.edu/cme/upcoming-ce-courses",
     organizer: "UCSF Department of Orthopaedic Surgery",
     description: "The Abbott Society scientific program with the Verne T. Inman Lectureship."
+  },
+  {
+    name: "Primary Care in Paradise 2027",
+    specialty: "Family Medicine",
+    year: 2027,
+    startDate: "2027-04-05",
+    endDate: "2027-04-08",
+    city: "Lahaina",
+    country: "USA",
+    lat: 20.8783,
+    lng: -156.6825,
+    url: "https://scrippshealthcme.cloud-cme.com/course/courseoverview?P=5&EID=48606",
+    organizer: "Scripps Conference Services & CME",
+    description: "Scripps' long-running primary care course at the Hyatt Regency Maui, with a dermoscopy pre-conference workshop."
   }
 ];
