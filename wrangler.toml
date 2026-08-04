@@ -3,7 +3,11 @@ compatibility_date = "2025-06-01"
 
 [assets]
 directory = "."
-not_found_handling = "single-page-application"
+# The site has no client-side routing, so the SPA fallback only served to return a
+# 200 copy of the homepage for every bogus URL — which Google treats as a soft 404
+# and as duplicate content. Real hub pages exist at /specialty/, /country/, /city/,
+# /year/ and /browse/; anything else should genuinely 404.
+not_found_handling = "none"
 
 [[routes]]
 pattern = "convene.md"

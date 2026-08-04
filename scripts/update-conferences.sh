@@ -50,8 +50,12 @@ mkdir -p "$PROJECT_DIR/logs"
       exit 1
     fi
 
+    # Hubs first: build-seo.js reads scripts/hub-urls.json for the sitemap and the
+    # crawlable link block, so stale hubs would mean a stale sitemap.
+    node scripts/build-hubs.js
     node scripts/build-seo.js
-    git add conferences.js index.html sitemap.xml robots.txt
+    git add -A conferences.js index.html sitemap.xml robots.txt \
+      specialty country city year browse scripts/hub-urls.json
     git commit -m "Weekly auto-update: new conferences + refreshed SEO" \
       -m "Automated by scripts/update-conferences.sh" \
       -m "Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>"

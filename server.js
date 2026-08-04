@@ -18,8 +18,14 @@ const MIME = {
 http.createServer((req, res) => {
   let urlPath = decodeURIComponent(req.url.split('?')[0]);
   if (urlPath === '/') urlPath = '/index.html';
-  const filePath = path.join(ROOT, urlPath);
+  let filePath = path.join(ROOT, urlPath);
   if (!filePath.startsWith(ROOT)) { res.writeHead(403); return res.end('forbidden'); }
+  // Directory URLs (/browse/, /specialty/cardiology/) resolve to their index.html,
+  // matching how Cloudflare serves static assets in production.
+  if (!path.extname(filePath)) {
+    const candidate = path.join(filePath, 'index.html');
+    if (fs.existsSync(candidate)) filePath = candidate;
+  }
   fs.readFile(filePath, (err, data) => {
     if (err) { res.writeHead(404); return res.end('not found'); }
     const ext = path.extname(filePath).toLowerCase();

@@ -82,6 +82,28 @@ function buildList(upcoming) {
   return `<ul>\n${items}\n</ul>`;
 }
 
+// Gives crawlers a path from the homepage to every hub page. Rendered inside the
+// visually-hidden .seo-index block; the same destinations are reachable by users
+// through the "Browse" link in the List view.
+function buildHubLinks(hubUrls) {
+  if (!hubUrls.length) return "";
+  const label = (u) => {
+    const parts = u.split("/").filter(Boolean);        // ["specialty","cardiology"]
+    const kind = parts[0];
+    const name = (parts[1] || "").replace(/-/g, " ").replace(/\band\b/g, "&");
+    const title = name.replace(/\b\w/g, m => m.toUpperCase());
+    if (kind === "specialty") return `${title} conferences`;
+    if (kind === "country")   return `Medical conferences in ${title}`;
+    if (kind === "city")      return `Medical conferences in ${title}`;
+    if (kind === "year")      return `Medical conferences ${parts[1]}`;
+    return "Browse all conferences";
+  };
+  const items = hubUrls
+    .map(u => `<li><a href="${u}">${esc(label(u))}</a></li>`)
+    .join("\n");
+  return `<nav aria-label="Browse conference categories">\n<ul>\n${items}\n</ul>\n</nav>`;
+}
+
 function injectBetween(html, startMarker, endMarker, payload) {
   const start = html.indexOf(startMarker);
   const end = html.indexOf(endMarker);
@@ -96,19 +118,34 @@ function main() {
     .filter(c => c.endDate >= today)
     .sort((a, b) => a.startDate.localeCompare(b.startDate));
 
+  // Read hub URLs first: they feed both the crawlable link block and the sitemap.
+  let hubUrls = [];
+  const hubUrlsFile = path.join(ROOT, "scripts", "hub-urls.json");
+  if (fs.existsSync(hubUrlsFile)) {
+    hubUrls = JSON.parse(fs.readFileSync(hubUrlsFile, "utf8"));
+  } else {
+    console.warn("build-seo: scripts/hub-urls.json not found — run scripts/build-hubs.js first; sitemap will list the homepage only.");
+  }
+
   let html = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
   html = injectBetween(html, "<!-- SEO:JSONLD:START -->", "<!-- SEO:JSONLD:END -->", buildJsonLd(upcoming));
+  html = injectBetween(html, "<!-- SEO:HUBS:START -->", "<!-- SEO:HUBS:END -->", buildHubLinks(hubUrls));
   html = injectBetween(html, "<!-- SEO:LIST:START -->", "<!-- SEO:LIST:END -->", buildList(upcoming));
   fs.writeFileSync(path.join(ROOT, "index.html"), html);
 
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>${SITE}/</loc>
+  // Hub pages go in the sitemap too — they are the pages that can actually rank
+  // for "<specialty> conferences" and "medical conferences in <place>" queries.
+  const entry = (loc, priority) => `  <url>
+    <loc>${SITE}${loc}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+    <priority>${priority}</priority>
+  </url>`;
+
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${entry("/", "1.0")}
+${hubUrls.map(u => entry(u, u === "/browse/" ? "0.9" : "0.8")).join("\n")}
 </urlset>
 `;
   fs.writeFileSync(path.join(ROOT, "sitemap.xml"), sitemap);
@@ -116,7 +153,8 @@ function main() {
   const robots = `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`;
   fs.writeFileSync(path.join(ROOT, "robots.txt"), robots);
 
-  console.log(`build-seo: ${upcoming.length} upcoming events → JSON-LD + list injected, sitemap.xml + robots.txt written.`);
+  console.log(`build-seo: ${upcoming.length} upcoming events → JSON-LD + list injected, ` +
+              `sitemap.xml (${1 + hubUrls.length} urls) + robots.txt written.`);
 }
 
 main();

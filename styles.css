@@ -874,3 +874,13 @@ h1 {
   #list-signup-form { width: 100%; }
   #list-signup-form input { flex: 1; min-width: 0; }
 }
+
+/* Link out to the generated hub pages (/browse/, /specialty/, /country/, …).
+   Lives at the foot of the List view, which scrolls; the map view has no room. */
+.list-browse {
+  text-align: center;
+  font-size: 13.5px;
+  color: #5a6b7d;
+  margin: 18px 0 8px;
+}
+.list-browse a { color: #14746f; font-weight: 600; }
