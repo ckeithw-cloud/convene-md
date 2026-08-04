@@ -11707,5 +11707,19 @@ const CONFERENCES = [
     url: "https://uofuhealth.cloud-cme.com/course/listing?p=1000",
     organizer: "University of Utah Health Continuing Medical Education",
     description: "Symposium on advanced heart and lung failure and transplantation."
+  },
+  {
+    name: "Maui Derm Caribbean 2027 (5th Annual)",
+    specialty: "Dermatology",
+    year: 2027,
+    startDate: "2027-01-13",
+    endDate: "2027-01-16",
+    city: "San Juan",
+    country: "Puerto Rico",
+    lat: 18.4655,
+    lng: -66.1057,
+    url: "https://mauiderm.com/maui-derm-caribbean-2027-overview/",
+    organizer: "Maui Derm (CME by University of Cincinnati)",
+    description: "Caribbean dermatology meeting at the Fairmont El San Juan Hotel, offering 20.25 AMA PRA Category 1 Credits."
   }
 ];
