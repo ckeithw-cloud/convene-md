@@ -19,7 +19,10 @@ const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://convene.md";
-const MIN_CITY = 3;           // don't generate a city page for one-off destinations
+// Two conferences is enough for a real page: each carries a verified date, venue
+// and description, and "medical conferences in <city>" is a query nobody owns.
+// Single-conference cities are left out — that page would just restate one row.
+const MIN_CITY = 2;
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
 function loadConferences() {
