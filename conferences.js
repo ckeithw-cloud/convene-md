@@ -4933,20 +4933,6 @@ const CONFERENCES = [
     description: "Europe's largest rheumatology congress, held at Messe Berlin."
   },
   {
-    name: "ACNAP 2027 — ESC Congress on Cardiovascular Nursing",
-    specialty: "Cardiology",
-    year: 2027,
-    startDate: "2027-06-11",
-    endDate: "2027-06-12",
-    city: "Sophia Antipolis",
-    country: "France",
-    lat: 43.6167,
-    lng: 7.0500,
-    url: "https://www.escardio.org/Congresses-Events",
-    organizer: "Association of Cardiovascular Nursing & Allied Professions",
-    description: "ESC congress for cardiovascular nurses and allied health professionals."
-  },
-  {
     name: "EACR 2027 — Congress of the European Association for Cancer Research",
     specialty: "Medical Oncology",
     year: 2027,
@@ -9763,20 +9749,6 @@ const CONFERENCES = [
     description: "Multidisciplinary genitourinary oncology update at The Westin Carlsbad Resort."
   },
   {
-    name: "Oncology Nurses Symposium 2026",
-    specialty: "Medical Oncology",
-    year: 2026,
-    startDate: "2026-10-03",
-    endDate: "2026-10-04",
-    city: "San Diego",
-    country: "USA",
-    lat: 32.7657,
-    lng: -117.2111,
-    url: "https://scrippshealthcme.cloud-cme.com/default.aspx?P=5&EID=48608",
-    organizer: "Scripps Cancer Center",
-    description: "Oncology symposium for nurses and advanced practice providers, at the Hyatt Regency Mission Bay."
-  },
-  {
     name: "Updates in Diabetes Management 2026",
     specialty: "Endocrinology",
     year: 2026,
@@ -9901,20 +9873,6 @@ const CONFERENCES = [
     url: "https://cedars.cloud-cme.com/default.aspx?P=5&EID=33514",
     organizer: "Cedars-Sinai CME",
     description: "ABA MOCA simulation course at the Women's Guild Simulation Center."
-  },
-  {
-    name: "Frontiers in Gastroenterology 2026",
-    specialty: "Gastroenterology",
-    year: 2026,
-    startDate: "2026-09-19",
-    endDate: "2026-09-19",
-    city: "Los Angeles",
-    country: "USA",
-    lat: 34.0752,
-    lng: -118.3801,
-    url: "https://cedars.cloud-cme.com/default.aspx?P=5&EID=33631",
-    organizer: "Cedars-Sinai CME",
-    description: "GI conference for nurses and allied professionals on pancreatic cancer, IBD and endoscopy."
   },
   {
     name: "IBD & Women's Health Conference 2026",
@@ -11415,20 +11373,6 @@ const CONFERENCES = [
     description: "Intensive TMS training with hands-on device administration."
   },
   {
-    name: "Duke Transplant Advanced Practice Provider Symposium 2026",
-    specialty: "HPB / Transplant Surgery",
-    year: 2026,
-    startDate: "2026-09-26",
-    endDate: "2026-09-26",
-    city: "Durham",
-    country: "USA",
-    lat: 36.004,
-    lng: -78.9386,
-    url: "https://ja.dh.duke.edu/content/2026-duke-transplant-advanced-practice-provider-symposium",
-    organizer: "Duke Division of Abdominal Transplant Surgery",
-    description: "Solid-organ transplant symposium at the Duke University School of Nursing."
-  },
-  {
     name: "Duke Case-Based Multimodality Imaging Symposium 2026",
     specialty: "Cardiology",
     year: 2026,
@@ -11723,20 +11667,6 @@ const CONFERENCES = [
     description: "Congress at the Omni Charlotte on novel therapies in myeloid, lymphoid and plasma cell malignancies."
   },
   {
-    name: "Growing Well Conference 2026",
-    specialty: "Pediatrics",
-    year: 2026,
-    startDate: "2026-10-04",
-    endDate: "2026-10-06",
-    city: "Boone",
-    country: "USA",
-    lat: 36.2168,
-    lng: -81.6746,
-    url: "https://northwestahec.wakehealth.edu/t3/courses-and-events/78353",
-    organizer: "Northwest AHEC, Wake Forest University School of Medicine",
-    description: "Interprofessional conference at Appalachian State University on children with special health care needs."
-  },
-  {
     name: "4th Annual Black Maternal & Infant Health Conference 2026",
     specialty: "Obstetrics & Gynecology",
     year: 2026,
@@ -11749,34 +11679,6 @@ const CONFERENCES = [
     url: "https://northwestahec.wakehealth.edu/t3/courses-and-events/78080",
     organizer: "Northwest AHEC, Wake Forest University School of Medicine",
     description: "Conference at Winston-Salem State University on Black maternal and infant health disparities."
-  },
-  {
-    name: "44th Annual Gravidas at Risk Perinatal Conference 2026",
-    specialty: "Obstetrics & Gynecology",
-    year: 2026,
-    startDate: "2026-11-04",
-    endDate: "2026-11-05",
-    city: "Hickory",
-    country: "USA",
-    lat: 35.7332,
-    lng: -81.3412,
-    url: "https://go.northwestahec.wakehealth.edu/gravidas",
-    organizer: "Northwest AHEC, Wake Forest University School of Medicine",
-    description: "Statewide perinatal conference at the Hickory Metro Convention Center."
-  },
-  {
-    name: "28th Annual Diabetes Management Conference 2026",
-    specialty: "Endocrinology",
-    year: 2026,
-    startDate: "2026-11-13",
-    endDate: "2026-11-13",
-    city: "Colfax",
-    country: "USA",
-    lat: 36.1043,
-    lng: -79.9878,
-    url: "https://northwestahec.wakehealth.edu/t3/courses-and-events/78170",
-    organizer: "Northwest AHEC, Wake Forest University School of Medicine",
-    description: "Diabetes update at The Conference Center at GTCC with breakouts on CGM, incretins and DKA."
   },
   {
     name: "Clinical Fungi 2026",

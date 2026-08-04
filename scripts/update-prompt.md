@@ -97,6 +97,21 @@ Many parent-organization "meetings" pages (e.g. ACS chapter meetings, FELAC, IFS
 3. WebFetch each chapter/sub-org site directly. These typically *do* publish meeting details publicly.
 4. WebSearch `"<chapter name>" annual meeting 2027 dates location` as a fallback.
 
+**Audience rule — physician CME only:**
+
+The site is aimed at physicians. Add an activity only if it offers **AMA PRA Category 1 Credit™**
+(or the national equivalent for non-US conferences — e.g. EACCME credits in Europe, RACGP/ACRRM
+in Australia, national college accreditation elsewhere).
+
+- **Skip** activities accredited only for nurses, pharmacists or other non-physician professions
+  (ACPE, ANCC/state nursing contact hours, CPEU) with no physician credit.
+- **Skip** meetings explicitly aimed at nurses or advanced practice providers — e.g. anything titled
+  "… for Nurses", "Nursing Congress", "Advanced Practice Provider Symposium".
+- **Keep** physician conferences that merely welcome allied professionals as well, and keep physician
+  conferences that happen to be *held at* a school of nursing or run alongside a separate nursing
+  congress — the venue or a co-located event is not the audience.
+- If the credit type is not stated anywhere on the official site, skip it.
+
 **Quality rules:**
 
 - Be conservative — only add conferences you're confident about (clear date, clear location, real organizing society with an official site).
