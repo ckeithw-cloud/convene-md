@@ -11777,5 +11777,33 @@ const CONFERENCES = [
     url: "https://northwestahec.wakehealth.edu/t3/courses-and-events/78170",
     organizer: "Northwest AHEC, Wake Forest University School of Medicine",
     description: "Diabetes update at The Conference Center at GTCC with breakouts on CGM, incretins and DKA."
+  },
+  {
+    name: "Clinical Fungi 2026",
+    specialty: "Infectious Disease",
+    year: 2026,
+    startDate: "2026-08-31",
+    endDate: "2026-09-05",
+    city: "Salt Lake City",
+    country: "USA",
+    lat: 40.7608,
+    lng: -111.891,
+    url: "https://uofuhealth.cloud-cme.com/course/listing?p=1000",
+    organizer: "University of Utah Health Continuing Medical Education",
+    description: "Six-day medical mycology course at the Marriott Downtown Salt Lake City, offering 45.5 credits."
+  },
+  {
+    name: "Albuquerque Symposium on Advanced Cardiopulmonary Disease and Transplant 2026",
+    specialty: "Cardiology",
+    year: 2026,
+    startDate: "2026-09-23",
+    endDate: "2026-09-23",
+    city: "Albuquerque",
+    country: "USA",
+    lat: 35.0844,
+    lng: -106.6504,
+    url: "https://uofuhealth.cloud-cme.com/course/listing?p=1000",
+    organizer: "University of Utah Health Continuing Medical Education",
+    description: "Symposium on advanced heart and lung failure and transplantation."
   }
 ];
