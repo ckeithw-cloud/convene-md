@@ -97,6 +97,19 @@ Many parent-organization "meetings" pages (e.g. ACS chapter meetings, FELAC, IFS
 3. WebFetch each chapter/sub-org site directly. These typically *do* publish meeting details publicly.
 4. WebSearch `"<chapter name>" annual meeting 2027 dates location` as a fallback.
 
+**WATCHLIST — call these out, don't just add them:**
+
+The site owner personally wants to attend the conferences below. If one appears with confirmed
+dates during a run, add it as normal AND state it prominently at the very top of your run summary
+(e.g. `*** WATCHLIST HIT: SMA Tavarua 2027, June 19-26, Fiji ***`) so it is not lost among the
+routine additions.
+
+- **Surfers Medical Association @ Tavarua, Fiji.** The June 2026 edition already ran. Check
+  `https://surfersmedicalassociation.org/product-category/conferences/` each run — SMA publishes
+  conferences as WooCommerce products. Their date metadata is unreliable (the 2026 listing still
+  used a `june-2025` URL slug, and the product page disagreed with search results on the exact
+  days), so confirm dates from the product page body itself.
+
 **Audience rule — physician CME only:**
 
 The site is aimed at physicians. Add an activity only if it offers **AMA PRA Category 1 Credit™**
