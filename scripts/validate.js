@@ -87,6 +87,28 @@ for (const c of CONFERENCES) {
   } else byUrlYear.set(key, c.name);
 }
 
+// The exact city+startDate+specialty key misses the case that actually bit us:
+// two researchers reporting the SAME congress with dates a day or two apart
+// (e.g. WCN 2027 as Oct 23-25 vs Oct 24-27). Same city + same specialty +
+// overlapping date ranges is almost never two distinct meetings, so treat it
+// as an error and go re-check the official site for the real dates.
+const overlaps = [];
+for (let i = 0; i < CONFERENCES.length; i++) {
+  const a = CONFERENCES[i];
+  if (!a) continue;
+  for (let j = i + 1; j < CONFERENCES.length; j++) {
+    const b = CONFERENCES[j];
+    if (!b) continue;
+    if (a.specialty !== b.specialty) continue;
+    if (String(a.city).toLowerCase() !== String(b.city).toLowerCase()) continue;
+    if (a.startDate <= b.endDate && b.startDate <= a.endDate) {
+      overlaps.push(`overlapping dates, same city+specialty: "${a.name}" (${a.startDate}→${a.endDate}) ` +
+                    `and "${b.name}" (${b.startDate}→${b.endDate}) — same event twice? verify official dates`);
+    }
+  }
+}
+for (const o of overlaps) err(o);
+
 const specialties = new Set(CONFERENCES.filter(Boolean).map((c) => c.specialty));
 const missing = [...VALID_SPECIALTIES].filter((s) => !specialties.has(s));
 if (missing.length) warnings.push(`specialties with no conferences: ${missing.join(", ")}`);
