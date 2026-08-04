@@ -65,14 +65,36 @@ CONFERENCES.forEach((c, i) => {
   if (c._id !== undefined) err(`${id}: _id must not be hand-set (assigned at runtime)`);
 });
 
-// Same event listed twice. City + start date + specialty is the practical key:
-// two genuinely different meetings essentially never share all three.
+// Helpers shared by the duplicate checks below. Two records are "the same event"
+// if they point at the same URL, or their distinctive title words mostly match.
+const norm = (u) => String(u || "").replace(/\/$/, "").toLowerCase();
+const titleWords = (n) => new Set(
+  String(n).toLowerCase().replace(/[^a-z0-9 ]/g, " ").split(/\s+/)
+    .filter((w) => w.length > 3 && !/^(the|and|with|for|annual|conference|congress|meeting|update|course|symposium|20\d\d)$/.test(w))
+);
+function sameEventish(a, b) {
+  if (norm(a.url) === norm(b.url)) return true;
+  const wa = titleWords(a.name), wb = titleWords(b.name);
+  if (!wa.size || !wb.size) return false;
+  let shared = 0;
+  for (const w of wa) if (wb.has(w)) shared++;
+  return shared / Math.min(wa.size, wb.size) >= 0.6;   // most distinctive words match
+}
+
+// Same event listed twice. City + start date + specialty catches most of it — but a
+// large CME office can legitimately run two different courses in one specialty, in
+// one city, on the same day. So a key collision is only an ERROR when the records
+// also look like the same event; otherwise it is a warning to eyeball.
 const byKey = new Map();
 for (const c of CONFERENCES) {
   if (!c) continue;
   const key = `${c.city}|${c.startDate}|${c.specialty}`.toLowerCase();
-  if (byKey.has(key)) err(`duplicate: "${c.name}" collides with "${byKey.get(key)}" (${key})`);
-  else byKey.set(key, c.name);
+  const prev = byKey.get(key);
+  if (prev) {
+    const msg = `same city+date+specialty: "${c.name}" and "${prev.name}"`;
+    if (sameEventish(c, prev)) err(msg + " — looks like the SAME event twice");
+    else warnings.push(msg + " — two different courses? verify both are real");
+  } else byKey.set(key, c);
 }
 
 // Same URL under different names is usually fine (society landing pages are reused
@@ -89,10 +111,11 @@ for (const c of CONFERENCES) {
 
 // The exact city+startDate+specialty key misses the case that actually bit us:
 // two researchers reporting the SAME congress with dates a day or two apart
-// (e.g. WCN 2027 as Oct 23-25 vs Oct 24-27). Same city + same specialty +
-// overlapping date ranges is almost never two distinct meetings, so treat it
-// as an error and go re-check the official site for the real dates.
-const overlaps = [];
+// (e.g. WCN 2027 as Oct 23-25 vs Oct 24-27). But it also produces false alarms:
+// a big CME office can genuinely run two different courses in the same specialty,
+// in the same city, on the same days (Harvard ran Boston Sports Cardiology and the
+// Rhodes Course concurrently). So overlap alone is a WARNING; it is only an ERROR
+// when the two records also look like the same event (see sameEventish above).
 for (let i = 0; i < CONFERENCES.length; i++) {
   const a = CONFERENCES[i];
   if (!a) continue;
@@ -101,13 +124,13 @@ for (let i = 0; i < CONFERENCES.length; i++) {
     if (!b) continue;
     if (a.specialty !== b.specialty) continue;
     if (String(a.city).toLowerCase() !== String(b.city).toLowerCase()) continue;
-    if (a.startDate <= b.endDate && b.startDate <= a.endDate) {
-      overlaps.push(`overlapping dates, same city+specialty: "${a.name}" (${a.startDate}→${a.endDate}) ` +
-                    `and "${b.name}" (${b.startDate}→${b.endDate}) — same event twice? verify official dates`);
-    }
+    if (!(a.startDate <= b.endDate && b.startDate <= a.endDate)) continue;
+    const msg = `overlapping dates, same city+specialty: "${a.name}" (${a.startDate}→${a.endDate}) ` +
+                `and "${b.name}" (${b.startDate}→${b.endDate})`;
+    if (sameEventish(a, b)) err(msg + " — looks like the SAME event twice; verify official dates");
+    else warnings.push(msg + " — two different courses? verify both are real");
   }
 }
-for (const o of overlaps) err(o);
 
 const specialties = new Set(CONFERENCES.filter(Boolean).map((c) => c.specialty));
 const missing = [...VALID_SPECIALTIES].filter((s) => !specialties.has(s));
