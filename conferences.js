@@ -2213,7 +2213,7 @@ const CONFERENCES = [
     lat: 29.7604,
     lng: -95.3698,
     url: "https://accscientificsession.acc.org/",
-    organizer: "American College of Cardiology",
+    organizer: "American College of Cardiology & World Heart Federation",
     description: "ACC's flagship scientific session, held together with the World Congress of Cardiology."
   },
   {
@@ -3839,20 +3839,6 @@ const CONFERENCES = [
     url: "https://www.impe2027.jp/",
     organizer: "Japanese Society for Pediatric Endocrinology with international pediatric endocrine societies",
     description: "The global pediatric endocrinology meeting, hosted at Pacifico Yokohama."
-  },
-  {
-    name: "ACC.27 with the World Congress of Cardiology",
-    specialty: "Cardiology",
-    year: 2027,
-    startDate: "2027-04-10",
-    endDate: "2027-04-12",
-    city: "Houston",
-    country: "USA",
-    lat: 29.7604,
-    lng: -95.3698,
-    url: "https://accscientificsession.acc.org/",
-    organizer: "American College of Cardiology & World Heart Federation",
-    description: "The ACC's Annual Scientific Session, held jointly with the World Congress of Cardiology."
   },
   {
     name: "ACC.28 Annual Scientific Session",
