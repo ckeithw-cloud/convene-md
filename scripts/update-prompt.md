@@ -65,7 +65,16 @@ If a candidate doesn't fit any of the 46 specialty values above, skip it — don
    - **ACR** = American College of Radiology **and** American College of Rheumatology.
    - **AAP** = American Academy of Pediatrics **and** American Academy of Pain Medicine.
    - **ASA** = American Society of Anesthesiologists **and** American Stroke Association.
+   - **APSICON** = Association of Plastic Surgeons of India **and** Indian Association of Pediatric Surgeons.
+   - **ISG** resolves to the Indian Society of *Geomatics*, not Gastroenterology — `isgindia.org` is the wrong body.
    When in doubt, open the URL and read whose branding is on it.
+
+3b. **Some "official" calendars are themselves unreliable — always confirm on the event's own site.**
+   The Chinese Medical Association publishes an annual conference plan PDF at `cma.org.cn`. It is a good
+   *discovery* tool but its data goes stale: it listed the 23rd Neurosurgery Congress in Shenyang when the
+   congress site says Dalian, and several dates in it had already been revised. Use such plans only to find
+   candidates, then verify each on its own congress site (for China, the `*.sciconf.cn` and `medmeeting.org`
+   microsites are the CMA's official congress-hosting platforms and count as primary).
 4. For new entries, supply `lat`/`lng` from your knowledge for the city. Confirm dates and URL from the official society site where possible.
 5. Append ONLY new entries to the array in `conferences.js`. **Do not reformat or modify existing entries.** Insert before the closing `];`.
 6. Run `node scripts/validate.js`. It must exit 0. If it reports errors, fix your own additions
