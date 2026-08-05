@@ -97,6 +97,18 @@ Many parent-organization "meetings" pages (e.g. ACS chapter meetings, FELAC, IFS
 3. WebFetch each chapter/sub-org site directly. These typically *do* publish meeting details publicly.
 4. WebSearch `"<chapter name>" annual meeting 2027 dates location` as a fallback.
 
+3c. **Series providers publish dozens of near-identical courses — check before re-adding.**
+   Commercial destination-CME companies run the same course title in many cities. The whole
+   published catalogue of these is already in `conferences.js`; only add an edition that is
+   genuinely absent, and always deep-link the individual course page, never a category page.
+   - **Medical Education Resources (MER)** — `mer.org`, 170 conferences already loaded through
+     Oct 2027. Month pages are server-rendered at
+     `https://www.mer.org/conference-schedule/<base64 of MM-YYYY>/` (follow the redirect) and
+     each course lives at `https://www.mer.org/conference//<base64 of its numeric id>`, so the
+     catalogue can be re-scraped without a browser. Titles repeat heavily ("Internal Medicine
+     for Primary Care: <topics>"), so dedupe on the URL, not the name.
+   Name new editions `"<official course title> — <City> <Year>"`, matching the existing rows.
+
 **WATCHLIST — call these out, don't just add them:**
 
 The site owner personally wants to attend the conferences below. If one appears with confirmed
