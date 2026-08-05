@@ -78,7 +78,15 @@ function sameEventish(a, b) {
   if (!wa.size || !wb.size) return false;
   let shared = 0;
   for (const w of wa) if (wb.has(w)) shared++;
-  return shared / Math.min(wa.size, wb.size) >= 0.6;   // most distinctive words match
+  // Two records that link to DIFFERENT pages on the organiser's own site are usually
+  // two different courses, not one course entered twice — a real double-entry almost
+  // always shares the URL (that is the WCN case this check was written for). Series
+  // providers make this bite: every MER course is titled "Internal Medicine for
+  // Primary Care: <topics>", so the shared boilerplate alone clears 0.6 and back-to-back
+  // courses at one resort got flagged as duplicates. Demand a near-identical title
+  // before overriding the evidence of two distinct URLs.
+  const distinctUrls = a.url && b.url && norm(a.url) !== norm(b.url);
+  return shared / Math.min(wa.size, wb.size) >= (distinctUrls ? 0.85 : 0.6);
 }
 
 // Same event listed twice. City + start date + specialty catches most of it — but a
