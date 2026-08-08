@@ -124,6 +124,9 @@ function page({ url, title, description, h1, crumbs, lede, list, related, extraB
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/hub.css" />
+  <!-- No analytics beacon here on purpose: convene.md is a proxied Cloudflare zone with
+       Web Analytics RUM set to automatic, so the edge injects the snippet into every HTML
+       response, hub pages included. Adding it by hand would double-count. -->
 ${jsonld ? `  <script type="application/ld+json">\n${JSON.stringify(jsonld, null, 2)}\n  </script>` : ""}
 </head>
 <body>
@@ -320,7 +323,29 @@ function main() {
 
   fs.writeFileSync(path.join(ROOT, "scripts", "hub-urls.json"), JSON.stringify(urls.sort(), null, 2));
 
+  // Delete hub pages this run no longer generates. A hub disappears whenever its last
+  // events go past, its city drops below MIN_CITY, or a country/city gets renamed in
+  // conferences.js. Left behind, the old directory keeps being served but is absent from
+  // the sitemap — stale duplicate content, the same problem `not_found_handling = "none"`
+  // was set to avoid. Only ever touches generated hub roots, never hand-written files.
+  const live = new Set(urls);
+  let pruned = 0;
+  for (const group of ["specialty", "country", "city", "year"]) {
+    const dir = path.join(ROOT, group);
+    if (!fs.existsSync(dir)) continue;
+    for (const slug of fs.readdirSync(dir)) {
+      const url = `/${group}/${slug}/`;
+      if (live.has(url)) continue;
+      const target = path.join(dir, slug);
+      if (!fs.statSync(target).isDirectory()) continue;
+      fs.rmSync(target, { recursive: true, force: true });
+      warn.push(`pruned stale hub ${url}`);
+      pruned++;
+    }
+  }
+
   for (const w of warn) console.warn("warn: " + w);
+  if (pruned) console.log(`build-hubs: pruned ${pruned} stale hub page(s).`);
   console.log(`build-hubs: ${urls.length} pages — ${bySpecialty.size} specialty, ${byCountry.size} country, ` +
               `${cityEntries.length} city, ${byYear.size} year, 1 browse.`);
 }

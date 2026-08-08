@@ -15,6 +15,9 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/hub.css" />
+  <!-- No analytics beacon here on purpose: convene.md is a proxied Cloudflare zone with
+       Web Analytics RUM set to automatic, so the edge injects the snippet into every HTML
+       response, hub pages included. Adding it by hand would double-count. -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
