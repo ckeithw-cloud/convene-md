@@ -142,9 +142,18 @@ function main() {
     <priority>${priority}</priority>
   </url>`;
 
+  // Hand-written editorial pages. Unlike hubs these are not generated, so they have to be
+  // listed explicitly or they never reach the sitemap. Guides target informational queries
+  // ("can I deduct a medical conference") that the conference hubs cannot rank for, so they
+  // carry a high priority despite being few.
+  const staticPages = ["/guides/", "/guides/cme-money/"].filter((p) =>
+    fs.existsSync(path.join(ROOT, p, "index.html"))
+  );
+
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${entry("/", "1.0")}
+${staticPages.map(u => entry(u, "0.9")).join("\n")}
 ${hubUrls.map(u => entry(u, u === "/browse/" ? "0.9" : "0.8")).join("\n")}
 </urlset>
 `;
