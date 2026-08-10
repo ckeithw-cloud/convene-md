@@ -139,7 +139,7 @@ ${jsonld ? `  <script type="application/ld+json">\n${JSON.stringify(jsonld, null
       <nav>
         <a href="/">Map</a>
         <a href="/browse/">Browse</a>
-        <a href="/guides/">Guides</a>
+        <a href="/guides/cme-money/">Guides</a>
       </nav>
     </div>
   </header>

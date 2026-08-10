@@ -146,6 +146,9 @@ function main() {
   // listed explicitly or they never reach the sitemap. Guides target informational queries
   // ("can I deduct a medical conference") that the conference hubs cannot rank for, so they
   // carry a high priority despite being few.
+  // "/guides/" is listed but currently has no index.html — a single article did not need a
+  // parent page. The existsSync filter means it simply drops out of the sitemap, and
+  // restoring the index later is enough to bring it back with no change here.
   const staticPages = ["/guides/", "/guides/cme-money/"].filter((p) =>
     fs.existsSync(path.join(ROOT, p, "index.html"))
   );
