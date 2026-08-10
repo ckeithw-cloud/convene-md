@@ -62,31 +62,26 @@ function query(start, end) {
       referrers: rumPageloadEventsAdaptiveGroups(
         filter: { siteTag: "${SITE_TAG}", datetime_geq: "${iso(start)}", datetime_lt: "${iso(end)}" }
         limit: 50, orderBy: [count_DESC]
-        dimensions: { refererHost }
       ) { count dimensions { refererHost } }
 
       pages: rumPageloadEventsAdaptiveGroups(
         filter: { siteTag: "${SITE_TAG}", datetime_geq: "${iso(start)}", datetime_lt: "${iso(end)}" }
         limit: 25, orderBy: [count_DESC]
-        dimensions: { requestPath }
       ) { count dimensions { requestPath } }
 
       countries: rumPageloadEventsAdaptiveGroups(
         filter: { siteTag: "${SITE_TAG}", datetime_geq: "${iso(start)}", datetime_lt: "${iso(end)}" }
         limit: 15, orderBy: [count_DESC]
-        dimensions: { countryName }
       ) { count dimensions { countryName } }
 
       devices: rumPageloadEventsAdaptiveGroups(
         filter: { siteTag: "${SITE_TAG}", datetime_geq: "${iso(start)}", datetime_lt: "${iso(end)}" }
         limit: 10, orderBy: [count_DESC]
-        dimensions: { deviceType }
       ) { count dimensions { deviceType } }
 
       daily: rumPageloadEventsAdaptiveGroups(
         filter: { siteTag: "${SITE_TAG}", datetime_geq: "${iso(start)}", datetime_lt: "${iso(end)}" }
         limit: 100, orderBy: [date_ASC]
-        dimensions: { date }
       ) { count sum { visits } dimensions { date } }
     }
   }
@@ -210,6 +205,17 @@ function table(rows, label) {
   let md = `# convene.md traffic — ${label}\n\n`;
   md += `_${argDays}-day window, compared with the ${argDays} days before it. `;
   md += `Generated ${day(new Date())} from Cloudflare Web Analytics._\n\n`;
+
+  // At convene.md's current volume Cloudflare's adaptive sampling scales a handful of real
+  // events up by a fixed interval, so every figure lands on a round multiple. Saying so in
+  // the report stops us reading "10 referred visits" as ten separate people.
+  const allRound = [views, visits, externalTotal, refs.direct].every((n) => n % 10 === 0);
+  if (allRound && views > 0) {
+    md += `> **Read magnitudes loosely.** Every figure below is a multiple of 10, which means `;
+    md += `Cloudflare's adaptive sampling is scaling up a small number of real events — `;
+    md += `"10 visits" may be a single person. Trends and the direction of change are `;
+    md += `meaningful; exact counts are not, and will not be until volume rises.\n\n`;
+  }
 
   md += `## Headline\n\n`;
   md += `| Metric | This period | Previous | Change |\n| --- | ---: | ---: | ---: |\n`;
