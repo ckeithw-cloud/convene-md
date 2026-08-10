@@ -1,0 +1,95 @@
+/* Newsletter capture. Loaded by BOTH styles.css pages (the map/list app) and hub.css pages
+   (the 279 generated hubs + articles), so the component looks and behaves the same wherever
+   it appears. Kept in its own file rather than duplicated into two stylesheets that are
+   deliberately separate for unrelated reasons. */
+
+.signup {
+  background: #fff;
+  border: 1px solid #dbe3ec;
+  border-left: 4px solid #36b3a8;
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin: 26px 0;
+}
+
+.signup h2,
+.signup .signup-title {
+  margin: 0 0 4px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f2942;
+  border: none;
+  padding: 0;
+}
+
+.signup p.signup-sub {
+  margin: 0 0 13px;
+  font-size: 14px;
+  color: #5a6b7d;
+}
+
+.signup form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.signup input[type="email"],
+.signup select {
+  font: inherit;
+  font-size: 14px;
+  padding: 9px 11px;
+  border: 1px solid #cbd6e2;
+  border-radius: 7px;
+  background: #fff;
+  color: #1a2332;
+  min-width: 0;            /* lets flex children shrink instead of overflowing */
+}
+.signup input[type="email"] { flex: 1 1 210px; }
+.signup select { flex: 0 1 165px; }
+
+.signup input[type="email"]:focus,
+.signup select:focus {
+  outline: none;
+  border-color: #36b3a8;
+  box-shadow: 0 0 0 3px rgba(54,179,168,0.18);
+}
+
+.signup button[type="submit"] {
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 9px 18px;
+  border: none;
+  border-radius: 7px;
+  background: #36b3a8;
+  color: #fff;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+.signup button[type="submit"]:hover { background: #2c9488; }
+
+.signup .signup-fine {
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: #7a8899;
+}
+.signup .signup-fine a { color: #14746f; }
+
+.signup .signup-done {
+  font-size: 15px;
+  color: #12655e;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* The form posts into this so the page never navigates away and no overlay is needed. */
+.signup-sink { display: none; }
+
+@media (max-width: 560px) {
+  .signup form { flex-direction: column; align-items: stretch; }
+  .signup input[type="email"],
+  .signup select,
+  .signup button[type="submit"] { width: 100%; flex: 1 1 auto; }
+}

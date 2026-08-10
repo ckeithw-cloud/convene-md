@@ -17,6 +17,8 @@
 const fs = require("fs");
 const path = require("path");
 
+const { signupBlock } = require("./signup-block");
+
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://convene.md";
 // Two conferences is enough for a real page: each carries a verified date, venue
@@ -124,6 +126,7 @@ function page({ url, title, description, h1, crumbs, lede, list, related, extraB
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/hub.css" />
+  <link rel="stylesheet" href="/signup.css" />
   <!-- No analytics beacon here on purpose: convene.md is a proxied Cloudflare zone with
        Web Analytics RUM set to automatic, so the edge injects the snippet into every HTML
        response, hub pages included. Adding it by hand would double-count. -->
@@ -149,6 +152,7 @@ ${jsonld ? `  <script type="application/ld+json">\n${JSON.stringify(jsonld, null
     ${lede ? `<p class="lede">${lede}</p>` : ""}
 ${extraBody || ""}
 ${list ? `    <ul class="conf-list">\n${items}\n    </ul>` : ""}
+${signupBlock({ specialty: selfSpecialty, source: url })}
 ${related || ""}
   </main>
   <footer class="hub-footer">

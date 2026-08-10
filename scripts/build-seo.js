@@ -8,6 +8,8 @@
 const fs = require("fs");
 const path = require("path");
 
+const { signupBlock } = require("./signup-block");
+
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://convene.md";
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
@@ -131,7 +133,20 @@ function main() {
   html = injectBetween(html, "<!-- SEO:JSONLD:START -->", "<!-- SEO:JSONLD:END -->", buildJsonLd(upcoming));
   html = injectBetween(html, "<!-- SEO:HUBS:START -->", "<!-- SEO:HUBS:END -->", buildHubLinks(hubUrls));
   html = injectBetween(html, "<!-- SEO:LIST:START -->", "<!-- SEO:LIST:END -->", buildList(upcoming));
+  html = injectBetween(html, "<!-- SEO:SIGNUP:START -->", "<!-- SEO:SIGNUP:END -->",
+    signupBlock({ source: "/" }));
   fs.writeFileSync(path.join(ROOT, "index.html"), html);
+
+  // Hand-written article pages carry the same marker pair, so the capture block stays
+  // identical everywhere rather than being copied and left to drift.
+  for (const rel of ["how-to/deduct-cme-travel/index.html"]) {
+    const file = path.join(ROOT, rel);
+    if (!fs.existsSync(file)) continue;
+    let doc = fs.readFileSync(file, "utf8");
+    doc = injectBetween(doc, "<!-- SEO:SIGNUP:START -->", "<!-- SEO:SIGNUP:END -->",
+      signupBlock({ source: "/" + path.dirname(rel) + "/" }));
+    fs.writeFileSync(file, doc);
+  }
 
   // Hub pages go in the sitemap too — they are the pages that can actually rank
   // for "<specialty> conferences" and "medical conferences in <place>" queries.

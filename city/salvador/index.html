@@ -15,6 +15,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/hub.css" />
+  <link rel="stylesheet" href="/signup.css" />
   <!-- No analytics beacon here on purpose: convene.md is a proxied Cloudflare zone with
        Web Analytics RUM set to automatic, so the edge injects the snippet into every HTML
        response, hub pages included. Adding it by hand would double-count. -->
@@ -152,6 +153,90 @@
         <p class="desc">37th Brazilian Surgery Congress in Salvador, Bahia — Brazil's flagship biennial surgical meeting (3,000+ attendees).</p>
       </li>
     </ul>
+      <aside class="signup">
+        <p class="signup-title">New conferences, monthly</p>
+        <p class="signup-sub">One email a month: newly added meetings and destination CME, every date verified against the organiser's own site. No spam, unsubscribe anytime.</p>
+        <form class="signup-form" action="https://buttondown.com/api/emails/embed-subscribe/convenemd" method="post" target="signup-sink">
+          <input type="email" name="email" placeholder="you@hospital.org" required autocomplete="email" aria-label="Email address" />
+          <select name="metadata__role" aria-label="Your role">
+            <option value="">I am a…</option>
+            <option value="Physician (MD/DO)">Physician (MD/DO)</option>
+            <option value="Resident / Fellow">Resident / Fellow</option>
+            <option value="NP / PA">NP / PA</option>
+            <option value="Other">Other</option>
+          </select>
+          <select name="metadata__specialty" aria-label="Your specialty">
+            <option value="">Specialty (optional)</option>
+            <option value="Allergy &amp; Immunology">Allergy &amp; Immunology</option>
+            <option value="Anesthesiology">Anesthesiology</option>
+            <option value="Bariatric Surgery">Bariatric Surgery</option>
+            <option value="Cardiology">Cardiology</option>
+            <option value="Cardiothoracic Surgery">Cardiothoracic Surgery</option>
+            <option value="Colorectal Surgery">Colorectal Surgery</option>
+            <option value="Critical Care">Critical Care</option>
+            <option value="Dermatology">Dermatology</option>
+            <option value="Emergency Medicine">Emergency Medicine</option>
+            <option value="Endocrine / ENT Surgery">Endocrine / ENT Surgery</option>
+            <option value="Endocrinology">Endocrinology</option>
+            <option value="Family Medicine">Family Medicine</option>
+            <option value="Gastroenterology">Gastroenterology</option>
+            <option value="General Surgery">General Surgery</option>
+            <option value="Geriatrics">Geriatrics</option>
+            <option value="HPB / Transplant Surgery">HPB / Transplant Surgery</option>
+            <option value="Hematology">Hematology</option>
+            <option value="Hospital Medicine">Hospital Medicine</option>
+            <option value="Infectious Disease">Infectious Disease</option>
+            <option value="Internal Medicine">Internal Medicine</option>
+            <option value="Lifestyle &amp; Preventive Medicine">Lifestyle &amp; Preventive Medicine</option>
+            <option value="Medical Oncology">Medical Oncology</option>
+            <option value="Nephrology">Nephrology</option>
+            <option value="Neurology">Neurology</option>
+            <option value="Neurosurgery">Neurosurgery</option>
+            <option value="Obstetrics &amp; Gynecology">Obstetrics &amp; Gynecology</option>
+            <option value="Ophthalmology">Ophthalmology</option>
+            <option value="Orthopedic Surgery">Orthopedic Surgery</option>
+            <option value="Pain Medicine">Pain Medicine</option>
+            <option value="Palliative &amp; Supportive Care">Palliative &amp; Supportive Care</option>
+            <option value="Pathology">Pathology</option>
+            <option value="Pediatric Surgery">Pediatric Surgery</option>
+            <option value="Pediatrics">Pediatrics</option>
+            <option value="Physical Medicine &amp; Rehabilitation">Physical Medicine &amp; Rehabilitation</option>
+            <option value="Plastic Surgery">Plastic Surgery</option>
+            <option value="Psychiatry">Psychiatry</option>
+            <option value="Pulmonology">Pulmonology</option>
+            <option value="Radiation Oncology">Radiation Oncology</option>
+            <option value="Radiology">Radiology</option>
+            <option value="Rheumatology">Rheumatology</option>
+            <option value="Sports &amp; Wilderness Medicine">Sports &amp; Wilderness Medicine</option>
+            <option value="Sports Medicine">Sports Medicine</option>
+            <option value="Surgical Oncology">Surgical Oncology</option>
+            <option value="Trauma Surgery">Trauma Surgery</option>
+            <option value="Urology">Urology</option>
+            <option value="Vascular Surgery">Vascular Surgery</option>
+          </select>
+          <input type="hidden" name="metadata__source" value="/city/salvador/" />
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="signup-fine">Free. We never sell your address.</p>
+        <p class="signup-done" hidden>Thanks — check your inbox to confirm your subscription.</p>
+        <iframe name="signup-sink" class="signup-sink" title="" aria-hidden="true" tabindex="-1"></iframe>
+      </aside>
+<script>
+(function(){
+  if (window.__signupBound) return;
+  window.__signupBound = true;
+  document.addEventListener("submit", function(e){
+    var f = e.target.closest("form.signup-form");
+    if (!f) return;
+    var box = f.closest(".signup");
+    setTimeout(function(){
+      f.hidden = true;
+      var fine = box.querySelector(".signup-fine"); if (fine) fine.hidden = true;
+      var done = box.querySelector(".signup-done"); if (done) done.hidden = false;
+    }, 60);
+  });
+})();
+</script>
     <section class="related">
       <h2>Other conference cities</h2>
       <div class="chips"><a class="chip" href="/city/las-vegas/">Las Vegas</a><a class="chip" href="/city/lake-buena-vista/">Lake Buena Vista</a><a class="chip" href="/city/san-diego/">San Diego</a><a class="chip" href="/city/new-york/">New York</a><a class="chip" href="/city/boston/">Boston</a><a class="chip" href="/city/chicago/">Chicago</a><a class="chip" href="/city/san-francisco/">San Francisco</a><a class="chip" href="/city/los-angeles/">Los Angeles</a><a class="chip" href="/city/cleveland/">Cleveland</a><a class="chip" href="/city/singapore/">Singapore</a><a class="chip" href="/city/nashville/">Nashville</a><a class="chip" href="/city/washington-dc/">Washington, DC</a><a class="chip" href="/city/montreal/">Montreal</a><a class="chip" href="/city/cape-town/">Cape Town</a><a class="chip" href="/city/toronto/">Toronto</a><a class="chip" href="/city/wailea/">Wailea</a><a class="chip" href="/city/vancouver/">Vancouver</a><a class="chip" href="/city/st-louis/">St. Louis</a><a class="chip" href="/city/hong-kong/">Hong Kong</a><a class="chip" href="/city/coronado/">Coronado</a><a class="chip" href="/city/kuala-lumpur/">Kuala Lumpur</a><a class="chip" href="/city/taipei/">Taipei</a><a class="chip" href="/city/stanford/">Stanford</a><a class="chip" href="/city/halifax/">Halifax</a><a class="chip" href="/city/milan/">Milan</a><a class="chip" href="/city/new-orleans/">New Orleans</a><a class="chip" href="/city/orlando/">Orlando</a><a class="chip" href="/city/lahaina/">Lahaina</a><a class="chip" href="/city/hilton-head-island/">Hilton Head Island</a><a class="chip" href="/city/charleston/">Charleston</a><a class="chip" href="/city/rio-de-janeiro/">Rio de Janeiro</a><a class="chip" href="/city/anaheim/">Anaheim</a><a class="chip" href="/city/philadelphia/">Philadelphia</a><a class="chip" href="/city/calgary/">Calgary</a><a class="chip" href="/city/honolulu/">Honolulu</a><a class="chip" href="/city/london/">London</a><a class="chip" href="/city/paris/">Paris</a><a class="chip" href="/city/banff/">Banff</a><a class="chip" href="/city/seoul/">Seoul</a><a class="chip" href="/city/barcelona/">Barcelona</a><a class="chip" href="/city/ann-arbor/">Ann Arbor</a><a class="chip" href="/city/durham/">Durham</a><a class="chip" href="/city/kyoto/">Kyoto</a><a class="chip" href="/city/new-haven/">New Haven</a><a class="chip" href="/city/poipu/">Poipu</a><a class="chip" href="/city/bangkok/">Bangkok</a><a class="chip" href="/city/phoenix/">Phoenix</a><a class="chip" href="/city/nassau/">Nassau</a><a class="chip" href="/city/big-sky/">Big Sky</a><a class="chip" href="/city/gandhinagar/">Gandhinagar</a><a class="chip" href="/city/adelaide/">Adelaide</a><a class="chip" href="/city/lima/">Lima</a><a class="chip" href="/city/denver/">Denver</a><a class="chip" href="/city/berlin/">Berlin</a><a class="chip" href="/city/stockholm/">Stockholm</a><a class="chip" href="/city/pasay-city/">Pasay City</a><a class="chip" href="/city/vienna/">Vienna</a><a class="chip" href="/city/somerville/">Somerville</a><a class="chip" href="/city/asheville/">Asheville</a><a class="chip" href="/city/key-west/">Key West</a></div>

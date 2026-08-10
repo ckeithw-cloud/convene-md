@@ -23188,6 +23188,7 @@
         crossorigin="" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" crossorigin="" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/signup.css" />
 </head>
 <body>
   <div id="app">
@@ -23250,17 +23251,92 @@
     </header>
     <div id="map"></div>
     <div id="list" hidden>
-      <div class="list-signup">
-        <div class="ls-copy">
-          <strong>New conferences, monthly</strong>
-          <span>Newly added surgical meetings and destination CME — one email a month, no spam.</span>
-        </div>
-        <form id="list-signup-form" action="https://buttondown.com/api/emails/embed-subscribe/convenemd" method="post" target="_blank">
+      <!-- SEO:SIGNUP:START -->
+      <aside class="signup">
+        <p class="signup-title">New conferences, monthly</p>
+        <p class="signup-sub">One email a month: newly added meetings and destination CME, every date verified against the organiser's own site. No spam, unsubscribe anytime.</p>
+        <form class="signup-form" action="https://buttondown.com/api/emails/embed-subscribe/convenemd" method="post" target="signup-sink">
           <input type="email" name="email" placeholder="you@hospital.org" required autocomplete="email" aria-label="Email address" />
+          <select name="metadata__role" aria-label="Your role">
+            <option value="">I am a…</option>
+            <option value="Physician (MD/DO)">Physician (MD/DO)</option>
+            <option value="Resident / Fellow">Resident / Fellow</option>
+            <option value="NP / PA">NP / PA</option>
+            <option value="Other">Other</option>
+          </select>
+          <select name="metadata__specialty" aria-label="Your specialty">
+            <option value="">Specialty (optional)</option>
+            <option value="Allergy &amp; Immunology">Allergy &amp; Immunology</option>
+            <option value="Anesthesiology">Anesthesiology</option>
+            <option value="Bariatric Surgery">Bariatric Surgery</option>
+            <option value="Cardiology">Cardiology</option>
+            <option value="Cardiothoracic Surgery">Cardiothoracic Surgery</option>
+            <option value="Colorectal Surgery">Colorectal Surgery</option>
+            <option value="Critical Care">Critical Care</option>
+            <option value="Dermatology">Dermatology</option>
+            <option value="Emergency Medicine">Emergency Medicine</option>
+            <option value="Endocrine / ENT Surgery">Endocrine / ENT Surgery</option>
+            <option value="Endocrinology">Endocrinology</option>
+            <option value="Family Medicine">Family Medicine</option>
+            <option value="Gastroenterology">Gastroenterology</option>
+            <option value="General Surgery">General Surgery</option>
+            <option value="Geriatrics">Geriatrics</option>
+            <option value="HPB / Transplant Surgery">HPB / Transplant Surgery</option>
+            <option value="Hematology">Hematology</option>
+            <option value="Hospital Medicine">Hospital Medicine</option>
+            <option value="Infectious Disease">Infectious Disease</option>
+            <option value="Internal Medicine">Internal Medicine</option>
+            <option value="Lifestyle &amp; Preventive Medicine">Lifestyle &amp; Preventive Medicine</option>
+            <option value="Medical Oncology">Medical Oncology</option>
+            <option value="Nephrology">Nephrology</option>
+            <option value="Neurology">Neurology</option>
+            <option value="Neurosurgery">Neurosurgery</option>
+            <option value="Obstetrics &amp; Gynecology">Obstetrics &amp; Gynecology</option>
+            <option value="Ophthalmology">Ophthalmology</option>
+            <option value="Orthopedic Surgery">Orthopedic Surgery</option>
+            <option value="Pain Medicine">Pain Medicine</option>
+            <option value="Palliative &amp; Supportive Care">Palliative &amp; Supportive Care</option>
+            <option value="Pathology">Pathology</option>
+            <option value="Pediatric Surgery">Pediatric Surgery</option>
+            <option value="Pediatrics">Pediatrics</option>
+            <option value="Physical Medicine &amp; Rehabilitation">Physical Medicine &amp; Rehabilitation</option>
+            <option value="Plastic Surgery">Plastic Surgery</option>
+            <option value="Psychiatry">Psychiatry</option>
+            <option value="Pulmonology">Pulmonology</option>
+            <option value="Radiation Oncology">Radiation Oncology</option>
+            <option value="Radiology">Radiology</option>
+            <option value="Rheumatology">Rheumatology</option>
+            <option value="Sports &amp; Wilderness Medicine">Sports &amp; Wilderness Medicine</option>
+            <option value="Sports Medicine">Sports Medicine</option>
+            <option value="Surgical Oncology">Surgical Oncology</option>
+            <option value="Trauma Surgery">Trauma Surgery</option>
+            <option value="Urology">Urology</option>
+            <option value="Vascular Surgery">Vascular Surgery</option>
+          </select>
+          <input type="hidden" name="metadata__source" value="/" />
           <button type="submit">Subscribe</button>
         </form>
-        <div class="ls-success" id="list-signup-success" hidden>Thanks — check your inbox to confirm. 🎉</div>
-      </div>
+        <p class="signup-fine">Free. We never sell your address.</p>
+        <p class="signup-done" hidden>Thanks — check your inbox to confirm your subscription.</p>
+        <iframe name="signup-sink" class="signup-sink" title="" aria-hidden="true" tabindex="-1"></iframe>
+      </aside>
+<script>
+(function(){
+  if (window.__signupBound) return;
+  window.__signupBound = true;
+  document.addEventListener("submit", function(e){
+    var f = e.target.closest("form.signup-form");
+    if (!f) return;
+    var box = f.closest(".signup");
+    setTimeout(function(){
+      f.hidden = true;
+      var fine = box.querySelector(".signup-fine"); if (fine) fine.hidden = true;
+      var done = box.querySelector(".signup-done"); if (done) done.hidden = false;
+    }, 60);
+  });
+})();
+</script>
+  <!-- SEO:SIGNUP:END -->
       <div id="list-body"></div>
       <div class="list-submit" id="list-submit">
         <button type="button" class="submit-toggle" id="submit-toggle" aria-expanded="false">

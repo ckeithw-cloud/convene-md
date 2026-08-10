@@ -15,6 +15,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/hub.css" />
+  <link rel="stylesheet" href="/signup.css" />
   <!-- No analytics beacon here on purpose: convene.md is a proxied Cloudflare zone with
        Web Analytics RUM set to automatic, so the edge injects the snippet into every HTML
        response, hub pages included. Adding it by hand would double-count. -->
@@ -220,6 +221,90 @@
         <p class="desc">Saudi Arabia's national ENT conference, covering all subspecialties, held in Jeddah.</p>
       </li>
     </ul>
+      <aside class="signup">
+        <p class="signup-title">New conferences, monthly</p>
+        <p class="signup-sub">One email a month: newly added meetings and destination CME, every date verified against the organiser's own site. No spam, unsubscribe anytime.</p>
+        <form class="signup-form" action="https://buttondown.com/api/emails/embed-subscribe/convenemd" method="post" target="signup-sink">
+          <input type="email" name="email" placeholder="you@hospital.org" required autocomplete="email" aria-label="Email address" />
+          <select name="metadata__role" aria-label="Your role">
+            <option value="">I am a…</option>
+            <option value="Physician (MD/DO)">Physician (MD/DO)</option>
+            <option value="Resident / Fellow">Resident / Fellow</option>
+            <option value="NP / PA">NP / PA</option>
+            <option value="Other">Other</option>
+          </select>
+          <select name="metadata__specialty" aria-label="Your specialty">
+            <option value="">Specialty (optional)</option>
+            <option value="Allergy &amp; Immunology">Allergy &amp; Immunology</option>
+            <option value="Anesthesiology">Anesthesiology</option>
+            <option value="Bariatric Surgery">Bariatric Surgery</option>
+            <option value="Cardiology">Cardiology</option>
+            <option value="Cardiothoracic Surgery">Cardiothoracic Surgery</option>
+            <option value="Colorectal Surgery">Colorectal Surgery</option>
+            <option value="Critical Care">Critical Care</option>
+            <option value="Dermatology">Dermatology</option>
+            <option value="Emergency Medicine">Emergency Medicine</option>
+            <option value="Endocrine / ENT Surgery">Endocrine / ENT Surgery</option>
+            <option value="Endocrinology">Endocrinology</option>
+            <option value="Family Medicine">Family Medicine</option>
+            <option value="Gastroenterology">Gastroenterology</option>
+            <option value="General Surgery">General Surgery</option>
+            <option value="Geriatrics">Geriatrics</option>
+            <option value="HPB / Transplant Surgery">HPB / Transplant Surgery</option>
+            <option value="Hematology">Hematology</option>
+            <option value="Hospital Medicine">Hospital Medicine</option>
+            <option value="Infectious Disease">Infectious Disease</option>
+            <option value="Internal Medicine">Internal Medicine</option>
+            <option value="Lifestyle &amp; Preventive Medicine">Lifestyle &amp; Preventive Medicine</option>
+            <option value="Medical Oncology">Medical Oncology</option>
+            <option value="Nephrology">Nephrology</option>
+            <option value="Neurology">Neurology</option>
+            <option value="Neurosurgery">Neurosurgery</option>
+            <option value="Obstetrics &amp; Gynecology">Obstetrics &amp; Gynecology</option>
+            <option value="Ophthalmology">Ophthalmology</option>
+            <option value="Orthopedic Surgery">Orthopedic Surgery</option>
+            <option value="Pain Medicine">Pain Medicine</option>
+            <option value="Palliative &amp; Supportive Care">Palliative &amp; Supportive Care</option>
+            <option value="Pathology">Pathology</option>
+            <option value="Pediatric Surgery">Pediatric Surgery</option>
+            <option value="Pediatrics">Pediatrics</option>
+            <option value="Physical Medicine &amp; Rehabilitation">Physical Medicine &amp; Rehabilitation</option>
+            <option value="Plastic Surgery">Plastic Surgery</option>
+            <option value="Psychiatry">Psychiatry</option>
+            <option value="Pulmonology">Pulmonology</option>
+            <option value="Radiation Oncology">Radiation Oncology</option>
+            <option value="Radiology">Radiology</option>
+            <option value="Rheumatology">Rheumatology</option>
+            <option value="Sports &amp; Wilderness Medicine">Sports &amp; Wilderness Medicine</option>
+            <option value="Sports Medicine">Sports Medicine</option>
+            <option value="Surgical Oncology">Surgical Oncology</option>
+            <option value="Trauma Surgery">Trauma Surgery</option>
+            <option value="Urology">Urology</option>
+            <option value="Vascular Surgery">Vascular Surgery</option>
+          </select>
+          <input type="hidden" name="metadata__source" value="/country/saudi-arabia/" />
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="signup-fine">Free. We never sell your address.</p>
+        <p class="signup-done" hidden>Thanks — check your inbox to confirm your subscription.</p>
+        <iframe name="signup-sink" class="signup-sink" title="" aria-hidden="true" tabindex="-1"></iframe>
+      </aside>
+<script>
+(function(){
+  if (window.__signupBound) return;
+  window.__signupBound = true;
+  document.addEventListener("submit", function(e){
+    var f = e.target.closest("form.signup-form");
+    if (!f) return;
+    var box = f.closest(".signup");
+    setTimeout(function(){
+      f.hidden = true;
+      var fine = box.querySelector(".signup-fine"); if (fine) fine.hidden = true;
+      var done = box.querySelector(".signup-done"); if (done) done.hidden = false;
+    }, 60);
+  });
+})();
+</script>
     <section class="related">
       <h2>Conferences in other countries</h2>
       <div class="chips"><a class="chip" href="/country/argentina/">Argentina</a><a class="chip" href="/country/aruba/">Aruba</a><a class="chip" href="/country/australia/">Australia</a><a class="chip" href="/country/austria/">Austria</a><a class="chip" href="/country/bahamas/">Bahamas</a><a class="chip" href="/country/benin/">Benin</a><a class="chip" href="/country/botswana/">Botswana</a><a class="chip" href="/country/brazil/">Brazil</a><a class="chip" href="/country/canada/">Canada</a><a class="chip" href="/country/cayman-islands/">Cayman Islands</a><a class="chip" href="/country/chile/">Chile</a><a class="chip" href="/country/china/">China</a><a class="chip" href="/country/colombia/">Colombia</a><a class="chip" href="/country/costa-rica/">Costa Rica</a><a class="chip" href="/country/croatia/">Croatia</a><a class="chip" href="/country/czech-republic/">Czech Republic</a><a class="chip" href="/country/denmark/">Denmark</a><a class="chip" href="/country/dominican-republic/">Dominican Republic</a><a class="chip" href="/country/egypt/">Egypt</a><a class="chip" href="/country/finland/">Finland</a><a class="chip" href="/country/france/">France</a><a class="chip" href="/country/germany/">Germany</a><a class="chip" href="/country/greece/">Greece</a><a class="chip" href="/country/honduras/">Honduras</a><a class="chip" href="/country/hong-kong-sar/">Hong Kong SAR</a><a class="chip" href="/country/india/">India</a><a class="chip" href="/country/indonesia/">Indonesia</a><a class="chip" href="/country/italy/">Italy</a><a class="chip" href="/country/japan/">Japan</a><a class="chip" href="/country/kenya/">Kenya</a><a class="chip" href="/country/malawi/">Malawi</a><a class="chip" href="/country/malaysia/">Malaysia</a><a class="chip" href="/country/mexico/">Mexico</a><a class="chip" href="/country/morocco/">Morocco</a><a class="chip" href="/country/nepal/">Nepal</a><a class="chip" href="/country/netherlands/">Netherlands</a><a class="chip" href="/country/new-zealand/">New Zealand</a><a class="chip" href="/country/nicaragua/">Nicaragua</a><a class="chip" href="/country/nigeria/">Nigeria</a><a class="chip" href="/country/norway/">Norway</a><a class="chip" href="/country/peru/">Peru</a><a class="chip" href="/country/philippines/">Philippines</a><a class="chip" href="/country/poland/">Poland</a><a class="chip" href="/country/portugal/">Portugal</a><a class="chip" href="/country/puerto-rico/">Puerto Rico</a><a class="chip" href="/country/rwanda/">Rwanda</a><a class="chip" href="/country/saint-kitts-and-nevis/">Saint Kitts and Nevis</a><a class="chip" href="/country/serbia/">Serbia</a><a class="chip" href="/country/singapore/">Singapore</a><a class="chip" href="/country/slovenia/">Slovenia</a><a class="chip" href="/country/south-africa/">South Africa</a><a class="chip" href="/country/south-korea/">South Korea</a><a class="chip" href="/country/spain/">Spain</a><a class="chip" href="/country/sweden/">Sweden</a><a class="chip" href="/country/switzerland/">Switzerland</a><a class="chip" href="/country/taiwan/">Taiwan</a><a class="chip" href="/country/tanzania/">Tanzania</a><a class="chip" href="/country/thailand/">Thailand</a><a class="chip" href="/country/tunisia/">Tunisia</a><a class="chip" href="/country/usa/">USA</a><a class="chip" href="/country/uganda/">Uganda</a><a class="chip" href="/country/united-arab-emirates/">United Arab Emirates</a><a class="chip" href="/country/united-kingdom/">United Kingdom</a><a class="chip" href="/country/vietnam/">Vietnam</a></div>

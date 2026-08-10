@@ -15,6 +15,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/hub.css" />
+  <link rel="stylesheet" href="/signup.css" />
   <!-- No analytics beacon here on purpose: convene.md is a proxied Cloudflare zone with
        Web Analytics RUM set to automatic, so the edge injects the snippet into every HTML
        response, hub pages included. Adding it by hand would double-count. -->
@@ -43,6 +44,90 @@
     <section class="browse-group"><h2>By city</h2><div class="chips"><a class="chip" href="/city/las-vegas/">Las Vegas (25)</a><a class="chip" href="/city/lake-buena-vista/">Lake Buena Vista (25)</a><a class="chip" href="/city/san-diego/">San Diego (24)</a><a class="chip" href="/city/new-york/">New York (23)</a><a class="chip" href="/city/boston/">Boston (20)</a><a class="chip" href="/city/chicago/">Chicago (19)</a><a class="chip" href="/city/san-francisco/">San Francisco (17)</a><a class="chip" href="/city/los-angeles/">Los Angeles (17)</a><a class="chip" href="/city/cleveland/">Cleveland (13)</a><a class="chip" href="/city/singapore/">Singapore (11)</a><a class="chip" href="/city/nashville/">Nashville (10)</a><a class="chip" href="/city/washington-dc/">Washington, DC (10)</a><a class="chip" href="/city/montreal/">Montreal (10)</a><a class="chip" href="/city/cape-town/">Cape Town (9)</a><a class="chip" href="/city/toronto/">Toronto (9)</a><a class="chip" href="/city/wailea/">Wailea (9)</a><a class="chip" href="/city/vancouver/">Vancouver (9)</a><a class="chip" href="/city/st-louis/">St. Louis (8)</a><a class="chip" href="/city/hong-kong/">Hong Kong (8)</a><a class="chip" href="/city/coronado/">Coronado (8)</a><a class="chip" href="/city/kuala-lumpur/">Kuala Lumpur (7)</a><a class="chip" href="/city/taipei/">Taipei (7)</a><a class="chip" href="/city/stanford/">Stanford (7)</a><a class="chip" href="/city/halifax/">Halifax (7)</a><a class="chip" href="/city/milan/">Milan (7)</a><a class="chip" href="/city/new-orleans/">New Orleans (7)</a><a class="chip" href="/city/orlando/">Orlando (7)</a><a class="chip" href="/city/lahaina/">Lahaina (7)</a><a class="chip" href="/city/hilton-head-island/">Hilton Head Island (6)</a><a class="chip" href="/city/charleston/">Charleston (6)</a><a class="chip" href="/city/rio-de-janeiro/">Rio de Janeiro (6)</a><a class="chip" href="/city/anaheim/">Anaheim (6)</a><a class="chip" href="/city/philadelphia/">Philadelphia (6)</a><a class="chip" href="/city/calgary/">Calgary (6)</a><a class="chip" href="/city/honolulu/">Honolulu (5)</a><a class="chip" href="/city/london/">London (5)</a><a class="chip" href="/city/paris/">Paris (5)</a><a class="chip" href="/city/banff/">Banff (5)</a><a class="chip" href="/city/seoul/">Seoul (5)</a><a class="chip" href="/city/barcelona/">Barcelona (5)</a><a class="chip" href="/city/ann-arbor/">Ann Arbor (5)</a><a class="chip" href="/city/durham/">Durham (5)</a><a class="chip" href="/city/kyoto/">Kyoto (5)</a><a class="chip" href="/city/new-haven/">New Haven (5)</a><a class="chip" href="/city/poipu/">Poipu (5)</a><a class="chip" href="/city/bangkok/">Bangkok (5)</a><a class="chip" href="/city/phoenix/">Phoenix (5)</a><a class="chip" href="/city/nassau/">Nassau (5)</a><a class="chip" href="/city/big-sky/">Big Sky (5)</a><a class="chip" href="/city/gandhinagar/">Gandhinagar (4)</a><a class="chip" href="/city/adelaide/">Adelaide (4)</a><a class="chip" href="/city/lima/">Lima (4)</a><a class="chip" href="/city/denver/">Denver (4)</a><a class="chip" href="/city/berlin/">Berlin (4)</a><a class="chip" href="/city/stockholm/">Stockholm (4)</a><a class="chip" href="/city/pasay-city/">Pasay City (4)</a><a class="chip" href="/city/vienna/">Vienna (4)</a><a class="chip" href="/city/somerville/">Somerville (4)</a><a class="chip" href="/city/asheville/">Asheville (4)</a><a class="chip" href="/city/key-west/">Key West (4)</a><a class="chip" href="/city/ko-olina/">Ko Olina (4)</a><a class="chip" href="/city/vail/">Vail (4)</a><a class="chip" href="/city/yokohama/">Yokohama (4)</a><a class="chip" href="/city/salvador/">Salvador (3)</a><a class="chip" href="/city/sao-paulo/">São Paulo (3)</a><a class="chip" href="/city/shanghai/">Shanghai (3)</a><a class="chip" href="/city/munich/">Munich (3)</a><a class="chip" href="/city/la-jolla/">La Jolla (3)</a><a class="chip" href="/city/whitefish/">Whitefish (3)</a><a class="chip" href="/city/dubai/">Dubai (3)</a><a class="chip" href="/city/fish-camp/">Fish Camp (3)</a><a class="chip" href="/city/beijing/">Beijing (3)</a><a class="chip" href="/city/wuhan/">Wuhan (3)</a><a class="chip" href="/city/buenos-aires/">Buenos Aires (3)</a><a class="chip" href="/city/machu-picchu/">Machu Picchu (3)</a><a class="chip" href="/city/baltimore/">Baltimore (3)</a><a class="chip" href="/city/savannah/">Savannah (3)</a><a class="chip" href="/city/george-town/">George Town (3)</a><a class="chip" href="/city/lisbon/">Lisbon (3)</a><a class="chip" href="/city/ottawa/">Ottawa (3)</a><a class="chip" href="/city/tokyo/">Tokyo (3)</a><a class="chip" href="/city/kapalua/">Kapalua (3)</a><a class="chip" href="/city/copenhagen/">Copenhagen (3)</a><a class="chip" href="/city/basel/">Basel (3)</a><a class="chip" href="/city/palm-beach/">Palm Beach (3)</a><a class="chip" href="/city/beaver-creek/">Beaver Creek (3)</a><a class="chip" href="/city/san-juan/">San Juan (3)</a><a class="chip" href="/city/whistler/">Whistler (3)</a><a class="chip" href="/city/snowbird/">Snowbird (3)</a><a class="chip" href="/city/napa/">Napa (2)</a><a class="chip" href="/city/hobart/">Hobart (2)</a><a class="chip" href="/city/isle-of-palms/">Isle of Palms (2)</a><a class="chip" href="/city/oceanside/">Oceanside (2)</a><a class="chip" href="/city/melbourne/">Melbourne (2)</a><a class="chip" href="/city/mackinac-island/">Mackinac Island (2)</a><a class="chip" href="/city/bariloche/">Bariloche (2)</a><a class="chip" href="/city/santa-fe/">Santa Fe (2)</a><a class="chip" href="/city/xian/">Xi'an (2)</a><a class="chip" href="/city/penang/">Penang (2)</a><a class="chip" href="/city/batam/">Batam (2)</a><a class="chip" href="/city/florianopolis/">Florianópolis (2)</a><a class="chip" href="/city/seattle-washington/">Seattle, Washington (2)</a><a class="chip" href="/city/dusseldorf/">Düsseldorf (2)</a><a class="chip" href="/city/guangzhou/">Guangzhou (2)</a><a class="chip" href="/city/belo-horizonte/">Belo Horizonte (2)</a><a class="chip" href="/city/dana-point/">Dana Point (2)</a><a class="chip" href="/city/sonoma/">Sonoma (2)</a><a class="chip" href="/city/palo-alto/">Palo Alto (2)</a><a class="chip" href="/city/charlotte/">Charlotte (2)</a><a class="chip" href="/city/carlsbad/">Carlsbad (2)</a><a class="chip" href="/city/new-delhi/">New Delhi (2)</a><a class="chip" href="/city/da-nang/">Da Nang (2)</a><a class="chip" href="/city/beachwood/">Beachwood (2)</a><a class="chip" href="/city/sapporo/">Sapporo (2)</a><a class="chip" href="/city/rome/">Rome (2)</a><a class="chip" href="/city/sydney/">Sydney (2)</a><a class="chip" href="/city/athens/">Athens (2)</a><a class="chip" href="/city/san-antonio/">San Antonio (2)</a><a class="chip" href="/city/houston/">Houston (2)</a><a class="chip" href="/city/tunis/">Tunis (2)</a><a class="chip" href="/city/riyadh/">Riyadh (2)</a><a class="chip" href="/city/hollywood/">Hollywood (2)</a><a class="chip" href="/city/auckland/">Auckland (2)</a><a class="chip" href="/city/christchurch/">Christchurch (2)</a><a class="chip" href="/city/jaipur/">Jaipur (2)</a><a class="chip" href="/city/portland/">Portland (2)</a><a class="chip" href="/city/madrid/">Madrid (2)</a><a class="chip" href="/city/nagasaki/">Nagasaki (2)</a><a class="chip" href="/city/surabaya/">Surabaya (2)</a><a class="chip" href="/city/chongqing/">Chongqing (2)</a><a class="chip" href="/city/cartagena/">Cartagena (2)</a><a class="chip" href="/city/jeddah/">Jeddah (2)</a><a class="chip" href="/city/merida/">Mérida (2)</a><a class="chip" href="/city/bengaluru/">Bengaluru (2)</a><a class="chip" href="/city/manila/">Manila (2)</a><a class="chip" href="/city/ahmedabad/">Ahmedabad (2)</a><a class="chip" href="/city/scottsdale/">Scottsdale (2)</a><a class="chip" href="/city/fort-lauderdale/">Fort Lauderdale (2)</a><a class="chip" href="/city/indian-wells/">Indian Wells (2)</a><a class="chip" href="/city/breckenridge/">Breckenridge (2)</a><a class="chip" href="/city/waikoloa/">Waikoloa (2)</a><a class="chip" href="/city/waimea/">Waimea (2)</a><a class="chip" href="/city/park-city/">Park City (2)</a><a class="chip" href="/city/half-moon-bay/">Half Moon Bay (2)</a><a class="chip" href="/city/keystone/">Keystone (2)</a><a class="chip" href="/city/koloa/">Koloa (2)</a><a class="chip" href="/city/kigali/">Kigali (2)</a><a class="chip" href="/city/miami-beach/">Miami Beach (2)</a><a class="chip" href="/city/seville/">Seville (2)</a><a class="chip" href="/city/bilbao/">Bilbao (2)</a><a class="chip" href="/city/clearwater-beach/">Clearwater Beach (2)</a><a class="chip" href="/city/gold-coast/">Gold Coast (2)</a><a class="chip" href="/city/rotterdam/">Rotterdam (2)</a><a class="chip" href="/city/glasgow/">Glasgow (2)</a><a class="chip" href="/city/atlanta/">Atlanta (2)</a><a class="chip" href="/city/stevenson/">Stevenson (2)</a><a class="chip" href="/city/kobe/">Kobe (2)</a><a class="chip" href="/city/winnipeg/">Winnipeg (2)</a><a class="chip" href="/city/gothenburg/">Gothenburg (2)</a><a class="chip" href="/city/nairobi/">Nairobi (2)</a><a class="chip" href="/city/bali/">Bali (2)</a></div></section>
     <section class="browse-group"><h2>By year</h2><div class="chips"><a class="chip" href="/year/2026/">2026</a><a class="chip" href="/year/2027/">2027</a><a class="chip" href="/year/2028/">2028</a><a class="chip" href="/year/2029/">2029</a></div></section>
 
+      <aside class="signup">
+        <p class="signup-title">New conferences, monthly</p>
+        <p class="signup-sub">One email a month: newly added meetings and destination CME, every date verified against the organiser's own site. No spam, unsubscribe anytime.</p>
+        <form class="signup-form" action="https://buttondown.com/api/emails/embed-subscribe/convenemd" method="post" target="signup-sink">
+          <input type="email" name="email" placeholder="you@hospital.org" required autocomplete="email" aria-label="Email address" />
+          <select name="metadata__role" aria-label="Your role">
+            <option value="">I am a…</option>
+            <option value="Physician (MD/DO)">Physician (MD/DO)</option>
+            <option value="Resident / Fellow">Resident / Fellow</option>
+            <option value="NP / PA">NP / PA</option>
+            <option value="Other">Other</option>
+          </select>
+          <select name="metadata__specialty" aria-label="Your specialty">
+            <option value="">Specialty (optional)</option>
+            <option value="Allergy &amp; Immunology">Allergy &amp; Immunology</option>
+            <option value="Anesthesiology">Anesthesiology</option>
+            <option value="Bariatric Surgery">Bariatric Surgery</option>
+            <option value="Cardiology">Cardiology</option>
+            <option value="Cardiothoracic Surgery">Cardiothoracic Surgery</option>
+            <option value="Colorectal Surgery">Colorectal Surgery</option>
+            <option value="Critical Care">Critical Care</option>
+            <option value="Dermatology">Dermatology</option>
+            <option value="Emergency Medicine">Emergency Medicine</option>
+            <option value="Endocrine / ENT Surgery">Endocrine / ENT Surgery</option>
+            <option value="Endocrinology">Endocrinology</option>
+            <option value="Family Medicine">Family Medicine</option>
+            <option value="Gastroenterology">Gastroenterology</option>
+            <option value="General Surgery">General Surgery</option>
+            <option value="Geriatrics">Geriatrics</option>
+            <option value="HPB / Transplant Surgery">HPB / Transplant Surgery</option>
+            <option value="Hematology">Hematology</option>
+            <option value="Hospital Medicine">Hospital Medicine</option>
+            <option value="Infectious Disease">Infectious Disease</option>
+            <option value="Internal Medicine">Internal Medicine</option>
+            <option value="Lifestyle &amp; Preventive Medicine">Lifestyle &amp; Preventive Medicine</option>
+            <option value="Medical Oncology">Medical Oncology</option>
+            <option value="Nephrology">Nephrology</option>
+            <option value="Neurology">Neurology</option>
+            <option value="Neurosurgery">Neurosurgery</option>
+            <option value="Obstetrics &amp; Gynecology">Obstetrics &amp; Gynecology</option>
+            <option value="Ophthalmology">Ophthalmology</option>
+            <option value="Orthopedic Surgery">Orthopedic Surgery</option>
+            <option value="Pain Medicine">Pain Medicine</option>
+            <option value="Palliative &amp; Supportive Care">Palliative &amp; Supportive Care</option>
+            <option value="Pathology">Pathology</option>
+            <option value="Pediatric Surgery">Pediatric Surgery</option>
+            <option value="Pediatrics">Pediatrics</option>
+            <option value="Physical Medicine &amp; Rehabilitation">Physical Medicine &amp; Rehabilitation</option>
+            <option value="Plastic Surgery">Plastic Surgery</option>
+            <option value="Psychiatry">Psychiatry</option>
+            <option value="Pulmonology">Pulmonology</option>
+            <option value="Radiation Oncology">Radiation Oncology</option>
+            <option value="Radiology">Radiology</option>
+            <option value="Rheumatology">Rheumatology</option>
+            <option value="Sports &amp; Wilderness Medicine">Sports &amp; Wilderness Medicine</option>
+            <option value="Sports Medicine">Sports Medicine</option>
+            <option value="Surgical Oncology">Surgical Oncology</option>
+            <option value="Trauma Surgery">Trauma Surgery</option>
+            <option value="Urology">Urology</option>
+            <option value="Vascular Surgery">Vascular Surgery</option>
+          </select>
+          <input type="hidden" name="metadata__source" value="/browse/" />
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="signup-fine">Free. We never sell your address.</p>
+        <p class="signup-done" hidden>Thanks — check your inbox to confirm your subscription.</p>
+        <iframe name="signup-sink" class="signup-sink" title="" aria-hidden="true" tabindex="-1"></iframe>
+      </aside>
+<script>
+(function(){
+  if (window.__signupBound) return;
+  window.__signupBound = true;
+  document.addEventListener("submit", function(e){
+    var f = e.target.closest("form.signup-form");
+    if (!f) return;
+    var box = f.closest(".signup");
+    setTimeout(function(){
+      f.hidden = true;
+      var fine = box.querySelector(".signup-fine"); if (fine) fine.hidden = true;
+      var done = box.querySelector(".signup-done"); if (done) done.hidden = false;
+    }, 60);
+  });
+})();
+</script>
 
   </main>
   <footer class="hub-footer">

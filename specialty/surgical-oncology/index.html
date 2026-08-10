@@ -15,6 +15,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/hub.css" />
+  <link rel="stylesheet" href="/signup.css" />
   <!-- No analytics beacon here on purpose: convene.md is a proxied Cloudflare zone with
        Web Analytics RUM set to automatic, so the edge injects the snippet into every HTML
        response, hub pages included. Adding it by hand would double-count. -->
@@ -220,6 +221,42 @@
         <p class="desc">Annual meeting of the Society of Surgical Oncology.</p>
       </li>
     </ul>
+      <aside class="signup">
+        <p class="signup-title">New Surgical Oncology conferences, monthly</p>
+        <p class="signup-sub">One email a month: newly added meetings and destination CME, every date verified against the organiser's own site. No spam, unsubscribe anytime.</p>
+        <form class="signup-form" action="https://buttondown.com/api/emails/embed-subscribe/convenemd" method="post" target="signup-sink">
+          <input type="email" name="email" placeholder="you@hospital.org" required autocomplete="email" aria-label="Email address" />
+          <select name="metadata__role" aria-label="Your role">
+            <option value="">I am a…</option>
+            <option value="Physician (MD/DO)">Physician (MD/DO)</option>
+            <option value="Resident / Fellow">Resident / Fellow</option>
+            <option value="NP / PA">NP / PA</option>
+            <option value="Other">Other</option>
+          </select>
+          <input type="hidden" name="metadata__specialty" value="Surgical Oncology" />
+          <input type="hidden" name="metadata__source" value="/specialty/surgical-oncology/" />
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="signup-fine">Free. We never sell your address.</p>
+        <p class="signup-done" hidden>Thanks — check your inbox to confirm your subscription.</p>
+        <iframe name="signup-sink" class="signup-sink" title="" aria-hidden="true" tabindex="-1"></iframe>
+      </aside>
+<script>
+(function(){
+  if (window.__signupBound) return;
+  window.__signupBound = true;
+  document.addEventListener("submit", function(e){
+    var f = e.target.closest("form.signup-form");
+    if (!f) return;
+    var box = f.closest(".signup");
+    setTimeout(function(){
+      f.hidden = true;
+      var fine = box.querySelector(".signup-fine"); if (fine) fine.hidden = true;
+      var done = box.querySelector(".signup-done"); if (done) done.hidden = false;
+    }, 60);
+  });
+})();
+</script>
     <section class="related">
       <h2>Browse other specialties</h2>
       <div class="chips"><a class="chip" href="/specialty/allergy-and-immunology/">Allergy &amp; Immunology</a><a class="chip" href="/specialty/anesthesiology/">Anesthesiology</a><a class="chip" href="/specialty/bariatric-surgery/">Bariatric Surgery</a><a class="chip" href="/specialty/cardiology/">Cardiology</a><a class="chip" href="/specialty/cardiothoracic-surgery/">Cardiothoracic Surgery</a><a class="chip" href="/specialty/colorectal-surgery/">Colorectal Surgery</a><a class="chip" href="/specialty/critical-care/">Critical Care</a><a class="chip" href="/specialty/dermatology/">Dermatology</a><a class="chip" href="/specialty/emergency-medicine/">Emergency Medicine</a><a class="chip" href="/specialty/endocrine-ent-surgery/">Endocrine / ENT Surgery</a><a class="chip" href="/specialty/endocrinology/">Endocrinology</a><a class="chip" href="/specialty/family-medicine/">Family Medicine</a><a class="chip" href="/specialty/gastroenterology/">Gastroenterology</a><a class="chip" href="/specialty/general-surgery/">General Surgery</a><a class="chip" href="/specialty/geriatrics/">Geriatrics</a><a class="chip" href="/specialty/hpb-transplant-surgery/">HPB / Transplant Surgery</a><a class="chip" href="/specialty/hematology/">Hematology</a><a class="chip" href="/specialty/hospital-medicine/">Hospital Medicine</a><a class="chip" href="/specialty/infectious-disease/">Infectious Disease</a><a class="chip" href="/specialty/internal-medicine/">Internal Medicine</a><a class="chip" href="/specialty/lifestyle-and-preventive-medicine/">Lifestyle &amp; Preventive Medicine</a><a class="chip" href="/specialty/medical-oncology/">Medical Oncology</a><a class="chip" href="/specialty/nephrology/">Nephrology</a><a class="chip" href="/specialty/neurology/">Neurology</a><a class="chip" href="/specialty/neurosurgery/">Neurosurgery</a><a class="chip" href="/specialty/obstetrics-and-gynecology/">Obstetrics &amp; Gynecology</a><a class="chip" href="/specialty/ophthalmology/">Ophthalmology</a><a class="chip" href="/specialty/orthopedic-surgery/">Orthopedic Surgery</a><a class="chip" href="/specialty/pain-medicine/">Pain Medicine</a><a class="chip" href="/specialty/palliative-and-supportive-care/">Palliative &amp; Supportive Care</a><a class="chip" href="/specialty/pathology/">Pathology</a><a class="chip" href="/specialty/pediatric-surgery/">Pediatric Surgery</a><a class="chip" href="/specialty/pediatrics/">Pediatrics</a><a class="chip" href="/specialty/physical-medicine-and-rehabilitation/">Physical Medicine &amp; Rehabilitation</a><a class="chip" href="/specialty/plastic-surgery/">Plastic Surgery</a><a class="chip" href="/specialty/psychiatry/">Psychiatry</a><a class="chip" href="/specialty/pulmonology/">Pulmonology</a><a class="chip" href="/specialty/radiation-oncology/">Radiation Oncology</a><a class="chip" href="/specialty/radiology/">Radiology</a><a class="chip" href="/specialty/rheumatology/">Rheumatology</a><a class="chip" href="/specialty/sports-and-wilderness-medicine/">Sports &amp; Wilderness Medicine</a><a class="chip" href="/specialty/sports-medicine/">Sports Medicine</a><a class="chip" href="/specialty/trauma-surgery/">Trauma Surgery</a><a class="chip" href="/specialty/urology/">Urology</a><a class="chip" href="/specialty/vascular-surgery/">Vascular Surgery</a></div>

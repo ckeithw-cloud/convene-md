@@ -501,10 +501,10 @@ document.getElementById("hidePast").addEventListener("change", applyFilters);
 document.getElementById("view-map").addEventListener("click", () => setView("map"));
 document.getElementById("view-list").addEventListener("click", () => setView("list"));
 
-document.getElementById("list-signup-form").addEventListener("submit", () => {
-  document.getElementById("list-signup-form").hidden = true;
-  document.getElementById("list-signup-success").hidden = false;
-});
+// The signup form's submit handling now ships with the block itself (scripts/signup-block.js),
+// so it behaves identically here and on the 277 hub pages, which load no JS of their own.
+// Binding it here as well would double-fire — and getElementById on the old ids would throw,
+// taking the map down with it.
 
 const submitForm = document.getElementById("submit-form");
 const submitToggle = document.getElementById("submit-toggle");
