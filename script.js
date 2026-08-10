@@ -197,6 +197,18 @@ function makeMarker(c) {
 // on load so it fills the viewport width at any screen size (no side margins).
 const INITIAL_BOUNDS = [[-48, -168], [64, 170]];
 
+// KNOWN, ACCEPTED: on a phone this band cannot fit. fitBounds picks the zoom that fits
+// both axes, width binds first, and minZoom below clamps it — so at 390px the map opens
+// on roughly -67..70 longitude, i.e. Europe and Africa, with the Americas off-screen.
+// Most traffic is US, so that is not ideal.
+//
+// Do not "fix" it by lowering minZoom: the whole band then fits, but every marker
+// collapses into a single cluster and the map becomes one dot. A real fix means a
+// region-aware initial view plus zoom-dependent cluster radius, or defaulting mobile to
+// the list. Owner's call (Aug 2026) is to leave it until live user feedback says it
+// matters, rather than guess. Revisit if mobile engagement lags desktop in the weekly
+// traffic reports.
+
 const map = L.map("map", {
   minZoom: 2,
   maxZoom: 10,
