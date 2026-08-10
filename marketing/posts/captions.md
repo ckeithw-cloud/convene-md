@@ -127,3 +127,47 @@ Free, no login → convene.md (link in bio)
 - Post via Reels (not a feed photo). Add a **trending upbeat audio** in the IG editor at low volume — the video is intentionally silent so you can attach trending audio (better for the algorithm than baked-in music).
 - Use `reel-a-cover.png` as the cover so the grid shows the hook text.
 - Best window: 7–9am or 6–8pm ET.
+
+---
+
+## 10 · Kyoto — autumn CME (post next; meeting is Nov 10–13, ~3 months lead)
+**Image:** `2026-11-kyoto.png` — *to source.* Vertical 4:5, Kyoto maples in colour;
+Tofuku-ji or Eikan-do are the classic momiji views. Use your own shot or a genuinely
+free-licensed one (Unsplash/Pexels) — a copyright complaint on the brand account is not
+worth it.
+
+Your CME budget covers Kyoto in November. 🍁
+
+Internal Medicine for Primary Care runs November 10–13 at the Four Seasons Kyoto — 16 AMA PRA Category 1 Credits across four days, which leaves a lot of Kyoto. The maples turn from mid-November; you'd land as the season starts.
+
+Not your specialty? Four more Kyoto meetings are on the map for 2026–27 — orthopedics, allergy & immunology, pediatrics, critical care.
+
+Five Kyoto meetings, every one verified → convene.md (link in bio)
+
+*First comment:* #CME #CMEtravel #TravelCME #DestinationCME #InternalMedicine #PrimaryCare #Kyoto #JapanTravel #MedEd #PhysicianLife #DoctorsOfInstagram #MedicalConference
+
+*Bio link for this post:* `https://convene.md/city/kyoto/?utm_source=instagram&utm_campaign=kyoto-nov`
+
+*Why this one, now:* three months out is the booking window for international CME — Crete
+(Sep 28) and Banff (Aug 27) are already too close to act on. The maple timing is real and
+checkable, which matters with a physician audience. And `/city/kyoto/` holds five meetings
+across five specialties, so the click doesn't dead-end for anyone who isn't internal medicine.
+
+---
+
+## Link tagging — do this on every post from now on
+
+The first traffic report showed why: Instagram, Reddit and LinkedIn in-app browsers strip
+the referrer, so every past post landed in "direct" and was impossible to attribute. The
+only external referrer we have ever recorded is Facebook.
+
+So the bio link is no longer plain `convene.md`. Point it at the **specific hub page** for
+the post, tagged:
+
+```
+https://convene.md/<hub>/?utm_source=instagram&utm_campaign=<short-name>
+```
+
+Swap it when you swap the post. Deep-linking also converts better than the homepage — the
+visitor lands on the thing the caption promised instead of a world map they have to filter.
+`scripts/traffic-report.js` picks these up in the following Monday's report.
