@@ -31,7 +31,7 @@ typing the URL:
 | 2026-08-08 | Site | Added full MER catalogue — 848 → 1013 conferences, 165 new destination-CME meetings | mer.org import |
 | 2026-08-08 | Site | Removed 2 stale hub pages; generator now prunes them automatically | — |
 | 2026-08-08 | Analytics | Started weekly Cloudflare traffic snapshots | this report |
-| 2026-08-10 | Instagram | QUEUED — Kyoto autumn CME post (Nov 10–13, Four Seasons). First post with a tagged bio link | `/city/kyoto/?utm_source=instagram&utm_campaign=kyoto-nov` · caption in marketing/posts/captions.md #10 |
+| 2026-08-10 | Instagram | POSTED — Kyoto autumn CME card (Nov 10–13, Four Seasons Kyoto). First post ever with a tagged bio link, so the first one we can actually attribute | `/city/kyoto/?utm_source=instagram&utm_campaign=kyoto-nov` · caption #10, image 2026-11-kyoto.png |
 
 ## Backfill needed
 
