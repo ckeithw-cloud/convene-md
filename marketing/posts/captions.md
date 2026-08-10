@@ -131,10 +131,10 @@ Free, no login → convene.md (link in bio)
 ---
 
 ## 10 · Kyoto — autumn CME (post next; meeting is Nov 10–13, ~3 months lead)
-**Image:** `2026-11-kyoto.png` — *to source.* Vertical 4:5, Kyoto maples in colour;
-Tofuku-ji or Eikan-do are the classic momiji views. Use your own shot or a genuinely
-free-licensed one (Unsplash/Pexels) — a copyright complaint on the brand account is not
-worth it.
+**Image:** `2026-11-kyoto.png` — built, 1080×1080, same house style as the Snowmass card.
+Regenerate with `node scripts/make-post-kyoto.js > marketing/posts/2026-11-kyoto.svg` then
+`rsvg-convert -w 1080 -h 1080 … -o …png`. Original artwork, so there is no licensing
+question — worth keeping that way rather than pulling a photo off a search.
 
 Your CME budget covers Kyoto in November. 🍁
 
