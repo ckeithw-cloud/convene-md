@@ -152,6 +152,37 @@ table.rules td.no { color: #a33; font-weight: 600; }
 }
 .faq details[open] summary { margin-bottom: 8px; }
 
+/* Guide index cards. Deliberately NOT hub.css's .conf: that is a two-column grid with a
+   fixed 116px date column and white-space:nowrap, sized for "Nov 10-13, 2026". A guide's
+   "Last reviewed" line is far wider, and nowrap made it paint straight over the title. */
+.guide-list { list-style: none; margin: 0; padding: 0; }
+
+.guide-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 12px;
+}
+.guide-card h2 {
+  border-top: none;
+  padding-top: 0;
+  margin: 0 0 5px;
+  font-size: 20px;
+}
+.guide-card h2 a { text-decoration: none; }
+.guide-card h2 a:hover { text-decoration: underline; }
+.guide-card .guide-meta {
+  font-size: 13px;
+  color: #5a6b7d;
+  margin: 0 0 9px;
+}
+.guide-card .guide-desc {
+  font-size: 15px;
+  color: #445468;
+  margin: 0;
+}
+
 .sources { font-size: 14px; color: #4a5a6b; }
 .sources li { margin-bottom: 5px; }
 
