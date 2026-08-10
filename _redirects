@@ -1,0 +1,9 @@
+# Cloudflare static-asset redirects.
+#
+# The CME article shipped briefly at /guides/cme-money/ and that URL went into a sitemap
+# that had already been submitted to Search Console. It was renamed to /how-to/ because
+# "guide" reads as a travel guide rather than a how-to. Redirecting rather than leaving a
+# 404 keeps any crawl signal and stops Search Console reporting a dead sitemap URL.
+/guides/cme-money/  /how-to/deduct-cme-travel/  301
+/guides/            /how-to/deduct-cme-travel/  301
+/guides/*           /how-to/deduct-cme-travel/  301
