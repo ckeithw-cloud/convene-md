@@ -177,6 +177,7 @@ function buildPopupHtml(c) {
         <a class="website" href="${escapeHtml(c.url)}" target="_blank" rel="noopener noreferrer">Visit site →</a>
         <button type="button" class="cal-btn" data-ics="${c._id}">📅 Add to calendar</button>
       </div>
+      <button type="button" class="popup-sub" data-sub-specialty="${escapeHtml(c.specialty)}">Get new ${escapeHtml(c.specialty)} conferences monthly&nbsp;→</button>
     </div>
   `;
 }
@@ -470,6 +471,32 @@ document.addEventListener("click", (e) => {
   e.stopPropagation();
   const c = CONFERENCES[parseInt(t.getAttribute("data-ics"), 10)];
   if (c) downloadIcs(c);
+});
+
+// The map view is the landing view and had no way to subscribe — the signup lives inside
+// #list, which is hidden until someone clicks "List". This routes the highest-intent moment
+// on the site (opening a specific conference) to the form, carrying the specialty across so
+// the visitor never picks it from a 46-item dropdown. No overlay: the no-modal rule stands,
+// and map space is the product.
+document.addEventListener("click", (e) => {
+  const t = e.target.closest("[data-sub-specialty]");
+  if (!t) return;
+  e.preventDefault();
+  e.stopPropagation();
+  const specialty = t.getAttribute("data-sub-specialty");
+
+  setView("list");
+  map.closePopup();
+
+  const box = document.querySelector("#list .signup");
+  if (!box) return;
+  const sel = box.querySelector('select[name="metadata__specialty"]');
+  if (sel && [...sel.options].some(o => o.value === specialty)) sel.value = specialty;
+
+  box.scrollIntoView({ behavior: "smooth", block: "center" });
+  const email = box.querySelector('input[type="email"]');
+  // Focus after the scroll settles, otherwise the browser jumps to the field instantly.
+  if (email) setTimeout(() => email.focus({ preventScroll: true }), 420);
 });
 
 populateFilters();
