@@ -32,11 +32,18 @@ mkdir -p "$PROJECT_DIR/logs"
 
   # Run Claude Code in print/non-interactive mode with permissions auto-accepted
   # for tools the agent needs (read/write conferences.js, web search).
+  #
+  # The prompt goes in on STDIN, and --allowed-tools is last on purpose. That flag is
+  # variadic (<tools...>), so when the prompt was passed as a trailing argument the flag
+  # swallowed it as tool names — the run died with "Input must be provided" and complained
+  # about allow rules called "**Do" and "NOT:**", which were fragments of this very prompt
+  # file's "Do NOT:" section. It failed this way every week without anyone noticing,
+  # because the job could never start at all under the old ~/Documents path.
   "$CLAUDE_BIN" \
     --print \
     --permission-mode acceptEdits \
-    --allowed-tools "Read,Edit,Write,WebSearch,WebFetch,Bash" \
-    "$(cat "$PROMPT_FILE")"
+    --allowed-tools Read Edit Write WebSearch WebFetch Bash \
+    < "$PROMPT_FILE"
 
   # If the agent added/changed conferences, regenerate SEO artifacts and deploy.
   if ! git diff --quiet -- conferences.js; then
