@@ -54,11 +54,14 @@ mkdir -p "$PROJECT_DIR/logs"
     # crawlable link block, so stale hubs would mean a stale sitemap.
     node scripts/build-hubs.js
     node scripts/build-seo.js
+    # how-to/ is listed because build-seo.js injects the signup block into the articles as
+    # well as index.html — leaving it out would strand a modified file every time that
+    # block changes.
     git add -A conferences.js index.html sitemap.xml robots.txt \
-      specialty country city year browse scripts/hub-urls.json
+      specialty country city year browse how-to scripts/hub-urls.json
     git commit -m "Weekly auto-update: new conferences + refreshed SEO" \
       -m "Automated by scripts/update-conferences.sh" \
-      -m "Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>"
+      -m "Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
     git push
   else
     echo "No changes to conferences.js — nothing to deploy."
