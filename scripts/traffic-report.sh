@@ -7,7 +7,7 @@
 
 set -u
 
-PROJECT_DIR="/Users/ckeithw/Documents/Claude projects/medconf"
+PROJECT_DIR="/Users/ckeithw/projects/convene-md"
 LOG_FILE="$PROJECT_DIR/logs/traffic.log"
 TOKEN_FILE="$HOME/.config/convene/cloudflare-token"
 NODE_BIN="$(command -v node || echo /opt/homebrew/bin/node)"

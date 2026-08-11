@@ -30,7 +30,7 @@ cat ~/.config/convene/buttondown-token | wc -c
 5. Run the first report:
 
 ```bash
-cd "/Users/ckeithw/Documents/Claude projects/medconf" && node scripts/subscriber-report.js
+cd "/Users/ckeithw/projects/convene-md" && node scripts/subscriber-report.js
 ```
 
 If Buttondown has renamed a field and a breakdown comes back empty, dump one raw record to

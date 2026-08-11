@@ -1,4 +1,4 @@
-You are running a weekly auto-update for the convene.md website at `/Users/ckeithw/Documents/Claude projects/medconf/`.
+You are running a weekly auto-update for the convene.md website at `/Users/ckeithw/projects/convene-md/`.
 
 **Goal:** Find newly announced medical conferences (ALL specialties, not just surgery) and append them to `conferences.js`. Do not modify existing entries.
 
@@ -36,7 +36,7 @@ If a candidate doesn't fit any of the 46 specialty values above, skip it — don
 
 **Steps:**
 
-1. Read `/Users/ckeithw/Documents/Claude projects/medconf/conferences.js` to load existing entries.
+1. Read `/Users/ckeithw/projects/convene-md/conferences.js` to load existing entries.
 2. Use WebSearch to look for newly announced medical conferences in 2026, 2027, and 2028 across the 46 specialties. Rotate focus each week so coverage stays even — don't only search surgery. Useful query patterns:
    - `"{specialty} congress 2027 location dates"` for each specialty
    - `"{society acronym} annual meeting 2027"` — e.g.

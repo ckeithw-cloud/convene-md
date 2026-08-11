@@ -3,34 +3,35 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>com.medconf.traffic</string>
+    <string>com.medconf.subscribers</string>
 
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>/Users/ckeithw/projects/convene-md/scripts/traffic-report.sh</string>
+        <string>/Users/ckeithw/projects/convene-md/scripts/subscriber-report.sh</string>
     </array>
 
-    <!-- Mondays 08:20. Deliberately well before com.medconf.update (Mon 14:07) so the two
-         jobs never touch the same git checkout at once. -->
+    <!-- 1st of each month at 08:40. Omitting Weekday makes this monthly rather than weekly.
+         Sits 20 minutes after the weekly traffic job so the two never touch the same git
+         checkout at once, and hours before the conference updater. -->
     <key>StartCalendarInterval</key>
     <dict>
-        <key>Weekday</key>
+        <key>Day</key>
         <integer>1</integer>
         <key>Hour</key>
         <integer>8</integer>
         <key>Minute</key>
-        <integer>20</integer>
+        <integer>40</integer>
     </dict>
 
     <key>RunAtLoad</key>
     <false/>
 
     <key>StandardOutPath</key>
-    <string>/Users/ckeithw/projects/convene-md/logs/traffic.out.log</string>
+    <string>/Users/ckeithw/projects/convene-md/logs/subscribers.out.log</string>
 
     <key>StandardErrorPath</key>
-    <string>/Users/ckeithw/projects/convene-md/logs/traffic.err.log</string>
+    <string>/Users/ckeithw/projects/convene-md/logs/subscribers.err.log</string>
 
     <key>EnvironmentVariables</key>
     <dict>

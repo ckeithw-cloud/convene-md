@@ -5,7 +5,7 @@
 
 set -u
 
-PROJECT_DIR="/Users/ckeithw/Documents/Claude projects/medconf"
+PROJECT_DIR="/Users/ckeithw/projects/convene-md"
 PROMPT_FILE="$PROJECT_DIR/scripts/update-prompt.md"
 LOG_FILE="$PROJECT_DIR/logs/update.log"
 CLAUDE_BIN="/opt/homebrew/bin/claude"

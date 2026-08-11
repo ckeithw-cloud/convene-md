@@ -3,34 +3,32 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>com.medconf.traffic</string>
+    <string>com.medconf.update</string>
 
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>/Users/ckeithw/projects/convene-md/scripts/traffic-report.sh</string>
+        <string>/Users/ckeithw/projects/convene-md/scripts/update-conferences.sh</string>
     </array>
 
-    <!-- Mondays 08:20. Deliberately well before com.medconf.update (Mon 14:07) so the two
-         jobs never touch the same git checkout at once. -->
     <key>StartCalendarInterval</key>
     <dict>
         <key>Weekday</key>
         <integer>1</integer>
         <key>Hour</key>
-        <integer>8</integer>
+        <integer>14</integer>
         <key>Minute</key>
-        <integer>20</integer>
+        <integer>7</integer>
     </dict>
 
     <key>RunAtLoad</key>
     <false/>
 
     <key>StandardOutPath</key>
-    <string>/Users/ckeithw/projects/convene-md/logs/traffic.out.log</string>
+    <string>/Users/ckeithw/projects/convene-md/logs/launchd.out.log</string>
 
     <key>StandardErrorPath</key>
-    <string>/Users/ckeithw/projects/convene-md/logs/traffic.err.log</string>
+    <string>/Users/ckeithw/projects/convene-md/logs/launchd.err.log</string>
 
     <key>EnvironmentVariables</key>
     <dict>

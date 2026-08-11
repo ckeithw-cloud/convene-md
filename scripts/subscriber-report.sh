@@ -7,7 +7,7 @@
 
 set -u
 
-PROJECT_DIR="/Users/ckeithw/Documents/Claude projects/medconf"
+PROJECT_DIR="/Users/ckeithw/projects/convene-md"
 LOG_FILE="$PROJECT_DIR/logs/subscribers.log"
 TOKEN_FILE="$HOME/.config/convene/buttondown-token"
 NODE_BIN="$(command -v node || echo /opt/homebrew/bin/node)"
