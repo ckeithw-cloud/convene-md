@@ -29,7 +29,7 @@ mkdir -p ~/.config/convene && touch ~/.config/convene/cloudflare-token && chmod 
 Then paste the token into that file with your editor and save. Verify:
 
 ```bash
-cd "/Users/ckeithw/Documents/Claude projects/medconf" && node scripts/traffic-report.js --days 7
+cd "/Users/ckeithw/projects/convene-md" && node scripts/traffic-report.js --days 7
 ```
 
 If the token is wrong or under-scoped, Cloudflare's own error is printed verbatim.
