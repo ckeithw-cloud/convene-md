@@ -67,6 +67,11 @@ If a candidate doesn't fit any of the 46 specialty values above, skip it — don
    - **ASA** = American Society of Anesthesiologists **and** American Stroke Association.
    - **APSICON** = Association of Plastic Surgeons of India **and** Indian Association of Pediatric Surgeons.
    - **ISG** resolves to the Indian Society of *Geomatics*, not Gastroenterology — `isgindia.org` is the wrong body.
+   - **AAPM** = American Association of *Physicists* in Medicine (`aapm.org`), one character off
+     **AAPM&R**, the American Academy of *Physical Medicine and Rehabilitation* (`aapmr.org`).
+     Searching for the physiatrists returns the physicists' meeting first.
+   - **ASRA** runs *two* separate annual meetings — a spring regional-anesthesia one and an
+     autumn pain-medicine one. They are different events; do not merge or substitute them.
    When in doubt, open the URL and read whose branding is on it.
 
 3b. **Some "official" calendars are themselves unreliable — always confirm on the event's own site.**
