@@ -14186,4 +14186,32 @@ const CONFERENCES = [
     organizer: "Medical Education Resources (MER)",
     description: "Destination primary care CME at JW Marriott Savannah Plant Riverside District, offering 12 AMA PRA Category 1 Credits."
   },
+  {
+    name: "ASCRS Annual Scientific Meeting 2027",
+    specialty: "Colorectal Surgery",
+    year: 2027,
+    startDate: "2027-05-22",
+    endDate: "2027-05-25",
+    city: "New Orleans",
+    country: "USA",
+    lat: 29.9511,
+    lng: -90.0715,
+    url: "https://ascrsasm2027.eventscribe.net/",
+    organizer: "American Society of Colon and Rectal Surgeons",
+    description: "ASCRS annual scientific meeting at the New Orleans Ernest N. Morial Convention Center."
+  },
+  {
+    name: "ASCRS Annual Scientific Meeting 2028",
+    specialty: "Colorectal Surgery",
+    year: 2028,
+    startDate: "2028-05-20",
+    endDate: "2028-05-23",
+    city: "Fort Lauderdale",
+    country: "USA",
+    lat: 26.1224,
+    lng: -80.1373,
+    url: "https://fascrs.org/Web/Web/My-ASCRS/Meetings-Events/Future-Annual-Meetings.aspx",
+    organizer: "American Society of Colon and Rectal Surgeons",
+    description: "ASCRS annual scientific meeting at the Broward County Convention Center."
+  },
 ];
