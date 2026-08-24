@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FDF1E0"/>
+      <stop offset="0.5" stop-color="#FBD9B4"/>
+      <stop offset="1" stop-color="#F7B98C"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5FA8B8"/>
+      <stop offset="1" stop-color="#3E8598"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="640" fill="url(#sky)"/>
+  <circle cx="812" cy="300" r="150" fill="#FFE9C2" opacity="0.55"/>
+  <circle cx="812" cy="300" r="86" fill="#FFD79B"/>
+  <rect y="470" width="1080" height="170" fill="url(#sea)"/>
+  <rect y="640" width="1080" height="120" fill="#F3D9A4"/>
+  <g>
+    <path d="M 96 754 Q 84.52 686.35 74.68 631" stroke="#6B4A34" stroke-width="9.0" fill="none" stroke-linecap="round"/>
+    <path d="M 74.68 631 Q 31.384000000000007 601.726 -4.039999999999992 622.0784" stroke="#1F6B4F" stroke-width="10.7" fill="none" stroke-linecap="round" opacity="0.95"/>
+    <path d="M 74.68 631 Q 43.11000000000001 567.286 17.28000000000001 611.5824" stroke="#1F6B4F" stroke-width="10.7" fill="none" stroke-linecap="round" opacity="0.95"/>
+    <path d="M 74.68 631 Q 74.68 555.232 74.68 607.9088" stroke="#1F6B4F" stroke-width="10.7" fill="none" stroke-linecap="round" opacity="0.95"/>
+    <path d="M 74.68 631 Q 106.25 567.286 132.08 611.5824" stroke="#1F6B4F" stroke-width="10.7" fill="none" stroke-linecap="round" opacity="0.95"/>
+    <path d="M 74.68 631 Q 117.976 601.726 153.4 622.0784" stroke="#1F6B4F" stroke-width="10.7" fill="none" stroke-linecap="round" opacity="0.95"/>
+    <path d="M 74.68 631 Q 53.934000000000005 636.166 36.96000000000001 632.5744" stroke="#1F6B4F" stroke-width="10.7" fill="none" stroke-linecap="round" opacity="0.95"/>
+    <path d="M 74.68 631 Q 95.42600000000002 636.166 112.4 632.5744" stroke="#1F6B4F" stroke-width="10.7" fill="none" stroke-linecap="round" opacity="0.95"/>
+  </g>
+  <g opacity="0.92">
+    <path d="M 1000 756 Q 1010.08 696.6 1018.72 648" stroke="#6B4A34" stroke-width="7.9" fill="none" stroke-linecap="round"/>
+    <path d="M 1018.72 648 Q 980.7040000000001 622.296 949.6 640.1664" stroke="#1F6B4F" stroke-width="9.4" fill="none" stroke-linecap="round" opacity="0.95"/>
+    <path d="M 1018.72 648 Q 991 592.056 968.32 630.9504" stroke="#1F6B4F" stroke-width="9.4" fill="none" stroke-linecap="round" opacity="0.95"/>
+    <path d="M 1018.72 648 Q 1018.72 581.472 1018.72 627.7248" stroke="#1F6B4F" stroke-width="9.4" fill="none" stroke-linecap="round" opacity="0.95"/>
+    <path d="M 1018.72 648 Q 1046.44 592.056 1069.1200000000001 630.9504" stroke="#1F6B4F" stroke-width="9.4" fill="none" stroke-linecap="round" opacity="0.95"/>
+    <path d="M 1018.72 648 Q 1056.736 622.296 1087.8400000000001 640.1664" stroke="#1F6B4F" stroke-width="9.4" fill="none" stroke-linecap="round" opacity="0.95"/>
+    <path d="M 1018.72 648 Q 1000.504 652.536 985.6 649.3824" stroke="#1F6B4F" stroke-width="9.4" fill="none" stroke-linecap="round" opacity="0.95"/>
+    <path d="M 1018.72 648 Q 1036.936 652.536 1051.84 649.3824" stroke="#1F6B4F" stroke-width="9.4" fill="none" stroke-linecap="round" opacity="0.95"/>
+  </g>
+  <rect y="760" width="1080" height="320" fill="#0f2942"/>
+  <g transform="translate(64,52) scale(0.8)">
+    <path d="M 64 6 C 38 6, 18 24, 18 50 C 18 92, 64 124, 64 124 C 64 124, 110 92, 110 50 C 110 24, 90 6, 64 6 Z" fill="#36b3a8"/>
+    <line x1="26" y1="50" x2="102" y2="50" stroke="white" stroke-width="1.6" opacity="0.55"/>
+    <path d="M 64 10 Q 34 50 64 90" fill="none" stroke="white" stroke-width="1.6" opacity="0.55"/>
+    <rect x="57" y="24" width="14" height="42" fill="white" rx="2"/>
+    <rect x="43" y="38" width="42" height="14" fill="white" rx="2"/>
+  </g>
+  <text x="170" y="122" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="44" font-weight="700" fill="#0f2942">convene.md</text>
+  <text x="70" y="246" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="74" font-weight="800" fill="#0f2942">Two conferences.</text>
+  <text x="70" y="330" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="74" font-weight="800" fill="#C2571F">One airfare.</text>
+  <rect x="70" y="386" width="340" height="172" rx="14" fill="rgba(255,255,255,0.94)" stroke="#E2CBA8" stroke-width="2"/>
+  <rect x="444" y="386" width="192" height="172" rx="14" fill="#36b3a8" stroke="#36b3a8" stroke-width="2"/>
+  <rect x="670" y="386" width="340" height="172" rx="14" fill="rgba(255,255,255,0.94)" stroke="#E2CBA8" stroke-width="2"/>
+  <text x="240" y="426" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#8A6A3A" text-anchor="middle" letter-spacing="1.5">JAN 16–22</text>
+  <text x="240" y="470" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#0f2942" text-anchor="middle" letter-spacing="0">Hawaiian Eye</text>
+  <text x="240" y="504" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#0f2942" text-anchor="middle" letter-spacing="0">&amp; Retina</text>
+  <text x="240" y="536" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19" font-weight="500" fill="#6C7A8A" text-anchor="middle" letter-spacing="0">Ophthalmology</text>
+  <text x="540" y="432" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#EAFBF8" text-anchor="middle" letter-spacing="1.5">SAT + SUN</text>
+  <text x="540" y="478" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="40" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="0">FREE</text>
+  <text x="540" y="522" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#DFF6F2" text-anchor="middle" letter-spacing="0">in Wailea</text>
+  <text x="840" y="426" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#8A6A3A" text-anchor="middle" letter-spacing="1.5">JAN 25–29</text>
+  <text x="840" y="470" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#0f2942" text-anchor="middle" letter-spacing="0">Maui Derm</text>
+  <text x="840" y="504" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#0f2942" text-anchor="middle" letter-spacing="0">Hawaii</text>
+  <text x="840" y="536" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19" font-weight="500" fill="#6C7A8A" text-anchor="middle" letter-spacing="0">Dermatology</text>
+  <rect x="410" y="469" width="34" height="6" fill="#C99A5B" opacity="0.75"/>
+  <rect x="636" y="469" width="34" height="6" fill="#C99A5B" opacity="0.75"/>
+  <text x="70" y="848" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="25" font-weight="600" fill="#36b3a8" letter-spacing="1.6">THE WEEKEND BETWEEN TWO MEETINGS IS A BUSINESS DAY</text>
+  <text x="70" y="920" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="54" font-weight="700" fill="#FFFFFF">Wailea, Maui</text>
+  <text x="70" y="984" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="38" font-weight="500" fill="#FFFFFF" opacity="0.85">January 2027</text>
+  <text x="1010" y="984" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="38" font-weight="700" fill="#36b3a8" text-anchor="end">convene.md</text>
+</svg>
