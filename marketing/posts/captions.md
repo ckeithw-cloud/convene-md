@@ -155,50 +155,16 @@ across five specialties, so the click doesn't dead-end for anyone who isn't inte
 
 ---
 
-## Link tagging — do this on every post from now on
+## Attributing a post — utm tags do NOT work
 
-The first traffic report showed why: Instagram, Reddit and LinkedIn in-app browsers strip
-the referrer, so every past post landed in "direct" and was impossible to attribute. The
-only external referrer we have ever recorded is Facebook.
+Verified 26 Aug 2026: Cloudflare Web Analytics keeps the request path and throws away the
+query string, so `?utm_source=instagram` never reaches any report. Posts #10 and #11 both
+carried tagged links and neither could be attributed as a result.
 
-So the bio link is no longer plain `convene.md`. Point it at the **specific hub page** for
-the post, tagged:
+Cloudflare does keep the **path**. So give a campaign its own path — post
+`convene.md/go/<campaign>/` and redirect it onward in `_redirects` — and it becomes a
+distinct row in the top-pages table.
 
-```
-https://convene.md/<hub>/?utm_source=instagram&utm_campaign=<short-name>
-```
-
-Swap it when you swap the post. Deep-linking also converts better than the homepage — the
-visitor lands on the thing the caption promised instead of a world map they have to filter.
-`scripts/traffic-report.js` picks these up in the following Monday's report.
-
----
-
-## 11 · Maui — two conferences, one airfare (post next; meetings are Jan 2027, ~5 months lead)
-**Image:** `2027-01-maui-stack.png` — built, 1080×1080. Regenerate with
-`node scripts/make-post-maui.js > marketing/posts/2027-01-maui-stack.svg` then
-`rsvg-convert -w 1080 -h 1080 … -o …png`. Original artwork, no licensing question.
-
-Two conferences. One airfare. 🌴
-
-Hawaiian Eye & Retina runs Jan 16–22 in Wailea. Maui Derm Hawaii starts Jan 25. The Saturday and Sunday in between fall *between* two business days — and the IRS counts those as business days, not personal ones.
-
-Book them as two trips and you pay two airfares and the weekend is your own time. Book them as one and the weekend in Maui is part of the trip.
-
-You do have to genuinely attend both, and each has to fit your practice. But if you're an eye or skin doctor eyeing January, the calendar has already done the work for you.
-
-We found 8 pairings like this across the site. The rules, and how to count the days, are in our guide.
-
-convene.md — link in bio
-
-*First comment:* #CME #CMEtravel #TravelCME #Maui #Hawaii #Ophthalmology #Dermatology #MedEd #DestinationCME #PhysicianLife #DoctorsOfInstagram #MedicalConference
-
-*Bio link for this post:* `https://convene.md/how-to/deduct-cme-travel/?utm_source=instagram&utm_campaign=maui-stack`
-
-*Why this one, and why not another destination card:* the Kyoto post produced no measurable
-Instagram referrals. That may be the in-app browser stripping the referrer rather than the
-post failing — but either way, repeating an identical format learns nothing. This one leads
-with an insight instead of a place: it is genuinely useful, it is specific to a real pair of
-meetings on the site, and no aggregator can write it because none of them know the dates well
-enough. The link goes to the guide rather than the city hub because the guide both explains
-the rule and names this exact pairing.
+Deep-linking still matters for its own sake: send people to the specific hub the caption
+promised, not the homepage. Just do not expect a query parameter to tell you where they
+came from.

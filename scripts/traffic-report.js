@@ -226,8 +226,14 @@ function table(rows, label) {
   md += `## Where it came from\n\n`;
   md += `Referred visits are the only number that reflects a post working. `;
   md += `Direct includes anyone who typed the URL — and, importantly, most in-app browsers `;
-  md += `(Instagram, Reddit, LinkedIn) strip the referrer, so real social clicks hide in there. `;
-  md += `Tag posted links with \`?utm_source=\` to pull them out.\n\n`;
+  md += `(Instagram, Reddit, LinkedIn) strip the referrer, so real social clicks hide in there.\n\n`;
+  // Verified 26 Aug 2026: Cloudflare Web Analytics discards the query string — every
+  // requestPath comes back as "/city/whistler/", never with "?utm_source=...". So utm tags
+  // are invisible here and cannot separate social clicks from direct. A distinct PATH per
+  // campaign (e.g. /go/maui/ redirecting onward) is the only thing this stack can attribute.
+  md += `> Note: utm tags do **not** work with Cloudflare Web Analytics — it stores the path `;
+  md += `and drops the query string. To attribute a campaign, give it its own path rather than `;
+  md += `a query parameter.\n\n`;
   md += `- **Referred: ${externalTotal}**\n- Direct / unknown: ${refs.direct}\n- Internal navigation: ${refs.internal}\n\n`;
   md += table(refs.external.map((r) => ({ k: r.dimensions.refererHost, v: r.count })), "External referrer");
 

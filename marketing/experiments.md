@@ -13,16 +13,17 @@ report, so the numbers arrive next to the thing that caused them.
 Keep one row per action. Log the attempt even when it flops — a post that got removed or
 buried is a result, and unlogged failures are how you end up repeating them.
 
-## Tagging links
+## Attributing a post
 
-Cloudflare can only report a referrer the browser actually sends, and Instagram, Reddit
-and LinkedIn in-app browsers usually strip it. Anything you post from here on should carry
-a `utm_source`, otherwise the click lands in "direct" and is indistinguishable from someone
-typing the URL:
+**utm tags do not work here.** Verified 26 Aug 2026: Cloudflare Web Analytics stores the
+request path and discards the query string, so `?utm_source=instagram` is invisible to every
+report. Two posts were tagged on the assumption it worked; neither could be attributed.
 
-- `https://convene.md/specialty/dermatology/?utm_source=instagram`
-- `https://convene.md/specialty/sports-and-wilderness-medicine/?utm_source=reddit`
-- `https://convene.md/browse/?utm_source=linkedin`
+What Cloudflare *does* keep is the path. So to attribute a campaign, give it a path of its
+own — e.g. post `convene.md/go/maui/`, redirect it onward in `_redirects`, and the hit shows
+up as a distinct row. Until those exist, treat social attribution as unresolved rather than
+as a zero: in-app browsers on Instagram, Reddit and LinkedIn strip the referrer, so genuine
+clicks land in "direct" and look identical to someone typing the URL.
 
 ## Log
 

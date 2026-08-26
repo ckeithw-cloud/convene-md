@@ -67,7 +67,8 @@ node scripts/traffic-report.js --days 30
 - **Referred visits** is the honest signal that a post did something. Page views and total
   visits move with crawlers, your own browsing, and noise.
 - **Direct is not "nobody"** — Instagram, Reddit and LinkedIn in-app browsers strip the
-  referrer, so social clicks land there. That is why links you post should carry
-  `?utm_source=instagram` and friends; see `marketing/experiments.md`.
+  referrer, so social clicks land there. Note that utm tags cannot rescue this: Cloudflare
+  stores the path and drops the query string, so `?utm_source=` is invisible to these
+  reports. Attribute a campaign with its own path instead; see `marketing/experiments.md`.
 - The **"What we tried"** section is filled from `marketing/experiments.md`. If it says
   nothing was logged, the report cannot explain its own numbers — log the posts.
