@@ -228,10 +228,16 @@ window.addEventListener("resize", () => {
   fitTimer = setTimeout(() => map.fitBounds(INITIAL_BOUNDS, { animate: false }), 200);
 });
 
-L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · © <a href="https://carto.com/attributions">CARTO</a>',
-  subdomains: "abcd",
-  maxZoom: 19,
+// Basemap: Esri World Light Gray Base. Replaced CARTO's light_all in Aug 2026 — CARTO
+// began requiring an API key and started stamping "API KEY REQUIRED" across every tile,
+// which was showing on the live map. Esri's equivalent needs no key, keeps the same pale
+// minimal look the pin colours are designed against, and bakes in place labels.
+//
+// Two gotchas versus the CARTO URL this replaced: the path is {z}/{y}/{x}, NOT {z}/{x}/{y},
+// and there are no {s} subdomains or {r} retina variants — passing either yields 404 tiles.
+L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}", {
+  attribution: 'Tiles © <a href="https://www.esri.com/">Esri</a> — Esri, HERE, Garmin, © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  maxZoom: 16,
   noWrap: true
 }).addTo(map);
 
