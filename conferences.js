@@ -14354,4 +14354,18 @@ const CONFERENCES = [
     organizer: "American Heart Association",
     description: "AHA Scientific Sessions at the Ernest N. Morial Convention Center."
   },
+  {
+    name: "9th Annual Updates in General Surgery Symposium 2027",
+    specialty: "General Surgery",
+    year: 2027,
+    startDate: "2027-01-22",
+    endDate: "2027-01-25",
+    city: "Vail",
+    country: "USA",
+    lat: 39.6403,
+    lng: -106.3742,
+    url: "https://www.clevelandclinicmeded.com/live/courses/UpdateGENSUR/",
+    organizer: "Cleveland Clinic Center for Continuing Education",
+    description: "Ski-week general surgery update at The Hythe Vail, 20.75 AMA PRA Category 1 Credits."
+  },
 ];
