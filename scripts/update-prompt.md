@@ -114,6 +114,55 @@ Many parent-organization "meetings" pages (e.g. ACS chapter meetings, FELAC, IFS
      for Primary Care: <topics>"), so dedupe on the URL, not the name.
    Name new editions `"<official course title> — <City> <Year>"`, matching the existing rows.
 
+3d. **Academic CME providers — CloudCME is scrapeable; here is how.**
+   About a dozen major academic centres run their catalogue on CloudCME. The listing is
+   **server-rendered and curl-able**, but only at the right URL:
+
+   - Use `https://<inst>.cloud-cme.com/course/listing?p=1000`. **The `?p=1000` is required** —
+     it selects the Live Courses listing. Plain `/course/listing` renders an empty shell, and
+     `/public/calendar` is a JS-only shell for every instance. That single wrong URL is why an
+     earlier pass wrongly concluded these providers were unscrapeable.
+   - Each row is `<div id='<EID>' class='12u activityListContainer'>` containing
+     `span.activTitle`, `span.activTimeDate` (date then venue, separated by `<br/>`),
+     `<em>Specialties</em> - ...` and `<strong>Credits:</strong> ... <em>AMA PRA Category 1 Credits</em> (N hours)`.
+   - Pagination is 10/page via an ASP.NET postback: POST the same URL with the page's
+     `__VIEWSTATE` / `__VIEWSTATEGENERATOR` / `__EVENTVALIDATION` plus
+     `__EVENTTARGET=ResultsPageClick` and `__EVENTARGUMENT=ResultPage<N>`.
+     Do **not** use the `#ddlResultsPerPage` "50 per page" control — it posts `ApplyFilters`
+     and bounces to a login/create-account form.
+   - Deep-link each course as `https://<inst>.cloud-cme.com/default.aspx?P=0&EID=<id>`
+     (Johns Hopkins uses `/course/courseoverview?P=0&EID=<id>`).
+   - Live hosts confirmed: `mssm`, `ucla`, `upenn`, `hopkinscme`, `washu`, `vumc`, `umich`,
+     `stanford`, `ucsf`, `northwestern`, `cedars`.
+
+   **Two traps in this data:**
+   - The `LIVE` format tag is on online courses too. Filter on the **venue** instead — skip
+     rows whose venue is `Online` / `Virtual` / `Internet Live Conference` / empty.
+   - **Johns Hopkins omits the Credits block from the listing entirely.** There, `cat1` absent
+     means "not stated on the listing", not "no Category 1" — fetch the course page and look
+     for `designates this live activity for a maximum of N AMA PRA Category 1 Credits`.
+
+   **Most of a CloudCME catalogue is not conference material.** Expect faculty-development
+   workshops, remedial/behavioural programmes, degree and certificate courses, simulation
+   sessions and grand rounds. Skip anything matching this shape — e.g. UCSF's `T4UCSF:` teaching
+   series and Family Medicine Faculty Development Fellowship, Vanderbilt's "Program for
+   Distressed Physician Behaviors", Stanford's MS and Improvement Science certificate courses.
+   A useful floor: skip activities offering **fewer than 4 Category 1 credits** (that removes
+   evening dinner meetings), and skip anything you cannot confidently map to one of the 46
+   specialties — the listings often leave the description blank, and a guessed specialty
+   silently breaks the filter and pin colour.
+
+   **Other platforms seen at providers that are NOT on CloudCME:**
+   - **Emory** — CME Tracker (`cmetracker.net/EMORY/Publisher?page=pubOpen#/featured`,
+     JS-rendered; the `#course` "Live Activities" route is the useful one). Swept Aug 2026:
+     its public catalogue is a repeating ECT mini-fellowship plus half-day local symposia —
+     no destination conferences, and credit *types* are left blank on the listing.
+   - **Baylor College of Medicine** — EthosCE (`cpd.education.bcm.edu/calendar/upcoming-events`).
+     Swept Aug 2026: entirely grand rounds, noon conferences and case presentations.
+   - **Baylor Scott & White** (a separate system) — `ce.bswhealth.com`, catalogue is JS-gated.
+     Not yet swept; it does publish real meetings (e.g. the Matthew Davis Trauma Symposium,
+     Temple TX, and the annual Internal Medicine Review).
+
 **WATCHLIST — call these out, don't just add them:**
 
 The site owner personally wants to attend the conferences below. If one appears with confirmed
@@ -126,6 +175,25 @@ routine additions.
   conferences as WooCommerce products. Their date metadata is unreliable (the 2026 listing still
   used a `june-2025` URL slug, and the product page disagreed with search results on the exact
   days), so confirm dates from the product page body itself.
+
+**PENDING RE-CHECKS — real meetings held back only for a missing credit statement.**
+
+These are genuine, in-person meetings from accredited providers that were deliberately NOT
+added because their own page carries no AMA PRA Category 1 designation yet (only boilerplate
+ACCME text). The rule is "if the credit type is not stated, skip it" — so re-check each on a
+later run and add it once the statement appears. Do not add them on the strength of a prior
+edition's accreditation.
+
+- **Johns Hopkins, 44th Annual Medical and Surgical Gastroenterology: A Multidisciplinary
+  Approach** — The Pines Lodge, Beaver Creek, CO, 7–10 Feb 2027.
+  `hopkinscme.cloud-cme.com/course/courseoverview?P=0&EID=68380`
+- **Johns Hopkins, 27th Gastroenterology and Hepatology: Viva la Vida** — Caribe Hilton,
+  San Juan, PR, 16–19 Mar 2027. Same site, `EID=68379`.
+- **Johns Hopkins, 41st Annual Pediatrics for Practitioner Update 2026** — Baltimore,
+  15–16 Oct 2026. Same site, `EID=68094`.
+- **Cleveland Clinic** — the `radonc`, `marfan` and `neuromuscular` courses, for the same reason.
+
+Also worth re-checking later: **ASTRO 2027** host city (not yet announced as of Aug 2026).
 
 **Audience rule — physician CME only:**
 
