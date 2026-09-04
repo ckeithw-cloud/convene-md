@@ -91,7 +91,12 @@ function page({ url, title, description, h1, crumbs, lede, list, related, extraB
         },
         description: c.description,
         url: c.url,
-        organizer: { "@type": "Organization", name: c.organizer, url: c.url }
+        organizer: { "@type": "Organization", name: c.organizer, url: c.url },
+        // Search Console flagged Events on the hub pages for a missing `image`
+        // (non-critical, 5 Aug 2026). build-seo.js already emitted one for the
+        // homepage graph; the hub generator did not, so all 272 hubs were short
+        // a field on the very pages that earn the organic traffic.
+        image: `${SITE}/logo-social.png`
       }
     }))
   } : null;
