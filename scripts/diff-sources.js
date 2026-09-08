@@ -61,6 +61,35 @@ for (const c of CONFERENCES) {
   byNameDate.set(norm(c.name) + "|" + c.startDate, c);
 }
 
+// Exact key and exact name+date are not enough. The same conference is routinely held
+// under a different URL (a department page rather than the CloudCME course) and a slightly
+// different title ("48th Annual Echo Northwestern" vs "... 2026", "UCSF Liver Symposium"
+// vs "UCSF Liver Transplant Symposium 2026"). Without this, 49 of 130 candidates in the
+// first full run were conferences we already held -- acting on that list would have
+// created 49 duplicates. Match on token overlap within a +/-3 day window, the same test
+// used by hand when this was caught.
+const STOP = new Set(["the","of","and","for","in","on","annual","update","conference",
+  "symposium","course","meeting","summit","review","advances","current",
+  "2026","2027","2028","2029"]);
+const toks = (n) => new Set(
+  String(n || "").toLowerCase().match(/[a-z0-9]+/g)?.filter(w => w.length > 2 && !STOP.has(w)) || []);
+const dayNum = (d) => Date.parse(d + "T00:00:00Z") / 86400000;
+
+function fuzzyHeld(name, startDate) {
+  const ct = toks(name);
+  if (!ct.size || !startDate) return null;
+  const cs = dayNum(startDate);
+  for (const e of CONFERENCES) {
+    if (Math.abs(dayNum(e.startDate) - cs) > 3) continue;
+    const et = toks(e.name);
+    if (!et.size) continue;
+    let shared = 0;
+    for (const w of ct) if (et.has(w)) shared++;
+    if (shared / Math.min(ct.size, et.size) >= 0.6) return e;
+  }
+  return null;
+}
+
 // ---------------------------------------------------------------- sources
 
 // Hosts are taken from the dataset itself rather than hard-coded guesses: an earlier
@@ -76,7 +105,11 @@ function cloudcmeHosts() {
 
 // Most of a CloudCME catalogue is faculty development, remedial programmes and
 // certificate courses. Same bar the manual sweeps use, so the NEW list stays readable.
-const JUNK = /T4UCSF|faculty development|fellowship|maintenance of certification|MOCA|grand round|journal club|tumou?r board|distressed physician|proper prescribing|research ethics|improvement science|certificate course|master of science|orientation|onboarding/i;
+// Widened after the first full run: the original missed whole categories that the
+// audience rule or the "not a conference" rule excludes anyway -- Project ECHO
+// telementoring series, "Master Clinician Series"-style monthly RSS, instructor
+// certification, and anything explicitly aimed at APPs or nurses.
+const JUNK = /T4UCSF|faculty development|fellowship|maintenance of certification|MOCA|grand round|journal club|tumou?r board|distressed physician|proper prescribing|research ethics|improvement science|certificate course|master of science|orientation|onboarding|advanced practice provider|\bAPP\b|for nurses|nursing|master clinician series|\bECHO\b|introductory training|instructor certification|didactic workshop|scholarship program|simulation training/i;
 
 async function fetchCloudCME() {
   const out = [];
@@ -229,7 +262,16 @@ const SOURCES = { cloudcme: fetchCloudCME, mer: fetchMER };
 
   for (const r of live) {
     if (!r.startDate || r.endDate < TODAY) continue;
-    const held = byKey.get(r.key) || byNameDate.get(norm(r.name) + "|" + r.startDate);
+    // Identity confidence matters here, and the two checks need different bars.
+    //
+    // A KEY match (same EID / MER id) is proof of identity, so it can drive the
+    // "changed dates" report. A FUZZY match is only evidence that we probably already
+    // hold this event -- good enough to suppress a duplicate, NOT good enough to claim a
+    // date changed. Letting fuzzy matches feed "changed" produced cross-institution
+    // nonsense on the first run: Mount Sinai's "Echo NY 2026" paired with a WashU record,
+    // "Dubai Derma" with a Utah listing. Acting on those would have corrupted correct rows.
+    const exact = byKey.get(r.key) || byNameDate.get(norm(r.name) + "|" + r.startDate);
+    const held = exact || fuzzyHeld(r.name, r.startDate);
     if (!held) {
       // Only surface plausible additions, else the report is mostly noise.
       if (r.online || r.junk || !r.cat1) continue;
@@ -237,10 +279,11 @@ const SOURCES = { cloudcme: fetchCloudCME, mer: fetchMER };
       isNew.push(r);
       continue;
     }
+    if (!exact) continue;   // fuzzy-only: suppress the duplicate, assert nothing about dates
     const d = [];
-    if (held.startDate !== r.startDate) d.push(`start ${held.startDate} → ${r.startDate}`);
-    if (held.endDate !== r.endDate) d.push(`end ${held.endDate} → ${r.endDate}`);
-    if (d.length) changed.push({ held, r, diffs: d });
+    if (exact.startDate !== r.startDate) d.push(`start ${exact.startDate} → ${r.startDate}`);
+    if (exact.endDate !== r.endDate) d.push(`end ${exact.endDate} → ${r.endDate}`);
+    if (d.length) changed.push({ held: exact, r, diffs: d });
   }
 
   // Anything we hold whose source key has vanished from the live catalogue.
