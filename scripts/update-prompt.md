@@ -37,7 +37,14 @@ If a candidate doesn't fit any of the 46 specialty values above, skip it — don
 **Steps:**
 
 1. Read `/Users/ckeithw/projects/convene-md/conferences.js` to load existing entries.
-2. Use WebSearch to look for newly announced medical conferences in 2026, 2027, and 2028 across the 46 specialties. Rotate focus each week so coverage stays even — don't only search surgery. Useful query patterns:
+2. **FIRST read `marketing/scan-log.md`,** then use WebSearch to look for newly announced
+   medical conferences across the 46 specialties. That file is the rotation's memory:
+   it records which specialties were swept when, and — importantly — which meetings came
+   back "not yet announced" and must NOT be re-searched before their re-check date.
+   Pick the specialties with the fewest 2027+ entries that have not been swept in ~6 weeks;
+   don't only search surgery, and don't only search the thinnest, or the large specialties
+   never get revisited. **Update `marketing/scan-log.md` at the end of every run.**
+   Useful query patterns:
    - `"{specialty} congress 2027 location dates"` for each specialty
    - `"{society acronym} annual meeting 2027"` — e.g.
      - Surgical: ACS, AATS, EACTS, AAOS, CNS, AANS, IFSO, EAES, SICOT, AUA, EAU, ASCRS, ESCP, AAST, SSO, APSA, IHPBA, JSS, ASI, RACS, WACS, COSECSA
@@ -47,6 +54,12 @@ If a candidate doesn't fit any of the 46 specialty values above, skip it — don
      - Acute/hospital: ACEP, EUSEM, ICEM, ASA, ESAIC, WFSA, SCCM, ESICM, SHM, RSNA, ECR, ISR
      - Primary care: AAFP, WONCA, AAP, IPA, ESPGHAN, ACOG, FIGO, ESHRE, AGS
      - Diagnostic/other: USCAP, CAP, ECP, AAD, EADV, AAO, ESCRS, ICO
+
+   - Prefer a society's **"future meetings"** page over its current-year page — one fetch
+     often yields three years at once.
+   - If a society publishes dates but no host city, check its **exhibitor / general-information
+     micro-site** for that year; venues are frequently named there first (this is how
+     ASTRO 2027's Chicago venue was found after the main page omitted it).
    - Regional sweeps: `"{specialty} conference 2027 Asia"` / `"... Africa"` / `"... Latin America"` / `"... Middle East"` to catch coverage gaps
 3. For each candidate, **dedupe**:
    - Skip if existing list already has an entry with the same `name` (case-insensitive) AND same `year`.
