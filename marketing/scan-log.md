@@ -154,8 +154,11 @@ UK: RCP, RCS, BMA, BTS, BSR, BAD, RCOG, BOA — none checked.
 First tier-2 pass, chosen by country rather than specialty. **Added 7:** DGK Jahrestagung
 2027 Mannheim, Deutscher Echokardiographie-Kongress 2027 Leipzig, DGK Herztage 2026
 Hamburg, DGK Kardiale Bildgebung 2026 Cologne, DGPPN Kongress 2026 Hamburg, 108. Deutscher
-Röntgenkongress 2027 Leipzig, JESFC 2027 Paris. Germany 11 → 17, new hubs for Mannheim and
-Cologne. See the Tier 2 section above for the method and the remaining society lists.
+Röntgenkongress 2027 Leipzig, JESFC 2027 Paris. Germany 11 → 17. New hubs for **Hamburg**
+and **Leipzig** — each crossed `MIN_CITY = 2`. Mannheim and Cologne did NOT get hubs: one
+upcoming conference each, so they stay below the threshold until a second lands. A single
+national congress in a new city adds a pin but no page.
+See the Tier 2 section above for the method and the remaining society lists.
 
 ### 2026-09-08 (third pass) — remaining flagship gaps + a systematic city-name audit
 Swept the flagship societies still lacking a 2027+ entry. **Added 5:** EASD 2027 Budapest,
