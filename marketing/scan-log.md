@@ -119,7 +119,7 @@ community:
 | --- | ---: | --- |
 | USA | 547 | 57% of the dataset |
 | Canada | 56 | |
-| **Germany** | 18 (was 11) | in progress |
+| **Germany** | 24 (was 11) | **major societies done** — see below |
 | **France** | 8 (was 7) | barely started — SFC only |
 | **United Kingdom** | 10 (was 8) | in progress |
 | Austria | 6 | +1 incidentally (DGHO 2026 is in Vienna) |
@@ -134,16 +134,17 @@ covered while its own societies are missing entirely.
 **Worked example — Germany.** DGK (cardiology) alone yielded four congresses from one
 page; DGPPN and the Deutsche Röntgengesellschaft one each.
 
-**Done so far:** Germany — DGK (4 congresses), DGPPN, DRG/RöKo, DGHO (2). France — SFC.
-UK — BOA, BAD.
+**Germany — major societies done (11 → 24 upcoming).** DGK (4 congresses), DGPPN, DRG/RöKo,
+DGHO (2), DGCH, DGN, DGAI, DOG, DGGG, DDG. Remaining German societies are smaller:
+DGKJ (paediatrics), DGP (pneumology), DGHNO (ENT), DGU (2027), DGVS (2027), plus the
+sub-society meetings on the DGCH calendar (DIVI, DGG vascular, ECTES 2027) which publish
+a start date but no end date and so need individual checks.
 
-**Still to check.** Germany: DGCH (surgery), DGN (neurology), DGAI (anaesthesia), DGGG
-(ob/gyn), DDG (dermatology), DGKJ (paediatrics), DOG (ophthalmology), DGP (pneumology),
-DGHNO (ENT). France: SFAR, SNFGE, SFD, SFR, SFORL, CNGOF, SFCTCV. UK: RCP, RCS, BTS, RCOG,
-RCR, ASGBI, BSG (its own annual meeting, not the endorsed courses).
-Not begun at all: Netherlands, Switzerland, Austria, Sweden, Denmark, Norway, Portugal,
-Greece, Poland, Czechia, Hungary — and Belgium, Ireland, Turkey and Israel, which have
-**zero** entries each.
+**Still to check.** France: SFAR, SNFGE, SFD, SFR, SFORL, CNGOF, SFCTCV. UK: RCP, RCS, BTS,
+RCOG, RCR, ASGBI, BSG (its own annual meeting, not the endorsed courses).
+Not begun at all: Netherlands, Switzerland, Sweden, Denmark, Norway, Portugal, Greece,
+Poland, Czechia, Hungary — and Belgium, Ireland, Turkey and Israel, which have **zero**
+entries each.
 
 **Checked, nothing addable yet:** BCS 2027 (Manchester Central confirmed, no dates
 published), BSG LIVE 2027 (not announced), BSR 2027 (not announced).
@@ -163,6 +164,23 @@ one or two countries per scan rather than trying to finish it.
   page for these, exactly as with US society flagships.
 
 ## Scan history
+
+### 2026-09-08 (sixth pass) — Germany finished (major societies)
+**Added 6:** 144. Deutscher Chirurgie Kongress 2027 Munich, DGN Kongress 2026 Berlin,
+DGAI Jahreskongress 2026 Kassel, DOG 2027 Berlin, 66. DGGG-Kongress 2026 Munich,
+DDG-Tagung 2027 Berlin. **Germany 11 → 24 across the two German passes.**
+
+Two things that made this efficient:
+- A society's **umbrella events page** can carry its member societies too. The DGCH
+  calendar listed the vascular, knee, intensive-care (DIVI) and ECTES congresses alongside
+  its own — one fetch, many leads. Those were not added because the page gives only a start
+  date; they need individual checks.
+- When a German page 404s on the URL search returns, try the society's own **calendar
+  overview** and follow its links. `derma.de`'s deep link was dead but the calendar reached
+  a detail page carrying venue *and* an explicit `CME-Zertifikat` flag.
+
+Checked, nothing addable: DGN 2027 (Berlin known, no dates), DGAI 2027 (dates known, no
+venue), DCK 2026 (already past-dated for our window).
 
 ### 2026-09-08 (fifth pass) — tier 2 continued: UK + DGHO
 **Added 4:** BOA Annual Congress 2027 Liverpool, 107th BAD Annual Meeting 2027 Liverpool,
