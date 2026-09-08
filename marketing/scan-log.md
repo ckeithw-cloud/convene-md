@@ -127,8 +127,9 @@ community:
 | **Ireland** | 2 (was 0) | RCSI events page |
 | Netherlands | 5 | checked — nothing addable yet, see below |
 | **Turkey** | 1 (was 0) | TKD only |
-| Switzerland / Sweden | 4–6 each | not started |
-| Israel | 0 | not started |
+| **Switzerland** | 9 (was 6) | SGAIM ×3 |
+| Sweden | 6 | checked — Kirurgveckan 2026 already past, 2027 unannounced |
+| Israel | 0 | checked — society sites are Hebrew and poorly indexed; needs a different approach |
 
 Before this pass Germany's 11 entries were almost all *European* congresses that merely
 happen to be held there (ESPEN, ECNP, EULAR, ESPID, EAES) — the German national societies
@@ -153,6 +154,15 @@ French society sites, and expect roughly a 1-in-4 hit rate.
 Also note two French acronym traps: **SFR** is both Rhumatologie and Radiologie, and **SFD**
 is both Dermatologie and Diabète. Confirm which society owns the domain before trusting a
 result.
+
+**RULE, now confirmed twice: an event's own page beats the society's multi-year table.**
+- RÖKO 2027 — event page 5–7 May, planning table 25–27 May.
+- BTS Winter Meeting 2026 — event page 25–27 Nov, "meeting dates and programmes" table
+  26–28 Nov.
+In both cases the event page was right. The corollary matters more: **do not harvest
+out-years from a table that is wrong about the current year.** BTS lists Winter 2027
+(24–26 Nov) and 2028, and Summer 2027 Newcastle, but all come from the table that just
+failed, so none were added.
 
 **The commonest tier-2 blocker is a missing CITY, not a missing date.** Societies announce
 dates far earlier than venues, and the map needs a city for lat/lng. Live examples:
@@ -196,6 +206,22 @@ one or two countries per scan rather than trying to finish it.
   page for these, exactly as with US society flagships.
 
 ## Scan history
+
+### 2026-09-08 (ninth pass) — Switzerland, Sweden, Israel, UK colleges
+**Added 5:** SGAIM Herbstkongress 2026 Bern, SGAIM Frühjahrskongress 2027 Basel, SGAIM
+Herbstkongress 2027 **Montreux**, BTS Winter Meeting 2026 London, RCOG World Congress 2027
+**Kuala Lumpur**. Switzerland 6 → 9.
+
+SGAIM was the best single source of the whole tier-2 effort: one events page giving three
+congresses with dates, cities *and* credit hours (16/24/16 AIM credits). Montreux on Lake
+Geneva is a genuine destination entry.
+
+Note RCOG's world congress counts toward **Malaysia**, not the UK — a UK college's meeting
+held abroad. Worth watching for elsewhere; the organiser's country is not the venue's.
+
+Sweden: Kirurgveckan 2026 (17–21 Aug, Malmö) had already passed; 2027 unannounced.
+Israel: nothing findable — society sites are Hebrew-language and poorly indexed in English,
+so it needs a different approach (perhaps via international societies' Israeli chapters).
 
 ### 2026-09-08 (eighth pass) — Netherlands, Turkey
 **Added 1:** 42. Ulusal Kardiyoloji Kongresi 2026, Antalya — **Turkey 0 → 1**, taking the
