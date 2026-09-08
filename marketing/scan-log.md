@@ -53,12 +53,22 @@ Last swept, by specialty. Anything absent has never been swept by a logged scan.
 | Ophthalmology | 2026-09-08 | AAO 2027/2028/2029 |
 | Pulmonology | 2026-09-08 | ERS 2027 |
 | Hospital Medicine | 2026-09-08 | nothing new |
+| Critical Care | 2026-09-08 | ESICM LIVES 2027 |
+| Pain Medicine | 2026-09-08 | IASP 2026 (deep-linked; removed a duplicate) |
+| Dermatology | 2026-09-08 | EADV Symposium 2027 |
+| Family Medicine | 2026-09-08 | nothing confirmable |
+| Gastroenterology | 2026-09-08 | nothing new |
+| Infectious Disease | 2026-09-08 | nothing new |
 
-**Never swept by a logged scan** — Neuro & psych, Acute & hospital-based, Primary care &
-family, Pathology/Dermatology, plus Palliative, Geriatrics, Pain Medicine, Bariatric,
-Trauma, Lifestyle & Preventive, Sports, Cardiology, Gastroenterology, Infectious Disease,
-Hematology, Nephrology, Critical Care.
-These are well-populated for 2026 but that is not evidence they are current for 2027+.
+**Flagship coverage is now complete** in the sense that every major society acronym in
+`update-prompt.md` has been checked for a 2027+ entry at least once. What has NOT been
+swept is the *second tier* — national and regional societies, chapter meetings and
+subspecialty groups below flagship level, in every specialty. That is tier 2 of
+[coverage-plan.md](coverage-plan.md) and is where the next passes belong.
+
+Specialties with no flagship gap left but thin second-tier depth: Neurology, Psychiatry,
+Emergency Medicine, Anesthesiology, Geriatrics, Palliative, Bariatric, Trauma,
+Lifestyle & Preventive, Sports, Hematology, Nephrology, Pathology.
 
 ---
 
@@ -79,6 +89,11 @@ These are well-populated for 2026 but that is not evidence they are current for 
 | IDWeek 2027 | 2026-09-08 | 2026 Washington DC is latest published | 2027-01 |
 | APA 2027 | 2026-09-08 | **city known (New York), no dates yet** — add as soon as dates post | 2026-11 |
 | ADA 2028 | 2026-09-08 | Houston appeared in a search summary but NOT on the ADA meetings page | 2026-12 |
+| UEG Week 2027 | 2026-09-08 | opportunities release mid-Q4 2026; no dates or city yet | 2026-12 |
+| ESCRS 2027 (45th) | 2026-09-08 | page exists but says only "Save the date" | 2026-12 |
+| AAFP FMX 2027 | 2026-09-08 | "Sep 20–24 2027, San Diego" appeared in a search summary but AAFP's own FMX pages show no 2027 at all | 2026-12 |
+| EADV Congress 2027 | 2026-09-08 | 2026 Vienna is latest; the 2027 *Symposium* (Dresden) IS confirmed and added | 2027-01 |
+| SITC 2027 | 2026-09-08 | Nov 3–7 2027 in a search summary, not on the SITC site | 2027-01 |
 | ASTRO 2028 / 2029 | 2026-09-08 | dates published (21–25 Oct 2028, 6–10 Oct 2029), **no host city** | 2027-03 |
 
 ## Held back for a missing credit statement
@@ -91,6 +106,30 @@ radonc / marfan / neuromuscular).
 ---
 
 ## Scan history
+
+### 2026-09-08 (third pass) — remaining flagship gaps + a systematic city-name audit
+Swept the flagship societies still lacking a 2027+ entry. **Added 5:** EASD 2027 Budapest,
+EADV Symposium 2027 Dresden, SITC 2026 Phoenix (SITC had no entry at all), IASP 2026
+World Congress Bangkok, ESICM LIVES 2027 Copenhagen.
+
+**City-name audit.** After hitting a third city split (Seattle, then Washington DC, then
+Snowmass), clustered every city by country and coordinate proximity. Most near-neighbours
+are genuinely distinct towns (San Diego/La Jolla, Vail/Beaver Creek) and were left alone.
+Thirteen were true splits — twelve of the form `X` vs `X, Region` (Wailea/Kapalua/Lahaina/
+Ko Olina/Waikoloa/Big Sky/Napa/Sonoma/Mackinac Island/Honolulu/Park City) plus `Montréal`
+vs `Montreal` — and were merged onto the dominant spelling and coordinates.
+
+**One merge had to be reverted:** `Lexington, Kentucky` is NOT a variant of `Lexington` —
+the bare entry is Lexington, *Massachusetts*, and the naive base-name rule moved an AAES
+meeting 1,200 km. Two real cities can share a name, so a comma suffix is sometimes correct
+disambiguation rather than a split. Any future automated merge must compare coordinates,
+not just names.
+
+The merges immediately exposed **three duplicates the splits had been hiding** from
+validate.js's city+startDate+specialty key: FIGO 2027 (Montréal/Montreal), Mayo Interactive
+Surgery Symposium 2027 (two ce.mayo.edu URLs), and IASP 2026 — the last one mine, added
+minutes earlier because I had checked "no 2027+ entry" without checking whether that 2026
+event already existed. Check the specific event, not just the year band.
 
 ### 2026-09-08 (second pass) — large medical specialties, flagship meetings
 Per the priority order in [coverage-plan.md](coverage-plan.md), targeted the *flagship*
