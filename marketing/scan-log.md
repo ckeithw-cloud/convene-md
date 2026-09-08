@@ -105,7 +105,57 @@ radonc / marfan / neuromuscular).
 
 ---
 
+## Tier 2 — national societies by country
+
+Tier 1 (flagship societies) is done. Tier 2 is the long tail, and the highest-yield way
+into it is **by country, not by specialty**: each country's national societies run annual
+congresses that no flagship list covers, and one society's congress page often yields
+three or four events at once.
+
+The gap is measurable. Upcoming entries by country, against the size of the medical
+community:
+
+| Country | Upcoming | Note |
+| --- | ---: | --- |
+| USA | 547 | 57% of the dataset |
+| Canada | 56 | |
+| **Germany** | 17 (was 11) | started 2026-09-08 |
+| **France** | 8 (was 7) | started 2026-09-08 |
+| **United Kingdom** | 8 | **not started** |
+| Netherlands / Switzerland / Austria / Sweden | 4–6 each | not started |
+| Belgium, Ireland, Turkey, Israel | 0 | not started |
+
+Before this pass Germany's 11 entries were almost all *European* congresses that merely
+happen to be held there (ESPEN, ECNP, EULAR, ESPID, EAES) — the German national societies
+themselves were nearly absent. Expect the same pattern elsewhere: a country can look
+covered while its own societies are missing entirely.
+
+**Worked example — Germany.** DGK (cardiology) alone yielded four congresses from one
+page; DGPPN and the Deutsche Röntgengesellschaft one each.
+
+German societies still to check: DGHO (haem/onc), DGCH (surgery), DGN (neurology), DGAI
+(anaesthesia), DGGG (ob/gyn), DDG (dermatology), DGKJ (paediatrics), DOG (ophthalmology),
+DGVS (already have Viszeralmedizin), DGP (pneumology), DGHNO (ENT), DGU (have 2026).
+France: SFC done (JESFC 2027); still SFAR, SNFGE, SFD, SFR, SFORL, CNGOF, SFCTCV.
+UK: RCP, RCS, BMA, BTS, BSR, BAD, RCOG, BOA — none checked.
+
+**Two cautions learned here.**
+- **Prefer the individual congress page over a society's multi-year planning table.**
+  RÖKO 2027 appears as 5–7 May on its own event page and as 25–27 May on the society's
+  "Kongresstermine bis 2030" table, which is footnoted *"alle Termine sind unter Vorbehalt
+  der Änderung"*. The event page won. Do not add out-years from those tables.
+- Non-US congresses qualify on the **national equivalent** of Category 1 (German
+  Fortbildungspunkte, French DPC, EACCME). Accreditation is rarely stated on a landing
+  page for these, exactly as with US society flagships.
+
 ## Scan history
+
+### 2026-09-08 (fourth pass) — TIER 2 begins: German and French national societies
+First tier-2 pass, chosen by country rather than specialty. **Added 7:** DGK Jahrestagung
+2027 Mannheim, Deutscher Echokardiographie-Kongress 2027 Leipzig, DGK Herztage 2026
+Hamburg, DGK Kardiale Bildgebung 2026 Cologne, DGPPN Kongress 2026 Hamburg, 108. Deutscher
+Röntgenkongress 2027 Leipzig, JESFC 2027 Paris. Germany 11 → 17, new hubs for Mannheim and
+Cologne. See the Tier 2 section above for the method and the remaining society lists.
 
 ### 2026-09-08 (third pass) — remaining flagship gaps + a systematic city-name audit
 Swept the flagship societies still lacking a 2027+ entry. **Added 5:** EASD 2027 Budapest,
