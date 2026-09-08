@@ -47,11 +47,17 @@ Last swept, by specialty. Anything absent has never been swept by a logged scan.
 | Surgical Oncology | 2026-09-08 | SSO 2028/2029 (+ ESSO 45 on 09-04) |
 | Pediatric Surgery | 2026-09-08 | APSA 2028 |
 | Colorectal Surgery | 2026-09-08 | nothing new |
+| Medical Oncology | 2026-09-08 | ESMO 2027 |
+| Endocrinology | 2026-09-08 | ADA 2027 |
+| Rheumatology | 2026-09-08 | ACR Winter Symposium 2027 (Snowmass) |
+| Ophthalmology | 2026-09-08 | AAO 2027/2028/2029 |
+| Pulmonology | 2026-09-08 | ERS 2027 |
 | Hospital Medicine | 2026-09-08 | nothing new |
 
-**Never swept by a logged scan** — the whole of Medicine & subspecialties, Neuro & psych,
-Acute & hospital-based, Primary care & family, Diagnostic & other, plus Palliative,
-Geriatrics, Pain Medicine, Bariatric, Trauma, Lifestyle & Preventive, Sports.
+**Never swept by a logged scan** — Neuro & psych, Acute & hospital-based, Primary care &
+family, Pathology/Dermatology, plus Palliative, Geriatrics, Pain Medicine, Bariatric,
+Trauma, Lifestyle & Preventive, Sports, Cardiology, Gastroenterology, Infectious Disease,
+Hematology, Nephrology, Critical Care.
 These are well-populated for 2026 but that is not evidence they are current for 2027+.
 
 ---
@@ -68,6 +74,11 @@ These are well-populated for 2026 but that is not evidence they are current for 
 | SHM Converge 2028 | 2026-09-08 | 2027 Las Vegas is the latest published | 2027-01 |
 | ACPGBI 2027 | 2026-09-08 | events list is login-gated | 2026-12 |
 | BAPS 2027 | 2026-09-08 | listed as "August 2027 (or to be agreed)" — dates unconfirmed | 2026-12 |
+| ACG 2027 | 2026-09-08 | future-dates page says "check back"; 2026 Nashville is latest | 2027-01 |
+| ACR Convergence 2027 | 2026-09-08 | 2026 Orlando is latest published | 2027-01 |
+| IDWeek 2027 | 2026-09-08 | 2026 Washington DC is latest published | 2027-01 |
+| APA 2027 | 2026-09-08 | **city known (New York), no dates yet** — add as soon as dates post | 2026-11 |
+| ADA 2028 | 2026-09-08 | Houston appeared in a search summary but NOT on the ADA meetings page | 2026-12 |
 | ASTRO 2028 / 2029 | 2026-09-08 | dates published (21–25 Oct 2028, 6–10 Oct 2029), **no host city** | 2027-03 |
 
 ## Held back for a missing credit statement
@@ -80,6 +91,23 @@ radonc / marfan / neuromuscular).
 ---
 
 ## Scan history
+
+### 2026-09-08 (second pass) — large medical specialties, flagship meetings
+Per the priority order in [coverage-plan.md](coverage-plan.md), targeted the *flagship*
+annual meetings rather than the thinnest specialties. Checked 50 flagship acronyms for a
+2027+ entry; 17 had none. **Added 7:** ESMO 2027 Barcelona, ADA 2027 Washington DC,
+ACR Winter Rheumatology Symposium 2027 Snowmass, AAO 2027/2028/2029, ERS 2027 Milan.
+
+Also **removed a duplicate**: "Winter Clinics for Cranial & Spinal Surgery 2027" and
+"Mayfield Winter Clinics…" were one event (same URL, dates and venue) split across two
+spellings of the city — "Snowmass Village" vs "Snowmass Village, Colorado". The city split
+hid it from the validator's city+date+specialty key, and because `MIN_CITY = 2` in
+build-hubs.js, it also left Snowmass with 1+1 entries and therefore no hub page at all.
+Merging plus the new ACR symposium created `/city/snowmass-village/` — a prime ski hub
+that had been missing. Worth grepping for other city-name variants.
+
+Still missing after this pass: ACG, UEG, EASD, ACR Convergence, IDWeek, SITC, APA, IASP,
+ESICM, AAFP, EADV, ESCRS — see the not-yet-announced table.
 
 ### 2026-09-08 — thinnest surgical subspecialties
 Targets: Pediatric Surgery (1 entry for 2027+), Radiation Oncology (1), Surgical
