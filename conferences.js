@@ -15838,4 +15838,18 @@ const CONFERENCES = [
     organizer: "Royal College of Surgeons in Ireland",
     description: "RCSI's annual Millin Meeting in surgery, held in Dublin."
   },
+  {
+    name: "42. Ulusal Kardiyoloji Kongresi 2026 — Turkish Society of Cardiology National Congress",
+    specialty: "Cardiology",
+    year: 2026,
+    startDate: "2026-10-30",
+    endDate: "2026-11-03",
+    city: "Antalya",
+    country: "Turkey",
+    lat: 36.8969,
+    lng: 30.7133,
+    url: "https://tkd.org.tr/2026kongre/",
+    organizer: "Türk Kardiyoloji Derneği (Turkish Society of Cardiology)",
+    description: "Turkey's national cardiology congress, held at the Antalya resort hotels."
+  },
 ];

@@ -125,8 +125,10 @@ community:
 | Austria | 6 | +1 incidentally (DGHO 2026 is in Vienna) |
 | **Belgium** | 1 (was 0) | BSC only |
 | **Ireland** | 2 (was 0) | RCSI events page |
-| Netherlands / Switzerland / Sweden | 4–6 each | not started |
-| Turkey, Israel | 0 | not started |
+| Netherlands | 5 | checked — nothing addable yet, see below |
+| **Turkey** | 1 (was 0) | TKD only |
+| Switzerland / Sweden | 4–6 each | not started |
+| Israel | 0 | not started |
 
 Before this pass Germany's 11 entries were almost all *European* congresses that merely
 happen to be held there (ESPEN, ECNP, EULAR, ESPID, EAES) — the German national societies
@@ -151,6 +153,23 @@ French society sites, and expect roughly a 1-in-4 hit rate.
 Also note two French acronym traps: **SFR** is both Rhumatologie and Radiologie, and **SFD**
 is both Dermatologie and Diabète. Confirm which society owns the domain before trusting a
 result.
+
+**The commonest tier-2 blocker is a missing CITY, not a missing date.** Societies announce
+dates far earlier than venues, and the map needs a city for lat/lng. Live examples:
+
+- **Chirurgendagen (Netherlands)** publishes Chirurgendagen and Najaarsdag dates **through
+  2035** on one page (`congres.heelkunde.nl/informatie/toekomstige-congressen`) — 27–28 May
+  2027, 26 Nov 2027, and so on — but names no venue, and the location page 404s. The 2026
+  edition was at NBC Nieuwegein. Excellent re-check candidate: one page, a decade of dates.
+- BCS 2027, DGN 2027, APA 2027 and ESCRS 2027 are all in the same state.
+
+**Inferring a city from the official congress hotels is acceptable; guessing is not.**
+Turkey's TKD congress page gives dates but no city. Its own accommodation page lists four
+congress hotels — Titanic Deluxe, Selectum Luxury, Ducale Lara, Rixos Park Belek — all in
+Antalya province, so the entry is filed as Antalya. Recorded here because it is an
+inference, not a stated fact: the venue is in the Belek/Lara resort strip, roughly 40 km
+from Antalya city centre, which is within this dataset's city-level precision but worth
+knowing.
 
 **Still to check.** France: SNFGE, SFORL, SFR (both), SFD (both), SFCTCV. UK: RCP, RCS, BTS,
 RCOG, RCR, ASGBI, BSG's own annual meeting. Ireland: RCPI, and the RCSI Charter Meeting
@@ -177,6 +196,13 @@ one or two countries per scan rather than trying to finish it.
   page for these, exactly as with US society flagships.
 
 ## Scan history
+
+### 2026-09-08 (eighth pass) — Netherlands, Turkey
+**Added 1:** 42. Ulusal Kardiyoloji Kongresi 2026, Antalya — **Turkey 0 → 1**, taking the
+map to 69 countries.
+
+The Netherlands produced nothing addable despite good sources, and the reason generalises:
+the NVvH publishes congress dates to 2035 but no venues. See the "missing CITY" note above.
 
 ### 2026-09-08 (seventh pass) — France, Belgium, Ireland
 **Added 4:** Congrès SFAR 2026 Paris, BSC Congress 2027 Brussels, ISU Annual Meeting 2026
