@@ -119,9 +119,10 @@ community:
 | --- | ---: | --- |
 | USA | 547 | 57% of the dataset |
 | Canada | 56 | |
-| **Germany** | 17 (was 11) | started 2026-09-08 |
-| **France** | 8 (was 7) | started 2026-09-08 |
-| **United Kingdom** | 8 | **not started** |
+| **Germany** | 18 (was 11) | in progress |
+| **France** | 8 (was 7) | barely started — SFC only |
+| **United Kingdom** | 10 (was 8) | in progress |
+| Austria | 6 | +1 incidentally (DGHO 2026 is in Vienna) |
 | Netherlands / Switzerland / Austria / Sweden | 4–6 each | not started |
 | Belgium, Ireland, Turkey, Israel | 0 | not started |
 
@@ -133,11 +134,24 @@ covered while its own societies are missing entirely.
 **Worked example — Germany.** DGK (cardiology) alone yielded four congresses from one
 page; DGPPN and the Deutsche Röntgengesellschaft one each.
 
-German societies still to check: DGHO (haem/onc), DGCH (surgery), DGN (neurology), DGAI
-(anaesthesia), DGGG (ob/gyn), DDG (dermatology), DGKJ (paediatrics), DOG (ophthalmology),
-DGVS (already have Viszeralmedizin), DGP (pneumology), DGHNO (ENT), DGU (have 2026).
-France: SFC done (JESFC 2027); still SFAR, SNFGE, SFD, SFR, SFORL, CNGOF, SFCTCV.
-UK: RCP, RCS, BMA, BTS, BSR, BAD, RCOG, BOA — none checked.
+**Done so far:** Germany — DGK (4 congresses), DGPPN, DRG/RöKo, DGHO (2). France — SFC.
+UK — BOA, BAD.
+
+**Still to check.** Germany: DGCH (surgery), DGN (neurology), DGAI (anaesthesia), DGGG
+(ob/gyn), DDG (dermatology), DGKJ (paediatrics), DOG (ophthalmology), DGP (pneumology),
+DGHNO (ENT). France: SFAR, SNFGE, SFD, SFR, SFORL, CNGOF, SFCTCV. UK: RCP, RCS, BTS, RCOG,
+RCR, ASGBI, BSG (its own annual meeting, not the endorsed courses).
+Not begun at all: Netherlands, Switzerland, Austria, Sweden, Denmark, Norway, Portugal,
+Greece, Poland, Czechia, Hungary — and Belgium, Ireland, Turkey and Israel, which have
+**zero** entries each.
+
+**Checked, nothing addable yet:** BCS 2027 (Manchester Central confirmed, no dates
+published), BSG LIVE 2027 (not announced), BSR 2027 (not announced).
+
+**Realistic rate.** Roughly one society per two web requests, and only about half have
+published 2027 dates. A country the size of Germany is 12–15 societies, so a thorough pass
+per country is a session's work, not a few minutes. This is an ongoing programme — take
+one or two countries per scan rather than trying to finish it.
 
 **Two cautions learned here.**
 - **Prefer the individual congress page over a society's multi-year planning table.**
@@ -149,6 +163,19 @@ UK: RCP, RCS, BMA, BTS, BSR, BAD, RCOG, BOA — none checked.
   page for these, exactly as with US society flagships.
 
 ## Scan history
+
+### 2026-09-08 (fifth pass) — tier 2 continued: UK + DGHO
+**Added 4:** BOA Annual Congress 2027 Liverpool, 107th BAD Annual Meeting 2027 Liverpool,
+DGHO Jahrestagung 2026 Vienna and 2027 Leipzig (one entry each — these are joint
+German/Austrian/Swiss congresses, so the joint-congress rule applies).
+UK 8 → 10, Germany 17 → 18, Austria 5 → 6.
+
+Useful pattern: a society's **"future congresses"** page beats its current-year page.
+BOA's future page gave 2027 Liverpool while listing 2026 as "TBC" — stale for the near
+year but correct for the far one, the opposite of what you would guess.
+
+Yield note: three UK societies checked (BCS, BSG, BSR) had nothing addable — venue but no
+dates, or no announcement. Expect roughly half of tier-2 societies to come back empty.
 
 ### 2026-09-08 (fourth pass) — TIER 2 begins: German and French national societies
 First tier-2 pass, chosen by country rather than specialty. **Added 7:** DGK Jahrestagung
