@@ -1,5 +1,10 @@
 # Conference scan log
 
+> Rotation covers only the sources that cannot be enumerated. The machine-readable
+> third (CloudCME + mer.org) is checked in FULL every week by `scripts/diff-sources.js`
+> and must not be rotated. Priority order and the reasoning behind the split live in
+> [coverage-plan.md](coverage-plan.md).
+
 What each weekly scan actually covered, and what it found. The scan cannot check
 all 46 specialties every week — that would be hundreds of searches — so it rotates.
 Without this file the rotation had no memory: each run re-picked targets by eye, so

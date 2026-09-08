@@ -30,6 +30,13 @@ mkdir -p "$PROJECT_DIR/logs"
 
   cd "$PROJECT_DIR" || exit 1
 
+  # Full check of the machine-readable sources (CloudCME + mer.org) BEFORE the agent runs.
+  # This makes no model calls, so it succeeds even while the Claude CLI auth is broken --
+  # it is the half of Monday that works unattended. The agent reads its report rather than
+  # re-searching those catalogues by hand.
+  echo "--- source diff ---"
+  node scripts/diff-sources.js --quiet || echo "WARN: diff-sources failed; continuing"
+
   # Run Claude Code in print/non-interactive mode with permissions auto-accepted
   # for tools the agent needs (read/write conferences.js, web search).
   #

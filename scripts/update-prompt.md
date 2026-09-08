@@ -37,7 +37,11 @@ If a candidate doesn't fit any of the 46 specialty values above, skip it — don
 **Steps:**
 
 1. Read `/Users/ckeithw/projects/convene-md/conferences.js` to load existing entries.
-2. **FIRST read `marketing/scan-log.md`,** then use WebSearch to look for newly announced
+2. **FIRST read `marketing/coverage-plan.md` for the priority order (big conferences,
+   then smaller societies, then paid destination courses), and the newest
+   `marketing/source-diff/<date>.md` — it already lists new/changed/vanished courses
+   for the machine-readable sources, so never hand-search CloudCME or mer.org.
+   Then read `marketing/scan-log.md`,** then use WebSearch to look for newly announced
    medical conferences across the 46 specialties. That file is the rotation's memory:
    it records which specialties were swept when, and — importantly — which meetings came
    back "not yet announced" and must NOT be re-searched before their re-check date.
