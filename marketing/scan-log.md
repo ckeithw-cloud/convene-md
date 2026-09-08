@@ -120,11 +120,13 @@ community:
 | USA | 547 | 57% of the dataset |
 | Canada | 56 | |
 | **Germany** | 24 (was 11) | **major societies done** — see below |
-| **France** | 8 (was 7) | barely started — SFC only |
+| **France** | 9 (was 7) | **low yield** — see below |
 | **United Kingdom** | 10 (was 8) | in progress |
 | Austria | 6 | +1 incidentally (DGHO 2026 is in Vienna) |
-| Netherlands / Switzerland / Austria / Sweden | 4–6 each | not started |
-| Belgium, Ireland, Turkey, Israel | 0 | not started |
+| **Belgium** | 1 (was 0) | BSC only |
+| **Ireland** | 2 (was 0) | RCSI events page |
+| Netherlands / Switzerland / Sweden | 4–6 each | not started |
+| Turkey, Israel | 0 | not started |
 
 Before this pass Germany's 11 entries were almost all *European* congresses that merely
 happen to be held there (ESPEN, ECNP, EULAR, ESPID, EAES) — the German national societies
@@ -140,11 +142,22 @@ DGKJ (paediatrics), DGP (pneumology), DGHNO (ENT), DGU (2027), DGVS (2027), plus
 sub-society meetings on the DGCH calendar (DIVI, DGG vascular, ECTES 2027) which publish
 a start date but no end date and so need individual checks.
 
-**Still to check.** France: SFAR, SNFGE, SFD, SFR, SFORL, CNGOF, SFCTCV. UK: RCP, RCS, BTS,
-RCOG, RCR, ASGBI, BSG (its own annual meeting, not the endorsed courses).
+**France is markedly harder than Germany.** Four societies checked, one addable (SFAR 2026).
+The obstacles are technical, not editorial: `sfar.org` returns 403 to WebFetch but loads in
+the browser; the JFR site (France's biggest congress, ~18k attendees) is **"Under
+Construction"**; CNGOF publishes no forward dates. Use the browser rather than WebFetch for
+French society sites, and expect roughly a 1-in-4 hit rate.
+
+Also note two French acronym traps: **SFR** is both Rhumatologie and Radiologie, and **SFD**
+is both Dermatologie and Diabète. Confirm which society owns the domain before trusting a
+result.
+
+**Still to check.** France: SNFGE, SFORL, SFR (both), SFD (both), SFCTCV. UK: RCP, RCS, BTS,
+RCOG, RCR, ASGBI, BSG's own annual meeting. Ireland: RCPI, and the RCSI Charter Meeting
+(9 Feb 2027 appears in search but is not on the RCSI events page, and the 2026 edition ran
+five days, so the end date is unknown). Belgium: surgery, gastro, paediatrics.
 Not begun at all: Netherlands, Switzerland, Sweden, Denmark, Norway, Portugal, Greece,
-Poland, Czechia, Hungary — and Belgium, Ireland, Turkey and Israel, which have **zero**
-entries each.
+Poland, Czechia, Hungary, Turkey, Israel.
 
 **Checked, nothing addable yet:** BCS 2027 (Manchester Central confirmed, no dates
 published), BSG LIVE 2027 (not announced), BSR 2027 (not announced).
@@ -164,6 +177,19 @@ one or two countries per scan rather than trying to finish it.
   page for these, exactly as with US society flagships.
 
 ## Scan history
+
+### 2026-09-08 (seventh pass) — France, Belgium, Ireland
+**Added 4:** Congrès SFAR 2026 Paris, BSC Congress 2027 Brussels, ISU Annual Meeting 2026
+Killarney, Millin Meeting 2026 Dublin. **Belgium 0 → 1 and Ireland 0 → 2** — the country
+count rose from 66 to 68.
+
+France returned only one find from four societies; see the Tier 2 notes for why (403s, a
+congress site under construction, no forward dates published). Germany remains the outlier
+for yield, not the norm.
+
+Technique that worked twice here: when a society's deep link 404s, **load its `/event` or
+`/events` index in the browser** — bscardio.be's congress URL was dead but the events index
+carried the 2027 dates and city, and RCSI's events page produced two datable meetings.
 
 ### 2026-09-08 (sixth pass) — Germany finished (major societies)
 **Added 6:** 144. Deutscher Chirurgie Kongress 2027 Munich, DGN Kongress 2026 Berlin,
