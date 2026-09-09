@@ -8862,7 +8862,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 41.3083,
     lng: -72.9279,
-    url: "https://yale.cloud-cme.com/default.aspx?p=1000",
+    url: "https://yale.cloud-cme.com/default.aspx?P=0&EID=56036",
     organizer: "Yale School of Medicine",
     description: "Lifelong multidisciplinary management of aortic disease, at The Anlyan Center."
   },
@@ -8876,7 +8876,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 41.3083,
     lng: -72.9279,
-    url: "https://yale.cloud-cme.com/default.aspx?p=1000",
+    url: "https://yale.cloud-cme.com/default.aspx?P=0&EID=55914",
     organizer: "Yale School of Medicine",
     description: "Glaucoma diagnosis, medical and surgical management, at The Anlyan Center."
   },
@@ -8890,7 +8890,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 41.3083,
     lng: -72.9279,
-    url: "https://yale.cloud-cme.com/default.aspx?p=1000",
+    url: "https://yale.cloud-cme.com/default.aspx?P=0&EID=56188",
     organizer: "Yale School of Medicine",
     description: "Multimodality imaging in coronary, peripheral and structural heart intervention."
   },
@@ -8904,7 +8904,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 41.3083,
     lng: -72.9279,
-    url: "https://yale.cloud-cme.com/default.aspx?p=1000",
+    url: "https://yale.cloud-cme.com/default.aspx?P=0&EID=56057",
     organizer: "Yale School of Medicine",
     description: "Contemporary management of asthma and airway disease, at The Anlyan Center."
   },
@@ -8918,7 +8918,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 41.3083,
     lng: -72.9279,
-    url: "https://yale.cloud-cme.com/default.aspx?p=1000",
+    url: "https://yale.cloud-cme.com/default.aspx?P=0&EID=56046",
     organizer: "Yale School of Medicine",
     description: "The science and clinical management of obesity, at The Anlyan Center."
   },
@@ -9268,7 +9268,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 39.9526,
     lng: -75.1652,
-    url: "https://upenn.cloud-cme.com/default.aspx?p=1000",
+    url: "https://upenn.cloud-cme.com/default.aspx?P=0&EID=99331",
     organizer: "Penn Medicine",
     description: "Contemporary aortic valve repair technique, at the Westin Philadelphia."
   },
@@ -9282,7 +9282,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 39.9526,
     lng: -75.1652,
-    url: "https://upenn.cloud-cme.com/default.aspx?p=1000",
+    url: "https://upenn.cloud-cme.com/default.aspx?P=0&EID=101953",
     organizer: "Penn Medicine",
     description: "Therapeutic advances and targeted approaches in glomerular disease, at the Smilow Center."
   },
@@ -9296,7 +9296,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 39.9526,
     lng: -75.1652,
-    url: "https://upenn.cloud-cme.com/default.aspx?p=1000",
+    url: "https://upenn.cloud-cme.com/default.aspx?P=0&EID=101869",
     organizer: "Penn Medicine",
     description: "Arrhythmia symposium at the Marriott Old City honouring Mark E. Josephson."
   },
@@ -9310,7 +9310,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 39.9526,
     lng: -75.1652,
-    url: "https://upenn.cloud-cme.com/default.aspx?p=1000",
+    url: "https://upenn.cloud-cme.com/default.aspx?P=0&EID=102139",
     organizer: "Penn Medicine",
     description: "Kidney transplant symposium at the Perelman Center for Advanced Medicine."
   },
@@ -9324,7 +9324,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 39.9526,
     lng: -75.1652,
-    url: "https://upenn.cloud-cme.com/default.aspx?p=1000",
+    url: "https://upenn.cloud-cme.com/default.aspx?P=0&EID=102305",
     organizer: "Penn Medicine",
     description: "Geriatric oncology conference on personalising cancer treatment in older adults."
   },
@@ -9338,7 +9338,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 39.9526,
     lng: -75.1652,
-    url: "https://upenn.cloud-cme.com/default.aspx?p=1000",
+    url: "https://upenn.cloud-cme.com/default.aspx?P=0&EID=90578",
     organizer: "Penn Medicine",
     description: "Practical management of common neurological presentations, at the Smilow Center."
   },
@@ -10108,7 +10108,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 42.3684,
     lng: -83.3527,
-    url: "https://umich.cloud-cme.com/course/listing?p=1000",
+    url: "https://umich.cloud-cme.com/default.aspx?P=0&EID=93371",
     organizer: "University of Michigan Medical School",
     description: "Transfusion medicine and blood banking meeting at the Schoolcraft College Vistatech Center."
   },
@@ -10122,7 +10122,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 42.2411,
     lng: -83.613,
-    url: "https://umich.cloud-cme.com/course/listing?p=1000",
+    url: "https://umich.cloud-cme.com/default.aspx?P=0&EID=92478",
     organizer: "University of Michigan Medical School",
     description: "Two-day sleep medicine update at the EMU Student Center."
   },
@@ -10136,7 +10136,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 42.2808,
     lng: -83.743,
-    url: "https://umich.cloud-cme.com/course/listing?p=1000",
+    url: "https://umich.cloud-cme.com/default.aspx?P=0&EID=93390",
     organizer: "University of Michigan Medical School",
     description: "Annual urology society meeting and visiting professorship at Barton Hills."
   },
@@ -10150,7 +10150,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 42.2808,
     lng: -83.743,
-    url: "https://umich.cloud-cme.com/course/listing?p=1000",
+    url: "https://umich.cloud-cme.com/default.aspx?P=0&EID=93283",
     organizer: "University of Michigan Rogel Cancer Center",
     description: "Breast cancer care update from Michigan Medicine's comprehensive cancer center."
   },
@@ -10164,7 +10164,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 42.2808,
     lng: -83.743,
-    url: "https://umich.cloud-cme.com/course/listing?p=1000",
+    url: "https://umich.cloud-cme.com/default.aspx?P=0&EID=93428",
     organizer: "University of Michigan Kellogg Eye Center",
     description: "Ophthalmology alumni reunion and scientific update on vision-threatening disorders."
   },
@@ -10178,7 +10178,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 42.4734,
     lng: -83.2219,
-    url: "https://umich.cloud-cme.com/course/listing?p=1000",
+    url: "https://umich.cloud-cme.com/default.aspx?P=0&EID=93382",
     organizer: "University of Michigan Transplant Center",
     description: "Annual update on kidney and pancreas transplantation, held at The Mint."
   },
@@ -10192,7 +10192,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 42.9634,
     lng: -85.6681,
-    url: "https://umich.cloud-cme.com/course/listing?p=1000",
+    url: "https://umich.cloud-cme.com/default.aspx?P=0&EID=82377",
     organizer: "University of Michigan Medical School",
     description: "Hematologic malignancies symposium at The Amway Grand Plaza."
   },
@@ -10206,7 +10206,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 42.2808,
     lng: -83.743,
-    url: "https://umich.cloud-cme.com/course/listing?p=1000",
+    url: "https://umich.cloud-cme.com/default.aspx?P=0&EID=93215",
     organizer: "University of Michigan Medical School",
     description: "Combined sports medicine and family medicine update at the DoubleTree Ann Arbor North."
   },
@@ -10220,7 +10220,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 42.2808,
     lng: -83.743,
-    url: "https://umich.cloud-cme.com/course/listing?p=1000",
+    url: "https://umich.cloud-cme.com/default.aspx?P=0&EID=93307",
     organizer: "University of Michigan Medical School",
     description: "Women's health conference with clinical-skills workshops."
   },
@@ -10248,7 +10248,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 41.8781,
     lng: -87.6298,
-    url: "https://northwestern.cloud-cme.com/course/listing?p=1000",
+    url: "https://northwestern.cloud-cme.com/default.aspx?P=0&EID=125543",
     organizer: "Northwestern University Feinberg School of Medicine",
     description: "Fetal medicine course on current practice and research at Simpson Querrey."
   },
@@ -10262,7 +10262,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 41.8681,
     lng: -87.6198,
-    url: "https://northwestern.cloud-cme.com/course/listing?p=1000",
+    url: "https://northwestern.cloud-cme.com/default.aspx?P=0&EID=123415",
     organizer: "Northwestern University Feinberg School of Medicine",
     description: "Hands-on pleural disease and procedures course at the Northwestern Simulation Lab."
   },
@@ -10276,7 +10276,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 41.8781,
     lng: -87.6298,
-    url: "https://northwestern.cloud-cme.com/course/listing?p=1000",
+    url: "https://northwestern.cloud-cme.com/default.aspx?P=0&EID=126807",
     organizer: "Northwestern University Feinberg School of Medicine",
     description: "Workshop on intracerebral and intraventricular hemorrhage management."
   },
@@ -10290,7 +10290,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 39.7684,
     lng: -86.1581,
-    url: "https://northwestern.cloud-cme.com/course/listing?p=1000",
+    url: "https://northwestern.cloud-cme.com/default.aspx?P=0&EID=125547",
     organizer: "Northwestern University Feinberg School of Medicine",
     description: "Multidisciplinary heart team summit at the Hyatt Regency Indianapolis."
   },
@@ -10304,7 +10304,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 41.8681,
     lng: -87.6198,
-    url: "https://northwestern.cloud-cme.com/course/listing?p=1000",
+    url: "https://northwestern.cloud-cme.com/default.aspx?P=0&EID=126415",
     organizer: "Northwestern University Feinberg School of Medicine",
     description: "Conference on diagnosis and management of Wilson disease."
   },
@@ -10318,7 +10318,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 41.8781,
     lng: -87.6298,
-    url: "https://northwestern.cloud-cme.com/course/listing?p=1000",
+    url: "https://northwestern.cloud-cme.com/default.aspx?P=0&EID=123902",
     organizer: "Northwestern University Feinberg School of Medicine",
     description: "Four-day multidisciplinary breast cancer symposium at the Radisson Blu Aqua Hotel."
   },
@@ -10332,7 +10332,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 41.8325,
     lng: -87.929,
-    url: "https://northwestern.cloud-cme.com/course/listing?p=1000",
+    url: "https://northwestern.cloud-cme.com/default.aspx?P=0&EID=126758",
     organizer: "Northwestern University Feinberg School of Medicine",
     description: "Annual hepatology symposium at the Hilton Chicago/Oak Brook Hills Resort."
   },
@@ -10346,7 +10346,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 41.8781,
     lng: -87.6298,
-    url: "https://northwestern.cloud-cme.com/course/listing?p=1000",
+    url: "https://northwestern.cloud-cme.com/default.aspx?P=0&EID=126136",
     organizer: "Northwestern University Feinberg School of Medicine",
     description: "Neurology update held at Prentice Women's Hospital."
   },
@@ -10360,7 +10360,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 41.8681,
     lng: -87.6198,
-    url: "https://northwestern.cloud-cme.com/course/listing?p=1000",
+    url: "https://northwestern.cloud-cme.com/default.aspx?P=0&EID=124694",
     organizer: "Northwestern University Feinberg School of Medicine",
     description: "Three-day cardiovascular MRI course offering 18.25 credits."
   },
@@ -10374,7 +10374,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 41.8681,
     lng: -87.6198,
-    url: "https://northwestern.cloud-cme.com/course/listing?p=1000",
+    url: "https://northwestern.cloud-cme.com/default.aspx?P=0&EID=125552",
     organizer: "Northwestern University Feinberg School of Medicine",
     description: "Multidisciplinary conference on adult and paediatric echocardiography."
   },
@@ -10388,7 +10388,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 38.9072,
     lng: -77.0369,
-    url: "https://northwestern.cloud-cme.com/course/listing?p=1000",
+    url: "https://northwestern.cloud-cme.com/default.aspx?P=0&EID=121822",
     organizer: "Northwestern University Feinberg School of Medicine",
     description: "Three-day course on interventional radiology complications, at the Four Seasons."
   },
@@ -10402,7 +10402,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 41.8681,
     lng: -87.6198,
-    url: "https://northwestern.cloud-cme.com/course/listing?p=1000",
+    url: "https://northwestern.cloud-cme.com/default.aspx?P=0&EID=126278",
     organizer: "Robert H. Lurie Comprehensive Cancer Center",
     description: "Symposium covering hepatobiliary, gastroesophageal, colorectal, pancreatic and neuroendocrine cancers."
   },
@@ -10416,7 +10416,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 41.8781,
     lng: -87.6298,
-    url: "https://northwestern.cloud-cme.com/course/listing?p=1000",
+    url: "https://northwestern.cloud-cme.com/default.aspx?P=0&EID=124407",
     organizer: "Northwestern University Feinberg School of Medicine",
     description: "Skills symposium on bedside clinical examination and point-of-care ultrasound."
   },
@@ -10458,7 +10458,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 38.647,
     lng: -90.2594,
-    url: "https://washu.cloud-cme.com/course/listing?p=1000",
+    url: "https://washu.cloud-cme.com/default.aspx?P=0&EID=65060",
     organizer: "WashU Medicine CME",
     description: "Two-day advanced therapeutic endoscopy course at the Chase Park Plaza."
   },
@@ -10472,7 +10472,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 38.627,
     lng: -90.1994,
-    url: "https://washu.cloud-cme.com/course/listing?p=1000",
+    url: "https://washu.cloud-cme.com/default.aspx?P=0&EID=65069",
     organizer: "WashU Medicine CME",
     description: "Symposium on glomerular disease mechanisms and management at the Newman Education Center."
   },
@@ -10486,7 +10486,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 38.647,
     lng: -90.3294,
-    url: "https://washu.cloud-cme.com/course/listing?p=1000",
+    url: "https://washu.cloud-cme.com/default.aspx?P=0&EID=65403",
     organizer: "WashU Medicine CME",
     description: "Clinical allergy and immunology update at Le Meridien St. Louis Clayton."
   },
@@ -10500,7 +10500,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 38.627,
     lng: -90.1994,
-    url: "https://washu.cloud-cme.com/course/listing?p=1000",
+    url: "https://washu.cloud-cme.com/default.aspx?P=0&EID=65099",
     organizer: "WashU Medicine CME",
     description: "Critical care and neurocritical care update focused on serious infections."
   },
@@ -10514,7 +10514,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 38.627,
     lng: -90.1994,
-    url: "https://washu.cloud-cme.com/course/listing?p=1000",
+    url: "https://washu.cloud-cme.com/default.aspx?P=0&EID=65061",
     organizer: "WashU Medicine CME",
     description: "Hospitalist conference on care of the hospitalized patient."
   },
@@ -10528,7 +10528,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 38.627,
     lng: -90.1994,
-    url: "https://washu.cloud-cme.com/course/listing?p=1000",
+    url: "https://washu.cloud-cme.com/default.aspx?P=0&EID=65910",
     organizer: "WashU Medicine CME",
     description: "Course on innovations in hip and knee arthroplasty."
   },
@@ -10542,7 +10542,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 38.647,
     lng: -90.2594,
-    url: "https://washu.cloud-cme.com/course/listing?p=1000",
+    url: "https://washu.cloud-cme.com/default.aspx?P=0&EID=65967",
     organizer: "WashU Medicine CME",
     description: "Multidisciplinary update on gastroesophageal cancer management."
   },
@@ -10556,7 +10556,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 39.0997,
     lng: -94.5786,
-    url: "https://washu.cloud-cme.com/course/listing?p=1000",
+    url: "https://washu.cloud-cme.com/default.aspx?P=0&EID=65174",
     organizer: "WashU Medicine CME",
     description: "Trauma care symposium on the latest innovations and trends, at the Cascade Hotel."
   },
@@ -11578,7 +11578,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 35.0844,
     lng: -106.6504,
-    url: "https://uofuhealth.cloud-cme.com/course/listing?p=1000",
+    url: "https://uofuhealth.cloud-cme.com/default.aspx?P=0&EID=83884",
     organizer: "University of Utah Health Continuing Medical Education",
     description: "Symposium on advanced heart and lung failure and transplantation."
   },
@@ -16523,5 +16523,19 @@ const CONFERENCES = [
     url: "https://northwestern.cloud-cme.com/default.aspx?P=0&EID=126545",
     organizer: "Northwestern University Feinberg School of Medicine",
     description: "50th annual Northwestern vascular surgery symposium at the InterContinental Chicago. Offers 19.25 AMA PRA Category 1 Credits."
+  },
+  {
+    name: "NVvH Najaarsdag 2026 — Dutch Society of Surgery Autumn Meeting",
+    specialty: "General Surgery",
+    year: 2026,
+    startDate: "2026-11-27",
+    endDate: "2026-11-27",
+    city: "Utrecht",
+    country: "Netherlands",
+    lat: 52.0907,
+    lng: 5.1214,
+    url: "https://congres.heelkunde.nl/",
+    organizer: "Nederlandse Vereniging voor Heelkunde (Dutch Society of Surgery)",
+    description: "Autumn meeting of the Dutch Society of Surgery at DeFabrique, Utrecht."
   },
 ];
