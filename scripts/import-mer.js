@@ -1,6 +1,14 @@
-// One-off importer: pull the full MER (Medical Education Resources) catalogue
-// from mer.org and emit conferences.js entries. Month pages are server-rendered,
-// so plain fetch works — no browser needed.
+// Incremental importer: pull the MER (Medical Education Resources) catalogue from
+// mer.org and emit conferences.js entries for courses we do NOT already hold.
+// Month pages are server-rendered, so plain fetch works — no browser needed.
+//
+// Re-runnable. Two things were changed after the original one-off run:
+//   * the month window rolls forward from today instead of being hardcoded, so new
+//     editions appear as MER publishes them (the hardcoded list stopped at Oct 2027
+//     and was silently hiding the Nov 2027 courses);
+//   * courses already in conferences.js are skipped, matched on the base64 id in the
+//     url, so the output can be appended directly.
+// Writes scripts/mer-entries.js with ONLY the new rows.
 const fs = require("fs");
 
 const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/124.0 Safari/537.36";
@@ -25,9 +33,24 @@ const dec = (s) => String(s)
   .replace(/\s+/g, " ").trim();
 
 const MONTHS = [];
-for (const [m, y] of [["08","2026"],["09","2026"],["10","2026"],["11","2026"],["12","2026"],
-  ["01","2027"],["02","2027"],["03","2027"],["04","2027"],["05","2027"],["06","2027"],
-  ["07","2027"],["08","2027"],["09","2027"],["10","2027"]]) MONTHS.push(`${m}-${y}`);
+{
+  const now = new Date();
+  for (let i = 0; i < 18; i++) {
+    const d = new Date(now.getFullYear(), now.getMonth() + i, 1);
+    MONTHS.push(`${String(d.getMonth() + 1).padStart(2, "0")}-${d.getFullYear()}`);
+  }
+}
+
+// Courses already held, keyed by the base64 id in the stored url.
+const HELD = new Set();
+{
+  const src = fs.readFileSync(__dirname + "/../conferences.js", "utf8");
+  const C = eval("(function(){" + src + "\nreturn CONFERENCES;})()");
+  for (const c of C) {
+    const m = /mer\.org\/conference\/+([A-Za-z0-9=+/]+)/.exec(c.url || "");
+    if (m) HELD.add(m[1]);
+  }
+}
 
 // city, country, lat, lng — keyed by MER's own "State, City" label. Where MER labels a
 // venue by resort/park brand rather than a place, the real municipality from the venue's
@@ -136,7 +159,11 @@ function parseDates(d) {
   const rows = new Map();
   for (const mo of MONTHS) {
     const html = await get(`https://www.mer.org/conference-schedule//${b64(mo)}`);
-    const re = /class="header" href="([^"]+)">([^<]*)<\/a><div class="ui label date_label">\s*<i class="calendar icon"><\/i>([^<]*)<\/div><div class="description">([^<]*)<\/div>/g;
+    // The title anchor, then the date and location in SIBLING divs. The original
+    // pattern assumed the elements were adjacent with no whitespace; mer.org emits
+    // newlines and tabs between them, so it silently matched nothing ("cards found: 0")
+    // and the importer reported zero new courses. Allow whitespace between the parts.
+    const re = /<a class="header"\s+href="(https:\/\/www\.mer\.org\/conference\/\/[^"]+)">([\s\S]*?)<\/a>[\s\S]{0,300}?date_label">[\s\S]*?<\/i>\s*([^<]*?)<\/div>[\s\S]{0,300}?<div class="description">\s*([^<]*?)<\/div>/g;
     let m;
     while ((m = re.exec(html))) {
       const url = m[1];
@@ -154,7 +181,10 @@ function parseDates(d) {
     await sleep(150);
     await Promise.all(all.slice(i, i + 4).map(async (r) => {
       const h = await get(r.url);
-      const v = h.match(/Venue Information<\/h4><div class="ui divider"><\/div><h4>([^<]*)<\/h4>/);
+      // Same whitespace trap as the listing regex: the divider and the venue <h4> are
+      // separated by newlines and indentation, so the adjacent-tag pattern matched
+      // nothing and every new course was rejected as "no venue".
+      const v = h.match(/Venue Information<\/h4>[\s\S]{0,200}?<h4>([^<]*)<\/h4>/);
       r.venue = v ? dec(v[1]) : "";
       const c = h.match(/<span class="ui header fourteen wide column">[^<]*?-\s*([\d.]+)\s*Credit Hours/);
       r.credits = c ? c[1] : "";
@@ -163,7 +193,10 @@ function parseDates(d) {
 
   // 3. Map onto the conferences.js schema.
   const problems = [], out = [];
+  let skipped = 0;
   for (const r of all) {
+    const cid = (r.url.match(/conference\/+([^/"]+)/) || [])[1];
+    if (cid && HELD.has(cid)) { skipped++; continue; }
     const loc = r.loc === "California, Napa/Sonoma"
       ? (/Sonoma/i.test(r.venue) ? ["Sonoma", "USA", 38.3122, -122.4830] : ["Napa", "USA", 38.2975, -122.2869])
       : LOC[r.loc];
@@ -192,6 +225,6 @@ function parseDates(d) {
 
   fs.writeFileSync(__dirname + "/mer-entries.js", js + "\n");
   fs.writeFileSync(__dirname + "/mer-raw.json", JSON.stringify(all, null, 1));
-  console.log(`entries written: ${out.length}`);
+  console.log(`new entries written: ${out.length} (skipped ${skipped} already held)`);
   if (problems.length) console.log("PROBLEMS:\n" + problems.join("\n"));
 })();
