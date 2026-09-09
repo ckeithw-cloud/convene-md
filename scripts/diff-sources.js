@@ -53,6 +53,15 @@ function datasetKey(url) {
   return null;
 }
 
+// Candidates already reviewed and declined, keyed the same way as datasetKey().
+// Without this the same two dozen faculty-development courses, simulation sessions and
+// ambiguous listings resurface in every weekly report, and the signal drowns. The file
+// records WHY each was declined so the decision can be revisited rather than re-derived.
+let DECLINED = {};
+try {
+  DECLINED = JSON.parse(fs.readFileSync(path.join(ROOT, "marketing", "source-diff-ignore.json"), "utf8"));
+} catch (e) { /* no ignore file yet */ }
+
 const byKey = new Map();
 const byNameDate = new Map();
 for (const c of CONFERENCES) {
@@ -133,7 +142,10 @@ async function fetchCloudCME() {
         startDate: s,
         endDate: e,
         venue: r.where || "",
-        online: !r.where || /\bonline\b|\bvirtual\b|internet live/i.test(r.where),
+        // "A Live Webinar" is how Stanford labels its online courses -- it contains
+        // neither "online" nor "virtual", so six webinars leaked into the candidate
+        // list before this was widened. Also catches hybrid/livestream phrasing.
+        online: !r.where || /\bonline\b|\bvirtual\b|internet live|webinar|livestream|live ?stream|\bhybrid\b|\bzoom\b/i.test(r.where),
         cat1: !!r.cat1,
         hours: r.hours,
         url: r.url,
@@ -274,6 +286,7 @@ const SOURCES = { cloudcme: fetchCloudCME, mer: fetchMER };
     const held = exact || fuzzyHeld(r.name, r.startDate);
     if (!held) {
       // Only surface plausible additions, else the report is mostly noise.
+      if (DECLINED[r.key]) continue;
       if (r.online || r.junk || !r.cat1) continue;
       if (r.hours != null && r.hours < 4) continue;
       isNew.push(r);
@@ -364,6 +377,8 @@ const SOURCES = { cloudcme: fetchCloudCME, mer: fetchMER };
       L.push(`- \`${u}\` — ${names.length} entr${names.length === 1 ? "y" : "ies"}: ${names.slice(0, 3).map(n => n.slice(0, 44)).join("; ")}${names.length > 3 ? " …" : ""}`);
   });
 
+  const declinedN = Object.keys(DECLINED).length;
+  if (declinedN) { L.push(`_${declinedN} previously reviewed candidate(s) suppressed — see marketing/source-diff-ignore.json._`); L.push(""); }
   if (emptySources.length) sec("Scraper failures", emptySources.length, () => {
     L.push("**A source returned nothing.** This is almost always a markup change, not mass cancellation. Fix the scraper before trusting anything else in this report.");
     L.push("");

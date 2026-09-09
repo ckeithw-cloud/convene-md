@@ -63,6 +63,12 @@ It reports four things and **edits nothing**:
 - **Entries with no deep link** — rows pointing at a listing page instead of a course.
   These break the deep-link rule in `update-prompt.md` and cannot be tracked at all.
 
+Candidates reviewed and rejected are recorded in `marketing/source-diff-ignore.json`, keyed
+the same way, with the reason and the date. Without it the same two dozen faculty-development
+courses, simulation sessions and ambiguous listings resurface every week and the signal
+drowns. **The goal is a report that reads "new 0"** — anything appearing is then genuinely
+new and worth a look. To reconsider a decision, delete its entry from that file.
+
 Two safety properties worth preserving if this is ever edited:
 
 - **It reports, never writes.** Silently rewriting dates from a regex would defeat the

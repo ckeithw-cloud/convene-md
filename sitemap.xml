@@ -643,6 +643,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://convene.md/city/newport/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://convene.md/city/oak-brook/</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>

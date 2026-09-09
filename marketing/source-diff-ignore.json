@@ -1,0 +1,122 @@
+{
+ "cloudcme:82209": {
+  "name": "The One and Only NICER: Cytokines, Connections, and the Pr",
+  "reason": "ambiguous specialty — no description published, cannot map to one of the 46",
+  "declined": "2026-09-09"
+ },
+ "cloudcme:112759": {
+  "name": "ACGME-VUMC Developing Faculty Competencies in Assessment -",
+  "reason": "faculty development, not a conference",
+  "declined": "2026-09-09"
+ },
+ "cloudcme:93550": {
+  "name": "43rd Annual James W. Rae Scientific Day & Lecture",
+  "reason": "internal departmental scientific day",
+  "declined": "2026-09-09"
+ },
+ "cloudcme:93321": {
+  "name": "2026 Michigan Work Society Meeting",
+  "reason": "ambiguous — cannot determine specialty or scope",
+  "declined": "2026-09-09"
+ },
+ "cloudcme:126806": {
+  "name": "ACE Society Annual Meeting 2026",
+  "reason": "ambiguous acronym; owning society not identifiable",
+  "declined": "2026-09-09"
+ },
+ "cloudcme:83881": {
+  "name": "Revere Elevate MSK",
+  "reason": "ambiguous — no description, unclear format",
+  "declined": "2026-09-09"
+ },
+ "cloudcme:83886": {
+  "name": "CT Academy",
+  "reason": "training course rather than a conference",
+  "declined": "2026-09-09"
+ },
+ "cloudcme:93428": {
+  "name": "Department of Ophthalmology and Visual Sciences 32nd Annua",
+  "reason": "alumni reunion; already held as 'Kellogg Eye Center 32nd Annual Fall Alumni Reunion 2026'",
+  "declined": "2026-09-09"
+ },
+ "cloudcme:57344": {
+  "name": "Lean Healthcare Academic Conference",
+  "reason": "health-system management, not clinical CME",
+  "declined": "2026-09-09"
+ },
+ "cloudcme:125954": {
+  "name": "Emergency Medicine FacET - 9/29/2026 CME",
+  "reason": "internal faculty training",
+  "declined": "2026-09-09"
+ },
+ "cloudcme:125653": {
+  "name": "Promoting Professionalism: Addressing Behaviors that Under",
+  "reason": "remedial behavioural programme",
+  "declined": "2026-09-09"
+ },
+ "cloudcme:93633": {
+  "name": "MBSC/MSQC October 2026 Tri-Annual Meeting",
+  "reason": "quality-collaborative business meeting",
+  "declined": "2026-09-09"
+ },
+ "cloudcme:84026": {
+  "name": "IMPROVE",
+  "reason": "no venue published beyond ', UT'",
+  "declined": "2026-09-09"
+ },
+ "cloudcme:93436": {
+  "name": "Adult ECMO Simulation Course",
+  "reason": "simulation training, not a conference",
+  "declined": "2026-09-09"
+ },
+ "cloudcme:93435": {
+  "name": "Stay Abreast: Breast Health, Cancer, and Genetics Workshop",
+  "reason": "half-day workshop",
+  "declined": "2026-09-09"
+ },
+ "cloudcme:84038": {
+  "name": "IMPROVE - Hawaii",
+  "reason": "venue contradicts the title (listed at St George, Utah); unresolvable",
+  "declined": "2026-09-09"
+ },
+ "cloudcme:125931": {
+  "name": "LifeFlight Critical Care Transport Simulation - 10/22/2026",
+  "reason": "simulation training",
+  "declined": "2026-09-09"
+ },
+ "cloudcme:93257": {
+  "name": "Medical Education Symposium",
+  "reason": "internal education event",
+  "declined": "2026-09-09"
+ },
+ "cloudcme:65164": {
+  "name": "2026 Clinical Research Education & Statistics Training (CR",
+  "reason": "research methods training course",
+  "declined": "2026-09-09"
+ },
+ "cloudcme:33778": {
+  "name": "2026 Patient Safety Symposium: Learning from Errors, Desig",
+  "reason": "non-clinical; no mappable specialty",
+  "declined": "2026-09-09"
+ },
+ "cloudcme:22106": {
+  "name": "15th Annual UCSF Techniques in Complex Cervical/Cervicotho",
+  "reason": "DUPLICATE of '15th Annual UCSF Spinal Surgery Bioskills Lab' (same dates, Las Vegas)",
+  "declined": "2026-09-09"
+ },
+ "cloudcme:20059": {
+  "name": "CH/UCSF/FCMS Health Conference 2026",
+  "reason": "ambiguous — organisers and scope not identifiable",
+  "declined": "2026-09-09"
+ },
+ "cloudcme:59051": {
+  "name": "11th Annual Connecticut Mandates Symposium",
+  "reason": "state licensure-mandate training, not a specialty conference",
+  "declined": "2026-09-09"
+ },
+ "cloudcme:33937": {
+  "name": "16th Annual Lysosomal Storage Disease Symposium",
+  "reason": "cannot map confidently to one of the 46 specialties",
+  "declined": "2026-09-09"
+ }
+}
