@@ -95,6 +95,9 @@ Lifestyle & Preventive, Sports, Hematology, Nephrology, Pathology.
 | EADV Congress 2027 | 2026-09-08 | 2026 Vienna is latest; the 2027 *Symposium* (Dresden) IS confirmed and added | 2027-01 |
 | SITC 2027 | 2026-09-08 | Nov 3–7 2027 in a search summary, not on the SITC site | 2027-01 |
 | ASTRO 2028 / 2029 | 2026-09-08 | dates published (21–25 Oct 2028, 6–10 Oct 2029), **no host city** | 2027-03 |
+| Læknadagar 2027 (Icelandic Medical Association, Reykjavik) | 2026-09-14 | runs the third week of January at Harpa every year (2026: 19–23 Jan) but 2027 not posted; programme is in Icelandic, so marginal for a travelling physician anyway | 2026-11 |
+| NUNAMED 2028 (Nuuk, Greenland) | 2026-09-14 | triennial; the 12th ran 3–5 Oct 2025 with 468 attendees — the **only** recurring physician meeting in Greenland. Next is ~Oct 2028, unannounced | 2027-10 |
+| SSAI 2028 (Scandinavian anaesthesia) | 2026-09-14 | 2026 was Reykjavik (10–12 Jun, past); 2028 host not on ssai.info | 2027-01 |
 
 ## Held back for a missing credit statement
 
@@ -132,6 +135,8 @@ community:
 | Israel | 0 | checked — society sites are Hebrew and poorly indexed; needs a different approach |
 | **Greece** | +1 | HCS international congress (Athens) — 2026-09-14 |
 | **Portugal** | +1 | SPC congress (Vilamoura) — 2026-09-14 |
+| **Iceland** | 6 (was 0) | **owner asked 2026-09-14** — Nordic rotation congresses + destination CME, see below |
+| Greenland | 0 | checked — only NUNAMED (triennial, next ~2028); everything else in search is aggregator junk |
 
 Before this pass Germany's 11 entries were almost all *European* congresses that merely
 happen to be held there (ESPEN, ECNP, EULAR, ESPID, EAES) — the German national societies
@@ -208,6 +213,35 @@ one or two countries per scan rather than trying to finish it.
   page for these, exactly as with US society flagships.
 
 ## Scan history
+
+### 2026-09-14 (later) — Iceland and Greenland, on request
+Owner asked "anything in Greenland or Iceland?" — dataset had zero for both and neither
+had ever been searched. **Added 6, all Reykjavik, all on the organiser's own page:**
+SCR 2027 (41st Scandinavian Congress of Rheumatology, Harpa, 25–28 Aug), NSSC 2027
+(24th Nordic Stroke Society Congress, Hilton, 15–17 Sep), NWAS Current Anesthesia Practice
+(Iceland Parliament Hotel, 23–27 Aug 2027, 20 AMA PRA Cat 1), two Continuing Education Inc.
+cruises (Cardiology/Critical Care round-trip Reykjavik 7–14 Aug 2027; Internal Medicine
+Reykjavik→Rotterdam 18–25 Jul 2027; 14 credits each — cruise precedent is the Honolulu
+entry, city = departure port), and **NCGP 2028** (25th Nordic Congress of General Practice,
+14–16 Jun 2028, from NFGP's own next-congress page). Iceland is now a country hub and
+Reykjavik a city hub; with 6 entries it entered the top-60 city chip strip, bumping Copenhagen.
+
+Two things learned:
+- **The Nordic rotation is a vein we have not tapped.** The dataset held exactly one
+  "Nordic" entry before today. NOF (orthopaedics), SSAI (anaesthesia), NFGP, Nordic Stroke,
+  SCR, NUF (urology), NFOG (gynaecology), Nordic ENT and others rotate among DK/NO/SE/FI/IS
+  on 2–3-year cycles and publish the rotation years ahead. Each society's "future congresses"
+  page is one fetch for several countries at once. Worth a dedicated pass — Denmark, Norway,
+  Sweden, Finland are all still "not begun" in the country table.
+- **Greenland has one physician meeting.** NUNAMED, triennial, Nuuk, last 3–5 Oct 2025.
+  Every other "conference in Nuuk" hit is a predatory aggregator listing. ICCH (circumpolar
+  health) is real but its 2027 congress is Anchorage, 6–8 Jun — worth adding on the next
+  US pass; not held.
+
+Skipped: NWAS's own listing page for its 2027 Keystone course is still a listing URL
+(no deep link) — the 2027 Reykjavik entry uses the course's `/conference/view/` deep link,
+and the Keystone one should be upgraded the same way. NWAS runs dozens of destination
+courses on that pattern and is a Tier 3 provider we hold **one** entry from.
 
 ### 2026-09-14 — weekly run
 **Source diff caught its first real date change.** San Diego Genitourinary Annual Course

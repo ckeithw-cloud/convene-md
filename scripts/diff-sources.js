@@ -120,17 +120,35 @@ function cloudcmeHosts() {
 // certification, and anything explicitly aimed at APPs or nurses.
 const JUNK = /T4UCSF|faculty development|fellowship|maintenance of certification|MOCA|grand round|journal club|tumou?r board|distressed physician|proper prescribing|research ethics|improvement science|certificate course|master of science|orientation|onboarding|advanced practice provider|\bAPP\b|for nurses|nursing|master clinician series|\bECHO\b|introductory training|instructor certification|didactic workshop|scholarship program|simulation training/i;
 
+// Which python3 runs the CloudCME scraper. launchd's PATH puts /opt/homebrew/bin first, so
+// a bare "python3" resolved to Homebrew's 3.14 there — which has no `requests` — and all 15
+// hosts failed with a bare "Command failed" on 2026-09-14. Probe once for an interpreter that
+// can actually import it; the system python at /usr/bin has it.
+const PYTHON = (() => {
+  const cands = [process.env.CONVENE_PYTHON, "/usr/bin/python3", "python3"].filter(Boolean);
+  for (const c of cands) {
+    try {
+      execFileSync(c, ["-c", "import requests"], { stdio: "ignore", timeout: 20000 });
+      return c;
+    } catch {}
+  }
+  return "python3";
+})();
+
 async function fetchCloudCME() {
   const out = [];
   for (const host of cloudcmeHosts()) {
     let rows;
     try {
-      const raw = execFileSync("python3", [path.join(__dirname, "scrape-cloudcme.py"), host], {
-        encoding: "utf8", maxBuffer: 64 * 1024 * 1024, stdio: ["ignore", "pipe", "ignore"], timeout: 180000
+      const raw = execFileSync(PYTHON, [path.join(__dirname, "scrape-cloudcme.py"), host], {
+        encoding: "utf8", maxBuffer: 64 * 1024 * 1024, stdio: ["ignore", "pipe", "pipe"], timeout: 180000
       });
       rows = JSON.parse(raw);
     } catch (e) {
-      out.push({ __error: `${host}: ${String(e.message || e).split("\n")[0]}` });
+      // Keep the last stderr line: "Command failed" alone told us nothing when every
+      // host failed under launchd on 2026-09-14.
+      const err = String(e.stderr || "").trim().split("\n").pop() || String(e.message || e).split("\n")[0];
+      out.push({ __error: `${host}: ${err}` });
       continue;
     }
     for (const r of rows) {

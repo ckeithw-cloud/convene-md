@@ -112,9 +112,13 @@ was found there after the main future-meetings page listed dates alone.
 | Job | Runs | State |
 | --- | --- | --- |
 | Traffic report (`com.medconf.traffic`) | Mon 08:20 | works unattended |
-| Source diff (`scripts/diff-sources.js`) | should join Monday | no LLM needed, so it *can* run unattended — unlike the updater |
+| Source diff (`scripts/diff-sources.js`) | Mon 14:07, first step of the updater | works unattended since 2026-09-14 — before that, launchd's PATH picked Homebrew's python3 (no `requests`), all 15 CloudCME hosts failed, and the empty-source guard hid it as a clean report. Now pinned to `/usr/bin/python3` (override: `CONVENE_PYTHON`) |
 | Conference scan (`com.medconf.update`) | Mon 14:07 | **broken** — Claude CLI "Not logged in"; run manually |
 | Subscriber report | 1st of month 08:40 | **broken** — needs `~/.config/convene/buttondown-token` |
 
 The source diff is the one piece of conference work that does not depend on the unresolved
 CLI auth, since it makes no model calls. That makes it the reliable half of Monday.
+
+One caveat learned the hard way: the launchd run **overwrites** `marketing/source-diff/<date>.md`
+for the same day. If the morning's manual run has already been acted on, the afternoon's
+automated run replaces that report — restore it from git if the record matters.
