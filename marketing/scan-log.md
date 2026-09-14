@@ -130,6 +130,8 @@ community:
 | **Switzerland** | 9 (was 6) | SGAIM ×3 |
 | Sweden | 6 | checked — Kirurgveckan 2026 already past, 2027 unannounced |
 | Israel | 0 | checked — society sites are Hebrew and poorly indexed; needs a different approach |
+| **Greece** | +1 | HCS international congress (Athens) — 2026-09-14 |
+| **Portugal** | +1 | SPC congress (Vilamoura) — 2026-09-14 |
 
 Before this pass Germany's 11 entries were almost all *European* congresses that merely
 happen to be held there (ESPEN, ECNP, EULAR, ESPID, EAES) — the German national societies
@@ -206,6 +208,24 @@ one or two countries per scan rather than trying to finish it.
   page for these, exactly as with US society flagships.
 
 ## Scan history
+
+### 2026-09-14 — weekly run
+**Source diff caught its first real date change.** San Diego Genitourinary Annual Course
+in Oncology (GUACO) 2026 moved from 26 Sep to **17 Oct** — a key-matched EID on Scripps'
+own page, verified there, corrected. This is the tool doing exactly what it was built for;
+the entry would otherwise have sat a month wrong.
+
+Diff also surfaced 3 new candidates: added the Pennsylvania Chapter of ASMBS 2026 (King of
+Prussia — bariatric is thin) and the BCVI Cardiovascular Symposium 2026 (Huntley);
+declined a VUMC "Maintaining Professional Boundaries" remedial programme. Three delisted
+entries all still have live pages — registration closed, not cancelled.
+
+Rotation: Greece and Portugal, two destination countries not yet started. **Added 2:**
+HCS International Cardiology Congress 2026 (Grand Hyatt Athens, 13–15 Nov) and
+**CPC 2027 (Vilamoura, Algarve, 18–21 Mar)**. Both confirmed on the society's own page.
+
+Traffic: 431 visits this week, +70%. Hub count fell 284 → 276 as September events expired
+and some cities dropped below `MIN_CITY` — expected pruning, not a defect.
 
 ### 2026-09-08 (ninth pass) — Switzerland, Sweden, Israel, UK colleges
 **Added 5:** SGAIM Herbstkongress 2026 Bern, SGAIM Frühjahrskongress 2027 Basel, SGAIM
