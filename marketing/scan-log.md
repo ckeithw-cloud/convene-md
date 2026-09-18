@@ -59,6 +59,14 @@ Last swept, by specialty. Anything absent has never been swept by a logged scan.
 | Family Medicine | 2026-09-08 | nothing confirmable |
 | Gastroenterology | 2026-09-08 | nothing new |
 | Infectious Disease | 2026-09-08 | nothing new |
+| Urology (Nordic) | 2026-09-18 | NUF 2027 |
+| Nephrology (Nordic) | 2026-09-18 | NSN 2027 |
+| Obstetrics & Gynecology (Nordic) | 2026-09-18 | NFOG 2027 |
+| Otolaryngology (Nordic) | 2026-09-18 | NOK 2027 |
+| Orthopedic Surgery (Nordic) | 2026-09-18 | NOF/DOS 2026 |
+| Neurology (Nordic) | 2026-09-18 | NCCN 2027; Cedars neurovascular 2027 via diff |
+| Dermatology (Nordic) | 2026-09-18 | NCDV 2028 |
+| Cardiothoracic (Nordic) | 2026-09-18 | SATS 2026 already past; 2027 unannounced |
 
 **Flagship coverage is now complete** in the sense that every major society acronym in
 `update-prompt.md` has been checked for a 2027+ entry at least once. What has NOT been
@@ -98,6 +106,10 @@ Lifestyle & Preventive, Sports, Hematology, Nephrology, Pathology.
 | Læknadagar 2027 (Icelandic Medical Association, Reykjavik) | 2026-09-14 | runs the third week of January at Harpa every year (2026: 19–23 Jan) but 2027 not posted; programme is in Icelandic, so marginal for a travelling physician anyway | 2026-11 |
 | NUNAMED 2028 (Nuuk, Greenland) | 2026-09-14 | triennial; the 12th ran 3–5 Oct 2025 with 468 attendees — the **only** recurring physician meeting in Greenland. Next is ~Oct 2028, unannounced | 2027-10 |
 | SSAI 2028 (Scandinavian anaesthesia) | 2026-09-14 | 2026 was Reykjavik (10–12 Jun, past); 2028 host not on ssai.info | 2027-01 |
+| SATS 2027 (Scandinavian thoracic) | 2026-09-18 | 74th meeting was Trondheim 9–11 Sep 2026 (past); 2027 not on satsnordic.com | 2027-01 |
+| NOF 2028 (Nordic orthopaedics) | 2026-09-18 | Norway confirmed on norf.org, no city or dates | 2027-06 |
+| Nordic gastro / cardiology / psychiatry / paediatrics / geriatrics congresses | 2026-09-18 | searches for a Nordic-level congress in each came back empty — several of these federations no longer run one; do not re-search as a group, only if a specific society name turns up | 2027-03 |
+| Kirurgveckan 2027 (Sweden) | 2026-09-08 | still unannounced 2026-09-18 | 2026-12 |
 
 ## Held back for a missing credit statement
 
@@ -136,6 +148,10 @@ community:
 | **Greece** | +1 | HCS international congress (Athens) — 2026-09-14 |
 | **Portugal** | +1 | SPC congress (Vilamoura) — 2026-09-14 |
 | **Iceland** | 6 (was 0) | **owner asked 2026-09-14** — Nordic rotation congresses + destination CME, see below |
+| **Denmark** | +2 | NOF/DOS 2026, NUF 2027 — 2026-09-18 (DKS Årsmøde 2026 was already held) |
+| **Norway** | +1 | NCDV 2028 Oslo — 2026-09-18 (Høstmøtet 2026 was already held) |
+| **Sweden** | +2 | NCCN 2027 Uppsala, NSN 2027 Stockholm — 2026-09-18 |
+| **Finland** | 4 (was 0) | Operatiiviset Päivät 2026, Lääkäripäivät 2027, NOK 2027 Turku, NFOG 2027 Tampere — 2026-09-18 |
 | Greenland | 0 | checked — only NUNAMED (triennial, next ~2028); everything else in search is aggregator junk |
 
 Before this pass Germany's 11 entries were almost all *European* congresses that merely
@@ -192,8 +208,8 @@ knowing.
 RCOG, RCR, ASGBI, BSG's own annual meeting. Ireland: RCPI, and the RCSI Charter Meeting
 (9 Feb 2027 appears in search but is not on the RCSI events page, and the 2026 edition ran
 five days, so the end date is unknown). Belgium: surgery, gastro, paediatrics.
-Not begun at all: Netherlands, Switzerland, Sweden, Denmark, Norway, Portugal, Greece,
-Poland, Czechia, Hungary, Turkey, Israel.
+Not begun at all: Poland, Czechia, Hungary. (Netherlands, Switzerland, Sweden, Denmark,
+Norway, Finland, Iceland, Portugal, Greece, Turkey and Israel have each had at least one pass.)
 
 **Checked, nothing addable yet:** BCS 2027 (Manchester Central confirmed, no dates
 published), BSG LIVE 2027 (not announced), BSR 2027 (not announced).
@@ -213,6 +229,31 @@ one or two countries per scan rather than trying to finish it.
   page for these, exactly as with US society flagships.
 
 ## Scan history
+
+### 2026-09-18 — weekly run (Friday; Monday was a work day)
+**Diff:** 527 live | changed 0 | gone 4 | new 2. All four "gone" still have live pages —
+two are past (17–18 Sep), two are the same registration-closed pair as last week. Added the
+**17th Annual Symposium on Neurovascular Disease 2027** (Cedars-Sinai, Hotel Casa Del Mar,
+Santa Monica, 23 Jan, 7.5 Cat 1); declined UMich "Exposure Therapy Training" (School of
+Social Work). First diff run since the launchd python fix — clean, 0 errors.
+
+**Rotation: the Nordic pass flagged on 09-14.** Federation "future congresses" pages plus
+the four national surgical weeks. **Added 9:** NOF/DOS 2026 Copenhagen (11–13 Nov),
+Operatiiviset Päivät 2026 Helsinki (25–27 Nov), Lääkäripäivät 2027 Helsinki (27–28 Jan),
+NCCN 2027 Uppsala (14–16 Apr), NOK 2027 Turku (26–28 May), NUF 2027 Copenhagen (9–12 Jun,
+Scandic), NFOG 2027 Tampere (24–27 Aug), NSN 2027 Stockholm (29 Sep–1 Oct, Karolinska),
+NCDV 2028 Oslo (25–28 Apr, from the NDA's own news page). **Finland goes 0 → 4** and gets
+a country hub; Helsinki and Oslo become city hubs.
+
+Two duplicates caught by the validator, not by me: **Høstmøtet 2026 and DKS Årsmøde 2026
+were already held** from an unlogged pass — the country table's "not begun" was wrong for
+Norway and Denmark. Rule reinforced: grep the URL host *and* a name keyword before writing
+an entry, not just the country. Both duplicates removed before commit.
+
+Not found: SATS 2027, NOF 2028 city, and no Nordic-level congress at all for gastro,
+cardiology, psychiatry, paediatrics or geriatrics (logged so the group is not re-searched).
+Yield: 9 from ~12 society fetches — the best tier-2 rate so far, because the Nordic
+federations publish one page per congress and rotate predictably.
 
 ### 2026-09-14 (later) — Iceland and Greenland, on request
 Owner asked "anything in Greenland or Iceland?" — dataset had zero for both and neither
