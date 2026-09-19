@@ -230,6 +230,16 @@ one or two countries per scan rather than trying to finish it.
 
 ## Scan history
 
+### 2026-09-18 (later) — first form submissions, both spam
+Two Formspree submissions arrived 16 and 17 Sep, the first the site has received. Both are
+**Longdom Conferences** mill events submitted by `scimed@memeetings.com`: a "World Summit on
+Surgery and Pain Medicine" (city field *Chiba*, description *Tokyo*) and a natural-products
+conference in Dubai. Neither added. `BANNED_HOSTS` in `validate.js` widened to cover longdom,
+omicsonline, memeetings and the other OMICS-family imprints so nothing from them can validate.
+Note for the growth picture: zero physician submissions so far; the form's first users were
+marketers, which is the normal fate of any open form on a site that ranks for "medical
+conference".
+
 ### 2026-09-18 — weekly run (Friday; Monday was a work day)
 **Diff:** 527 live | changed 0 | gone 4 | new 2. All four "gone" still have live pages —
 two are past (17–18 Sep), two are the same registration-closed pair as last week. Added the

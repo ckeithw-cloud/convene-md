@@ -231,7 +231,7 @@ in Australia, national college accreditation elsewhere).
 
 - Be conservative — only add conferences you're confident about (clear date, clear location, real organizing society with an official site).
 - Skip vague "global conference on surgery"/"international conference on X" listings from predatory
-  conference mills (magnusgroup, conferenceseries, allconferencealert, conferenceindex, etc.) — no
+  conference mills (magnusgroup, conferenceseries, longdom, omicsonline, allconferencealert, conferenceindex, etc.) — no
   exceptions, even if they list a venue and dates. Tell-tale sign: several differently-named events
   in different cities all pointing at one generic URL. `scripts/validate.js` hard-fails on these hosts.
 - Skip past conferences (those whose `endDate` is before today). The site filters them out anyway, but they bloat the dataset.

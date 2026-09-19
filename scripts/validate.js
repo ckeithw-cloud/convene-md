@@ -26,7 +26,9 @@ const VALID_SPECIALTIES = new Set([
 ]);
 
 // Aggregators that fabricate or misreport listings — never acceptable as a source URL.
-const BANNED_HOSTS = /magnusgroup|conferenceseries|conferenceindex|allconferencealert|internationalconferencealert|conferencealerts?\.com|10times|emedevents|clocate|showsbee|pr-medicalevents|vendelux|aconf\.org/i;
+// longdom / omicsonline / memeetings added 2026-09-18: the first two submissions through the
+// site's own form were Longdom mill events (one listed Chiba as the city and Tokyo in the blurb).
+const BANNED_HOSTS = /magnusgroup|conferenceseries|conferenceindex|allconferencealert|internationalconferencealert|conferencealerts?\.com|10times|emedevents|clocate|showsbee|pr-medicalevents|vendelux|aconf\.org|longdom|omicsonline|memeetings|scitechnol|hilarispublisher|walshmedicalmedia|pulsus|meetingsint|euroscicon|scientificfederation|coalesceresearch|peersalley|continuumforums|unitedscientificgroup/i;
 
 const REQUIRED = ["name", "specialty", "year", "startDate", "endDate", "city",
                   "country", "lat", "lng", "url", "organizer", "description"];
