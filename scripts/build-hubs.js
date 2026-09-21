@@ -148,6 +148,7 @@ ${jsonld ? `  <script type="application/ld+json">\n${JSON.stringify(jsonld, null
         <a href="/">Map</a>
         <a href="/browse/">Browse</a>
         <a href="/how-to/deduct-cme-travel/">How To</a>
+        <a href="/about/">About</a>
       </nav>
     </div>
   </header>
@@ -161,7 +162,7 @@ ${signupBlock({ specialty: selfSpecialty, source: url })}
 ${related || ""}
   </main>
   <footer class="hub-footer">
-    <p><a href="/">Explore all conferences on the map</a> · <a href="/browse/">Browse by specialty, country or city</a></p>
+    <p><a href="/">Explore all conferences on the map</a> · <a href="/browse/">Browse by specialty, country or city</a> · <a href="/about/">About</a> · <a href="mailto:hello@convene.md">hello@convene.md</a></p>
     <p>convene.md — conference dates verified against organising societies' own sites.</p>
   </footer>
 </body>
