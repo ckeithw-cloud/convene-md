@@ -182,6 +182,9 @@ Full list with links → convene.md/new (link in bio)
 row in the top-pages table. This is the first post that can actually be attributed (see below
 for why the utm-tagged links on #10 and #11 could not).
 
+*Posted 21 Sep 2026:* https://www.instagram.com/convene.md/p/DdjwOsomNwD/ — uploaded from Chrome via
+instagram.com → Create → Post (web accepts multi-file carousels; crop 1:1; the caption box takes emoji).
+
 *Posting notes:*
 - Carousel, 8 slides, in file order. Slide 1 is the hook; slide 8 is the CTA with the URL.
 - Same six destinations as newsletter issue 1 (`marketing/newsletter/2026-09-issue-1.md`),

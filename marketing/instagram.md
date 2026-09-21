@@ -1,6 +1,6 @@
 # convene.md — Instagram growth plan
 
-**Account:** @convenemd · **Link in bio:** https://convene.md
+**Account:** **@convene.md** (not @convenemd — the profile URL is instagram.com/convene.md/) · **Link in bio:** should be `https://convene.md/new/`, the monthly round-up page, so bio taps are a distinct row in the traffic report. Was `convene.me` (wrong domain) until 21 Sep 2026; the link can only be edited in the phone app.
 **Audience:** clinicians with employer-funded CME budgets. The hook in every post: *your hospital pays — pick somewhere worth going.*
 
 ## Cadence
