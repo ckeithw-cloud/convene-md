@@ -139,7 +139,7 @@ function main() {
 
   // Hand-written article pages carry the same marker pair, so the capture block stays
   // identical everywhere rather than being copied and left to drift.
-  for (const rel of ["how-to/deduct-cme-travel/index.html", "about/index.html"]) {
+  for (const rel of ["how-to/deduct-cme-travel/index.html", "about/index.html", "new/index.html"]) {
     const file = path.join(ROOT, rel);
     if (!fs.existsSync(file)) continue;
     let doc = fs.readFileSync(file, "utf8");
@@ -171,7 +171,7 @@ function main() {
   // ("can I deduct a medical conference") that the conference hubs cannot rank for, so they
   // carry a high priority despite being few. The existsSync filter means an entry listed
   // here before its page exists is simply skipped rather than emitting a dead sitemap URL.
-  const staticPages = ["/how-to/deduct-cme-travel/", "/about/"].filter((p) =>
+  const staticPages = ["/how-to/deduct-cme-travel/", "/about/", "/new/"].filter((p) =>
     fs.existsSync(path.join(ROOT, p, "index.html"))
   );
 

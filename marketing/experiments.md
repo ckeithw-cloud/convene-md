@@ -34,6 +34,7 @@ clicks land in "direct" and look identical to someone typing the URL.
 | 2026-08-08 | Analytics | Started weekly Cloudflare traffic snapshots | this report |
 | 2026-08-10 | Instagram | POSTED — Kyoto autumn CME card (Nov 10–13, Four Seasons Kyoto). First post ever with a tagged bio link, so the first one we can actually attribute | `/city/kyoto/?utm_source=instagram&utm_campaign=kyoto-nov` · caption #10, image 2026-11-kyoto.png |
 | 2026-08-24 | Instagram | POSTED — Maui "two conferences, one airfare" card. Insight-led rather than destination-led, after Kyoto drove no measurable referrals. Second post carrying a utm-tagged link | `/how-to/deduct-cme-travel/?utm_source=instagram&utm_campaign=maui-stack` · caption #11, image 2027-01-maui-stack.png |
+| 2026-09-21 | Instagram | QUEUED — "New on the map — September" 8-slide carousel, the newsletter's twin. First post with an attributable landing path | `https://convene.md/new/` · caption #12, images `2026-09-update/slide-0[1-8].png` |
 
 ## Backfill needed
 

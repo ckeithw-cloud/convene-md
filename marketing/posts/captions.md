@@ -155,6 +155,41 @@ across five specialties, so the click doesn't dead-end for anyone who isn't inte
 
 ---
 
+## 12 · "New on the map — September" (CAROUSEL, 8 slides — the newsletter's Instagram twin)
+**Images:** `2026-09-update/slide-01.png` … `slide-08.png`, 1080×1080, post in order.
+Regenerate with `node scripts/make-post-update.js marketing/posts/2026-09-update` then
+`for f in marketing/posts/2026-09-update/*.svg; do rsvg-convert -w 1080 -h 1080 "$f" -o "${f%.svg}.png"; done`.
+Typographic, original — no photos, no licensing question. Format #2 from instagram.md.
+
+New on the map this month. 🗺️
+
+174 physician conferences added since August — national societies, destination CME, two new countries. Six worth a look:
+
+🇵🇹 Vilamoura — Portuguese cardiology congress, Mar 18–21, 2027. The Algarve in March.
+🇮🇸 Reykjavik — six meetings, Iceland is new on the map. Late August is the window.
+🇬🇷 Athens — Hellenic cardiology congress, Nov 13–15, Grand Hyatt.
+🇩🇰🇫🇮🇸🇪 The Nordic rotation — urology, ENT, OB/GYN, nephrology across Copenhagen, Turku, Tampere, Stockholm in 2027.
+🌺 Kahuku, Oahu — Hawaii Cardiovascular Symposium, Oct 21–24. One month out.
+🍁 Kyoto — Internal Medicine for Primary Care, Nov 10–13, Four Seasons.
+
+Every date checked on the society's own site. 950+ upcoming conferences, 68 countries, 46 specialties. Free, no login.
+
+Full list with links → convene.md/new (link in bio)
+
+*First comment:* #CME #CMEtravel #DestinationCME #MedEd #PhysicianLife #DoctorsOfInstagram #MedicalConference #ConferenceTravel #Cardiology #InternalMedicine #Iceland #Portugal #MedTwitter
+
+*Bio link for this post:* `https://convene.md/new/` — a real page, so it shows up as its own
+row in the top-pages table. This is the first post that can actually be attributed (see below
+for why the utm-tagged links on #10 and #11 could not).
+
+*Posting notes:*
+- Carousel, 8 slides, in file order. Slide 1 is the hook; slide 8 is the CTA with the URL.
+- Same six destinations as newsletter issue 1 (`marketing/newsletter/2026-09-issue-1.md`),
+  same order — the two channels tell one story, and `/new/` is the web version both point at.
+- Monthly from here: regenerate the slides from the next issue's six, update `/new/`, post.
+
+---
+
 ## Attributing a post — utm tags do NOT work
 
 Verified 26 Aug 2026: Cloudflare Web Analytics keeps the request path and throws away the

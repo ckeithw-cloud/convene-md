@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <rect width="1080" height="1080" fill="#0f2942"/>
+  <g transform="translate(64,56) scale(0.85)">
+    <path d="M 64 6 C 38 6, 18 24, 18 50 C 18 92, 64 124, 64 124 C 64 124, 110 92, 110 50 C 110 24, 90 6, 64 6 Z" fill="#36b3a8"/>
+    <line x1="26" y1="50" x2="102" y2="50" stroke="white" stroke-width="1.6" opacity="0.55"/>
+    <path d="M 64 10 Q 34 50 64 90" fill="none" stroke="white" stroke-width="1.6" opacity="0.55"/>
+    <rect x="57" y="24" width="14" height="42" fill="white" rx="2"/>
+    <rect x="43" y="38" width="42" height="14" fill="white" rx="2"/>
+  </g>
+  <text x="180" y="130" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="46" font-weight="700" fill="#FFFFFF">convene.md</text>
+  <text x="70" y="300" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="30" font-weight="600" fill="#36b3a8" letter-spacing="4">THE WHOLE MAP</text>
+  <text x="70" y="420" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="96" font-weight="800" fill="#FFFFFF">950+</text>
+  <text x="70" y="470" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="34" font-weight="500" fill="#FFFFFF" opacity="0.75">upcoming conferences</text>
+  <text x="70" y="590" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="96" font-weight="800" fill="#FFFFFF">68</text>
+  <text x="70" y="640" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="34" font-weight="500" fill="#FFFFFF" opacity="0.75">countries</text>
+  <text x="70" y="760" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="96" font-weight="800" fill="#FFFFFF">46</text>
+  <text x="70" y="810" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="34" font-weight="500" fill="#FFFFFF" opacity="0.75">specialties</text>
+  <text x="540" y="420" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="36" font-weight="500" fill="#FFFFFF">Every date and venue</text>
+  <text x="540" y="466" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="36" font-weight="500" fill="#FFFFFF">checked on the organising</text>
+  <text x="540" y="512" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="36" font-weight="500" fill="#FFFFFF">society's own site.</text>
+  <text x="540" y="600" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="38" font-weight="700" fill="#36b3a8">Verified, not aggregated.</text>
+  <text x="540" y="700" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="32" font-weight="500" fill="#FFFFFF" opacity="0.75">Free. No login.</text>
+  <text x="540" y="744" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="32" font-weight="500" fill="#FFFFFF" opacity="0.75">One email a month,</text>
+  <text x="540" y="788" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="32" font-weight="500" fill="#FFFFFF" opacity="0.75">if you want it.</text>
+  <rect x="70" y="880" width="940" height="110" rx="16" fill="#36b3a8"/>
+  <text x="540" y="950" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="44" font-weight="700" fill="#0f2942" text-anchor="middle">convene.md/new  →  link in bio</text>
+</svg>

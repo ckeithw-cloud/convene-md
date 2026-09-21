@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <rect width="1080" height="1080" fill="#0f2942"/>
+  <g transform="translate(64,56) scale(0.85)">
+    <path d="M 64 6 C 38 6, 18 24, 18 50 C 18 92, 64 124, 64 124 C 64 124, 110 92, 110 50 C 110 24, 90 6, 64 6 Z" fill="#36b3a8"/>
+    <line x1="26" y1="50" x2="102" y2="50" stroke="white" stroke-width="1.6" opacity="0.55"/>
+    <path d="M 64 10 Q 34 50 64 90" fill="none" stroke="white" stroke-width="1.6" opacity="0.55"/>
+    <rect x="57" y="24" width="14" height="42" fill="white" rx="2"/>
+    <rect x="43" y="38" width="42" height="14" fill="white" rx="2"/>
+  </g>
+  <text x="180" y="130" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="46" font-weight="700" fill="#FFFFFF">convene.md</text>
+  <text x="70" y="300" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="30" font-weight="600" fill="#36b3a8" letter-spacing="4">SEPTEMBER 2026</text>
+  <text x="70" y="420" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="118" font-weight="800" fill="#FFFFFF">New on</text>
+  <text x="70" y="545" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="118" font-weight="800" fill="#36b3a8">the map.</text>
+  <text x="70" y="660" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="38" font-weight="500" fill="#FFFFFF" opacity="0.9">174 conferences added since August —</text>
+  <text x="70" y="712" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="38" font-weight="500" fill="#FFFFFF" opacity="0.9">national societies, destination CME, two new countries.</text>
+  <circle cx="100" cy="850" r="34" fill="none" stroke="#36b3a8" stroke-width="3"/>
+  <text x="100" y="862" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <circle cx="196" cy="850" r="34" fill="none" stroke="#36b3a8" stroke-width="3"/>
+  <text x="196" y="862" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <circle cx="292" cy="850" r="34" fill="none" stroke="#36b3a8" stroke-width="3"/>
+  <text x="292" y="862" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <circle cx="388" cy="850" r="34" fill="none" stroke="#36b3a8" stroke-width="3"/>
+  <text x="388" y="862" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <circle cx="484" cy="850" r="34" fill="none" stroke="#36b3a8" stroke-width="3"/>
+  <text x="484" y="862" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <circle cx="580" cy="850" r="34" fill="none" stroke="#36b3a8" stroke-width="3"/>
+  <text x="580" y="862" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+  <text x="70" y="960" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="44" font-weight="700" fill="#36b3a8">Six worth a look →</text>
+  <text x="1010" y="1016" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="30" font-weight="500" fill="#FFFFFF" text-anchor="end" opacity="0.6">swipe</text>
+</svg>
