@@ -139,8 +139,14 @@ async function run(token, start, end) {
 }
 
 const total = (rows) => rows.reduce((n, r) => n + r.count, 0);
-const visitsOf = (a) => (a.totals[0] && a.totals[0].sum ? a.totals[0].sum.visits : 0);
-const viewsOf = (a) => (a.totals[0] ? a.totals[0].count : 0);
+// The undimensioned `totals` group came back EMPTY on 2026-09-21 while every dimensioned
+// query in the same request returned data, so the report said "0 views / 0 visits /
+// 410 referred" and wrote that row to history. Fall back to summing the per-day groups,
+// which are the same events bucketed by date.
+const visitsOf = (a) => (a.totals[0] && a.totals[0].sum
+  ? a.totals[0].sum.visits
+  : (a.daily || []).reduce((n, d) => n + ((d.sum && d.sum.visits) || 0), 0));
+const viewsOf = (a) => (a.totals[0] ? a.totals[0].count : total(a.daily || []));
 
 // Cloudflare reports same-site navigation and unknown referrers alongside real
 // referrals. Only the third bucket tells us whether a post did anything.
@@ -266,9 +272,13 @@ function table(rows, label) {
   if (!fs.existsSync(HISTORY)) {
     fs.writeFileSync(HISTORY, "generated,window_start,window_end,days,page_views,visits,referred_visits,direct,internal\n");
   }
-  fs.appendFileSync(HISTORY,
-    [day(new Date()), day(start), day(new Date(end.getTime() - 86400000)), argDays,
-     views, visits, externalTotal, refs.direct, refs.internal].join(",") + "\n");
+  // One row per generated day: a manual re-run after a bad automated run replaces its
+  // row rather than leaving both in the series.
+  const row = [day(new Date()), day(start), day(new Date(end.getTime() - 86400000)), argDays,
+     views, visits, externalTotal, refs.direct, refs.internal].join(",");
+  const lines = fs.readFileSync(HISTORY, "utf8").split("\n").filter(Boolean);
+  const kept = lines.filter((l, i) => i === 0 || !l.startsWith(day(new Date()) + "," + day(start) + ","));
+  fs.writeFileSync(HISTORY, kept.concat(row).join("\n") + "\n");
 
   console.log(`traffic-report: ${outFile}`);
   console.log(`  ${views} views / ${visits} visits / ${externalTotal} referred (prev: ${pViews}/${pVisits}/${prevExternal})`);
