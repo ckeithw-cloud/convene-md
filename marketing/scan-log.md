@@ -103,6 +103,12 @@ Lifestyle & Preventive, Sports, Hematology, Nephrology, Pathology.
 | EADV Congress 2027 | 2026-09-08 | 2026 Vienna is latest; the 2027 *Symposium* (Dresden) IS confirmed and added | 2027-01 |
 | SITC 2027 | 2026-09-08 | Nov 3–7 2027 in a search summary, not on the SITC site | 2027-01 |
 | ASTRO 2028 / 2029 | 2026-09-08 | dates published (21–25 Oct 2028, 6–10 Oct 2029), **no host city** | 2027-03 |
+| RMTS 69th Annual Meeting (Snowmass, 15–18 Jan 2027) | 2026-09-22 | real 69-year-old trauma society, dates + venue confirmed on rmts.org, but **no credit type stated anywhere on the site** and no programme archive to check. Ski-CME destination — worth getting | 2026-11 |
+| Southeastern Fracture Symposium 2027 (Omni, Charlottesville, 28–30 Jan) | 2026-09-22 | dates and venue confirmed; site says "AMA PRA Credit information TBD! Stay tuned!" | 2026-11 |
+| Rocky Mountain Trauma & EM Conference 2027 (Beaver Run, Breckenridge) | 2026-09-22 | Denver Health; 50th year; dates TBD, registration opens 1 Oct 2026 | 2026-10 |
+| Chicago Symposium on Trauma 2027 | 2026-09-22 | 2026 ran 6–7 May (past); no 2027 page at cme.uchicago.edu/CST2027 yet | 2027-01 |
+| Midwest Regional Trauma/ACS Symposium 2027 (MCW, Milwaukee) | 2026-09-22 | 2026 ran 12–13 Aug (past); 2027 unannounced | 2027-02 |
+| Northwest States Trauma Conference (OHSU) | 2026-09-22 | **nursing CE only** (ANCC via Oregon Nurses Association), no AMA PRA Category 1 — excluded under the audience rule, not merely unannounced | — |
 | Læknadagar 2027 (Icelandic Medical Association, Reykjavik) | 2026-09-14 | runs the third week of January at Harpa every year (2026: 19–23 Jan) but 2027 not posted; programme is in Icelandic, so marginal for a travelling physician anyway | 2026-11 |
 | NUNAMED 2028 (Nuuk, Greenland) | 2026-09-14 | triennial; the 12th ran 3–5 Oct 2025 with 468 attendees — the **only** recurring physician meeting in Greenland. Next is ~Oct 2028, unannounced | 2027-10 |
 | SSAI 2028 (Scandinavian anaesthesia) | 2026-09-14 | 2026 was Reykjavik (10–12 Jun, past); 2028 host not on ssai.info | 2027-01 |
@@ -229,6 +235,30 @@ one or two countries per scan rather than trying to finish it.
   page for these, exactly as with US society flagships.
 
 ## Scan history
+
+### 2026-09-22 (later) — ACS Committee on Trauma regions, all 17
+Swept every COT region after Region 7 turned out to be missing. **Added 3:** ACS **TQIP Annual
+Conference 2026** (13–15 Nov, Anaheim Convention Center, **37.5 AMA PRA Cat 1**, verified on
+facs.org's own CME page) — a major national trauma conference we simply did not have; **NYC
+Trauma/EM Symposium 2027** (12 May, Jacobi, Bronx); **Annual International San Francisco
+Orthopaedic Trauma Conference 2027** (15–17 Apr, InterContinental, UCSF).
+
+**The main finding is negative and worth recording so nobody re-runs this sweep:** only Region 7
+runs a big public annual meeting of its own. The other 16 regions are governance bodies — chiefs,
+state chairs, a resident paper competition feeding the national COT meeting — and the regional
+trauma education is delivered by *institutions* instead (MCW, OHSU, Denver Health, Jacobi,
+UChicago). So the productive query is "<region> trauma symposium", not "Region N Committee on
+Trauma meeting". Regions 11–17 (Canada, military, Latin America, Norway, Australia, Egypt) have
+no public annual meeting at all.
+
+**Trap avoided: "ACS Regional Meetings" are the American Chemical Society.** A search for ACS COT
+regional meetings returns MWRM / SERMACS / SWRM / NERM / NORM in Lubbock, Terre Haute, Corvallis
+etc. — eight chemistry meetings on a cvent portal that reads exactly like a surgical one. Checked
+the portal and it says "ACS Meeting Planning Partner" for the American Chemical Society. **Any
+"ACS" hit must be confirmed as College of Surgeons before use.**
+
+Five real meetings held back for a missing or TBD credit statement — see the table above; the
+Snowmass one (RMTS, 69th annual, ski destination) is the one worth chasing.
 
 ### 2026-09-22 — owner sent a conference PDF
 Owner pasted a Cvent-hosted agenda PDF and asked whether we had it. We did not, and neither

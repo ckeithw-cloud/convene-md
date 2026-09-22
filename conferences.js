@@ -16832,4 +16832,46 @@ const CONFERENCES = [
     organizer: "American College of Surgeons Committee on Trauma, Region 7",
     description: "Region 7 (Iowa, Kansas, Missouri, Nebraska) trauma meeting at the Marriott Kansas City Overland Park — BCVI, rib fracture fixation, burn resuscitation, rural damage control; ACS designates it for AMA PRA Category 1 Credits."
   },
+  {
+    name: "ACS TQIP Annual Conference 2026",
+    specialty: "Trauma Surgery",
+    year: 2026,
+    startDate: "2026-11-13",
+    endDate: "2026-11-15",
+    city: "Anaheim",
+    country: "USA",
+    lat: 33.8085,
+    lng: -117.9190,
+    url: "https://www.facs.org/quality-programs/trauma/quality/trauma-quality-improvement-program/conference/",
+    organizer: "American College of Surgeons Trauma Quality Improvement Program",
+    description: "The ACS Trauma Quality Improvement Program's annual conference at the Anaheim Convention Center — trauma benchmarking, registry and quality science; 37.5 AMA PRA Category 1 credits."
+  },
+  {
+    name: "New York City Trauma/EM Symposium 2027",
+    specialty: "Trauma Surgery",
+    year: 2027,
+    startDate: "2027-05-12",
+    endDate: "2027-05-12",
+    city: "New York",
+    country: "USA",
+    lat: 40.7128,
+    lng: -74.006,
+    url: "https://www.nychealthandhospitals.org/jacobi/services/trauma-symposium/",
+    organizer: "NYC Health + Hospitals / Jacobi",
+    description: "The Warren Wetzel, MD memorial symposium at Jacobi Medical Center in the Bronx — the longest-running regional conference devoted solely to trauma management, running since 1999."
+  },
+  {
+    name: "Annual International San Francisco Orthopaedic Trauma Conference 2027",
+    specialty: "Orthopedic Surgery",
+    year: 2027,
+    startDate: "2027-04-15",
+    endDate: "2027-04-17",
+    city: "San Francisco",
+    country: "USA",
+    lat: 37.7749,
+    lng: -122.4194,
+    url: "https://orthosurgery.ucsf.edu/education/programs/Annual-International-San-Francisco-Orthopaedic-Trauma-Course",
+    organizer: "UCSF Department of Orthopaedic Surgery",
+    description: "Three days of orthopaedic trauma at the InterContinental San Francisco, from UCSF — jointly accredited by ACCME, ACPE and ANCC."
+  },
 ];
