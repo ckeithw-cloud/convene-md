@@ -16818,4 +16818,18 @@ const CONFERENCES = [
     organizer: "Nordic Dermatology Association",
     description: "Triennial Nordic dermatology and venereology congress, announced by the NDA for Oslo; congress site not yet live."
   },
+  {
+    name: "48th Annual Advances in Trauma Meeting",
+    specialty: "Trauma Surgery",
+    year: 2026,
+    startDate: "2026-12-09",
+    endDate: "2026-12-11",
+    city: "Overland Park",
+    country: "USA",
+    lat: 38.9822,
+    lng: -94.6708,
+    url: "https://www.aitkc.com/",
+    organizer: "American College of Surgeons Committee on Trauma, Region 7",
+    description: "Region 7 (Iowa, Kansas, Missouri, Nebraska) trauma meeting at the Marriott Kansas City Overland Park — BCVI, rib fracture fixation, burn resuscitation, rural damage control; ACS designates it for AMA PRA Category 1 Credits."
+  },
 ];

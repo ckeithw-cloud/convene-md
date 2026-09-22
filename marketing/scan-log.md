@@ -230,6 +230,26 @@ one or two countries per scan rather than trying to finish it.
 
 ## Scan history
 
+### 2026-09-22 — owner sent a conference PDF
+Owner pasted a Cvent-hosted agenda PDF and asked whether we had it. We did not, and neither
+the meeting nor Overland Park appeared anywhere. **Added the 48th Annual Advances in Trauma
+Meeting** (ACS Committee on Trauma Region 7, Marriott Kansas City Overland Park, 9–11 Dec 2026).
+
+Two things worth reusing:
+- **An agenda PDF is a usable lead, not a source.** The PDF gave name, dates and venue; the
+  meeting's own site (`aitkc.com`) confirmed them. Follow the PDF back to the organiser.
+- **When the current year's page omits the accreditation statement, check the archive.** aitkc.com
+  has no /cme page and the Cvent registration page only mentions an evaluation deadline for
+  claiming credits. The **2023 programme PDF** in the site's own Past Meetings archive carries the
+  full statement: ACS is ACCME-accredited and "designates this live activity for a maximum of
+  14.75 AMA PRA Category 1 Credits". A recurring meeting's back catalogue answers the credit
+  question when the current brochure has not been posted yet — better than holding it back.
+- Corroborating signal: the 2026 agenda marks the sponsored workshop "(NO CME)" and the sponsored
+  lunch "(NOT FOR CME)". A programme that bothers to flag its non-certified sessions is certified.
+
+Regional ACS COT meetings are a **gap worth a dedicated pass** — Region 7 was absent entirely and
+there are 17 regions, each running an annual meeting.
+
 ### 2026-09-18 (later) — first form submissions, both spam
 Two Formspree submissions arrived 16 and 17 Sep, the first the site has received. Both are
 **Longdom Conferences** mill events submitted by `scimed@memeetings.com`: a "World Summit on
