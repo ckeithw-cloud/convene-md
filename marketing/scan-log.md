@@ -103,6 +103,8 @@ Lifestyle & Preventive, Sports, Hematology, Nephrology, Pathology.
 | EADV Congress 2027 | 2026-09-08 | 2026 Vienna is latest; the 2027 *Symposium* (Dresden) IS confirmed and added | 2027-01 |
 | SITC 2027 | 2026-09-08 | Nov 3–7 2027 in a search summary, not on the SITC site | 2027-01 |
 | ASTRO 2028 / 2029 | 2026-09-08 | dates published (21–25 Oct 2028, 6–10 Oct 2029), **no host city** | 2027-03 |
+| NCS 25th (New Orleans, Hyatt Regency) & 26th (Denver) Annual Meetings | 2026-09-22 | **start dates and venues published** (27 Sep 2027; 19 Oct 2028) but the future-meetings page gives no end dates — do not guess a 4-day span | 2027-01 |
+| 16th Annual Gynecologic Robotic Surgery Conference (Four Seasons Baltimore, 15–17 Oct 2026) | 2026-09-22 | from an email invite; Mercy Medical Center, 16 years running, billed as "A Continuing Medical Education Symposium" with a RoboticsCME@ contact, but **no AMA PRA statement** on the Mercy page or Eventbrite. Runs in 3 weeks, so it will pass before the credit line appears | — |
 | RMTS 69th Annual Meeting (Snowmass, 15–18 Jan 2027) | 2026-09-22 | real 69-year-old trauma society, dates + venue confirmed on rmts.org, but **no credit type stated anywhere on the site** and no programme archive to check. Ski-CME destination — worth getting | 2026-11 |
 | Southeastern Fracture Symposium 2027 (Omni, Charlottesville, 28–30 Jan) | 2026-09-22 | dates and venue confirmed; site says "AMA PRA Credit information TBD! Stay tuned!" | 2026-11 |
 | Rocky Mountain Trauma & EM Conference 2027 (Beaver Run, Breckenridge) | 2026-09-22 | Denver Health; 50th year; dates TBD, registration opens 1 Oct 2026 | 2026-10 |
@@ -235,6 +237,25 @@ one or two countries per scan rather than trying to finish it.
   page for these, exactly as with US society flagships.
 
 ## Scan history
+
+### 2026-09-22 (later still) — swept the owner's Gmail for conference invites
+Owner asked for a mailbox sweep (he is on the TQIP list from attending in Denver). 120 days of mail,
+~200 threads. Most society mail is newsletters, not invitations — the signal is thin. **Added 1:**
+**NCS 24th Annual Meeting 2026** (Neurocritical Care Society, Seattle Convention Center, 20–23 Oct).
+Credit confirmed via the society's own hosted accreditation PDF for the 23rd meeting: Cine-Med,
+jointly accredited, **24.5 AMA PRA Category 1 Credits** — the archive technique again.
+
+**Also fixed a real duplicate the validator could not see:** the Philippine College of Surgeons 82nd
+Annual Clinical Congress was in twice — same dates, same coordinates, same organiser and URL — under
+"Manila" and "Mandaluyong City". The city+startDate+specialty key is defeated by a city-name split,
+exactly the trap recorded in the data conventions. Kept Manila. **Worth a periodic sweep for entries
+sharing a URL + start date under different city names.**
+
+What the mailbox actually contains: ACS Clinical Congress promotion (held), JACS and ACS Bulletin
+newsletters, NCS webinar/masterclass mail (virtual, excluded), and vendor invitations from Intuitive
+and Stryker to industry events at other meetings. **A mailbox sweep is low-yield** — the societies a
+physician already belongs to are the ones we cover best. Not worth repeating more than a couple of
+times a year.
 
 ### 2026-09-22 (later) — ACS Committee on Trauma regions, all 17
 Swept every COT region after Region 7 turned out to be missing. **Added 3:** ACS **TQIP Annual

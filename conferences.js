@@ -7859,20 +7859,6 @@ const CONFERENCES = [
     description: "National congress with live endoscopic, laser and robotic surgical demonstrations."
   },
   {
-    name: "Philippine College of Surgeons 82nd Annual Clinical Congress",
-    specialty: "General Surgery",
-    year: 2026,
-    startDate: "2026-12-05",
-    endDate: "2026-12-09",
-    city: "Mandaluyong City",
-    country: "Philippines",
-    lat: 14.5794,
-    lng: 121.0359,
-    url: "https://pcs.org.ph/",
-    organizer: "Philippine College of Surgeons",
-    description: "The college's flagship five-day national surgical congress at EDSA Shangri-La Manila."
-  },
-  {
     name: "24th PSGS Surgical Forum 2026",
     specialty: "General Surgery",
     year: 2026,
@@ -16873,5 +16859,19 @@ const CONFERENCES = [
     url: "https://orthosurgery.ucsf.edu/education/programs/Annual-International-San-Francisco-Orthopaedic-Trauma-Course",
     organizer: "UCSF Department of Orthopaedic Surgery",
     description: "Three days of orthopaedic trauma at the InterContinental San Francisco, from UCSF — jointly accredited by ACCME, ACPE and ANCC."
+  },
+  {
+    name: "NCS 24th Annual Meeting 2026 — Neurocritical Care Society",
+    specialty: "Critical Care",
+    year: 2026,
+    startDate: "2026-10-20",
+    endDate: "2026-10-23",
+    city: "Seattle",
+    country: "USA",
+    lat: 47.6062,
+    lng: -122.3321,
+    url: "https://www.neurocriticalcare.org/Events/Event-Calendar/Event-Details/ncs-24th-annual-meeting-2026",
+    organizer: "Neurocritical Care Society",
+    description: "The society's annual meeting at the Seattle Convention Center — TBI, intracranial haemorrhage, stroke, neuromonitoring and prognostication; jointly accredited, ~24.5 AMA PRA Category 1 credits."
   },
 ];
