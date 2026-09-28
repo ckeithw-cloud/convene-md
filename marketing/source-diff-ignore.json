@@ -128,5 +128,20 @@
     "name": "Exposure Therapy Training",
     "reason": "School of Social Work programme for therapists, not physician CME",
     "declined": "2026-09-18"
+  },
+  "cloudcme:102489": {
+    "name": "Presentation Mastery for Healthcare Professionals Fall",
+    "reason": "presentation-skills training, not a conference",
+    "declined": "2026-09-28"
+  },
+  "cloudcme:93675": {
+    "name": "MOQC Gynecologic Oncology Biannual Meeting",
+    "reason": "Michigan Oncology Quality Consortium collaborative business meeting — administrator-weighted audience, not a conference anyone travels for",
+    "declined": "2026-09-28"
+  },
+  "cloudcme:84101": {
+    "name": "Cardiovascular, Renal and Metabolism Center (CRMC)",
+    "reason": "U of Utah; 7.5 Cat 1 and real, but the listing gives no city at all (venue field is bare ', UT') — re-check when a venue is published",
+    "declined": "2026-09-28"
   }
 }

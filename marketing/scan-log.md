@@ -155,6 +155,8 @@ community:
 | Israel | 0 | checked — society sites are Hebrew and poorly indexed; needs a different approach |
 | **Greece** | +1 | HCS international congress (Athens) — 2026-09-14 |
 | **Portugal** | +1 | SPC congress (Vilamoura) — 2026-09-14 |
+| **Czechia** | 2 (was 0) | CSC annual congress Brno 2027, Research & Innovation Days Prague — 2026-09-28 |
+| **Poland** | 2 (was 1) | 73rd TChP congress Warsaw 2027 — 2026-09-28 |
 | **Iceland** | 6 (was 0) | **owner asked 2026-09-14** — Nordic rotation congresses + destination CME, see below |
 | **Denmark** | +2 | NOF/DOS 2026, NUF 2027 — 2026-09-18 (DKS Årsmøde 2026 was already held) |
 | **Norway** | +1 | NCDV 2028 Oslo — 2026-09-18 (Høstmøtet 2026 was already held) |
@@ -216,7 +218,7 @@ knowing.
 RCOG, RCR, ASGBI, BSG's own annual meeting. Ireland: RCPI, and the RCSI Charter Meeting
 (9 Feb 2027 appears in search but is not on the RCSI events page, and the 2026 edition ran
 five days, so the end date is unknown). Belgium: surgery, gastro, paediatrics.
-Not begun at all: Poland, Czechia, Hungary. (Netherlands, Switzerland, Sweden, Denmark,
+Not begun at all: Hungary. (Poland and Czechia swept 2026-09-28.) (Netherlands, Switzerland, Sweden, Denmark,
 Norway, Finland, Iceland, Portugal, Greece, Turkey and Israel have each had at least one pass.)
 
 **Checked, nothing addable yet:** BCS 2027 (Manchester Central confirmed, no dates
@@ -237,6 +239,27 @@ one or two countries per scan rather than trying to finish it.
   page for these, exactly as with US society flagships.
 
 ## Scan history
+
+### 2026-09-28 — weekly run
+**Diff:** 496 live | changed 1 | gone 3 | new 8. **Second real date change caught:** MER's
+Agios Nikolaos course (Crete) actually starts **27 Sep, not 28** — confirmed on mer.org, corrected.
+It began the day before we said, so anyone flying in on our date would have missed the opening.
+**Added 5 from the diff:** Cedars-Sinai International Endoscopy Symposium 2027 (LA, 4 days, 24.5
+credits), Amyloidosis 2027 (WashU, St Louis), Penn Neuromuscular Symposium 2027, Yale COPD
+Symposium 2027, Michigan Medicine GU Malignancies 2026. **Declined 3:** a presentation-skills
+course; the MOQC gynae-oncology collaborative (a quality-consortium business meeting, administrator-
+weighted); and U of Utah's CRMC — 7.5 credits and real, but the listing carries **no city at all**
+(venue field is a bare ", UT"), so it is in the ignore list with a re-check note rather than guessed.
+
+**Rotation: Poland and Czechia**, the last two European countries never swept. **Added 3:** 35th
+Czech Society of Cardiology congress (Výstaviště Brno, 8–11 May 2027), Czech Cardiovascular Research
+and Innovation Days (Hotel Diplomat Prague, 22–24 Nov 2026), and the 73rd Congress of the Polish
+Society of Surgeons (Warsaw, 20–23 Oct 2027, confirmed on tchp.pl not the Termedia booking page).
+**Czechia is a new country hub — 77 countries.** Only Hungary is now unswept in Europe.
+
+Ran the new **URL+startDate duplicate sweep** for the first time: 2 pairs, both legitimate — different
+conferences sharing a provider's generic listing URL (UCSF, eventleaf). No Manila-class duplicates left.
+It did expose 2 entries pointing at a listing page instead of a deep link (UCSF `upcoming-ce-courses`).
 
 ### 2026-09-22 (later still) — swept the owner's Gmail for conference invites
 Owner asked for a mailbox sweep (he is on the TQIP list from attending in Denver). 120 days of mail,
