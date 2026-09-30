@@ -16986,4 +16986,18 @@ const CONFERENCES = [
     organizer: "Towarzystwo Chirurgów Polskich (Polish Society of Surgeons)",
     description: "Poland's national surgical congress, held every two years; the 73rd meets in Warsaw."
   },
+  {
+    name: "43rd Annual Children's National Symposium: ECMO and the Advanced Therapies for Cardiovascular and Respiratory Failure",
+    specialty: "Critical Care",
+    year: 2027,
+    startDate: "2027-02-21",
+    endDate: "2027-02-24",
+    city: "Keystone",
+    country: "USA",
+    lat: 39.6069,
+    lng: -105.9439,
+    url: "https://web.cvent.com/event/532f62b6-510c-4375-97f4-3029cd8f12fc/summary",
+    organizer: "Children's National Hospital Division of Neonatology / George Washington University School of Medicine and Health Sciences",
+    description: "The long-running ECMO and extracorporeal life support symposium at the Keystone Conference Center in the Colorado Rockies — neonatal, paediatric and adult ECLS, with 90+ research abstracts; jointly sponsored with GW School of Medicine."
+  },
 ];

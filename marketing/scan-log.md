@@ -240,6 +240,32 @@ one or two countries per scan rather than trying to finish it.
 
 ## Scan history
 
+### 2026-09-30 — owner sent a conference link
+Owner sent the Children's National ECMO meeting page. **Added the 43rd Annual Children's National
+Symposium: ECMO and the Advanced Therapies** (Keystone Conference Center, Colorado, 21–24 Feb 2027).
+
+**Technique: the page the owner sends may be the wrong year.** That page advertises the *42nd*
+(Feb 2026, already past) and has not been updated. The live 2027 edition was behind the page's
+`ecmomeeting.com` link, which 301s to a Cvent event site carrying the real dates and venue. When a
+hospital CME page looks stale, follow its outbound meeting link before concluding nothing is announced.
+
+**Credit call, recorded for consistency.** No AMA PRA designation appears on the Children's National
+page, the Cvent site, its sub-pages, or the hospital's conferences index. Added anyway on the same
+basis as UCSF's SF Orthopaedic Trauma course: the *accreditation mechanism* is stated — "jointly-
+sponsored by the Children's National Hospital Division of Neonatology and the **George Washington
+University School of Medicine and Health Sciences**" — and joint providership with an ACCME-accredited
+medical school is a physician-CME statement even without a credit count. Supporting: it sits in the
+hospital's Continuing Education section, the stated audience is neonatologists, paediatric and adult
+intensivists and surgeons, it is 43 years old, and its proceedings are published in ASAIO Journal.
+**The line to hold:** an accreditation mechanism naming an accredited provider counts; "CME available",
+"credit information TBD", or silence does not (cf. RMTS and the Southeastern Fracture Symposium, both
+still held back).
+
+Side effect worth noting: **Keystone now has three meetings in a five-week window** — Topics in
+Emergency Medicine (8–12 Feb), this ECMO symposium (21–24 Feb), Wilderness Medical Society winter
+(7–10 Mar 2027). That is a conference-stacking story for the newsletter, and `/city/keystone/` already
+drew traffic in the 28 Sep report.
+
 ### 2026-09-28 — weekly run
 **Diff:** 496 live | changed 1 | gone 3 | new 8. **Second real date change caught:** MER's
 Agios Nikolaos course (Crete) actually starts **27 Sep, not 28** — confirmed on mer.org, corrected.
