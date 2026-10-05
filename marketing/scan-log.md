@@ -103,6 +103,7 @@ Lifestyle & Preventive, Sports, Hematology, Nephrology, Pathology.
 | EADV Congress 2027 | 2026-09-08 | 2026 Vienna is latest; the 2027 *Symposium* (Dresden) IS confirmed and added | 2027-01 |
 | SITC 2027 | 2026-09-08 | Nov 3–7 2027 in a search summary, not on the SITC site | 2027-01 |
 | ASTRO 2028 / 2029 | 2026-09-08 | dates published (21–25 Oct 2028, 6–10 Oct 2029), **no host city** | 2027-03 |
+| ASSH 2027 (San Antonio) / 2028 (Las Vegas) | 2026-10-05 | assh.org's whole annual-meeting section is a JS app that renders **"ASSH App can't be loaded!"** and serves 141 characters of text — no future-meetings data is reachable. Search summaries give 82nd 7–9 Oct 2027 San Antonio and 83rd 7–9 Sep 2028 Las Vegas, but that is a summary, not a primary source, so it is NOT added | 2026-12 |
 | NCS 25th (New Orleans, Hyatt Regency) & 26th (Denver) Annual Meetings | 2026-09-22 | **start dates and venues published** (27 Sep 2027; 19 Oct 2028) but the future-meetings page gives no end dates — do not guess a 4-day span | 2027-01 |
 | 16th Annual Gynecologic Robotic Surgery Conference (Four Seasons Baltimore, 15–17 Oct 2026) | 2026-09-22 | from an email invite; Mercy Medical Center, 16 years running, billed as "A Continuing Medical Education Symposium" with a RoboticsCME@ contact, but **no AMA PRA statement** on the Mercy page or Eventbrite. Runs in 3 weeks, so it will pass before the credit line appears | — |
 | RMTS 69th Annual Meeting (Snowmass, 15–18 Jan 2027) | 2026-09-22 | real 69-year-old trauma society, dates + venue confirmed on rmts.org, but **no credit type stated anywhere on the site** and no programme archive to check. Ski-CME destination — worth getting | 2026-11 |
@@ -118,6 +119,22 @@ Lifestyle & Preventive, Sports, Hematology, Nephrology, Pathology.
 | NOF 2028 (Nordic orthopaedics) | 2026-09-18 | Norway confirmed on norf.org, no city or dates | 2027-06 |
 | Nordic gastro / cardiology / psychiatry / paediatrics / geriatrics congresses | 2026-09-18 | searches for a Nordic-level congress in each came back empty — several of these federations no longer run one; do not re-search as a group, only if a specific society name turns up | 2027-03 |
 | Kirurgveckan 2027 (Sweden) | 2026-09-08 | still unannounced 2026-09-18 | 2026-12 |
+
+## Explicitly NOT CME — do not re-evaluate
+
+Meetings that look like prime destination CME but whose own pages state they carry **no**
+physician credit. Recorded so a future scan does not spend time re-verifying them.
+
+| Meeting | Where | What its page says |
+| --- | --- | --- |
+| Highlights of ASH in Asia-Pacific | Bangkok, Feb 2027 | "This activity does not provide Continuing Medical Education (CME) Credit" — 12.5 contact hours only |
+| Highlights of ASH in the Mediterranean, Middle East & North Africa | Istanbul/Athens | "This activity will not provide CME credit to participants" — 12.25 contact hours |
+| Highlights of ASH in Latin America | Santiago, Apr 2027 | "This activity will not provide Continuing Medical Education (CME) credit" — 12.5 contact hours |
+
+The North American editions of the same series **do** carry CME (ASH is ACCME-accredited), which
+is why four were added and three were not. The lesson: a single society can run one branded series
+where the domestic legs are accredited and the international legs deliberately are not. Check the
+individual leg, never the series.
 
 ## Held back for a missing credit statement
 
@@ -240,6 +257,22 @@ one or two countries per scan rather than trying to finish it.
   page for these, exactly as with US society flagships.
 
 ## Scan history
+
+### 2026-10-05 (later) — owner asked about ASSH and sent the ASH meetings page
+**ASSH: we had it.** The 81st Annual Meeting ran in Boston 17–19 Sep 2026 and is in the dataset —
+it had simply dropped off the map's upcoming view by the time he looked. Worth remembering that
+"did we miss it?" sometimes means "it already happened". **2027/2028 could not be added**: assh.org's
+annual-meeting section is a JavaScript app that serves an error and 141 characters of text, so the
+future-meetings page is unreadable. Logged for re-check.
+
+**ASH: the annual meeting was held, the Highlights series was not.** Added the **four North American
+editions** (Chicago 15–16 Jan, New York and Seattle both 22–23 Jan, Washington DC 29–30 Jan 2027).
+**Did not add Bangkok, Istanbul/Athens or Santiago** — each page says in terms that the activity does
+**not** provide CME credit, only contact hours and a certificate. New scan-log section "Explicitly NOT
+CME" records them so nobody re-verifies three attractive destination meetings a second time.
+
+**Rule learned:** one society can run a single branded series whose domestic legs are ACCME-accredited
+and whose international legs deliberately are not. Verify the individual leg, never the series.
 
 ### 2026-10-05 — weekly run
 **Diff:** 480 live | changed 0 | gone 3 | new 9. **Added 8:** Mount Sinai Healthspan Conference
