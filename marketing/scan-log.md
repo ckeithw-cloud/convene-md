@@ -155,6 +155,7 @@ community:
 | Israel | 0 | checked — society sites are Hebrew and poorly indexed; needs a different approach |
 | **Greece** | +1 | HCS international congress (Athens) — 2026-09-14 |
 | **Portugal** | +1 | SPC congress (Vilamoura) — 2026-09-14 |
+| **Hungary** | 9 (was 1) | both national societies publish full calendars — 2026-10-05 |
 | **Czechia** | 2 (was 0) | CSC annual congress Brno 2027, Research & Innovation Days Prague — 2026-09-28 |
 | **Poland** | 2 (was 1) | 73rd TChP congress Warsaw 2027 — 2026-09-28 |
 | **Iceland** | 6 (was 0) | **owner asked 2026-09-14** — Nordic rotation congresses + destination CME, see below |
@@ -218,7 +219,7 @@ knowing.
 RCOG, RCR, ASGBI, BSG's own annual meeting. Ireland: RCPI, and the RCSI Charter Meeting
 (9 Feb 2027 appears in search but is not on the RCSI events page, and the 2026 edition ran
 five days, so the end date is unknown). Belgium: surgery, gastro, paediatrics.
-Not begun at all: Hungary. (Poland and Czechia swept 2026-09-28.) (Netherlands, Switzerland, Sweden, Denmark,
+**Every European country has now had at least one pass** (Hungary completed 2026-10-05). (Netherlands, Switzerland, Sweden, Denmark,
 Norway, Finland, Iceland, Portugal, Greece, Turkey and Israel have each had at least one pass.)
 
 **Checked, nothing addable yet:** BCS 2027 (Manchester Central confirmed, no dates
@@ -239,6 +240,38 @@ one or two countries per scan rather than trying to finish it.
   page for these, exactly as with US society flagships.
 
 ## Scan history
+
+### 2026-10-05 — weekly run
+**Diff:** 480 live | changed 0 | gone 3 | new 9. **Added 8:** Mount Sinai Healthspan Conference
+(longevity — a thin specialty), U of Utah menopause medicine, WashU thyroidology 2027, Stanford
+Adolescent Health 2027, and four MER destination courses for 2027 (Caesars Palace, Paris Las Vegas,
+Fairmont Princess Scottsdale, Disney's Yacht & Beach Club).
+
+**Technique: MER puts credit hours in the listing line, not an accreditation block.** The course page
+has no "designates … AMA PRA Category 1" sentence anywhere; the number appears as
+`<course name> - 12 Credit Hours` next to the venue. A naive grep for the designation sentence returns
+nothing and the course looks unverifiable. Grep for `(\d+) Credit Hours` on mer.org instead.
+
+**Declined 1:** U of Utah's Cancer Pain Summit — 17.5 credits over four days, obviously real, but the
+listing gives **no city** (bare ", UT") for the second week running. Same defect as CRMC. Both are in
+the ignore list with re-check notes. If a third Utah course shows the same blank venue it is a portal
+defect worth writing to them about, not a per-course omission.
+
+**Rotation: Hungary**, the last unswept European country. **Added 8** from the two national societies'
+own calendars (mkardio.hu, mst.hu): Kardiológiai Horizont and the surgical-oncology section congress
+(both Visegrád), interventional cardiology (Pécs), **cardiac surgery at Hotel Azúr on Lake Balaton**,
+Budapest Cardiology Days, the 52nd Internal Medicine Grand Assembly, experimental surgery (Budapest),
+and Onco-Cardiology Days 2027 (Kecskemét). Hungary goes **1 → 9**; Budapest and Visegrád are new city
+hubs. **Europe is now fully swept at least once.**
+
+Caveat recorded: the Hungarian entries point at the societies' **events-calendar pages**, not per-event
+URLs, because neither society publishes one — hence 5 new "same url + year" validator warnings. This is
+the same deep-link gap as the two UCSF entries. Accepted here because the calendar *is* the society's own
+authoritative page; third-party agency sites (sonarmed.hu, ekho94.hu) host per-event pages but are not
+the organiser.
+
+Subscriber report: the 1 Oct launchd run died on a DNS failure (machine offline); re-ran by hand —
+**17 total / 8 active**, up 3. Traffic: 617 visits, first week-over-week fall (820 → 617).
 
 ### 2026-09-30 — owner sent a conference link
 Owner sent the Children's National ECMO meeting page. **Added the 43rd Annual Children's National

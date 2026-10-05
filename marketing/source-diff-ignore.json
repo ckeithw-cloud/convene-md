@@ -143,5 +143,10 @@
     "name": "Cardiovascular, Renal and Metabolism Center (CRMC)",
     "reason": "U of Utah; 7.5 Cat 1 and real, but the listing gives no city at all (venue field is bare ', UT') — re-check when a venue is published",
     "declined": "2026-09-28"
+  },
+  "cloudcme:84252": {
+    "name": "Cancer Pain Summit",
+    "reason": "U of Utah; 17.5 Cat 1 over 4 days and clearly real, but the listing again gives no city (bare ', UT') — same defect as CRMC. Re-check when a venue is published",
+    "declined": "2026-10-05"
   }
 }
