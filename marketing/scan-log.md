@@ -258,6 +258,27 @@ one or two countries per scan rather than trying to finish it.
 
 ## Scan history
 
+### 2026-10-06 — third form submission, and a correction to the subscriber read
+
+Owner asked whether any conferences have been submitted. **Three submissions to date, all spam,
+none added.** The newest (2 Oct, sent twice a minute apart) is **"GCPR 2027", Barcelona,
+PM&R — `physicalmedicine.irisscientificgroup.com`**. `irisscientificgroup` added to
+`BANNED_HOSTS` in validate.js.
+
+**The correction.** Iris Scientific Group is the same outfit whose four department mailboxes
+(`ortho@`, `neurology@`, `addiction@`, `physicalmedicine@irisscientificgroup.org`) subscribed to
+the newsletter in September and never confirmed. That means the subscriber report's headline
+signal — **"/specialty/physical-medicine-and-rehabilitation/ is the top-converting page, 5 of 17
+signups"** — is wrong: **four of those five are Iris**, and the fifth is the genuine PM&R resident.
+PM&R is not a high-converting page; it is one mill signing up four times from the same page.
+
+Real picture of the list: **8 confirmed, of whom 4 are physicians, 1 a resident, 1 a hospice
+staffer, 1 a publisher**, and signups are spread roughly one per hub page with **no page
+converting more than once**. Double opt-in is what keeps the mill mailboxes out of the send.
+
+**Rule:** before reading any pattern out of the subscriber report, check whether a single domain
+accounts for it. Aggregate counts hide the fact that one actor can supply a whole "trend".
+
 ### 2026-10-06 (later) — swept 22 unknown CloudCME hosts; Mammoth 2027 found by the owner
 
 **The sweep.** Probed ~180 candidate `<institution>.cloud-cme.com` slugs; **22 live instances we

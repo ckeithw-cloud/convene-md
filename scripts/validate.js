@@ -26,9 +26,11 @@ const VALID_SPECIALTIES = new Set([
 ]);
 
 // Aggregators that fabricate or misreport listings — never acceptable as a source URL.
+// irisscientificgroup added 2026-10-06: submitted "GCPR 2027" twice through the site's form,
+// and is the same outfit whose four department mailboxes padded the newsletter list in September.
 // longdom / omicsonline / memeetings added 2026-09-18: the first two submissions through the
 // site's own form were Longdom mill events (one listed Chiba as the city and Tokyo in the blurb).
-const BANNED_HOSTS = /magnusgroup|conferenceseries|conferenceindex|allconferencealert|internationalconferencealert|conferencealerts?\.com|10times|emedevents|clocate|showsbee|pr-medicalevents|vendelux|aconf\.org|longdom|omicsonline|memeetings|scitechnol|hilarispublisher|walshmedicalmedia|pulsus|meetingsint|euroscicon|scientificfederation|coalesceresearch|peersalley|continuumforums|unitedscientificgroup/i;
+const BANNED_HOSTS = /magnusgroup|conferenceseries|conferenceindex|allconferencealert|internationalconferencealert|conferencealerts?\.com|10times|emedevents|clocate|showsbee|pr-medicalevents|vendelux|aconf\.org|longdom|omicsonline|memeetings|scitechnol|hilarispublisher|walshmedicalmedia|pulsus|meetingsint|euroscicon|scientificfederation|coalesceresearch|peersalley|continuumforums|unitedscientificgroup|irisscientificgroup/i;
 
 const REQUIRED = ["name", "specialty", "year", "startDate", "endDate", "city",
                   "country", "lat", "lng", "url", "organizer", "description"];
