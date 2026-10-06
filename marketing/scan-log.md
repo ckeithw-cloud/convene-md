@@ -103,6 +103,7 @@ Lifestyle & Preventive, Sports, Hematology, Nephrology, Pathology.
 | EADV Congress 2027 | 2026-09-08 | 2026 Vienna is latest; the 2027 *Symposium* (Dresden) IS confirmed and added | 2027-01 |
 | SITC 2027 | 2026-09-08 | Nov 3–7 2027 in a search summary, not on the SITC site | 2027-01 |
 | ASTRO 2028 / 2029 | 2026-09-08 | dates published (21–25 Oct 2028, 6–10 Oct 2029), **no host city** | 2027-03 |
+| 46th Mammoth Mountain Emergency Medicine Conference (2027) | 2026-10-06 | the 45th ran 9–12 Mar 2026 at The Village Lodge, Mammoth Lakes (16 Cat 1); UCI's catalogue has no 2027 edition yet. **Ski-CME at Mammoth — chase this one** | 2026-12 |
 | ASSH 2027 (San Antonio) / 2028 (Las Vegas) | 2026-10-05 | assh.org's whole annual-meeting section is a JS app that renders **"ASSH App can't be loaded!"** and serves 141 characters of text — no future-meetings data is reachable. Search summaries give 82nd 7–9 Oct 2027 San Antonio and 83rd 7–9 Sep 2028 Las Vegas, but that is a summary, not a primary source, so it is NOT added | 2026-12 |
 | NCS 25th (New Orleans, Hyatt Regency) & 26th (Denver) Annual Meetings | 2026-09-22 | **start dates and venues published** (27 Sep 2027; 19 Oct 2028) but the future-meetings page gives no end dates — do not guess a 4-day span | 2027-01 |
 | 16th Annual Gynecologic Robotic Surgery Conference (Four Seasons Baltimore, 15–17 Oct 2026) | 2026-09-22 | from an email invite; Mercy Medical Center, 16 years running, billed as "A Continuing Medical Education Symposium" with a RoboticsCME@ contact, but **no AMA PRA statement** on the Mercy page or Eventbrite. Runs in 3 weeks, so it will pass before the credit line appears | — |
@@ -257,6 +258,34 @@ one or two countries per scan rather than trying to finish it.
   page for these, exactly as with US society flagships.
 
 ## Scan history
+
+### 2026-10-06 — owner sent a UCI CloudCME link, exposing a blind spot
+
+Owner sent a course at `uci.cloud-cme.com`. We did not have it — **and could never have found it**,
+which is the important part.
+
+**Structural finding: `diff-sources.js` only watches hosts already present in the dataset.**
+`cloudcmeHosts()` derives its list by regexing `cloud-cme.com` hostnames out of `conferences.js`.
+A CloudCME provider we hold zero entries from is therefore invisible to the weekly diff forever —
+it is a closed loop. UCI was one of those. The weekly "new 0" report has always meant "nothing new
+on the 15 hosts we already knew about", never "nothing new in CloudCME".
+
+Adding the first UCI entry fixes it for UCI specifically — the host list is now 16 and UCI joins
+automatically from next Monday. But the general gap remains: **there is no process that discovers a
+new CloudCME provider.** Worth a one-off sweep of likely academic hosts (`<institution>.cloud-cme.com`)
+to seed the list; logged under the next-steps queue rather than done today.
+
+**The course itself had already run:** 45th Annual Mammoth Mountain Emergency Medicine Conference,
+9–12 Mar 2026, The Village Lodge, Mammoth Lakes, 16 AMA PRA Cat 1. The 46th is not posted; it is in
+the not-yet-announced table with a December re-check, because **ski CME at Mammoth is squarely the
+kind of entry this site exists for**.
+
+**Added 5 from the rest of the UCI catalogue** (7 live records, all Category 1): Comprehensive Stroke
+Symposium (10 Oct), 18th Orange County Cardiovascular Disease Prevention (23–24 Oct), HARMONICS 2026 —
+an international music, medicine and science conference (28–29 Oct), HoLEP Masterclass 2027 (Orange,
+18–20 Feb), Gavin Herbert Eye Institute 20th Colloquium (19 Feb 2027). **Irvine and Orange are new city
+hubs.** Skipped the Women's Health Summit (2.25 credits, below the 4-credit floor) and the Advanced
+International Men's Health Course (online).
 
 ### 2026-10-05 (later) — owner asked about ASSH and sent the ASH meetings page
 **ASSH: we had it.** The 81st Annual Meeting ran in Boston 17–19 Sep 2026 and is in the dataset —
