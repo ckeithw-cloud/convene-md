@@ -1,0 +1,85 @@
+# Candidate CloudCME tenant slugs, probed by scripts/probe-cloudcme.sh.
+#
+# WHY THIS FILE EXISTS
+# diff-sources.js derives its weekly watch list by regexing cloud-cme.com hostnames out of
+# conferences.js. That is a closed loop: a provider we hold zero entries from is invisible to
+# the weekly diff forever. This list is the only thing that breaks the loop, and it only works
+# if someone adds names to it. Append freely — a wrong guess costs one HTTP request.
+#
+# A slug is the subdomain in <slug>.cloud-cme.com. Lines starting with # are ignored.
+# Slugs already in the dataset are marked "# known" so a re-probe shows what is genuinely new.
+#
+# Last full probe: 2026-10-06 (~180 slugs, 22 new instances found).
+# Cadence: twice a year. Nothing discovers a new provider automatically.
+
+# --- known: already in the dataset and scraped weekly -------------------------
+avera            # known (0 qualifying courses at first probe)
+cchmc            # known
+cedars           # known
+chop             # known
+cuanschutz       # known (0 live records at first probe)
+hopkinscme       # known
+intermountain    # known
+jefferson        # known
+miami            # known
+mskcc            # known (0 qualifying courses at first probe)
+mssm             # known
+musc             # known
+nationwidechildrens  # known
+northwestern     # known
+osu              # known (0 qualifying courses at first probe)
+scrippshealthcme # known
+sentara          # known
+sharp            # known
+slu              # known
+stanford         # known
+ttuhsc           # known
+uams             # known
+uarizona         # known
+uci              # known
+ucdavis          # known (0 live records at first probe)
+ucla             # known
+ucsd             # known
+ucsf             # known
+umaryland        # known
+umich            # known
+uofuhealth       # known
+upenn            # known
+uva              # known
+uw               # known
+vcu              # known
+vumc             # known
+washu            # known
+yale             # known
+
+# --- probed 2026-10-06, no CloudCME instance (keep so they are not re-guessed) -
+# Northeast / Mid-Atlantic
+harvard hms mgh bwh bidmc dfci bch penn pennmedicine temple pitt upmc
+nyu mountsinai columbia cornell weill nyp montefiore einstein northwell hss
+roswell urmc buffalo stonybrook hackensack rwjbh atlantichealth virtua
+geisinger lvhn lehigh tower christiana nemours inova georgetown gwu howard
+jhu umm
+# Southeast
+emory grady augusta wakehealth atrium unc duke novant prismahealth ballad vidant
+unchealth duke-health usf ufl jax
+# Midwest
+clevelandclinic ccf uhhospitals case mayo mayoclinic uchicago northshore rush
+loyola uic siu iowa nebraska kumc wustl mizzou kansas uky louisville
+mcw froedtert gundersen marshfield sanfordhealth essentia
+# South-central
+utsw utmb uth bcm methodist houstonmethodist texaschildrens baylor ochsner
+lsu tulane vanderbilt vumcpeds
+# West / Mountain
+uwmedicine ohsu ucdmc keck usc cedarssinai stanfordchildrens lpch sutterhealth
+scripps providence banner mayoaz unm ucolorado childrenscolorado denverhealth
+uofu utah unr unlv oregon idaho montana alaska hawaii queens
+# Canada
+ualberta ubc ucalgary umanitoba utoronto uottawa mcgill dal sickkids sunnybrook
+uhn camh queensu mcmaster western usask unb mun nshealth albertahealth
+# Societies / commercial providers
+aast sages facs asmbs acc sts aats scai hrsonline asa aan aap acep sccm chest
+ashp aacn aorn ena npa pri-med
+
+# --- NOT YET PROBED — add candidates here ------------------------------------
+# Good sources of new names: the `organizer` field of any entry added by hand, a
+# hospital's "Continuing Education" page URL, or a CloudCME login page in search results.

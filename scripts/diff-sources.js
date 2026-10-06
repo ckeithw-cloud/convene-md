@@ -103,11 +103,23 @@ function fuzzyHeld(name, startDate) {
 
 // Hosts are taken from the dataset itself rather than hard-coded guesses: an earlier
 // pass probed a guessed list and missed yale, scripps, ucsd and uofuhealth entirely.
+// The watch list is DERIVED from the dataset, which used to make it a closed loop: a provider
+// we held zero entries from could never appear in the diff, so "new 0" only ever meant "nothing
+// new on the hosts we already knew". scripts/probe-cloudcme.sh finds unseen instances; any it
+// reports that have nothing addable yet go in cloudcme-extra-hosts.txt and are unioned in here,
+// so their first qualifying course surfaces instead of being invisible indefinitely.
 function cloudcmeHosts() {
   const set = new Set();
   for (const c of CONFERENCES) {
     const m = /https?:\/\/([a-z0-9-]+\.cloud-cme\.com)/i.exec(c.url || "");
     if (m) set.add(m[1].toLowerCase());
+  }
+  const extra = path.join(__dirname, "cloudcme-extra-hosts.txt");
+  if (fs.existsSync(extra)) {
+    for (const line of fs.readFileSync(extra, "utf8").split("\n")) {
+      const h = line.replace(/#.*/, "").trim().toLowerCase();
+      if (/^[a-z0-9-]+\.cloud-cme\.com$/.test(h)) set.add(h);
+    }
   }
   return [...set].sort();
 }

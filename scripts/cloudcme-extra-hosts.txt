@@ -1,0 +1,15 @@
+# Extra CloudCME hosts for diff-sources.js to watch, beyond those implied by conferences.js.
+#
+# diff-sources.js normally derives its watch list from cloud-cme.com URLs already in the
+# dataset. That misses a live instance we hold NO entries from — and "we hold none today"
+# is not "there will never be anything worth holding". These five were confirmed live by
+# scripts/probe-cloudcme.sh on 2026-10-06 but had no qualifying course at the time
+# (in-person, Category 1, >= 4 credits). Listing them here keeps them in the weekly scrape
+# so the first qualifying course they publish shows up as a NEW candidate.
+#
+# One slug per line; # comments ignored. Add any slug probe-cloudcme.sh reports as NEW.
+avera.cloud-cme.com
+cuanschutz.cloud-cme.com
+mskcc.cloud-cme.com
+osu.cloud-cme.com
+ucdavis.cloud-cme.com

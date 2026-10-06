@@ -45,7 +45,7 @@ be ~52 fetches to catch one edit. Frequency should track how fast a source actua
 
 ## Tier A — Automated, checked in full every week
 
-`node scripts/diff-sources.js` — **33 CloudCME provider instances** plus mer.org, **~1,000 live
+`node scripts/diff-sources.js` — **38 CloudCME provider instances** plus mer.org, **~1,000 live
 records in a few minutes**, pure HTTP, no searching and no model calls. Writes
 `marketing/source-diff/<date>.md`.
 
@@ -57,8 +57,18 @@ on the hosts we already knew", not "nothing new in CloudCME". A one-off probe of
 (CHOP, MUSC, Jefferson, UW, UVA, Intermountain, Sharp, Cincinnati Children's, Nationwide
 Children's, Arizona, Maryland, VCU, SLU, UAMS, Miami, Sentara, TTUHSC and others), carrying 104
 qualifying candidates. Seeding one entry per host pulls each into the weekly rotation.
-**If a new academic CME provider appears, nothing will discover it automatically — re-run the
-slug probe (`scratchpad/probe-hosts.sh` pattern) once or twice a year.**
+**Nothing discovers a new provider automatically.** Two committed pieces close that:
+
+- `scripts/probe-cloudcme.sh` — probes every slug in `scripts/cloudcme-slugs.txt` (203 names,
+  grouped by region, including the ones already checked and found empty so they are not
+  re-guessed) and prints `NEW` for any live instance absent from the dataset. **Run it twice a
+  year**, and whenever a hand-added conference reveals a provider we have not seen. Append
+  candidates to the list file freely — a wrong guess costs one HTTP request.
+- `scripts/cloudcme-extra-hosts.txt` — hosts that are live but have nothing addable *yet*.
+  `diff-sources.js` unions these into its watch list, so a provider with no qualifying course
+  today still gets scraped and its first one surfaces as a NEW candidate. Five sit there now
+  (avera, cuanschutz, mskcc, osu, ucdavis), found live on 2026-10-06 with zero qualifying courses.
+  Without this they would be permanently invisible despite having been found.
 
 It reports four things and **edits nothing**:
 

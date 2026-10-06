@@ -212,6 +212,22 @@ edition's accreditation.
 
 Also worth re-checking later: **ASTRO 2027** host city (not yet announced as of Aug 2026).
 
+**Finding CloudCME providers we do not yet watch.**
+
+`diff-sources.js` only scrapes hosts it can see — those with a `cloud-cme.com` URL already in
+`conferences.js`, plus anything listed in `scripts/cloudcme-extra-hosts.txt`. A provider outside
+both is invisible to the weekly diff no matter how many conferences it runs. Twice a year, and any
+time a hand-added conference names an institution we have not seen:
+
+```
+bash scripts/probe-cloudcme.sh          # prints NEW <slug> for unwatched live instances
+/usr/bin/python3 scripts/scrape-cloudcme.py <slug>.cloud-cme.com   # then triage each
+```
+
+Add at least **one verified entry per new host** — that is what pulls it into the weekly rotation.
+If a live host has nothing that passes the bar today, put it in `cloudcme-extra-hosts.txt` instead
+so it is still scraped. Add new candidate slugs to `scripts/cloudcme-slugs.txt` as you meet them.
+
 **Audience rule — physician CME only:**
 
 The site is aimed at physicians. Add an activity only if it offers **AMA PRA Category 1 Credit™**
