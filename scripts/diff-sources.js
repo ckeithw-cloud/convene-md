@@ -118,7 +118,10 @@ function cloudcmeHosts() {
 // audience rule or the "not a conference" rule excludes anyway -- Project ECHO
 // telementoring series, "Master Clinician Series"-style monthly RSS, instructor
 // certification, and anything explicitly aimed at APPs or nurses.
-const JUNK = /T4UCSF|faculty development|fellowship|maintenance of certification|MOCA|grand round|journal club|tumou?r board|distressed physician|proper prescribing|research ethics|improvement science|certificate course|master of science|orientation|onboarding|advanced practice provider|\bAPP\b|for nurses|nursing|master clinician series|\bECHO\b|introductory training|instructor certification|didactic workshop|scholarship program|simulation training/i;
+// Widened again 2026-10-06 after the 22-host sweep surfaced: simulation *facilitator* courses
+// (the old 'simulation training' missed them), career-development classes, Reiki and
+// self-compassion training, a medicolegal death-investigator course, and a cardiac-centre reunion.
+const JUNK = /T4UCSF|faculty development|fellowship|maintenance of certification|MOCA|grand round|journal club|tumou?r board|distressed physician|proper prescribing|research ethics|improvement science|certificate course|master of science|orientation|onboarding|advanced practice provider|\bAPP\b|for nurses|nursing|master clinician series|\bECHO\b|introductory training|instructor certification|didactic workshop|scholarship program|simulation training|simulation facilitator|transforming your career|reiki|self-compassion|death investigator|practitioner training|study development workshop|center reunion/i;
 
 // Which python3 runs the CloudCME scraper. launchd's PATH puts /opt/homebrew/bin first, so
 // a bare "python3" resolved to Homebrew's 3.14 there — which has no `requests` — and all 15
@@ -163,7 +166,7 @@ async function fetchCloudCME() {
         // "A Live Webinar" is how Stanford labels its online courses -- it contains
         // neither "online" nor "virtual", so six webinars leaked into the candidate
         // list before this was widened. Also catches hybrid/livestream phrasing.
-        online: !r.where || /\bonline\b|\bvirtual\b|internet live|webinar|livestream|live ?stream|\bhybrid\b|\bzoom\b/i.test(r.where),
+        online: !r.where || /\bon-?line\b|\bvirtual\b|internet live|webinar|live[- ]?stream|\bhybrid\b|\bzoom\b/i.test(r.where),
         cat1: !!r.cat1,
         hours: r.hours,
         url: r.url,

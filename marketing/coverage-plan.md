@@ -45,9 +45,20 @@ be ~52 fetches to catch one edit. Frequency should track how fast a source actua
 
 ## Tier A — Automated, checked in full every week
 
-`node scripts/diff-sources.js` — 15 CloudCME provider instances plus mer.org, **530 live
-records in ~90 seconds**, pure HTTP, no searching and no model calls. Writes
+`node scripts/diff-sources.js` — **33 CloudCME provider instances** plus mer.org, **~1,000 live
+records in a few minutes**, pure HTTP, no searching and no model calls. Writes
 `marketing/source-diff/<date>.md`.
+
+**The host list is derived, and that was a trap.** `cloudcmeHosts()` builds its watch list by
+regexing `cloud-cme.com` hostnames out of `conferences.js` — so a provider we hold zero entries
+from is invisible to the diff **permanently**. Every "new 0" before 2026-10-06 meant "nothing new
+on the hosts we already knew", not "nothing new in CloudCME". A one-off probe of candidate
+`<institution>.cloud-cme.com` slugs on 2026-10-06 found **22 live instances we had never seen**
+(CHOP, MUSC, Jefferson, UW, UVA, Intermountain, Sharp, Cincinnati Children's, Nationwide
+Children's, Arizona, Maryland, VCU, SLU, UAMS, Miami, Sentara, TTUHSC and others), carrying 104
+qualifying candidates. Seeding one entry per host pulls each into the weekly rotation.
+**If a new academic CME provider appears, nothing will discover it automatically — re-run the
+slug probe (`scratchpad/probe-hosts.sh` pattern) once or twice a year.**
 
 It reports four things and **edits nothing**:
 

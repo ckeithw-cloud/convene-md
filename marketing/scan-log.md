@@ -103,7 +103,6 @@ Lifestyle & Preventive, Sports, Hematology, Nephrology, Pathology.
 | EADV Congress 2027 | 2026-09-08 | 2026 Vienna is latest; the 2027 *Symposium* (Dresden) IS confirmed and added | 2027-01 |
 | SITC 2027 | 2026-09-08 | Nov 3–7 2027 in a search summary, not on the SITC site | 2027-01 |
 | ASTRO 2028 / 2029 | 2026-09-08 | dates published (21–25 Oct 2028, 6–10 Oct 2029), **no host city** | 2027-03 |
-| 46th Mammoth Mountain Emergency Medicine Conference (2027) | 2026-10-06 | the 45th ran 9–12 Mar 2026 at The Village Lodge, Mammoth Lakes (16 Cat 1); UCI's catalogue has no 2027 edition yet. **Ski-CME at Mammoth — chase this one** | 2026-12 |
 | ASSH 2027 (San Antonio) / 2028 (Las Vegas) | 2026-10-05 | assh.org's whole annual-meeting section is a JS app that renders **"ASSH App can't be loaded!"** and serves 141 characters of text — no future-meetings data is reachable. Search summaries give 82nd 7–9 Oct 2027 San Antonio and 83rd 7–9 Sep 2028 Las Vegas, but that is a summary, not a primary source, so it is NOT added | 2026-12 |
 | NCS 25th (New Orleans, Hyatt Regency) & 26th (Denver) Annual Meetings | 2026-09-22 | **start dates and venues published** (27 Sep 2027; 19 Oct 2028) but the future-meetings page gives no end dates — do not guess a 4-day span | 2027-01 |
 | 16th Annual Gynecologic Robotic Surgery Conference (Four Seasons Baltimore, 15–17 Oct 2026) | 2026-09-22 | from an email invite; Mercy Medical Center, 16 years running, billed as "A Continuing Medical Education Symposium" with a RoboticsCME@ contact, but **no AMA PRA statement** on the Mercy page or Eventbrite. Runs in 3 weeks, so it will pass before the credit line appears | — |
@@ -258,6 +257,39 @@ one or two countries per scan rather than trying to finish it.
   page for these, exactly as with US society flagships.
 
 ## Scan history
+
+### 2026-10-06 (later) — swept 22 unknown CloudCME hosts; Mammoth 2027 found by the owner
+
+**The sweep.** Probed ~180 candidate `<institution>.cloud-cme.com` slugs; **22 live instances we
+had never held a single entry from**: cchmc, chop, jefferson, musc, nationwidechildrens, osu,
+umaryland, uva, vcu, cuanschutz, intermountain, sharp, uarizona, ucdavis, uw, avera, miami, slu,
+ttuhsc, uams, mskcc, sentara. Scraped all 22 through the diff's own filters: **104 qualifying
+candidates**. Watch list goes **16 → 33 hosts**; each seeded host now enters the weekly rotation
+automatically.
+
+**Added 29 from the sweep**, chosen for travel value rather than volume — the rest are local
+one-day hospital symposia the weekly diff will now surface for normal triage. Highlights:
+**three new ski-CME meetings** (Jefferson Winter CME at the Viceroy Snowmass, Jefferson Anesthesia
+at Huntley Lodge Big Sky, and **MOGULS — Mountain Outdoor GU Lecture Series at Snowbird**),
+CHOP's Cardiology 2027 at Disney's Yacht & Beach Club, Sharp's **Aloha! Conference at the Grand
+Hyatt Kauai**, two Grand Hyatt Indian Wells meetings, four MUSC conferences at historic Charleston
+hotels, and a Spanish-language diabetes intensive in Aventura.
+
+**Two filter bugs the sweep exposed, both now fixed in `diff-sources.js`:**
+- The online filter missed **hyphenated** forms — "On-Line" and "Live-Streamed" both passed as
+  in-person. Regex is now `\bon-?line\b` and `live[- ]?stream`.
+- The junk filter's "simulation training" missed "Simulation **Facilitator** Course" (five
+  Intermountain instances). Also added: career-development classes, Reiki training,
+  self-compassion training, a medicolegal death-investigator course, and a cardiac-centre reunion.
+
+**Mammoth 2027 — the owner found it, and the reason the scrape missed it matters.** The 45th was
+on UCI's CloudCME portal; the **46th (8–11 Mar 2027, The Village Lodge, Mammoth Lakes) is hosted on
+eventcreate.com instead**. A conference can change registration platform between years, so a
+provider's catalogue being current does not mean its own conferences are all in it. Added on the
+prior edition's accreditation (the 45th listed 16 AMA PRA Cat 1 on UCI's portal); the 2027 page's
+own credit line is stale copy that still says "45th Annual" and names no designating body — noted
+here so the entry's basis is on record. The page also contradicts itself: headline dates are March
+2027, the session blocks below still say March 2026. Headline dates used.
 
 ### 2026-10-06 — owner sent a UCI CloudCME link, exposing a blind spot
 
