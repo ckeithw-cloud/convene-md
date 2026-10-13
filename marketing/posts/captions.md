@@ -228,6 +228,8 @@ and switch it back afterwards. `/year/2026/` is a hub page that already gets org
 unlike `/new/` it will NOT give a clean attribution read; accept that, the landing page matters
 more than the measurement here.
 
+*Posted 13 Oct 2026:* https://www.instagram.com/convene.md/p/DearU2YFDFN/
+
 *Posting notes:*
 - Carousel, 6 slides, file order. Slide 1 is the hook; slide 6 is the CTA.
 - **Post in October.** The whole thing is dead on 1 January, and the site callout disappears then too.
