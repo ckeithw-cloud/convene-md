@@ -242,6 +242,13 @@ in Australia, national college accreditation elsewhere).
   conferences that happen to be *held at* a school of nursing or run alongside a separate nursing
   congress — the venue or a co-located event is not the audience.
 - If the credit type is not stated anywhere on the official site, skip it.
+- **Before skipping, check the back catalogue — and prefer an old BROCHURE to an old agenda.**
+  Three meetings have now been recovered this way (Advances in Trauma 2023 programme, NCS 2025
+  accreditation PDF, Detroit Trauma 2019 brochure). Agendas are session lists and usually omit
+  accreditation; brochures carry a dedicated CME Credit page. A recurring meeting's accreditation
+  pathway rarely changes, so a prior edition's statement establishes the credit TYPE — but do not
+  carry over the credit COUNT unless the programme length is unchanged.
+
 
 **Quality rules:**
 

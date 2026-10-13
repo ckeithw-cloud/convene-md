@@ -258,6 +258,37 @@ one or two countries per scan rather than trying to finish it.
 
 ## Scan history
 
+### 2026-10-13 — owner sent detroittrauma.org
+
+Not held. **Added the 74th Annual Detroit Trauma Symposium** (5–6 Nov 2026, MGM Grand Detroit) —
+three weeks out, and by its own account the longest continuously running trauma symposium in the US.
+
+**The archive technique worked for the third time, and the pattern is now clear enough to state as
+a rule.** Nothing on detroittrauma.org carries an accreditation statement: not the homepage, the
+about page, the 2026 agenda PDF, the RegFox registration page, or the pricing image. The RegFox
+page says attendees "claim CME" but never says who accredits it. The statement is in the **2019
+(67th) brochure**, which is a proper multi-page PDF:
+
+> "The Wayne State University School of Medicine is accredited by the Accreditation Council for
+> Continuing Medical Education to provide continuing medical education for physicians. The Wayne
+> State University School of Medicine designates this live activity for a maximum of **17.75 AMA
+> PRA Category 1 Credit(s)™**."
+
+Added on that basis. **No credit count is in the entry** — 2019 was two full days plus sunrise
+sessions; 2026 is a full Thursday plus Friday morning, so 17.75 does not transfer and no 2026
+figure is published anywhere.
+
+**Rule: when a conference's web presence has no accreditation statement, look for an older
+*brochure* rather than an older agenda.** Agendas are session lists and rarely carry it; brochures
+have a dedicated CME Credit page. Both Detroit agendas (2024, 2026) were silent; the 2019 brochure
+had it on page 5.
+
+**Secondary observation worth watching.** Detroit Trauma's agenda PDF and the Advances in Trauma
+agenda the owner sent on 2026-09-22 are hosted on the *same* Cvent account
+(`1190D1E72B3847B3AB241880E7E41301`) — both meetings are run by KnowledgeConnex. Two for two on
+omitting CME statements from the public site. If a third KnowledgeConnex-run meeting appears, go
+straight to the back catalogue rather than reading the current site first.
+
 ### 2026-10-12 — weekly run, and a key-collision bug the host expansion exposed
 
 Traffic's 08:20 launchd run died on a DNS failure (`ENOTFOUND api.cloudflare.com`, machine offline)

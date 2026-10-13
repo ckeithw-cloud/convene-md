@@ -17882,4 +17882,18 @@ const CONFERENCES = [
     organizer: "Medical Education Resources (MER)",
     description: "Destination primary care CME at Caesars Palace, offering 12 AMA PRA Category 1 Credits."
   },
+  {
+    name: "74th Annual Detroit Trauma Symposium 2026",
+    specialty: "Trauma Surgery",
+    year: 2026,
+    startDate: "2026-11-05",
+    endDate: "2026-11-06",
+    city: "Detroit",
+    country: "USA",
+    lat: 42.3314,
+    lng: -83.0458,
+    url: "https://detroittrauma.org",
+    organizer: "Wayne State University School of Medicine / DMC Detroit Receiving Hospital",
+    description: "The longest continuously running trauma symposium in the United States, at the MGM Grand Detroit \u2014 resuscitation, REBOA, whole blood, vascular injury and trauma AI. Wayne State University School of Medicine is ACCME-accredited and designates AMA PRA Category 1 Credits."
+  },
 ];
