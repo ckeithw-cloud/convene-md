@@ -881,3 +881,54 @@ EuroELSO, IFAD, PCICS, SRLF, DIVI, SSAI, TUYUD, CCSSA)
   an unrelated site), iagg.info, esprm.net, pacificassociationofpediatricsurgeons.org,
   ossanz.com.au, wfsos.org, iasoindia.org, alatro.org, sccs-sa.org (redirects to
   a gambling domain), anzics.org, issp.co.in, icaai.in, apaaaci.org.
+
+### Pass completed, 13 Oct 2026 — all 45 specialties done
+
+**1,286 → 1,886 conferences (+600). 77 → 84 countries. 269 → 344 hub pages.**
+
+New countries added by the pass: Serbia, Sri Lanka, Georgia, Saint Lucia,
+Kyrgyzstan, Bangladesh, Uruguay, Panama, Costa Rica, Bahrain.
+
+Biggest gaps found (upcoming count before → after):
+Radiology 37→76 · Ophthalmology 25→45 · Neurology 29→47 · Orthopedic 28→46 ·
+General Surgery 36→47 · Anesthesiology 23→43 · Gastroenterology 16→40 ·
+Pediatrics 32→41 · Medical Oncology 30→38 · Psychiatry 17→37 · Dermatology
+20→36 · Pulmonology 24→35 · Endocrinology 21→35 · ID 17→34 · Nephrology
+16→31 · Endocrine/ENT 10→31 · Critical Care 14→29 · Neurosurgery 10→28 ·
+Cardiothoracic 12→28 · Family Medicine 13→28 · Urology 15→27 · Vascular
+8→24 · Lifestyle 9→24 · Plastic 10→25 · Rheumatology 14→25 · Surgical Onc
+7→23 · Colorectal 2→9 · Pediatric Surgery 2→8 · Radiation Onc 3→13 ·
+Bariatric 5→14 · Pain 6→14 · PM&R 7→15 · Geriatrics 4→12 · Pathology 4→12 ·
+Hospital Medicine 6→8 · Palliative 4→7 · Sports Medicine 14→22 ·
+Sports & Wilderness 14→26 · Hematology 22→34 · Internal Medicine 179→194 ·
+Cardiology 74→83 · Allergy 8→15 · HPB/Transplant 9→21 · Trauma 20 (done
+earlier)
+
+**The lesson, confirmed at scale.** Discovery was society-name-driven, so
+anything absent from the ~90-acronym flagship list in update-prompt.md was
+invisible regardless of how often we rescanned. The worst misses were not
+obscure: AAO-HNSF, NASS, EAU, ESCRS, SIU, AABB, ASRM, APA, ACR, ARRS,
+SNMMI, CIRSE and the American Headache Society were all absent. CIRSE's
+ESIR course programme alone yielded 18 entries across nine countries.
+Subspecialty societies and course programmes, not national societies, are
+where the volume sits.
+
+**Durable follow-ups**
+- Two entries dropped for sharing a listing URL with a sibling meeting and
+  so reading as one event twice: The VEINS 2027 (shares the VIVA Foundation
+  page) and the ASHNR 2027 programme (merged into the joint ASNR entry,
+  which is the more accurate representation). Both want deep links.
+- Skipped for want of a published city: ASGBI ISC 2027, SPUMS 55th, several
+  IASLC regional conferences, DAN Bonaire, PRiSM 15th, EBCOG 2027.
+- Skipped for want of an end date: Central Surgical Association 84th.
+- Skipped as weakly sourced: four one-day SEPAR jornadas sharing one
+  generic URL; the UBT Kosovo sports medicine conference (listed only on
+  fims.org, not the organiser's site) — Kosovo would be a new country, so
+  worth one direct fetch.
+- Excluded on the physician-CME rule, correctly: ASTCT Gene Therapy Summit
+  (states it offers no CE credit), SIAAIC XXXVIII ("CONGRESSO NO ECM"),
+  ASBrS BSO Fellows Summit ("non-CME"), the UK National Clinical
+  Endoscopist Conference, NASS APP course, SVM Fellows & APP course.
+- `update-prompt.md` still drives the weekly job off the flagship acronym
+  list. Until that list is widened with the societies found here, the
+  weekly diff will keep missing their future editions.
