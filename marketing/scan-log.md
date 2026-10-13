@@ -834,3 +834,50 @@ one event, not two. AAPM&R 2026, AAHPM 2027 and AGS 2027 were already present.
 Unlogged. Earlier passes covered MER's catalogue (170 courses), the CloudCME academic
 providers (see `scripts/update-prompt.md` §3d) and assorted ad-hoc society sweeps, but
 no record was kept of which specialties were searched when.
+
+## 13 Oct 2026 — per-specialty discovery pass (45 specialties)
+
+Prompted by the trauma pass (12 → 20 upcoming) showing that discovery is
+society-name-driven, so any society absent from the ~90-acronym flagship list
+in `scripts/update-prompt.md` is invisible to us no matter how many times we
+re-scan. One search per specialty, each told what we already hold and asked for
+societies *not* on the obvious list.
+
+**Result: 1,286 → 1,614 conferences (+328).** 33 of 45 specialties done.
+
+### Still to run (12 specialties — session rate limit hit mid-wave)
+General Surgery · Anesthesiology · Neurology · Pulmonology · Medical Oncology ·
+Pediatrics · Radiology · Internal Medicine · Hematology · Obstetrics &
+Gynecology · Sports Medicine · Sports & Wilderness Medicine
+
+Partial findings glimpsed before those agents died (worth re-running, not
+recorded as data): ECIM 2027 for Internal Medicine; AMSSM for Sports Medicine;
+BExMed for wilderness; MDS and WSO congress sites for Neurology.
+
+### Reports received but NOT yet entered
+Psychiatry (~20 finds: APA, RCPsych, ACLP, AAGP, SOBP, SIRS, NEI, Psych
+Congress, AAAP, ANPA, AADPRT) · Dermatology (~18: SID, ASLMS, ACMS, SPD, SOCS,
+WDS, ESPD, IPC, SIDeMaST, SFD, SBD) · Emergency Medicine (~16: NAEMSP, AAEM,
+RCEM, SAEM, DGINA, IAEM, NACCT, WMS) · Endocrinology (~16: ATTD, ISPAD, ESA,
+DGE, ISCD, Diabetes UK, ESPE, Pituitary Society, ADS, ETA, PES) ·
+Infectious Disease (~19: BHIVA, BSAC, ISID, ASTMH, ASID, FIS, SHEA, ISTM,
+ICPIC, EACS, WSPID) · Critical Care (~15: ICS UK, ISCCM, ELSO chapters,
+EuroELSO, IFAD, PCICS, SRLF, DIVI, SSAI, TUYUD, CCSSA)
+
+### Flagged for follow-up
+- **The VEINS 2027** — real meeting, dropped. Only URL available is the VIVA
+  Foundation listing page it shares with VIVA 2027, which validate.js reads as
+  one event twice. Needs a deep link.
+- Two IAP entries (Thailand 64th, Singapore Breast Pathology) share the generic
+  `iapcentral.org/events/` URL. Same weakness as the two UCSF listing-page
+  entries already flagged.
+- Blocked hosts worth a manual look: ascp.org, rcpa.edu.au, cap-acp.org,
+  ahns.info, triological.org, eans.org, cxsymposium.com, hrsonline.org,
+  hfsa.org, scct.org, corneasociety.org, aofas.org, esska.org, posna.org,
+  iasociety.org, bts.org.uk, endocrinology.org, asbmr.org, adaa.org, aapl.org,
+  asam.org, acoem.org, ifem.cc, aams.org — all returned 403/5xx to the fetcher
+  but render in a browser.
+- Dead/hijacked society domains found: cspcp.ca, bsrm.org.uk (now redirects to
+  an unrelated site), iagg.info, esprm.net, pacificassociationofpediatricsurgeons.org,
+  ossanz.com.au, wfsos.org, iasoindia.org, alatro.org, sccs-sa.org (redirects to
+  a gambling domain), anzics.org, issp.co.in, icaai.in, apaaaci.org.
