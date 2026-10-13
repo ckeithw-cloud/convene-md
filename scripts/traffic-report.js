@@ -14,6 +14,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { execFileSync } = require("child_process");
 
 const ACCOUNT_TAG = "86e2df40100c00350328477fcccf8a31";
 const SITE_TAG = "f52c7677238046e6a6e393db9609d308";
@@ -180,6 +181,67 @@ function experimentsInWindow(start, end) {
   return out;
 }
 
+// ---------------------------------------------------------------------------
+// Dataset movement and deploy state.
+//
+// The updater (com.medconf.update, Mondays 14:07) lands its finds as local commits and
+// explicitly does not push; this report runs Mondays 08:20, so its 7-day window always
+// contains exactly one updater run — the previous Monday's. That is what makes "added in
+// this window" a clean per-run figure rather than an arbitrary slice.
+//
+// In Oct 2026 600 conferences sat committed-but-unpushed for a whole session because
+// nothing surfaced the gap. Hence the deploy block below: this report is the weekly
+// moment the question gets asked.
+
+const git = (args, fallback = null) => {
+  try {
+    return execFileSync("git", args, { cwd: ROOT, encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }).trim();
+  } catch { return fallback; }
+};
+
+const countEntries = (src) => (src ? (src.match(/^\s{4}startDate: "/gm) || []).length : null);
+
+function datasetDelta(start, end) {
+  const live = fs.readFileSync(path.join(ROOT, "conferences.js"), "utf8");
+  const total = countEntries(live);
+
+  // Entries are parsed, not regex-counted, for the date arithmetic: endDate is what
+  // decides whether a conference still shows on the site.
+  let rows = [];
+  try {
+    rows = eval("(function(){" + live + "\nreturn CONFERENCES;})()").filter(Boolean);
+  } catch { /* validate.js is the place that fails loudly on a broken file, not here */ }
+
+  const d = (x) => day(x);
+  const today = d(new Date());
+  const in30 = d(new Date(Date.now() + 30 * 86400000));
+  const upcoming = rows.filter((c) => c.endDate >= today).length;
+  // "Expired in this window" = ended inside it, so it dropped off the site during the week.
+  const expired = rows.filter((c) => c.endDate >= d(start) && c.endDate < d(end)).length;
+  const expiringSoon = rows.filter((c) => c.endDate >= today && c.endDate < in30).length;
+
+  // Compare against the dataset as it stood at the start of the window.
+  const base = git(["rev-list", "-1", "--first-parent", `--before=${iso(start)}`, "HEAD"]);
+  let added = null, net = null, baseTotal = null;
+  if (base) {
+    baseTotal = countEntries(git(["show", `${base}:conferences.js`]));
+    if (baseTotal !== null && total !== null) net = total - baseTotal;
+    const diff = git(["diff", "--unified=0", `${base}..HEAD`, "--", "conferences.js"]);
+    if (diff !== null) added = (diff.match(/^\+\s{4}name: "/gm) || []).length;
+  }
+  return { total, upcoming, added, net, expired, expiringSoon, baseTotal };
+}
+
+function deployState() {
+  const branch = git(["rev-parse", "--abbrev-ref", "HEAD"]);
+  const upstream = git(["rev-parse", "--abbrev-ref", "--symbolic-full-name", "@{u}"]);
+  if (!branch || !upstream) return { branch, upstream: null };
+  const ahead = parseInt(git(["rev-list", "--count", `${upstream}..HEAD`], "0"), 10) || 0;
+  const dirty = (git(["status", "--porcelain"], "") || "").split("\n").filter(Boolean).length;
+  const log = ahead ? (git(["log", "--oneline", `${upstream}..HEAD`]) || "").split("\n").filter(Boolean) : [];
+  return { branch, upstream, ahead, dirty, log };
+}
+
 function table(rows, label) {
   if (!rows.length) return `_none recorded_\n`;
   const w = Math.max(label.length, ...rows.map((r) => String(r.k).length));
@@ -207,10 +269,34 @@ function table(rows, label) {
 
   const label = `${day(start)} → ${day(new Date(end.getTime() - 86400000))}`;
   const exps = experimentsInWindow(start, end);
+  const ds = datasetDelta(start, end);
+  const dep = deployState();
 
   let md = `# convene.md traffic — ${label}\n\n`;
   md += `_${argDays}-day window, compared with the ${argDays} days before it. `;
   md += `Generated ${day(new Date())} from Cloudflare Web Analytics._\n\n`;
+
+  // Asked first, not last: this is the one thing in the report that needs a decision, and
+  // burying it under the stats is exactly how 600 conferences stayed unpublished once.
+  if (dep.upstream && dep.ahead > 0) {
+    md += `## Deploy — ${dep.ahead} commit${dep.ahead === 1 ? "" : "s"} not pushed\n\n`;
+    md += `**None of the work below is on the live site yet.** Cloudflare rebuilds on every `;
+    md += `push to \`${dep.branch}\`, and the weekly updater deliberately does not push, so `;
+    md += `these are waiting on you:\n\n`;
+    for (const l of dep.log) md += `- \`${l}\`\n`;
+    if (ds.added) {
+      md += `\nThat includes **${ds.added} new conference${ds.added === 1 ? "" : "s"}** that `;
+      md += `nobody can see yet.\n`;
+    }
+    md += `\n**Push them?**\n\n\`\`\`bash\ngit -C ${ROOT} push origin ${dep.branch}\n\`\`\`\n\n`;
+    if (dep.dirty) {
+      md += `> Also ${dep.dirty} uncommitted change${dep.dirty === 1 ? "" : "s"} in the working `;
+      md += `tree — commit or discard before pushing so a half-finished edit does not ship.\n\n`;
+    }
+  } else if (dep.upstream) {
+    md += `## Deploy\n\nUp to date with \`${dep.upstream}\` — everything below is live`;
+    md += `${dep.dirty ? `, though ${dep.dirty} file(s) are uncommitted` : ""}.\n\n`;
+  }
 
   // At convene.md's current volume Cloudflare's adaptive sampling scales a handful of real
   // events up by a fixed interval, so every figure lands on a round multiple. Saying so in
@@ -228,6 +314,30 @@ function table(rows, label) {
   md += `| Page views | ${views} | ${pViews} | ${delta(views, pViews)} |\n`;
   md += `| Visits | ${visits} | ${pVisits} | ${delta(visits, pVisits)} |\n`;
   md += `| **Referred visits** | **${externalTotal}** | ${prevExternal} | ${delta(externalTotal, prevExternal)} |\n\n`;
+
+  md += `## Conferences\n\n`;
+  md += `| | |\n| --- | ---: |\n`;
+  md += `| Found this window | ${ds.added === null ? "unknown" : ds.added} |\n`;
+  md += `| Expired this window | ${ds.expired} |\n`;
+  if (ds.net !== null && ds.net !== ds.added) {
+    md += `| Net change in file | ${ds.net >= 0 ? "+" : ""}${ds.net} |\n`;
+  }
+  md += `| **Upcoming now** | **${ds.upcoming}** |\n`;
+  md += `| Total in dataset | ${ds.total} |\n`;
+  md += `| Expiring in next 30 days | ${ds.expiringSoon} |\n\n`;
+  // "Found" counts entries added to conferences.js by commits in the window, so it credits
+  // hand-added finds as well as the updater's. "Expired" is the count whose endDate fell
+  // inside the window — those left the site this week, which is the number that has to be
+  // out-run for the upcoming total to grow.
+  if (ds.added !== null && ds.added <= ds.expired) {
+    md += `> **Attrition is winning.** ${ds.expired} conference(s) expired against `;
+    md += `${ds.added} found, so the upcoming total shrank. The dataset only looks alive if `;
+    md += `discovery out-runs the calendar.\n\n`;
+  }
+  if (ds.added === 0) {
+    md += `> The updater added nothing this window. Check \`logs/update.log\` — a silent `;
+    md += `failure (expired CLI auth, DNS down at 14:07) looks exactly like a quiet week.\n\n`;
+  }
 
   md += `## Where it came from\n\n`;
   md += `Referred visits are the only number that reflects a post working. `;
@@ -283,4 +393,8 @@ function table(rows, label) {
   console.log(`traffic-report: ${outFile}`);
   console.log(`  ${views} views / ${visits} visits / ${externalTotal} referred (prev: ${pViews}/${pVisits}/${prevExternal})`);
   if (exps.length) console.log(`  ${exps.length} logged experiment(s) in window`);
+  console.log(`  conferences: +${ds.added === null ? "?" : ds.added} found / -${ds.expired} expired / ${ds.upcoming} upcoming`);
+  if (dep.upstream && dep.ahead > 0) {
+    console.log(`  NOT DEPLOYED: ${dep.ahead} commit(s) unpushed — git -C ${ROOT} push origin ${dep.branch}`);
+  }
 })();
