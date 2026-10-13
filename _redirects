@@ -7,3 +7,11 @@
 /guides/cme-money/  /how-to/deduct-cme-travel/  301
 /guides/            /how-to/deduct-cme-travel/  301
 /guides/*           /how-to/deduct-cme-travel/  301
+
+# The Oct 2026 discovery pass normalised two split country spellings in conferences.js
+# ("United Kingdom" -> "UK", "Czechia" -> "Czech Republic") because each pair was building
+# two hub pages for one country, and /city/glasgow/ collided between them. build-hubs.js
+# then correctly pruned the now-empty hubs — but both were already in a submitted sitemap,
+# so without these they are dead indexed URLs rather than consolidated ones.
+/country/united-kingdom/  /country/uk/              301
+/country/czechia/         /country/czech-republic/   301
