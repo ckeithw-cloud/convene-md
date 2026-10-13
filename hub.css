@@ -116,3 +116,20 @@ h1 { font-size: 30px; line-height: 1.2; margin: 0 0 10px; letter-spacing: -0.5px
   .conf .meta, .conf .desc { grid-column: 1; }
   h1 { font-size: 24px; }
 }
+
+/* Seasonal CME-deadline callout. Rendered by scripts/year-end.js only in Q4 — outside that
+   window the element is absent entirely, so there is nothing to go stale. Deliberately a
+   left-accent bar rather than a tinted box: it sits directly under the lede on every hub and
+   needs to read as a note, not an advertisement. Square corners because the border is
+   single-sided. */
+.yearend {
+  border-left: 3px solid #36b3a8;
+  border-radius: 0;
+  background: #f4fbfa;
+  margin: 0 0 18px;
+  padding: 11px 14px;
+  font-size: 15px;
+  color: #22333f;
+}
+.yearend strong { color: #0f2942; }
+.yearend a { color: #15756c; }

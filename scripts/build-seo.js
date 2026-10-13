@@ -9,6 +9,7 @@ const fs = require("fs");
 const path = require("path");
 
 const { signupBlock } = require("./signup-block");
+const { yearEndSentence, yearEndCallout } = require("./year-end");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://convene.md";
@@ -133,13 +134,15 @@ function main() {
   html = injectBetween(html, "<!-- SEO:JSONLD:START -->", "<!-- SEO:JSONLD:END -->", buildJsonLd(upcoming));
   html = injectBetween(html, "<!-- SEO:HUBS:START -->", "<!-- SEO:HUBS:END -->", buildHubLinks(hubUrls));
   html = injectBetween(html, "<!-- SEO:LIST:START -->", "<!-- SEO:LIST:END -->", buildList(upcoming));
+  // Same seasonal callout the hubs carry, in the list view where it reaches map traffic too.
+  html = injectBetween(html, "<!-- SEO:YEAREND:START -->", "<!-- SEO:YEAREND:END -->", yearEndCallout(upcoming));
   html = injectBetween(html, "<!-- SEO:SIGNUP:START -->", "<!-- SEO:SIGNUP:END -->",
     signupBlock({ source: "/" }));
   fs.writeFileSync(path.join(ROOT, "index.html"), html);
 
   // Hand-written article pages carry the same marker pair, so the capture block stays
   // identical everywhere rather than being copied and left to drift.
-  for (const rel of ["how-to/deduct-cme-travel/index.html", "about/index.html", "new/index.html"]) {
+  for (const rel of ["how-to/deduct-cme-travel/index.html", "about/index.html", "new/index.html", "how-to/use-cme-funds-before-year-end/index.html"]) {
     const file = path.join(ROOT, rel);
     if (!fs.existsSync(file)) continue;
     let doc = fs.readFileSync(file, "utf8");
@@ -147,6 +150,12 @@ function main() {
       signupBlock({ source: "/" + path.dirname(rel) + "/" }));
     // The about page quotes the live size of the dataset. Rounded down to the nearest 50 so the
     // sentence stays true between weekly builds instead of drifting stale by Tuesday.
+    // The year-end post quotes how much is actually left on this year's calendar, and the same
+    // numbers drive the seasonal callout. Generated so the page cannot go stale mid-season, and
+    // so it reads correctly if anyone lands on it in March.
+    if (rel === "how-to/use-cme-funds-before-year-end/index.html") {
+      doc = injectBetween(doc, "<!-- CALLOUT:COUNTS:START -->", "<!-- CALLOUT:COUNTS:END -->", yearEndSentence(upcoming));
+    }
     if (rel === "about/index.html") {
       const countries = new Set(upcoming.map(c => c.country)).size;
       const specialties = new Set(upcoming.map(c => c.specialty)).size;
@@ -171,7 +180,7 @@ function main() {
   // ("can I deduct a medical conference") that the conference hubs cannot rank for, so they
   // carry a high priority despite being few. The existsSync filter means an entry listed
   // here before its page exists is simply skipped rather than emitting a dead sitemap URL.
-  const staticPages = ["/how-to/deduct-cme-travel/", "/about/", "/new/"].filter((p) =>
+  const staticPages = ["/how-to/deduct-cme-travel/", "/about/", "/new/", "/how-to/use-cme-funds-before-year-end/"].filter((p) =>
     fs.existsSync(path.join(ROOT, p, "index.html"))
   );
 

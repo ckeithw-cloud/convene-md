@@ -18,6 +18,11 @@ const fs = require("fs");
 const path = require("path");
 
 const { signupBlock } = require("./signup-block");
+const { yearEndCallout } = require("./year-end");
+
+// Filled once by main(); page() is module-scope and cannot see main's `upcoming`.
+// Empty outside Q4, so the banner cannot linger into the new year.
+let YEAR_END = "";
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://convene.md";
@@ -156,7 +161,7 @@ ${jsonld ? `  <script type="application/ld+json">\n${JSON.stringify(jsonld, null
     <p class="crumbs">${crumbs}</p>
     <h1>${esc(h1)}</h1>
     ${lede ? `<p class="lede">${lede}</p>` : ""}
-${extraBody || ""}
+${YEAR_END}${extraBody || ""}
 ${list ? `    <ul class="conf-list">\n${items}\n    </ul>` : ""}
 ${signupBlock({ specialty: selfSpecialty, source: url })}
 ${related || ""}
@@ -192,6 +197,8 @@ function main() {
   const upcoming = loadConferences()
     .filter(c => c.endDate >= today)
     .sort((a, b) => a.startDate.localeCompare(b.startDate));
+
+  YEAR_END = yearEndCallout(upcoming);
 
   const by = (keyFn) => {
     const m = new Map();

@@ -898,3 +898,18 @@ h1 {
   margin: 18px 0 8px;
 }
 .list-browse a { color: #14746f; font-weight: 600; }
+
+/* Seasonal CME-deadline callout in the List view. Mirrors .yearend on the hub pages; kept here
+   because the homepage has its own stylesheet and its own (dark-header, light-body) palette. */
+.yearend {
+  border-left: 3px solid #36b3a8;
+  border-radius: 0;
+  background: #f4fbfa;
+  max-width: 860px;
+  margin: 14px auto 2px;
+  padding: 11px 14px;
+  font-size: 15px;
+  color: #22333f;
+}
+.yearend strong { color: #0f2942; }
+.yearend a { color: #15756c; }
