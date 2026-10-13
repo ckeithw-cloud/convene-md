@@ -277,13 +277,38 @@ function main() {
 
   // ---- city hubs (only where there's enough to be a real page)
   const cityEntries = [...byCity.entries()].filter(([, l]) => l.length >= MIN_CITY);
+
+  // Two cities can share a name across countries (Naples IT/US, Cambridge UK/US).
+  // The slug used to be the city alone, so the second page silently overwrote the
+  // first. Busiest variant keeps the bare slug (existing URLs stay put); the rest
+  // get a country suffix.
+  const cityNameCounts = new Map();
+  for (const [key] of cityEntries) {
+    const n = slug(key.split("|")[0]);
+    cityNameCounts.set(n, (cityNameCounts.get(n) || 0) + 1);
+  }
+  const bareOwner = new Map();
+  for (const [name, n] of cityNameCounts) {
+    if (n < 2) continue;
+    const rivals = cityEntries
+      .filter(([k]) => slug(k.split("|")[0]) === name)
+      .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
+    bareOwner.set(name, rivals[0][0]);
+  }
+  const citySlug = (key) => {
+    const [city, country] = key.split("|");
+    const name = slug(city);
+    if (!bareOwner.has(name) || bareOwner.get(name) === key) return name;
+    return `${name}-${slug(country)}`;
+  };
+
   const cityLinks = cityEntries
-    .map(([k, l]) => ({ label: k.split("|")[0], href: `/city/${slug(k.split("|")[0])}/`, n: l.length }))
+    .map(([k, l]) => ({ label: k.split("|")[0], href: `/city/${citySlug(k)}/`, n: l.length }))
     .sort((a, b) => b.n - a.n);
 
   for (const [key, list] of cityEntries) {
     const [city, country] = key.split("|");
-    const s = claim("city", key, slug(city));
+    const s = claim("city", key, citySlug(key));
     const span = yearSpan(list);
     const specs = [...new Set(list.map(c => c.specialty))];
     write(`city/${s}`, page({

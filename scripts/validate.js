@@ -9,6 +9,17 @@ const FILE = path.join(__dirname, "..", "conferences.js");
 const src = fs.readFileSync(FILE, "utf8");
 const CONFERENCES = eval("(function(){" + src + "\nreturn CONFERENCES;})()");
 
+// A stray double comma in the array literal leaves an `undefined` hole that
+// reads as a normal-length array and slips past every field check below.
+{
+  const holes = [];
+  for (let i = 0; i < CONFERENCES.length; i++) if (!CONFERENCES[i]) holes.push(i);
+  if (holes.length) {
+    console.error(`validate: FAIL \u2014 ${holes.length} empty slot(s) in CONFERENCES at index ${holes.join(", ")} (look for ",," in conferences.js)`);
+    process.exit(1);
+  }
+}
+
 // Keep in sync with SPECIALTY_GROUPS in script.js
 const VALID_SPECIALTIES = new Set([
   "General Surgery", "Cardiothoracic Surgery", "Neurosurgery", "Orthopedic Surgery",
