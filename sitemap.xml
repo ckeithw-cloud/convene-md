@@ -49,6 +49,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://convene.md/city/amsterdam/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://convene.md/city/anaheim/</loc>
     <lastmod>2026-10-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -175,6 +181,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://convene.md/city/busan/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://convene.md/city/cairns/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://convene.md/city/calgary/</loc>
     <lastmod>2026-10-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -200,6 +218,12 @@
   </url>
   <url>
     <loc>https://convene.md/city/charleston/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://convene.md/city/charlotte/</loc>
     <lastmod>2026-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -235,6 +259,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://convene.md/city/cologne/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://convene.md/city/columbus/</loc>
     <lastmod>2026-10-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -265,7 +295,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://convene.md/city/dresden/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://convene.md/city/durham/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://convene.md/city/edinburgh/</loc>
     <lastmod>2026-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -278,6 +320,12 @@
   </url>
   <url>
     <loc>https://convene.md/city/fort-lauderdale/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://convene.md/city/frankfurt/</loc>
     <lastmod>2026-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -847,6 +895,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://convene.md/city/tampa/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://convene.md/city/tokyo/</loc>
     <lastmod>2026-10-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -974,6 +1028,12 @@
   </url>
   <url>
     <loc>https://convene.md/country/bahamas/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://convene.md/country/bahrain/</loc>
     <lastmod>2026-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1315,13 +1375,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://convene.md/country/united-arab-emirates/</loc>
+    <loc>https://convene.md/country/uk/</loc>
     <lastmod>2026-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://convene.md/country/united-kingdom/</loc>
+    <loc>https://convene.md/country/united-arab-emirates/</loc>
     <lastmod>2026-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
