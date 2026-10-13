@@ -103,6 +103,9 @@ Lifestyle & Preventive, Sports, Hematology, Nephrology, Pathology.
 | EADV Congress 2027 | 2026-09-08 | 2026 Vienna is latest; the 2027 *Symposium* (Dresden) IS confirmed and added | 2027-01 |
 | SITC 2027 | 2026-09-08 | Nov 3–7 2027 in a search summary, not on the SITC site | 2027-01 |
 | ASTRO 2028 / 2029 | 2026-09-08 | dates published (21–25 Oct 2028, 6–10 Oct 2029), **no host city** | 2027-03 |
+| Chest Wall Injury Summit 2027 (Renaissance Baltimore Harborplace, 14–17 Apr) | 2026-10-13 | dates and venue confirmed on cwisociety.org; **no accreditation statement** on the 2027 page, the education index, or anywhere on the site, and the 2026 agenda PDF is not text-extractable | 2027-01 |
+| Panamerican Congress of Trauma 2027 (XXXIX) | 2026-10-13 | the 38th ran 18–21 Aug 2026 in Cartagena and has moved to Past Meetings; no 2027 congress published, Upcoming Events shows only a Paraguay course | 2027-02 |
+| Australasian Trauma Society annual conference | 2026-10-13 | could not even locate a working domain — australasiantraumasociety.org/.au and trauma.org.au all fail DNS. Needs a search for the society's current site before anything else | 2027-01 |
 | ASSH 2027 (San Antonio) / 2028 (Las Vegas) | 2026-10-05 | assh.org's whole annual-meeting section is a JS app that renders **"ASSH App can't be loaded!"** and serves 141 characters of text — no future-meetings data is reachable. Search summaries give 82nd 7–9 Oct 2027 San Antonio and 83rd 7–9 Sep 2028 Las Vegas, but that is a summary, not a primary source, so it is NOT added | 2026-12 |
 | NCS 25th (New Orleans, Hyatt Regency) & 26th (Denver) Annual Meetings | 2026-09-22 | **start dates and venues published** (27 Sep 2027; 19 Oct 2028) but the future-meetings page gives no end dates — do not guess a 4-day span | 2027-01 |
 | 16th Annual Gynecologic Robotic Surgery Conference (Four Seasons Baltimore, 15–17 Oct 2026) | 2026-09-22 | from an email invite; Mercy Medical Center, 16 years running, billed as "A Continuing Medical Education Symposium" with a RoboticsCME@ contact, but **no AMA PRA statement** on the Mercy page or Eventbrite. Runs in 3 weeks, so it will pass before the credit line appears | — |
@@ -129,6 +132,7 @@ physician credit. Recorded so a future scan does not spend time re-verifying the
 | --- | --- | --- |
 | Highlights of ASH in Asia-Pacific | Bangkok, Feb 2027 | "This activity does not provide Continuing Medical Education (CME) Credit" — 12.5 contact hours only |
 | Highlights of ASH in the Mediterranean, Middle East & North Africa | Istanbul/Athens | "This activity will not provide CME credit to participants" — 12.25 contact hours |
+| Trauma Care UK, 29th Annual Conference | Yarnfield Park, Stone, 8–11 Mar 2027 | no accrediting body at all — "Certificates of attendance will be provided" plus self-directed CPD reflection. No UEMS/EACCME, no Royal College, no points figure |
 | Highlights of ASH in Latin America | Santiago, Apr 2027 | "This activity will not provide Continuing Medical Education (CME) credit" — 12.5 contact hours |
 
 The North American editions of the same series **do** carry CME (ASH is ACCME-accredited), which
@@ -257,6 +261,52 @@ one or two countries per scan rather than trying to finish it.
   page for these, exactly as with US society flagships.
 
 ## Scan history
+
+### 2026-10-13 (later) — the trauma deep pass: 12 → 20
+
+Run to **measure** the gap the owner identified: he is a trauma surgeon forwarding conference
+emails, and three of his forwards this month were meetings our searches could never have found.
+The question was whether trauma is unusually under-covered or whether every specialty looks like
+this. Trauma was the right test because he can sanity-check the answer.
+
+**Result: 12 upcoming → 20. A 40% undercount in a specialty we had already swept twice.**
+
+**Added 8**, and the first four are the indictment: **EAST — the Eastern Association for the Surgery
+of Trauma — was entirely absent**, and its site publishes *four years* at once (40th, New Orleans,
+12–15 Jan 2027, 19 AMA PRA Cat 1 via Cine-Med; then Disney Yacht & Beach Club 2028, Arizona Grand
+Resort 2029, Disney again 2030). A flagship society, four destination venues, zero entries. Also
+added **ECTES 2027** (26th European Congress, Zurich, 25–27 Apr — Europe's flagship, also absent),
+**Pediatric Trauma Society** 12th (Fort Lauderdale, 2–5 Nov 2026) and 13th (Westin La Paloma,
+Tucson, 3–6 Nov 2027), and **TAC 2027** (Fairmont Le Chateau Frontenac, Quebec City, 20–22 Apr).
+
+**Why the earlier sweeps missed them.** Our discovery has been *society-name-driven*: think of a
+society, find its site, read its calendar. The ~90 flagship acronyms in `update-prompt.md` are the
+list I think from — and **EAST and ESTES are not on it**. Nothing in the process surfaces a society
+whose name nobody wrote down. That is the real defect, not laziness in any individual sweep.
+
+**Two access problems worth recording as technique:**
+- **east.org returns HTTP 403 to plain fetching** but renders fine in the browser. A 403 from a
+  society site means "use the browser", not "unreachable".
+- **estes-congress.org serves the same shell for every path** (client-side routing), so subpages
+  look identical to plain fetching. Its CME page is unreadable even in the browser — the congress
+  was added on the established non-US precedent (EACCME/national equivalent, rarely stated on a
+  landing page), the same basis as DGK, RÖKO and SECOT.
+- A banner image settled the PTS dates: the program's day headings implied 2–6 Nov, the banner says
+  **2–5 Nov**. When a meeting's dates are only in a graphic, read the graphic.
+
+**Held back:** Chest Wall Injury Summit 2027 (Baltimore — real, dated, venued, but no accreditation
+statement anywhere), Panamerican Congress 2027 (unpublished), Australasian Trauma Society (its
+domain does not resolve at all). **Excluded outright:** Trauma Care UK's 29th Annual Conference —
+attendance certificates and self-directed CPD only, no accrediting body; added to the
+"Explicitly NOT CME" table.
+
+**The implication for the other 45 specialties.** Trauma was *better* covered than average when this
+started — it had been swept in the September surgical passes and again during the ACS COT sweep,
+and the owner had been feeding it. It was still 40% short. The gap in specialties nobody is
+forwarding email for is almost certainly larger. **The fix is not more sweeps of the same kind** —
+it is adding society names we have never written down, and the practical routes to those are
+pattern searches ("Nth annual <specialty> symposium"), professional-body calendars used as leads,
+and readers telling us.
 
 ### 2026-10-13 — owner sent detroittrauma.org
 
