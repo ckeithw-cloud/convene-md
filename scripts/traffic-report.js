@@ -239,7 +239,15 @@ function deployState() {
   const ahead = parseInt(git(["rev-list", "--count", `${upstream}..HEAD`], "0"), 10) || 0;
   const dirty = (git(["status", "--porcelain"], "") || "").split("\n").filter(Boolean).length;
   const log = ahead ? (git(["log", "--oneline", `${upstream}..HEAD`]) || "").split("\n").filter(Boolean) : [];
-  return { branch, upstream, ahead, dirty, log };
+  // Conferences held hostage by the unpushed commits specifically. NOT the same as the
+  // window's "found" figure: on a week where the finds were pushed and only a script
+  // change is pending, that would overstate this wildly.
+  let pendingConfs = 0;
+  if (ahead) {
+    const d = git(["diff", "--unified=0", `${upstream}..HEAD`, "--", "conferences.js"], "");
+    pendingConfs = ((d || "").match(/^\+\s{4}name: "/gm) || []).length;
+  }
+  return { branch, upstream, ahead, dirty, log, pendingConfs };
 }
 
 function table(rows, label) {
@@ -284,9 +292,11 @@ function table(rows, label) {
     md += `push to \`${dep.branch}\`, and the weekly updater deliberately does not push, so `;
     md += `these are waiting on you:\n\n`;
     for (const l of dep.log) md += `- \`${l}\`\n`;
-    if (ds.added) {
-      md += `\nThat includes **${ds.added} new conference${ds.added === 1 ? "" : "s"}** that `;
-      md += `nobody can see yet.\n`;
+    if (dep.pendingConfs) {
+      md += `\nThat includes **${dep.pendingConfs} new conference${dep.pendingConfs === 1 ? "" : "s"}** `;
+      md += `that nobody can see yet.\n`;
+    } else {
+      md += `\nNo conference data in these — site content is current.\n`;
     }
     md += `\n**Push them?**\n\n\`\`\`bash\ngit -C ${ROOT} push origin ${dep.branch}\n\`\`\`\n\n`;
     if (dep.dirty) {
@@ -395,6 +405,6 @@ function table(rows, label) {
   if (exps.length) console.log(`  ${exps.length} logged experiment(s) in window`);
   console.log(`  conferences: +${ds.added === null ? "?" : ds.added} found / -${ds.expired} expired / ${ds.upcoming} upcoming`);
   if (dep.upstream && dep.ahead > 0) {
-    console.log(`  NOT DEPLOYED: ${dep.ahead} commit(s) unpushed — git -C ${ROOT} push origin ${dep.branch}`);
+    console.log(`  NOT DEPLOYED: ${dep.ahead} commit(s) unpushed${dep.pendingConfs ? `, ${dep.pendingConfs} conference(s) held back` : ""} — git -C ${ROOT} push origin ${dep.branch}`);
   }
 })();
