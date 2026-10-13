@@ -193,6 +193,51 @@ instagram.com → Create → Post (web accepts multi-file carousels; crop 1:1; t
 
 ---
 
+## 13 · "Use it or lose it" — CME year-end deadline (CAROUSEL, 6 slides, SEASONAL)
+
+**Images:** `2026-10-yearend/slide-01.png` … `slide-06.png`, 1080×1080, post in order.
+Regenerate with `node scripts/make-post-yearend.js marketing/posts/<yyyy-mm>-yearend` then
+`for f in …/*.svg; do rsvg-convert -w 1080 -h 1080 "$f" -o "${f%.svg}.png"; done`.
+**Counts are read live from conferences.js** via `scripts/year-end.js` — the same source as the
+site callout and `/how-to/use-cme-funds-before-year-end/`, so the three can never disagree.
+**Reusable every October.** Re-run the generator; the numbers and the year update themselves.
+The only hand-edit needed is the destination list on slide 3.
+
+Your CME money expires 31 December. Here's what's still possible. 🗓️
+
+Most hospital allowances run on the calendar year and don't roll over — and most people find this out in the second week of December, when the good options have gone.
+
+Before you do anything, ask your administrator one question: **does my allowance pay out on the date I register, or the date the conference happens?**
+
+That single answer decides everything.
+
+→ If it has to happen this year: 345 conferences still start before 31 December, 56 of them in December. Kauai, Maui, Ko Olina, Basel, Milan, Singapore, Palm Beach.
+
+→ If it pays on the date you register: book next year's meeting now. 558 are already listed for 2027 and beyond, and early-bird is usually the lowest price a meeting will ever be.
+
+And the deadline that actually catches people out isn't 31 December — it's your reimbursement submission deadline, which is often weeks earlier. Check that today.
+
+Every date verified on the organising society's own site. Free, no login.
+
+convene.md/year/2026 (link in bio)
+
+*First comment:* #CME #CMEtravel #DestinationCME #MedEd #PhysicianLife #DoctorsOfInstagram #MedicalConference #ConferenceTravel #ResidencyLife #AttendingLife #MedTwitter #CMEcredits
+
+*Bio link for this post:* `https://convene.md/year/2026/` — switch it from `/new/` before posting,
+and switch it back afterwards. `/year/2026/` is a hub page that already gets organic traffic, so
+unlike `/new/` it will NOT give a clean attribution read; accept that, the landing page matters
+more than the measurement here.
+
+*Posting notes:*
+- Carousel, 6 slides, file order. Slide 1 is the hook; slide 6 is the CTA.
+- **Post in October.** The whole thing is dead on 1 January, and the site callout disappears then too.
+- Pairs with the site callout now live on all 267 hub pages and the list view, and with the post at
+  `/how-to/use-cme-funds-before-year-end/`. Instagram is the weakest of the three by a wide margin —
+  the callout reaches ~730 visits a week, this reaches 14 followers. Post it because it is written,
+  not because it will move anything.
+
+---
+
 ## Attributing a post — utm tags do NOT work
 
 Verified 26 Aug 2026: Cloudflare Web Analytics keeps the request path and throws away the
