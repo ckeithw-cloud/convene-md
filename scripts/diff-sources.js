@@ -46,9 +46,21 @@ const norm = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, "");
 // category/listing page have no key -- those are reported separately, because
 // update-prompt.md requires deep links and they cannot be tracked without one.
 function datasetKey(url) {
+  // The key MUST include the host. EIDs are per-tenant, not global: EID 21326 is a breast-cancer
+  // conference at UCSD and an adolescent-health webinar at CHOP; EID 71193 is one event at WashU
+  // and another at UAMS. Keying on the bare number made the 2026-10-12 report claim both UCSD and
+  // WashU entries had "changed dates" when the correct dates were already held — applying them
+  // would have overwritten two good entries with another institution's dates. Harmless at 15
+  // hosts, actively dangerous at 38.
   const eid = /[?&]EID=(\d+)/i.exec(url || "");
-  if (eid) return "cloudcme:" + eid[1];
-  const mer = /mer\.org\/conference\/+([A-Za-z0-9=+/]+)/.exec(url || "");
+  if (eid) {
+    const host = /https?:\/\/([a-z0-9-]+)\.cloud-cme\.com/i.exec(url || "");
+    return "cloudcme:" + (host ? host[1].toLowerCase() : "?") + ":" + eid[1];
+  }
+  // Anchored and non-greedy with an optional trailing slash: base64 may legally contain "/",
+  // so a greedy capture swallowed the trailing slash of ".../conference/<id>/" and produced a
+  // key that matched nothing — four MER courses added 2026-10-05 reported as "gone" a week later.
+  const mer = /mer\.org\/conference\/+([A-Za-z0-9=+/]+?)\/?$/.exec(url || "");
   if (mer) return "mer:" + mer[1];
   return null;
 }
@@ -169,7 +181,7 @@ async function fetchCloudCME() {
     for (const r of rows) {
       const [s, e] = parseWhen(r.when);
       out.push({
-        key: "cloudcme:" + r.eid,
+        key: "cloudcme:" + host.replace(/\.cloud-cme\.com$/, "") + ":" + r.eid,
         source: host,
         name: r.name,
         startDate: s,

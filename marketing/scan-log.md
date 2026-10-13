@@ -258,6 +258,43 @@ one or two countries per scan rather than trying to finish it.
 
 ## Scan history
 
+### 2026-10-12 — weekly run, and a key-collision bug the host expansion exposed
+
+Traffic's 08:20 launchd run died on a DNS failure (`ENOTFOUND api.cloudflare.com`, machine offline)
+— same failure mode as the 1 Oct subscriber job. Re-ran by hand: **731 visits, +18%**, and
+**referred up 52% to 485**. Report filed as `2026-10-13.md` because an evening re-run crosses UTC
+midnight; the window (6–12 Oct) is correct.
+
+**First diff with all 38 hosts: 698 live records (was 480), new 77, changed 5, gone 9.** Three of
+those five "changes" and five of the nine "gone" were FALSE, from two distinct bugs:
+
+**1. EID keys collide across tenants — fixed.** `datasetKey()` keyed CloudCME courses on the bare
+EID. EIDs are per-tenant: **EID 21326 is a breast-cancer conference at UCSD and an adolescent-health
+webinar at CHOP; EID 71193 is one event at WashU and another at UAMS.** The diff therefore claimed
+our (correct) UCSD and WashU entries had changed dates. **Applying them would have overwritten two
+good entries with another institution's dates.** Harmless at 15 hosts; actively dangerous at 38.
+Key is now `cloudcme:<host>:<eid>` on both sides. `source-diff-ignore.json` re-keyed too — 17 of 30
+migrated by matching EID+name against a live scrape, 13 left on legacy keys because those courses
+are no longer listed anywhere and can never match again.
+
+**2. A trailing slash broke MER keys — mine, from last week.** I "fixed" four MER URLs to their
+redirect targets (`/conference/<id>/`) instead of the `//` form the other 201 use. Base64 may
+legally contain `/`, so the greedy capture swallowed the trailing slash and produced a key matching
+nothing — all four reported "gone" seven days after I added them. Regex is now anchored and
+non-greedy; the four URLs normalised to the house form.
+
+**Two genuine date changes, both verified and applied:** Cedars-Sinai Hand Symposium 5 Dec → **12
+Dec 2026**, and the Cedars International Endoscopy Symposium start 27 → **28 Jan 2027**.
+
+**Added 8 — MER's December 2027 batch**, the best destination block in months: Hotel del Coronado,
+**the Four Seasons Resort Costa Rica at Peninsula Papagayo** (16 credits), **Aulani on Oahu's
+leeward coast** (20 credits), The Venetian, Disney's Grand Californian, the New York Marriott
+Marquis, **Disney's Grand Floridian over New Year** (20 credits), and Caesars Palace. Seven US
+cities plus Costa Rica.
+
+The remaining ~60 candidates are the local hospital symposia left over from the 6 Oct sweep, now
+surfacing through the diff as intended — triage them in the normal weekly pass.
+
 ### 2026-10-06 — third form submission, and a correction to the subscriber read
 
 Owner asked whether any conferences have been submitted. **Three submissions to date, all spam,
