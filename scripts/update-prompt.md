@@ -50,14 +50,76 @@ If a candidate doesn't fit any of the 46 specialty values above, skip it — don
    never get revisited. **Update `marketing/scan-log.md` at the end of every run.**
    Useful query patterns:
    - `"{specialty} congress 2027 location dates"` for each specialty
-   - `"{society acronym} annual meeting 2027"` — e.g.
-     - Surgical: ACS, AATS, EACTS, AAOS, CNS, AANS, IFSO, EAES, SICOT, AUA, EAU, ASCRS, ESCP, AAST, SSO, APSA, IHPBA, JSS, ASI, RACS, WACS, COSECSA
-     - Medicine: ACC, AHA, ESC, ACP, DDW, ACG, UEG, CHEST, ATS, ERS, ASN, ERA, ENDO, ADA, EASD, ACR, EULAR, IDWeek, ESCMID, ASH, EHA, AAAAI, EAACI
-     - Oncology: ASCO, ESMO, ASTRO, ESTRO, AACR, SITC, AAHPM, EAPC
-     - Neuro/psych: AAN, EAN, WCN, APA, EPA, WPA, AAPM&R, IASP
-     - Acute/hospital: ACEP, EUSEM, ICEM, ASA, ESAIC, WFSA, SCCM, ESICM, SHM, RSNA, ECR, ISR
-     - Primary care: AAFP, WONCA, AAP, IPA, ESPGHAN, ACOG, FIGO, ESHRE, AGS
-     - Diagnostic/other: USCAP, CAP, ECP, AAD, EADV, AAO, ESCRS, ICO
+   - `"{society acronym} annual meeting 2027"`, and better still
+     `"{society} future meetings"` — one fetch often yields three to six years.
+
+   **This society list is the job's single biggest point of failure.** Discovery here is
+   society-name-driven, so a body that is not named below is invisible no matter how often the
+   specialty is re-swept. The October 2026 pass took the dataset from 1,286 to 1,886 entries
+   almost entirely by naming societies this list had omitted — and the omissions were not
+   obscure: AAO-HNSF, NASS, EAU, ESCRS, SIU, AABB, ASRM, APA, ACR, ARRS, SNMMI and CIRSE were
+   all absent. **The volume sits in subspecialty societies and in repeating course programmes,
+   not in national flagship congresses.** Whenever you meet a society that is not listed here,
+   add it to this file as part of the run.
+
+   **Flagship congresses** — one meeting a year each, cheap to check, low yield per fetch:
+     - Surgical: ACS, AATS, STS, EACTS, ESTS, AAOS, CNS, AANS, IFSO, EAES, SICOT, EFORT, AUA,
+       EAU, ASCRS, ESCP, ACPGBI, AAST, SSO, ESSO, APSA, BAPS, EUPSA, IHPBA, E-AHPBA, A-PHPBA,
+       JSS, ASI, RACS, ASGBI, WACS, COSECSA, SVS, ESVS, SCTS, ASPS, ISAPS, EURAPS, BAPRAS
+     - Medicine: ACC, AHA, ESC, ACP, SGIM, EFIM/ECIM, DDW, ACG, BSG, UEG, APASL, AASLD, EASL,
+       CHEST, ATS, ERS, BTS, ASN, ERA, UK Kidney Week, SEN, SIN, SFNDT, DGfN, ENDO, AACE, ADA,
+       EASD, Diabetes UK, ESE, ESPE, ACR(rheum), EULAR, BSR, APLAR, PANLAR, SER, SIR(rheum),
+       DGRh, IDWeek, ESCMID, ICID, ASTMH, ISTM, EACS, BHIVA, BSAC, ASH, EHA, EBMT, AABB, ISBT,
+       BSH, AAAAI, ACAAI, EAACI, WAO, ESID, BSACI, ASCIA, SEAIC
+     - Oncology: ASCO, ESMO, ASTRO, ESTRO, CARO, DEGRO, AIRO, SFRO, JASTRO, AROI, ABS, AACR,
+       SITC, IASLC/WCLC, SABCS, IGCA, AAHPM, EAPC, APM, MASCC, APHN
+     - Neuro/psych: AAN, EAN, WCN, WFNS, EANS, SBNS, DGNC, JNS, AES, ILAE, MDS, AHS, IHS, AANEM,
+       ECTRIMS/ACTRIMS, AAIC, AD/PD, ANA, CNS(child neuro), APA(psych), EPA, WPA, RCPsych,
+       ACLP, AAGP, SOBP, SIRS, AAPM&R, AAP(physiatry), ISPRM, ASIA, IASP, ASRA, AAPM(pain),
+       NANS, EFIC, ASIPP
+     - Acute/hospital: ACEP, AAEM, SAEM, RCEM, EUSEM, ICEM, NAEMSP, ASA, IARS, ESAIC, WFSA,
+       SCA, SOAP, ESRA, RCoA, DGAI, SCCM, ESICM, ICS(UK), ISCCM, DIVI, SRLF, ELSO/EuroELSO,
+       SHM, RSNA, ECR, ARRS, ACR(radiology), SNMMI, CIRSE, ASNR, SAR, SBI, SSR, STR, SPR(rad)
+     - Primary care: AAFP, RCGP, WONCA, AAP(peds), PAS, RCPCH, EAPS, IPA, ESPGHAN, ACOG, FIGO,
+       RCOG, SMFM, ASRM, ESHRE, ISUOG, AUGS, IUGA, Menopause Society, AGS, BGS, ANZSGM, GSA
+     - Diagnostic/other: USCAP, CAP, ASCP, AMP, ECP, IAP, ASDP, AAD, EADV, SID, ASLMS, ACMS,
+       SPD, AAO, ESCRS, EURETINA, ASRS, AGS(glaucoma), AAPOS, ASOPRS, ICO, RCOphth
+     - ENT/endocrine surgery: AAO-HNSF, AHNS, Triological, ENT UK, CEORL-HNS, CSOHNS, ARS,
+       ANS(neurotology), AOS, AAOA, ATA(thyroid), AAES, IAES, ESES, BAETS
+     - Lifestyle & sports: ACLM, ACPM, ASPC, ACOEM, OMA, NLA, AMSSM, ACSM, PRiSM, ECSS, FIMS,
+       WMS, UHMS, DAN, AsMA, EUBS, SPUMS
+
+   **Repeating course programmes — the highest-yield fetches in the whole job.** Each of these
+   publishes a rolling calendar of individually dated, individually accredited courses, often
+   in a dozen countries. One page can be worth twenty entries, and they are re-populated
+   continuously, so re-check them every few runs rather than once a year:
+     - **CIRSE ESIR courses** — `cirse.org/events/esir-courses/`. Yielded 18 entries across
+       nine countries in one fetch. Note the URL slugs are unreliable: one February 2027 course
+       still carried a `january-28-29-2027` slug, so trust the page body, not the slug.
+     - **ESRA workshops and cadaver courses** — `esraeurope.org/meetings/?meeting_type=esra-events`
+     - **ISUOG approved courses** — `isuog.org/events`. Individual host institutions worldwide;
+       many are the only entry we will ever get for their country.
+     - **UHMS live courses** — `courses-uhms.org/live-courses/`; **DAN** diving-medicine CME at
+       `dan.org/event/...`; **Scott Haldane Foundation** at `scotthaldane.nl/en/courses/upcoming-courses.html`.
+       These are dive-medicine courses at dive resorts — unusually good fits for this site.
+     - **USCAP interactive-microscopy courses** — `uscap.org/uscap-meetings-list/`
+     - **ENT UK calendar** — `entuk.org/events/calendar/date/<YEAR>?view=year` (the year view is
+       the useful one; the default list shows only weeks ahead)
+     - **ACPGBI events** — `acpgbi.org.uk/events/`; **BSG events** — `bsg.org.uk/events`;
+       **BSAC events** — `bsac.org.uk/events`; **BSH** — `b-s-h.org.uk/education/conference-and-events/events`
+     - **SER agenda** — `ser.es/profesionales/agenda/eventos-ser/` (note: SER's listings often
+       print the day and month with no year — confirm the year before trusting a date)
+     - **DIVI Akademie** and **DGE** German course lists — `divi.de`, `endokrinologie.net`
+     - **APASL single-topic conferences** — `apasl.info` lists five or six a year across Asia
+     - **RCP London / RCP Edinburgh / RCPSG** regional "Update in Medicine" days —
+       `rcp.ac.uk/events-and-education/events/`, `rcpe.ac.uk/events`, `rcpsg.ac.uk/education`
+     - **Pri-Med** regional conferences — `pri-med.com/cme-conferences/<region>`
+     - **TAFP** and other AAFP state chapters — `tafp.org/cme`; **STFM** — `stfm.org/conferences/generalinformation/future-dates/`
+
+   **Societies that publish unusually far ahead** (one fetch covers five or more years, so these
+   are efficient but need re-checking only rarely): AABB, SBI, ARRS, AUGS, ASES, OTA, CSRS, PES,
+   AAP(peds), PAS, ACOEM/AOHC, AANEM, American Headache Society (Scottsdale symposium is booked
+   through 2030), SOBP, ACLP, AAGP, ASRS, ASOPRS, DGPRAEC, CARO, SGO, ASBrS, IARS, SPUMS, SAR.
 
    - Prefer a society's **"future meetings"** page over its current-year page — one fetch
      often yields three years at once.
@@ -67,8 +129,24 @@ If a candidate doesn't fit any of the 46 specialty values above, skip it — don
    - Regional sweeps: `"{specialty} conference 2027 Asia"` / `"... Africa"` / `"... Latin America"` / `"... Middle East"` to catch coverage gaps
 3. For each candidate, **dedupe**:
    - Skip if existing list already has an entry with the same `name` (case-insensitive) AND same `year`.
-   - Skip if same `city` + `startDate` + `specialty` combo already exists. This is the key
-     `scripts/validate.js` enforces — a collision there fails the build, so check it yourself first.
+   - A `city` + `startDate` match is **a prompt to look, not grounds to skip.** Unrelated
+     societies meet in one city on one day routinely — a 2026 pass wrongly rejected seven good
+     entries this way, including SGO's annual meeting in Phoenix because an MER primary-care
+     course started there the same day. Treat it as a duplicate only when the **organiser also
+     matches**, or the titles share distinctive words (ignore boilerplate: "annual", "meeting",
+     "congress", "society", "international", "national", and nationality adjectives — those
+     matched JATS against JAAM, two unrelated Japanese societies sharing a congress host).
+     Require the same **year** too, or you will reject the 2028 edition of a meeting you hold
+     for 2027.
+   - `scripts/validate.js` only *errors* on a same-city-and-dates clash when the two records
+     also look like one event (shared URL, or near-identical titles); otherwise it warns and the
+     build still passes. So a warning is yours to adjudicate, not something to silence by
+     deleting an entry.
+   - **Two real sibling meetings sharing one announcement page will trip that error**, because a
+     shared URL is the strongest same-event signal there is. If the page presents them as one
+     joint meeting, enter **one** row spanning both and name each programme in the description
+     (this is how ASNR/ASHNR 2027 is stored). If they are genuinely separate meetings, find a
+     deep link for each; if you cannot, add the stronger one and log the other for follow-up.
    - **Joint congresses count as ONE entry.** Societies frequently co-host (e.g. APSC 2027 was held
      jointly with JCS 2027 at the same venue on the same days). Two pins on one venue is a bug —
      add a single entry naming both societies in `organizer`.
@@ -89,6 +167,35 @@ If a candidate doesn't fit any of the 46 specialty values above, skip it — don
      Searching for the physiatrists returns the physicists' meeting first.
    - **ASRA** runs *two* separate annual meetings — a spring regional-anesthesia one and an
      autumn pain-medicine one. They are different events; do not merge or substitute them.
+   - **AAP** has a *third* claimant: the Association of Academic Physiatrists (`physiatry.org`),
+     whose "Physiatry '27" annual meeting is PM&R, alongside Pediatrics and Pain Medicine.
+   - **ASCP** = American Society for Clinical *Pathology* (`ascp.org`) **and** American Society
+     of Clinical *Psychopharmacology* (`ascpp.org`).
+   - **SPR** = Society for Pediatric *Radiology* (`spr.org`) **and** Society for Pediatric
+     *Research* (part of PAS). **SIU** = Société Internationale d'Urologie **and** Società
+     Italiana di Urologia. **ESA** = Endocrine Society of Australia **and** the former European
+     Society of Anaesthesiology (now ESAIC). **AGS** = American Geriatrics Society **and**
+     American Glaucoma Society.
+   - **Domains that resolve to an entirely unrelated organisation.** Each of these cost a wasted
+     fetch or a near-miss; do not trust them:
+     - `jcr.or.jp` is the Japanese College of **Radiology**, not the Japan College of Rheumatology.
+     - `sbn.org.br` is the Sociedade Brasileira de **Nefrologia**, not neurosurgery.
+     - `jsso.or.jp` serves a Japanese **inheritance-support** body, not the Japanese Society of
+       Surgical Oncology.
+     - `attd.org` is **African Table Tennis in Diaspora**. The diabetes-technology conference
+       lives at `attd.kenes.com`, `attd2027.kenes.com` and `attdasia.kenes.com`.
+     - `igs.ie` is the Irish **Georgian** Society (architectural heritage), not gerontology.
+     - `cscs.ca` is a **motorsport** series, not the Canadian Society of Cardiac Surgeons.
+     - `isgindia.org` is the Indian Society of **Geomatics**, not Gastroenterology.
+     - `aapm.org` is the American Association of **Physicists** in Medicine, one character from
+       `aapmr.org` (physiatrists).
+   - **Lapsed or hijacked society domains — do not follow the redirect.** `sccs-sa.org` (Saudi
+     Critical Care Society) now 301s to a **gambling** domain; `bsrm.org.uk` (British Society of
+     Rehabilitation Medicine) redirects to an unrelated commercial site; `iagg.info` and
+     `alatro.org` now serve commercial content or SEO spam; `pacificassociationofpediatricsurgeons.org`
+     and `ossanz.com.au` are parked domain-for-sale pages. `marketing/scan-log.md` holds the full
+     list of dead domains and of hosts that return 403/5xx to the fetcher but render in a browser —
+     **read it before spending fetches on a society whose site failed on a previous run.**
    When in doubt, open the URL and read whose branding is on it.
 
 3b. **Some "official" calendars are themselves unreliable — always confirm on the event's own site.**
@@ -237,7 +344,15 @@ in Australia, national college accreditation elsewhere).
 - **Skip** activities accredited only for nurses, pharmacists or other non-physician professions
   (ACPE, ANCC/state nursing contact hours, CPEU) with no physician credit.
 - **Skip** meetings explicitly aimed at nurses or advanced practice providers — e.g. anything titled
-  "… for Nurses", "Nursing Congress", "Advanced Practice Provider Symposium".
+  "… for Nurses", "Nursing Congress", "Advanced Practice Provider Symposium". Real examples caught
+  this way: NASS's "Advanced Practice Provider Course", the SVM "Fellows & APP Course", Psych
+  Congress's PA and NP Institutes, and the UK "National Clinical Endoscopist Conference" (clinical
+  endoscopist is a non-physician role there).
+- **Some meetings say outright that they offer no credit — believe them.** The ASTCT Gene Therapy
+  Summit states it is not accredited; SIAAIC's national congress is labelled "CONGRESSO NO ECM"
+  (its ECM is online-only, afterwards); the ASBrS BSO Fellows Summit calls itself "a non-CME
+  educational experience". An accredited parent society does not make every one of its activities
+  accredited.
 - **Keep** physician conferences that merely welcome allied professionals as well, and keep physician
   conferences that happen to be *held at* a school of nursing or run alongside a separate nursing
   congress — the venue or a co-located event is not the audience.
