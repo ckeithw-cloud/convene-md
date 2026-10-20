@@ -220,16 +220,25 @@ function datasetDelta(start, end) {
   const expired = rows.filter((c) => c.endDate >= d(start) && c.endDate < d(end)).length;
   const expiringSoon = rows.filter((c) => c.endDate >= today && c.endDate < in30).length;
 
-  // Compare against the dataset as it stood at the start of the window.
+  // Compare the dataset at the start of the window against the dataset at the END of it.
+  // Using HEAD instead of the window-end commit counts work done after the window closed —
+  // which it always does when the report is run late (a Tuesday run for a window that
+  // closed on Sunday), and which overstated the first week this ran.
   const base = git(["rev-list", "-1", "--first-parent", `--before=${iso(start)}`, "HEAD"]);
-  let added = null, net = null, baseTotal = null;
+  const tip = git(["rev-list", "-1", "--first-parent", `--before=${iso(end)}`, "HEAD"]) || "HEAD";
+  let added = null, net = null, baseTotal = null, tipTotal = null;
   if (base) {
     baseTotal = countEntries(git(["show", `${base}:conferences.js`]));
-    if (baseTotal !== null && total !== null) net = total - baseTotal;
-    const diff = git(["diff", "--unified=0", `${base}..HEAD`, "--", "conferences.js"]);
+    tipTotal = countEntries(git(["show", `${tip}:conferences.js`]));
+    if (baseTotal !== null && tipTotal !== null) net = tipTotal - baseTotal;
+    const diff = git(["diff", "--unified=0", `${base}..${tip}`, "--", "conferences.js"]);
     if (diff !== null) added = (diff.match(/^\+\s{4}name: "/gm) || []).length;
   }
-  return { total, upcoming, added, net, expired, expiringSoon, baseTotal };
+  // Anything committed after the window closed is real but belongs to next week's figure.
+  const sinceWindow = tip === "HEAD" ? 0
+    : ((git(["diff", "--unified=0", `${tip}..HEAD`, "--", "conferences.js"], "") || "")
+        .match(/^\+\s{4}name: "/gm) || []).length;
+  return { total, upcoming, added, net, expired, expiringSoon, baseTotal, tipTotal, sinceWindow };
 }
 
 function deployState() {
@@ -334,6 +343,9 @@ function table(rows, label) {
   }
   md += `| **Upcoming now** | **${ds.upcoming}** |\n`;
   md += `| Total in dataset | ${ds.total} |\n`;
+  if (ds.sinceWindow) {
+    md += `| _Added since the window closed_ | _${ds.sinceWindow}_ |\n`;
+  }
   md += `| Expiring in next 30 days | ${ds.expiringSoon} |\n\n`;
   // "Found" counts entries added to conferences.js by commits in the window, so it credits
   // hand-added finds as well as the updater's. "Expired" is the count whose endDate fell
