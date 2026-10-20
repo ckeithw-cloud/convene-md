@@ -50,13 +50,40 @@ To add a **new specialty**, three edits:
 
 The filter dropdown and legend populate automatically from the data.
 
-## Auto-update routine
+## Weekly routine — run on request, not on a timer
 
-A weekly launchd job runs [`scripts/update-conferences.sh`](scripts/update-conferences.sh) every Monday at 14:07 local time. It invokes Claude Code headlessly with [`scripts/update-prompt.md`](scripts/update-prompt.md), which scans the web for newly announced surgical conferences, dedupes against the existing list, and appends new entries to `conferences.js`.
+**The weekly launchd jobs are disabled as of 20 Oct 2026.** `com.medconf.traffic`
+(Mondays 08:20) and `com.medconf.update` (Mondays 14:07) were booted out and their
+plists parked in `~/Library/LaunchAgents/disabled/`. Re-enable with
+`launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/<label>.plist` after moving
+the plist back.
 
-Logs land in `logs/update.log` (gitignored).
+They were unreliable in exactly the way an unattended job on a laptop is: three runs in
+four weeks died to `getaddrinfo ENOTFOUND` because the Mac was asleep or off-network at
+the scheduled minute, and a failure looked identical to a quiet week. The scan's
+discovery half had also been failing for weeks on `Not logged in` from the headless
+Claude CLI. Running on request fixes both at once — the machine is demonstrably awake,
+and the session doing the work is already authenticated, so no separate CLI login is
+needed.
 
-The launchd plist lives at `~/Library/LaunchAgents/com.medconf.update.plist` on the maintainer's Mac (not in this repo, since it has absolute user paths).
+It also restores the approval gate: `traffic-report.sh` and `subscriber-report.sh` both
+end in `git push`, which published whatever happened to be on `main` without anyone
+reading it first. Nothing pushes unprompted now.
+
+Ask for "the weekly report and scan". That means:
+
+```
+node scripts/traffic-report.js     # traffic + dataset movement + deploy state
+node scripts/diff-sources.js       # CloudCME + mer.org diff -> marketing/source-diff/<date>.md
+```
+
+then triage the diff's candidates by hand (see `scripts/update-prompt.md` for the rules,
+`scripts/add-conferences.js` to append, and `marketing/source-diff-ignore.json` to record
+declines so they stop resurfacing), and finally `git push` once the result has been read.
+
+`com.medconf.subscribers` (monthly, 1st at 08:40) is still loaded.
+
+Logs land in `logs/` (gitignored).
 
 ## Deployment
 
