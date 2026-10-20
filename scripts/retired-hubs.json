@@ -1,0 +1,138 @@
+{
+  "/city/bariloche/": {
+    "to": "/country/argentina/",
+    "retired": "2026-10-20"
+  },
+  "/city/batam/": {
+    "to": "/country/indonesia/",
+    "retired": "2026-10-20"
+  },
+  "/city/beachwood/": {
+    "to": "/country/usa/",
+    "retired": "2026-10-20"
+  },
+  "/city/beijing/": {
+    "to": "/country/china/",
+    "retired": "2026-10-20"
+  },
+  "/city/belo-horizonte/": {
+    "to": "/country/brazil/",
+    "retired": "2026-10-20"
+  },
+  "/city/cairns/": {
+    "to": "/country/australia/",
+    "retired": "2026-10-20"
+  },
+  "/city/da-nang/": {
+    "to": "/country/vietnam/",
+    "retired": "2026-10-20"
+  },
+  "/city/dana-point/": {
+    "to": "/country/usa/",
+    "retired": "2026-10-20"
+  },
+  "/city/dubai/": {
+    "to": "/country/united-arab-emirates/",
+    "retired": "2026-10-20"
+  },
+  "/city/estes-park/": {
+    "to": "/country/usa/",
+    "retired": "2026-10-20"
+  },
+  "/city/florianopolis/": {
+    "to": "/country/brazil/",
+    "retired": "2026-10-20"
+  },
+  "/city/guangzhou/": {
+    "to": "/country/china/",
+    "retired": "2026-10-20"
+  },
+  "/city/isle-of-palms/": {
+    "to": "/country/usa/",
+    "retired": "2026-10-20"
+  },
+  "/city/la-jolla/": {
+    "to": "/country/usa/",
+    "retired": "2026-10-20"
+  },
+  "/city/machu-picchu/": {
+    "to": "/country/peru/",
+    "retired": "2026-10-20"
+  },
+  "/city/mackinac-island/": {
+    "to": "/country/usa/",
+    "retired": "2026-10-20"
+  },
+  "/city/mandaluyong-city/": {
+    "to": "/country/philippines/",
+    "retired": "2026-10-20"
+  },
+  "/city/napa/": {
+    "to": "/country/usa/",
+    "retired": "2026-10-20"
+  },
+  "/city/newport-usa/": {
+    "to": "/country/usa/",
+    "retired": "2026-10-20"
+  },
+  "/city/oak-brook/": {
+    "to": "/country/usa/",
+    "retired": "2026-10-20"
+  },
+  "/city/oceanside/": {
+    "to": "/country/usa/",
+    "retired": "2026-10-20"
+  },
+  "/city/olympic-valley/": {
+    "to": "/country/usa/",
+    "retired": "2026-10-20"
+  },
+  "/city/palo-alto/": {
+    "to": "/country/usa/",
+    "retired": "2026-10-20"
+  },
+  "/city/penang/": {
+    "to": "/country/malaysia/",
+    "retired": "2026-10-20"
+  },
+  "/city/riyadh/": {
+    "to": "/country/saudi-arabia/",
+    "retired": "2026-10-20"
+  },
+  "/city/salvador/": {
+    "to": "/country/brazil/",
+    "retired": "2026-10-20"
+  },
+  "/city/seattle-washington/": {
+    "to": "/browse/",
+    "retired": "2026-10-20"
+  },
+  "/city/shanghai/": {
+    "to": "/country/china/",
+    "retired": "2026-10-20"
+  },
+  "/city/tunis/": {
+    "to": "/country/tunisia/",
+    "retired": "2026-10-20"
+  },
+  "/city/visegrad/": {
+    "to": "/country/hungary/",
+    "retired": "2026-10-20"
+  },
+  "/city/xian/": {
+    "to": "/country/china/",
+    "retired": "2026-10-20"
+  },
+  "/country/botswana/": {
+    "to": "/browse/",
+    "retired": "2026-10-20"
+  },
+  "/country/dominican-republic/": {
+    "to": "/browse/",
+    "retired": "2026-10-20"
+  },
+  "/country/nicaragua/": {
+    "to": "/browse/",
+    "retired": "2026-10-20"
+  }
+}
