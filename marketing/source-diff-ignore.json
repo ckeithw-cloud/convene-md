@@ -148,5 +148,165 @@
     "name": "Cancer Pain Summit",
     "reason": "U of Utah; 17.5 Cat 1 over 4 days and clearly real, but the listing again gives no city (bare ', UT') — same defect as CRMC. Re-check when a venue is published",
     "declined": "2026-10-05"
+  },
+  "cloudcme:avera:21634": {
+    "name": "Women's Health Master Class",
+    "reason": "enduring activity, not a dated conference (spans 2025-09-11 to 2026-12-31)",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:uarizona:50856": {
+    "name": "Wellness and Healthy Lifestyle Strategies for the Physician",
+    "reason": "enduring activity, year-long span",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:uarizona:50857": {
+    "name": "Wellness and Healthy Lifestyle Strategies for the Physician",
+    "reason": "enduring activity, year-long span",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:uarizona:50983": {
+    "name": "Medical Spanish & Cultural Awareness Course 2026",
+    "reason": "enduring activity, year-long span, 'Various locations'",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:umaryland:29433": {
+    "name": "2026 Complex Procedures Course",
+    "reason": "in-hospital procedure course repeated through the year in one conference room",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:umaryland:33578": {
+    "name": "2027 Complex Procedures Course - April 15",
+    "reason": "same course, quarterly repeat",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:umaryland:33579": {
+    "name": "2027 Complex Procedures Course - May 20",
+    "reason": "same course, quarterly repeat",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:umaryland:33580": {
+    "name": "2027 Complex Procedures Course - Sept 2",
+    "reason": "same course, quarterly repeat",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:umaryland:33581": {
+    "name": "2027 Complex Procedures Course - Oct 7",
+    "reason": "same course, quarterly repeat",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:umaryland:33574": {
+    "name": "2027 Critical Procedures Course - April 15",
+    "reason": "in-hospital procedure course, quarterly repeat in the Anatomy Board room",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:umaryland:33575": {
+    "name": "2027 Critical Procedures Course - May 20",
+    "reason": "same course, quarterly repeat",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:umaryland:33576": {
+    "name": "2027 Critical Procedures Course - Sept 2",
+    "reason": "same course, quarterly repeat",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:umaryland:33577": {
+    "name": "2027 Critical Procedures Course - Oct 7",
+    "reason": "same course, quarterly repeat",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:vumc:125496": {
+    "name": "Fundamentals of ECMO for Cardiac and Respiratory Failure",
+    "reason": "hands-on skills course, not a conference",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:vumc:126007": {
+    "name": "Point of Care Ultrasound Half-Day in Person CELA Workshop",
+    "reason": "half-day skills workshop",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:intermountain:60843": {
+    "name": "PEM POCUS Bootcamp 2026",
+    "reason": "hands-on skills bootcamp",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:chop:22586": {
+    "name": "Pediatric Anesthesia Point of Care Ultrasound Course",
+    "reason": "hands-on skills course",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:cchmc:66025": {
+    "name": "Continuous Renal Replacement Therapy (CRRT) University - P",
+    "reason": "hands-on skills training",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:cchmc:66026": {
+    "name": "Continuous Renal Replacement Therapy (CRRT) University - C",
+    "reason": "hands-on skills training",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:jefferson:45093": {
+    "name": "Endoscopy Reboot - Refresh and Recharge Your Skills",
+    "reason": "hands-on skills course",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:uarizona:55305": {
+    "name": "Cardiac CTA Live Patient Scan and Interpretation Course",
+    "reason": "hands-on scanning course",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:musc:50389": {
+    "name": "Brain Stimulation Intensive Course - ECT Track",
+    "reason": "training course, not a meeting",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:musc:50383": {
+    "name": "hEDS Diagnostic Consortium",
+    "reason": "consortium working meeting, not open CME",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:cchmc:66524": {
+    "name": "Rooted in Relationships: Safety, Stability, Connection",
+    "reason": "child-welfare training at an education service centre, not physician CME",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:chop:21706": {
+    "name": "Sharing the Science of Human Milk and Lactation",
+    "reason": "lactation audience, not physician CME",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:uci:11075": {
+    "name": "Train New Trainers (TNT) Essentials of Primary Care Psychiatry",
+    "reason": "faculty development, explicitly train-the-trainer",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:uci:11087": {
+    "name": "Train New Trainers (TNT) Essentials of Primary Care Child Psychiatry",
+    "reason": "faculty development, explicitly train-the-trainer",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:washu:72281": {
+    "name": "3rd Annual Midwest Critical Appraisal Workshop",
+    "reason": "research-methods workshop, not a clinical conference",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:intermountain:61393": {
+    "name": "Ready Resilient Conference Medical Track",
+    "reason": "clinician-wellness track, not clinical CME",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:intermountain:61137": {
+    "name": "Intermountain GI and Digestive Health Retreat",
+    "reason": "internal departmental retreat",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:vcu:41776": {
+    "name": "49th Annual Bunts Hackler Lecture - 2027",
+    "reason": "a single named lecture, not a conference",
+    "declined": "2026-10-20"
+  },
+  "cloudcme:uw:17846": {
+    "name": "DC2706: 2026 Pacific Northwest Head & Neck Cancer Symposium",
+    "reason": "title says 2026 but the listing dates it 2027-02-05 - one of the two is wrong; needs a direct check before adding",
+    "declined": "2026-10-20"
   }
 }
