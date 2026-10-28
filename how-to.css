@@ -201,3 +201,19 @@ table.rules td.no { color: #a33; font-weight: 600; }
   text-decoration: none;
 }
 .guide-nav a:hover { border-color: #36b3a8; }
+
+/* Referral call-to-action on /how-to/cme-travel-points/. Deliberately a link, not a banner:
+   the site has no ads and one understated button is the whole of its commercial surface. */
+.guide .cta-line { margin: 1.4rem 0 .4rem; }
+.guide a.cta {
+  display: inline-block;
+  padding: .7rem 1.25rem;
+  border-radius: 8px;
+  background: #15616d;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid #104b55;
+}
+.guide a.cta:hover { background: #104b55; }
+.guide a.cta:focus-visible { outline: 3px solid #ffb703; outline-offset: 2px; }
