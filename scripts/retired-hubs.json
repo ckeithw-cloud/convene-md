@@ -1,4 +1,8 @@
 {
+  "/city/auckland/": {
+    "to": "/country/new-zealand/",
+    "retired": "2026-10-28"
+  },
   "/city/bariloche/": {
     "to": "/country/argentina/",
     "retired": "2026-10-20"
@@ -19,9 +23,17 @@
     "to": "/country/brazil/",
     "retired": "2026-10-20"
   },
+  "/city/busan/": {
+    "to": "/country/south-korea/",
+    "retired": "2026-10-28"
+  },
   "/city/cairns/": {
     "to": "/country/australia/",
     "retired": "2026-10-20"
+  },
+  "/city/charlottesville/": {
+    "to": "/country/usa/",
+    "retired": "2026-10-28"
   },
   "/city/da-nang/": {
     "to": "/country/vietnam/",
@@ -47,9 +59,25 @@
     "to": "/country/china/",
     "retired": "2026-10-20"
   },
+  "/city/half-moon-bay/": {
+    "to": "/country/usa/",
+    "retired": "2026-10-28"
+  },
+  "/city/hyderabad/": {
+    "to": "/country/india/",
+    "retired": "2026-10-28"
+  },
   "/city/isle-of-palms/": {
     "to": "/country/usa/",
     "retired": "2026-10-20"
+  },
+  "/city/jaipur/": {
+    "to": "/country/india/",
+    "retired": "2026-10-28"
+  },
+  "/city/kansas-city/": {
+    "to": "/country/usa/",
+    "retired": "2026-10-28"
   },
   "/city/la-jolla/": {
     "to": "/country/usa/",
@@ -87,6 +115,10 @@
     "to": "/country/usa/",
     "retired": "2026-10-20"
   },
+  "/city/oslo/": {
+    "to": "/country/norway/",
+    "retired": "2026-10-28"
+  },
   "/city/palo-alto/": {
     "to": "/country/usa/",
     "retired": "2026-10-20"
@@ -111,6 +143,14 @@
     "to": "/country/china/",
     "retired": "2026-10-20"
   },
+  "/city/stanford/": {
+    "to": "/country/usa/",
+    "retired": "2026-10-28"
+  },
+  "/city/tucson/": {
+    "to": "/country/usa/",
+    "retired": "2026-10-28"
+  },
   "/city/tunis/": {
     "to": "/country/tunisia/",
     "retired": "2026-10-20"
@@ -119,6 +159,10 @@
     "to": "/country/hungary/",
     "retired": "2026-10-20"
   },
+  "/city/wuhan/": {
+    "to": "/country/china/",
+    "retired": "2026-10-28"
+  },
   "/city/xian/": {
     "to": "/country/china/",
     "retired": "2026-10-20"
@@ -126,6 +170,10 @@
   "/country/botswana/": {
     "to": "/browse/",
     "retired": "2026-10-20"
+  },
+  "/country/croatia/": {
+    "to": "/browse/",
+    "retired": "2026-10-28"
   },
   "/country/dominican-republic/": {
     "to": "/browse/",

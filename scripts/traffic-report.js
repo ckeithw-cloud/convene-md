@@ -357,8 +357,10 @@ function table(rows, label) {
     md += `discovery out-runs the calendar.\n\n`;
   }
   if (ds.added === 0) {
-    md += `> The updater added nothing this window. Check \`logs/update.log\` — a silent `;
-    md += `failure (expired CLI auth, DNS down at 14:07) looks exactly like a quiet week.\n\n`;
+    md += `> **Nothing was added in this window.** Since the weekly jobs were taken off the `;
+    md += `timer (20 Oct 2026) the dataset only grows when someone runs the routine, so a `;
+    md += `zero here means no run happened rather than a run that found nothing. Work done `;
+    md += `today lands in next week's figure — see the row above if one is shown.\n\n`;
   }
 
   md += `## Where it came from\n\n`;

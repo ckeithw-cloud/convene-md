@@ -51,6 +51,10 @@ const BOILER = new Set(["annual","meeting","congress","conference","society","as
 const words = (s) => new Set((s.toLowerCase().match(/[a-z]{5,}/g) || []).filter((w) => !BOILER.has(w)));
 const overlap = (a, b) => { const B = words(b); let n = 0; for (const w of words(a)) if (B.has(w)) n++; return n; };
 
+// Providers that run one course title in many cities. Their names carry no identifying
+// information, so only the URL can tell two editions apart.
+const SERIES_HOSTS = new Set(["mer.org"]);
+
 const rows = fs.readFileSync(tsv, "utf8").split("\n").filter((l) => l.trim()).map((l) => l.split("\t"));
 const bad = rows.filter((r) => r.length !== 9);
 if (bad.length) { console.error(`malformed row(s): ${bad.length}, first: ${bad[0].slice(0,2).join(" | ")}`); process.exit(1); }
@@ -73,8 +77,14 @@ for (const [specialty, name, startDate, endDate, city, country, organizer, url, 
     overlap(name, c.name) >= 2 || (c.organizer === organizer && overlap(name, c.name) >= 1));
   if (same) { dropped.push([name, `dup of "${same.name.slice(0, 44)}"`]); continue; }
   // 3. Same host, same year, distinctive title overlap — catches a re-add under a new name.
-  const hostHit = (byHost.get(host(url)) || []).find((c) => c.year === +startDate.slice(0, 4) && overlap(name, c.name) >= 2);
-  if (hostHit) { dropped.push([name, `dup@host "${hostHit.name.slice(0, 40)}"`]); continue; }
+  //    Skipped for series providers: every MER course is titled "Internal Medicine for
+  //    Primary Care: <topics>", so "internal" and "primary" alone clear the bar and two
+  //    genuinely new Bar Harbor dates were rejected as duplicates of a Cardiology edition.
+  //    update-prompt.md is explicit that MER dedupes on the URL, which rule 1 already does.
+  if (!SERIES_HOSTS.has(host(url))) {
+    const hostHit = (byHost.get(host(url)) || []).find((c) => c.year === +startDate.slice(0, 4) && overlap(name, c.name) >= 2);
+    if (hostHit) { dropped.push([name, `dup@host "${hostHit.name.slice(0, 40)}"`]); continue; }
+  }
 
   const [lat, lng] = cityCoords[city];
   const f = (v) => JSON.stringify(v);

@@ -54,4 +54,16 @@
 /country/botswana/                  /browse/                    301
 /country/dominican-republic/        /browse/                    301
 /country/nicaragua/                 /browse/                    301
+/country/croatia/                   /browse/                    301
+/city/auckland/                     /country/new-zealand/       301
+/city/busan/                        /country/south-korea/       301
+/city/charlottesville/              /country/usa/               301
+/city/half-moon-bay/                /country/usa/               301
+/city/hyderabad/                    /country/india/             301
+/city/jaipur/                       /country/india/             301
+/city/kansas-city/                  /country/usa/               301
+/city/oslo/                         /country/norway/            301
+/city/stanford/                     /country/usa/               301
+/city/tucson/                       /country/usa/               301
+/city/wuhan/                        /country/china/             301
 # BUILD:RETIRED-HUBS:END

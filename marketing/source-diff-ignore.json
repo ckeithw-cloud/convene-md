@@ -308,5 +308,25 @@
     "name": "DC2706: 2026 Pacific Northwest Head & Neck Cancer Symposium",
     "reason": "title says 2026 but the listing dates it 2027-02-05 - one of the two is wrong; needs a direct check before adding",
     "declined": "2026-10-20"
+  },
+  "cloudcme:uofuhealth:84258": {
+    "name": "66th WINO",
+    "reason": "unmappable - no description or specialty published, cannot assign one of the 46 confidently",
+    "declined": "2026-10-27"
+  },
+  "cloudcme:stanford:59904": {
+    "name": "Camp CME 2027",
+    "reason": "specialty 'Non-clinical' - a leadership retreat for CE/CPD administrators, not clinician CME, despite the Acadia National Park location",
+    "declined": "2026-10-27"
+  },
+  "cloudcme:upenn:102096": {
+    "name": "Ring the Bell: Inaugural Medical Education Conference",
+    "reason": "medical-education conference, i.e. faculty development",
+    "declined": "2026-10-27"
+  },
+  "cloudcme:uams:75717": {
+    "name": "2026 Stop Overdose Summit",
+    "reason": "no specialty or description published; community overdose summits are typically mixed-audience public health rather than physician CME",
+    "declined": "2026-10-27"
   }
 }
