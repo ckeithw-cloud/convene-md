@@ -133,3 +133,14 @@ h1 { font-size: 30px; line-height: 1.2; margin: 0 0 10px; letter-spacing: -0.5px
 }
 .yearend strong { color: #0f2942; }
 .yearend a { color: #15756c; }
+
+/* The single commercial line on the site, under the signup block on hub pages.
+   Deliberately plainer than .yearend: no border, no fill, smaller and muted, so it
+   reads as a footnote rather than a second banner competing with the conference list. */
+.hub-aside {
+  margin: 14px 0 0;
+  font-size: 14px;
+  color: #5a6b7a;
+  line-height: 1.5;
+}
+.hub-aside a { color: #15756c; }

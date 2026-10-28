@@ -20,6 +20,15 @@ const path = require("path");
 const { signupBlock } = require("./signup-block");
 const { yearEndCallout } = require("./year-end");
 
+// One quiet line under the signup block, on hub pages only. The site's single piece of
+// commercial content, kept to a sentence and placed where the page already asks the reader
+// for something rather than on the map or in the nav. Disclosure lives on the target page,
+// above the fold; this line says "referral" so the click is never a surprise.
+const CARD_LINE =
+  '    <p class="hub-aside">Fronting the cost of a conference before your allowance pays it back? ' +
+  '<a href="/how-to/cme-travel-points/">Earning points on reimbursable CME travel</a> ' +
+  '\u2014 what the travel cards are worth, and when they are not. Contains a referral link.</p>';
+
 // Filled once by main(); page() is module-scope and cannot see main's `upcoming`.
 // Empty outside Q4, so the banner cannot linger into the new year.
 let YEAR_END = "";
@@ -164,6 +173,7 @@ ${jsonld ? `  <script type="application/ld+json">\n${JSON.stringify(jsonld, null
 ${YEAR_END}${extraBody || ""}
 ${list ? `    <ul class="conf-list">\n${items}\n    </ul>` : ""}
 ${signupBlock({ specialty: selfSpecialty, source: url })}
+${CARD_LINE}
 ${related || ""}
   </main>
   <footer class="hub-footer">
