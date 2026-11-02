@@ -28,14 +28,12 @@
 /city/belo-horizonte/               /country/brazil/            301
 /city/busan/                        /country/south-korea/       301
 /city/cairns/                       /country/australia/         301
-/city/charlottesville/              /country/usa/               301
 /city/da-nang/                      /country/vietnam/           301
 /city/dana-point/                   /country/usa/               301
 /city/dubai/                        /country/united-arab-emirates/  301
 /city/estes-park/                   /country/usa/               301
 /city/florianopolis/                /country/brazil/            301
 /city/guangzhou/                    /country/china/             301
-/city/half-moon-bay/                /country/usa/               301
 /city/hyderabad/                    /country/india/             301
 /city/isle-of-palms/                /country/usa/               301
 /city/jaipur/                       /country/india/             301
@@ -66,4 +64,14 @@
 /country/croatia/                   /browse/                    301
 /country/dominican-republic/        /browse/                    301
 /country/nicaragua/                 /browse/                    301
+/country/georgia/                   /browse/                    301
+/country/sri-lanka/                 /browse/                    301
+/city/brisbane/                     /country/australia/         301
+/city/chongqing/                    /country/china/             301
+/city/christchurch/                 /country/new-zealand/       301
+/city/durham/                       /country/usa/               301
+/city/king-of-prussia/              /country/usa/               301
+/city/nagasaki/                     /country/japan/             301
+/city/sao-paulo/                    /country/brazil/            301
+/city/surabaya/                     /country/indonesia/         301
 # BUILD:RETIRED-HUBS:END

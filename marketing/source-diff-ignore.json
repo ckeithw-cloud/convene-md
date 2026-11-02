@@ -328,5 +328,10 @@
     "name": "2026 Stop Overdose Summit",
     "reason": "no specialty or description published; community overdose summits are typically mixed-audience public health rather than physician CME",
     "declined": "2026-10-27"
+  },
+  "cloudcme:ucsf:23364": {
+    "name": "Psychedelics Summit for First Responders and Frontline Clinicians",
+    "reason": "cannot map confidently — listed specialties (Anesthesiology Critical Care, EMS, Emergency Medicine, Hospice & Palliative) do not converge, and the subject points at Psychiatry, which is not among them; title also leads with a non-physician audience",
+    "declined": "2026-11-02"
   }
 }

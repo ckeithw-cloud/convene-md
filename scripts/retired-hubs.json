@@ -23,6 +23,10 @@
     "to": "/country/brazil/",
     "retired": "2026-10-20"
   },
+  "/city/brisbane/": {
+    "to": "/country/australia/",
+    "retired": "2026-11-02"
+  },
   "/city/busan/": {
     "to": "/country/south-korea/",
     "retired": "2026-10-28"
@@ -31,9 +35,13 @@
     "to": "/country/australia/",
     "retired": "2026-10-20"
   },
-  "/city/charlottesville/": {
-    "to": "/country/usa/",
-    "retired": "2026-10-28"
+  "/city/chongqing/": {
+    "to": "/country/china/",
+    "retired": "2026-11-02"
+  },
+  "/city/christchurch/": {
+    "to": "/country/new-zealand/",
+    "retired": "2026-11-02"
   },
   "/city/da-nang/": {
     "to": "/country/vietnam/",
@@ -47,6 +55,10 @@
     "to": "/country/united-arab-emirates/",
     "retired": "2026-10-20"
   },
+  "/city/durham/": {
+    "to": "/country/usa/",
+    "retired": "2026-11-02"
+  },
   "/city/estes-park/": {
     "to": "/country/usa/",
     "retired": "2026-10-20"
@@ -58,10 +70,6 @@
   "/city/guangzhou/": {
     "to": "/country/china/",
     "retired": "2026-10-20"
-  },
-  "/city/half-moon-bay/": {
-    "to": "/country/usa/",
-    "retired": "2026-10-28"
   },
   "/city/hyderabad/": {
     "to": "/country/india/",
@@ -79,6 +87,10 @@
     "to": "/country/usa/",
     "retired": "2026-10-28"
   },
+  "/city/king-of-prussia/": {
+    "to": "/country/usa/",
+    "retired": "2026-11-02"
+  },
   "/city/la-jolla/": {
     "to": "/country/usa/",
     "retired": "2026-10-20"
@@ -94,6 +106,10 @@
   "/city/mandaluyong-city/": {
     "to": "/country/philippines/",
     "retired": "2026-10-20"
+  },
+  "/city/nagasaki/": {
+    "to": "/country/japan/",
+    "retired": "2026-11-02"
   },
   "/city/napa/": {
     "to": "/country/usa/",
@@ -135,6 +151,10 @@
     "to": "/country/brazil/",
     "retired": "2026-10-20"
   },
+  "/city/sao-paulo/": {
+    "to": "/country/brazil/",
+    "retired": "2026-11-02"
+  },
   "/city/seattle-washington/": {
     "to": "/browse/",
     "retired": "2026-10-20"
@@ -146,6 +166,10 @@
   "/city/stanford/": {
     "to": "/country/usa/",
     "retired": "2026-10-28"
+  },
+  "/city/surabaya/": {
+    "to": "/country/indonesia/",
+    "retired": "2026-11-02"
   },
   "/city/tucson/": {
     "to": "/country/usa/",
@@ -179,8 +203,16 @@
     "to": "/browse/",
     "retired": "2026-10-20"
   },
+  "/country/georgia/": {
+    "to": "/browse/",
+    "retired": "2026-11-02"
+  },
   "/country/nicaragua/": {
     "to": "/browse/",
     "retired": "2026-10-20"
+  },
+  "/country/sri-lanka/": {
+    "to": "/browse/",
+    "retired": "2026-11-02"
   }
 }

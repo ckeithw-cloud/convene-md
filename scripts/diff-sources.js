@@ -361,10 +361,23 @@ const SOURCES = { cloudcme: fetchCloudCME, mer: fetchMER };
   // A delisted course usually still has a live page (registration merely closed).
   // Probing the handful of "gone" URLs makes the difference visible in the report
   // instead of leaving every row ambiguous. Only runs for the gone set, so it is cheap.
+  //
+  // The status code alone decides nothing, which cost a manual pass in Oct 2026: a
+  // withdrawn CloudCME course and a merely-delisted one BOTH answer 200, and
+  // default.aspx 302s to courseoverview for every course whether live or dead. The
+  // difference is only in the body — a withdrawn one says so in words — so read it.
+  // A thin page is the other tell: a pulled MER course returns ~27 KB against ~186 KB
+  // for a live one, so the byte count goes in the report rather than being judged here.
+  const WITHDRAWN = /(course|activity|event)\s+is\s+no\s+longer\s+available|no longer available|has been cancell?ed/i;
   for (const c of gone) {
     try {
       const r = await fetch(c.url, { headers: { "User-Agent": UA }, redirect: "follow" });
-      c.__alive = r.ok ? "still live" : `HTTP ${r.status}`;
+      if (!r.ok) { c.__alive = `HTTP ${r.status}`; continue; }
+      const body = await r.text();
+      const kb = Math.round(body.length / 1024);
+      c.__alive = WITHDRAWN.test(body)
+        ? `**withdrawn** — page says so (${kb} KB)`
+        : `delisted only, page still live (${kb} KB)`;
     } catch (e) {
       c.__alive = "unreachable";
     }
