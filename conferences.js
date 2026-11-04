@@ -18709,20 +18709,6 @@ const CONFERENCES = [
     description: "The association's annual academic physiatry meeting on the southern California coast."
   },
   {
-    name: "ISPRM 2027 World Congress",
-    specialty: "Physical Medicine & Rehabilitation",
-    year: 2027,
-    startDate: "2027-06-12",
-    endDate: "2027-06-17",
-    city: "Nusa Dua",
-    country: "Indonesia",
-    lat: -8.7963,
-    lng: 115.228,
-    url: "https://isprm.org/events/isprm2027-congress/",
-    organizer: "International Society of Physical and Rehabilitation Medicine",
-    description: "Hosted locally by PERDOSRI on Bali's southern peninsula."
-  },
-  {
     name: "ISPRM 2028 World Congress",
     specialty: "Physical Medicine & Rehabilitation",
     year: 2028,

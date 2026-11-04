@@ -1,4 +1,8 @@
 {
+  "/city/antalya/": {
+    "to": "/country/turkey/",
+    "retired": "2026-11-04"
+  },
   "/city/auckland/": {
     "to": "/country/new-zealand/",
     "retired": "2026-10-28"
@@ -119,6 +123,10 @@
     "to": "/country/usa/",
     "retired": "2026-10-20"
   },
+  "/city/nusa-dua/": {
+    "to": "/country/indonesia/",
+    "retired": "2026-11-04"
+  },
   "/city/oak-brook/": {
     "to": "/country/usa/",
     "retired": "2026-10-20"
@@ -214,5 +222,9 @@
   "/country/sri-lanka/": {
     "to": "/browse/",
     "retired": "2026-11-02"
+  },
+  "/country/uruguay/": {
+    "to": "/browse/",
+    "retired": "2026-11-04"
   }
 }
