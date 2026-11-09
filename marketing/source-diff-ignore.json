@@ -1,337 +1,342 @@
 {
-  "cloudcme:82209": {
-    "name": "The One and Only NICER: Cytokines, Connections, and the Pr",
-    "reason": "ambiguous specialty — no description published, cannot map to one of the 46",
-    "declined": "2026-09-09"
-  },
-  "cloudcme:112759": {
-    "name": "ACGME-VUMC Developing Faculty Competencies in Assessment -",
-    "reason": "faculty development, not a conference",
-    "declined": "2026-09-09"
-  },
-  "cloudcme:93550": {
-    "name": "43rd Annual James W. Rae Scientific Day & Lecture",
-    "reason": "internal departmental scientific day",
-    "declined": "2026-09-09"
-  },
-  "cloudcme:93321": {
-    "name": "2026 Michigan Work Society Meeting",
-    "reason": "ambiguous — cannot determine specialty or scope",
-    "declined": "2026-09-09"
-  },
-  "cloudcme:126806": {
-    "name": "ACE Society Annual Meeting 2026",
-    "reason": "ambiguous acronym; owning society not identifiable",
-    "declined": "2026-09-09"
-  },
-  "cloudcme:83881": {
-    "name": "Revere Elevate MSK",
-    "reason": "ambiguous — no description, unclear format",
-    "declined": "2026-09-09"
-  },
-  "cloudcme:83886": {
-    "name": "CT Academy",
-    "reason": "training course rather than a conference",
-    "declined": "2026-09-09"
-  },
-  "cloudcme:93428": {
-    "name": "Department of Ophthalmology and Visual Sciences 32nd Annua",
-    "reason": "alumni reunion; already held as 'Kellogg Eye Center 32nd Annual Fall Alumni Reunion 2026'",
-    "declined": "2026-09-09"
-  },
-  "cloudcme:57344": {
-    "name": "Lean Healthcare Academic Conference",
-    "reason": "health-system management, not clinical CME",
-    "declined": "2026-09-09"
-  },
-  "cloudcme:125954": {
-    "name": "Emergency Medicine FacET - 9/29/2026 CME",
-    "reason": "internal faculty training",
-    "declined": "2026-09-09"
-  },
-  "cloudcme:125653": {
-    "name": "Promoting Professionalism: Addressing Behaviors that Under",
-    "reason": "remedial behavioural programme",
-    "declined": "2026-09-09"
-  },
-  "cloudcme:93633": {
-    "name": "MBSC/MSQC October 2026 Tri-Annual Meeting",
-    "reason": "quality-collaborative business meeting",
-    "declined": "2026-09-09"
-  },
-  "cloudcme:84026": {
-    "name": "IMPROVE",
-    "reason": "no venue published beyond ', UT'",
-    "declined": "2026-09-09"
-  },
-  "cloudcme:umich:93436": {
-    "name": "Adult ECMO Simulation Course",
-    "reason": "simulation training, not a conference",
-    "declined": "2026-09-09"
-  },
-  "cloudcme:umich:93435": {
-    "name": "Stay Abreast: Breast Health, Cancer, and Genetics Workshop",
-    "reason": "half-day workshop",
-    "declined": "2026-09-09"
-  },
-  "cloudcme:uofuhealth:84038": {
-    "name": "IMPROVE - Hawaii",
-    "reason": "venue contradicts the title (listed at St George, Utah); unresolvable",
-    "declined": "2026-09-09"
-  },
-  "cloudcme:vumc:125931": {
-    "name": "LifeFlight Critical Care Transport Simulation - 10/22/2026",
-    "reason": "simulation training",
-    "declined": "2026-09-09"
-  },
-  "cloudcme:umich:93257": {
-    "name": "Medical Education Symposium",
-    "reason": "internal education event",
-    "declined": "2026-09-09"
-  },
-  "cloudcme:washu:65164": {
-    "name": "2026 Clinical Research Education & Statistics Training (CR",
-    "reason": "research methods training course",
-    "declined": "2026-09-09"
-  },
-  "cloudcme:cedars:33778": {
-    "name": "2026 Patient Safety Symposium: Learning from Errors, Desig",
-    "reason": "non-clinical; no mappable specialty",
-    "declined": "2026-09-09"
-  },
-  "cloudcme:ucsf:22106": {
-    "name": "15th Annual UCSF Techniques in Complex Cervical/Cervicotho",
-    "reason": "DUPLICATE of '15th Annual UCSF Spinal Surgery Bioskills Lab' (same dates, Las Vegas)",
-    "declined": "2026-09-09"
-  },
-  "cloudcme:ucsf:20059": {
-    "name": "CH/UCSF/FCMS Health Conference 2026",
-    "reason": "ambiguous — organisers and scope not identifiable",
-    "declined": "2026-09-09"
-  },
-  "cloudcme:yale:59051": {
-    "name": "11th Annual Connecticut Mandates Symposium",
-    "reason": "state licensure-mandate training, not a specialty conference",
-    "declined": "2026-09-09"
-  },
-  "cloudcme:cedars:33937": {
-    "name": "16th Annual Lysosomal Storage Disease Symposium",
-    "reason": "cannot map confidently to one of the 46 specialties",
-    "declined": "2026-09-09"
-  },
-  "cloudcme:vumc:125981": {
-    "name": "Maintaining Professional Boundaries - 11/4/2026 CME",
-    "reason": "remedial behavioural programme, not a conference",
-    "declined": "2026-09-14"
-  },
-  "cloudcme:umich:93777": {
-    "name": "Exposure Therapy Training",
-    "reason": "School of Social Work programme for therapists, not physician CME",
-    "declined": "2026-09-18"
-  },
-  "cloudcme:upenn:102489": {
-    "name": "Presentation Mastery for Healthcare Professionals Fall",
-    "reason": "presentation-skills training, not a conference",
-    "declined": "2026-09-28"
-  },
-  "cloudcme:umich:93675": {
-    "name": "MOQC Gynecologic Oncology Biannual Meeting",
-    "reason": "Michigan Oncology Quality Consortium collaborative business meeting — administrator-weighted audience, not a conference anyone travels for",
-    "declined": "2026-09-28"
-  },
-  "cloudcme:uofuhealth:84101": {
-    "name": "Cardiovascular, Renal and Metabolism Center (CRMC)",
-    "reason": "U of Utah; 7.5 Cat 1 and real, but the listing gives no city at all (venue field is bare ', UT') — re-check when a venue is published",
-    "declined": "2026-09-28"
-  },
-  "cloudcme:uofuhealth:84252": {
-    "name": "Cancer Pain Summit",
-    "reason": "U of Utah; 17.5 Cat 1 over 4 days and clearly real, but the listing again gives no city (bare ', UT') — same defect as CRMC. Re-check when a venue is published",
-    "declined": "2026-10-05"
-  },
-  "cloudcme:avera:21634": {
-    "name": "Women's Health Master Class",
-    "reason": "enduring activity, not a dated conference (spans 2025-09-11 to 2026-12-31)",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:uarizona:50856": {
-    "name": "Wellness and Healthy Lifestyle Strategies for the Physician",
-    "reason": "enduring activity, year-long span",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:uarizona:50857": {
-    "name": "Wellness and Healthy Lifestyle Strategies for the Physician",
-    "reason": "enduring activity, year-long span",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:uarizona:50983": {
-    "name": "Medical Spanish & Cultural Awareness Course 2026",
-    "reason": "enduring activity, year-long span, 'Various locations'",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:umaryland:29433": {
-    "name": "2026 Complex Procedures Course",
-    "reason": "in-hospital procedure course repeated through the year in one conference room",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:umaryland:33578": {
-    "name": "2027 Complex Procedures Course - April 15",
-    "reason": "same course, quarterly repeat",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:umaryland:33579": {
-    "name": "2027 Complex Procedures Course - May 20",
-    "reason": "same course, quarterly repeat",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:umaryland:33580": {
-    "name": "2027 Complex Procedures Course - Sept 2",
-    "reason": "same course, quarterly repeat",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:umaryland:33581": {
-    "name": "2027 Complex Procedures Course - Oct 7",
-    "reason": "same course, quarterly repeat",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:umaryland:33574": {
-    "name": "2027 Critical Procedures Course - April 15",
-    "reason": "in-hospital procedure course, quarterly repeat in the Anatomy Board room",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:umaryland:33575": {
-    "name": "2027 Critical Procedures Course - May 20",
-    "reason": "same course, quarterly repeat",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:umaryland:33576": {
-    "name": "2027 Critical Procedures Course - Sept 2",
-    "reason": "same course, quarterly repeat",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:umaryland:33577": {
-    "name": "2027 Critical Procedures Course - Oct 7",
-    "reason": "same course, quarterly repeat",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:vumc:125496": {
-    "name": "Fundamentals of ECMO for Cardiac and Respiratory Failure",
-    "reason": "hands-on skills course, not a conference",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:vumc:126007": {
-    "name": "Point of Care Ultrasound Half-Day in Person CELA Workshop",
-    "reason": "half-day skills workshop",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:intermountain:60843": {
-    "name": "PEM POCUS Bootcamp 2026",
-    "reason": "hands-on skills bootcamp",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:chop:22586": {
-    "name": "Pediatric Anesthesia Point of Care Ultrasound Course",
-    "reason": "hands-on skills course",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:cchmc:66025": {
-    "name": "Continuous Renal Replacement Therapy (CRRT) University - P",
-    "reason": "hands-on skills training",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:cchmc:66026": {
-    "name": "Continuous Renal Replacement Therapy (CRRT) University - C",
-    "reason": "hands-on skills training",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:jefferson:45093": {
-    "name": "Endoscopy Reboot - Refresh and Recharge Your Skills",
-    "reason": "hands-on skills course",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:uarizona:55305": {
-    "name": "Cardiac CTA Live Patient Scan and Interpretation Course",
-    "reason": "hands-on scanning course",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:musc:50389": {
-    "name": "Brain Stimulation Intensive Course - ECT Track",
-    "reason": "training course, not a meeting",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:musc:50383": {
-    "name": "hEDS Diagnostic Consortium",
-    "reason": "consortium working meeting, not open CME",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:cchmc:66524": {
-    "name": "Rooted in Relationships: Safety, Stability, Connection",
-    "reason": "child-welfare training at an education service centre, not physician CME",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:chop:21706": {
-    "name": "Sharing the Science of Human Milk and Lactation",
-    "reason": "lactation audience, not physician CME",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:uci:11075": {
-    "name": "Train New Trainers (TNT) Essentials of Primary Care Psychiatry",
-    "reason": "faculty development, explicitly train-the-trainer",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:uci:11087": {
-    "name": "Train New Trainers (TNT) Essentials of Primary Care Child Psychiatry",
-    "reason": "faculty development, explicitly train-the-trainer",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:washu:72281": {
-    "name": "3rd Annual Midwest Critical Appraisal Workshop",
-    "reason": "research-methods workshop, not a clinical conference",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:intermountain:61393": {
-    "name": "Ready Resilient Conference Medical Track",
-    "reason": "clinician-wellness track, not clinical CME",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:intermountain:61137": {
-    "name": "Intermountain GI and Digestive Health Retreat",
-    "reason": "internal departmental retreat",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:vcu:41776": {
-    "name": "49th Annual Bunts Hackler Lecture - 2027",
-    "reason": "a single named lecture, not a conference",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:uw:17846": {
-    "name": "DC2706: 2026 Pacific Northwest Head & Neck Cancer Symposium",
-    "reason": "title says 2026 but the listing dates it 2027-02-05 - one of the two is wrong; needs a direct check before adding",
-    "declined": "2026-10-20"
-  },
-  "cloudcme:uofuhealth:84258": {
-    "name": "66th WINO",
-    "reason": "unmappable - no description or specialty published, cannot assign one of the 46 confidently",
-    "declined": "2026-10-27"
-  },
-  "cloudcme:stanford:59904": {
-    "name": "Camp CME 2027",
-    "reason": "specialty 'Non-clinical' - a leadership retreat for CE/CPD administrators, not clinician CME, despite the Acadia National Park location",
-    "declined": "2026-10-27"
-  },
-  "cloudcme:upenn:102096": {
-    "name": "Ring the Bell: Inaugural Medical Education Conference",
-    "reason": "medical-education conference, i.e. faculty development",
-    "declined": "2026-10-27"
-  },
-  "cloudcme:uams:75717": {
-    "name": "2026 Stop Overdose Summit",
-    "reason": "no specialty or description published; community overdose summits are typically mixed-audience public health rather than physician CME",
-    "declined": "2026-10-27"
-  },
-  "cloudcme:ucsf:23364": {
-    "name": "Psychedelics Summit for First Responders and Frontline Clinicians",
-    "reason": "cannot map confidently — listed specialties (Anesthesiology Critical Care, EMS, Emergency Medicine, Hospice & Palliative) do not converge, and the subject points at Psychiatry, which is not among them; title also leads with a non-physician audience",
-    "declined": "2026-11-02"
-  }
+ "cloudcme:125954": {
+  "declined": "2026-09-09",
+  "name": "Emergency Medicine FacET - 9/29/2026 CME",
+  "reason": "internal faculty training [legacy 2-part key; tenant unrecoverable, activity already past]"
+ },
+ "cloudcme:avera:21634": {
+  "declined": "2026-10-20",
+  "name": "Women's Health Master Class",
+  "reason": "enduring activity, not a dated conference (spans 2025-09-11 to 2026-12-31)"
+ },
+ "cloudcme:cchmc:66025": {
+  "declined": "2026-10-20",
+  "name": "Continuous Renal Replacement Therapy (CRRT) University - P",
+  "reason": "hands-on skills training"
+ },
+ "cloudcme:cchmc:66026": {
+  "declined": "2026-10-20",
+  "name": "Continuous Renal Replacement Therapy (CRRT) University - C",
+  "reason": "hands-on skills training"
+ },
+ "cloudcme:cchmc:66524": {
+  "declined": "2026-10-20",
+  "name": "Rooted in Relationships: Safety, Stability, Connection",
+  "reason": "child-welfare training at an education service centre, not physician CME"
+ },
+ "cloudcme:cedars:33778": {
+  "declined": "2026-09-09",
+  "name": "2026 Patient Safety Symposium: Learning from Errors, Desig",
+  "reason": "non-clinical; no mappable specialty"
+ },
+ "cloudcme:cedars:33937": {
+  "declined": "2026-09-09",
+  "name": "16th Annual Lysosomal Storage Disease Symposium",
+  "reason": "cannot map confidently to one of the 46 specialties"
+ },
+ "cloudcme:chop:21706": {
+  "declined": "2026-10-20",
+  "name": "Sharing the Science of Human Milk and Lactation",
+  "reason": "lactation audience, not physician CME"
+ },
+ "cloudcme:chop:22586": {
+  "declined": "2026-10-20",
+  "name": "Pediatric Anesthesia Point of Care Ultrasound Course",
+  "reason": "hands-on skills course"
+ },
+ "cloudcme:intermountain:60843": {
+  "declined": "2026-10-20",
+  "name": "PEM POCUS Bootcamp 2026",
+  "reason": "hands-on skills bootcamp"
+ },
+ "cloudcme:intermountain:61137": {
+  "declined": "2026-10-20",
+  "name": "Intermountain GI and Digestive Health Retreat",
+  "reason": "internal departmental retreat"
+ },
+ "cloudcme:intermountain:61393": {
+  "declined": "2026-10-20",
+  "name": "Ready Resilient Conference Medical Track",
+  "reason": "clinician-wellness track, not clinical CME"
+ },
+ "cloudcme:jefferson:45093": {
+  "declined": "2026-10-20",
+  "name": "Endoscopy Reboot - Refresh and Recharge Your Skills",
+  "reason": "hands-on skills course"
+ },
+ "cloudcme:musc:50383": {
+  "declined": "2026-10-20",
+  "name": "hEDS Diagnostic Consortium",
+  "reason": "consortium working meeting, not open CME"
+ },
+ "cloudcme:musc:50389": {
+  "declined": "2026-10-20",
+  "name": "Brain Stimulation Intensive Course - ECT Track",
+  "reason": "training course, not a meeting"
+ },
+ "cloudcme:northwestern:126806": {
+  "declined": "2026-09-09",
+  "name": "ACE Society Annual Meeting 2026",
+  "reason": "ambiguous acronym; owning society not identifiable"
+ },
+ "cloudcme:stanford:57344": {
+  "declined": "2026-09-09",
+  "name": "Lean Healthcare Academic Conference",
+  "reason": "health-system management, not clinical CME"
+ },
+ "cloudcme:stanford:59904": {
+  "declined": "2026-10-27",
+  "name": "Camp CME 2027",
+  "reason": "specialty 'Non-clinical' - a leadership retreat for CE/CPD administrators, not clinician CME, despite the Acadia National Park location"
+ },
+ "cloudcme:uams:75717": {
+  "declined": "2026-10-27",
+  "name": "2026 Stop Overdose Summit",
+  "reason": "no specialty or description published; community overdose summits are typically mixed-audience public health rather than physician CME"
+ },
+ "cloudcme:uarizona:50856": {
+  "declined": "2026-10-20",
+  "name": "Wellness and Healthy Lifestyle Strategies for the Physician",
+  "reason": "enduring activity, year-long span"
+ },
+ "cloudcme:uarizona:50857": {
+  "declined": "2026-10-20",
+  "name": "Wellness and Healthy Lifestyle Strategies for the Physician",
+  "reason": "enduring activity, year-long span"
+ },
+ "cloudcme:uarizona:50983": {
+  "declined": "2026-10-20",
+  "name": "Medical Spanish & Cultural Awareness Course 2026",
+  "reason": "enduring activity, year-long span, 'Various locations'"
+ },
+ "cloudcme:uarizona:55305": {
+  "declined": "2026-10-20",
+  "name": "Cardiac CTA Live Patient Scan and Interpretation Course",
+  "reason": "hands-on scanning course"
+ },
+ "cloudcme:uci:11075": {
+  "declined": "2026-10-20",
+  "name": "Train New Trainers (TNT) Essentials of Primary Care Psychiatry",
+  "reason": "faculty development, explicitly train-the-trainer"
+ },
+ "cloudcme:uci:11087": {
+  "declined": "2026-10-20",
+  "name": "Train New Trainers (TNT) Essentials of Primary Care Child Psychiatry",
+  "reason": "faculty development, explicitly train-the-trainer"
+ },
+ "cloudcme:ucsf:20059": {
+  "declined": "2026-09-09",
+  "name": "CH/UCSF/FCMS Health Conference 2026",
+  "reason": "ambiguous — organisers and scope not identifiable"
+ },
+ "cloudcme:ucsf:22106": {
+  "declined": "2026-09-09",
+  "name": "15th Annual UCSF Techniques in Complex Cervical/Cervicotho",
+  "reason": "DUPLICATE of '15th Annual UCSF Spinal Surgery Bioskills Lab' (same dates, Las Vegas)"
+ },
+ "cloudcme:ucsf:23364": {
+  "declined": "2026-11-02",
+  "name": "Psychedelics Summit for First Responders and Frontline Clinicians",
+  "reason": "cannot map confidently — listed specialties (Anesthesiology Critical Care, EMS, Emergency Medicine, Hospice & Palliative) do not converge, and the subject points at Psychiatry, which is not among them; title also leads with a non-physician audience"
+ },
+ "cloudcme:umaryland:29433": {
+  "declined": "2026-10-20",
+  "name": "2026 Complex Procedures Course",
+  "reason": "in-hospital procedure course repeated through the year in one conference room"
+ },
+ "cloudcme:umaryland:33574": {
+  "declined": "2026-10-20",
+  "name": "2027 Critical Procedures Course - April 15",
+  "reason": "in-hospital procedure course, quarterly repeat in the Anatomy Board room"
+ },
+ "cloudcme:umaryland:33575": {
+  "declined": "2026-10-20",
+  "name": "2027 Critical Procedures Course - May 20",
+  "reason": "same course, quarterly repeat"
+ },
+ "cloudcme:umaryland:33576": {
+  "declined": "2026-10-20",
+  "name": "2027 Critical Procedures Course - Sept 2",
+  "reason": "same course, quarterly repeat"
+ },
+ "cloudcme:umaryland:33577": {
+  "declined": "2026-10-20",
+  "name": "2027 Critical Procedures Course - Oct 7",
+  "reason": "same course, quarterly repeat"
+ },
+ "cloudcme:umaryland:33578": {
+  "declined": "2026-10-20",
+  "name": "2027 Complex Procedures Course - April 15",
+  "reason": "same course, quarterly repeat"
+ },
+ "cloudcme:umaryland:33579": {
+  "declined": "2026-10-20",
+  "name": "2027 Complex Procedures Course - May 20",
+  "reason": "same course, quarterly repeat"
+ },
+ "cloudcme:umaryland:33580": {
+  "declined": "2026-10-20",
+  "name": "2027 Complex Procedures Course - Sept 2",
+  "reason": "same course, quarterly repeat"
+ },
+ "cloudcme:umaryland:33581": {
+  "declined": "2026-10-20",
+  "name": "2027 Complex Procedures Course - Oct 7",
+  "reason": "same course, quarterly repeat"
+ },
+ "cloudcme:umich:82209": {
+  "declined": "2026-09-09",
+  "name": "The One and Only NICER: Cytokines, Connections, and the Pr",
+  "reason": "ambiguous specialty — no description published, cannot map to one of the 46"
+ },
+ "cloudcme:umich:93257": {
+  "declined": "2026-09-09",
+  "name": "Medical Education Symposium",
+  "reason": "internal education event"
+ },
+ "cloudcme:umich:93321": {
+  "declined": "2026-09-09",
+  "name": "2026 Michigan Work Society Meeting",
+  "reason": "ambiguous — cannot determine specialty or scope"
+ },
+ "cloudcme:umich:93428": {
+  "declined": "2026-09-09",
+  "name": "Department of Ophthalmology and Visual Sciences 32nd Annua",
+  "reason": "alumni reunion; already held as 'Kellogg Eye Center 32nd Annual Fall Alumni Reunion 2026'"
+ },
+ "cloudcme:umich:93435": {
+  "declined": "2026-09-09",
+  "name": "Stay Abreast: Breast Health, Cancer, and Genetics Workshop",
+  "reason": "half-day workshop"
+ },
+ "cloudcme:umich:93436": {
+  "declined": "2026-09-09",
+  "name": "Adult ECMO Simulation Course",
+  "reason": "simulation training, not a conference"
+ },
+ "cloudcme:umich:93550": {
+  "declined": "2026-09-09",
+  "name": "43rd Annual James W. Rae Scientific Day & Lecture",
+  "reason": "internal departmental scientific day"
+ },
+ "cloudcme:umich:93633": {
+  "declined": "2026-09-09",
+  "name": "MBSC/MSQC October 2026 Tri-Annual Meeting",
+  "reason": "quality-collaborative business meeting"
+ },
+ "cloudcme:umich:93675": {
+  "declined": "2026-09-28",
+  "name": "MOQC Gynecologic Oncology Biannual Meeting",
+  "reason": "Michigan Oncology Quality Consortium collaborative business meeting — administrator-weighted audience, not a conference anyone travels for"
+ },
+ "cloudcme:umich:93777": {
+  "declined": "2026-09-18",
+  "name": "Exposure Therapy Training",
+  "reason": "School of Social Work programme for therapists, not physician CME"
+ },
+ "cloudcme:uofuhealth:83881": {
+  "declined": "2026-09-09",
+  "name": "Revere Elevate MSK",
+  "reason": "ambiguous — no description, unclear format"
+ },
+ "cloudcme:uofuhealth:83886": {
+  "declined": "2026-09-09",
+  "name": "CT Academy",
+  "reason": "training course rather than a conference"
+ },
+ "cloudcme:uofuhealth:84026": {
+  "declined": "2026-09-09",
+  "name": "IMPROVE",
+  "reason": "no venue published beyond ', UT'"
+ },
+ "cloudcme:uofuhealth:84038": {
+  "declined": "2026-09-09",
+  "name": "IMPROVE - Hawaii",
+  "reason": "venue contradicts the title (listed at St George, Utah); unresolvable"
+ },
+ "cloudcme:uofuhealth:84101": {
+  "declined": "2026-09-28",
+  "name": "Cardiovascular, Renal and Metabolism Center (CRMC)",
+  "reason": "U of Utah; 7.5 Cat 1 and real, but the listing gives no city at all (venue field is bare ', UT') — re-check when a venue is published"
+ },
+ "cloudcme:uofuhealth:84252": {
+  "declined": "2026-10-05",
+  "name": "Cancer Pain Summit",
+  "reason": "U of Utah; 17.5 Cat 1 over 4 days and clearly real, but the listing again gives no city (bare ', UT') — same defect as CRMC. Re-check when a venue is published"
+ },
+ "cloudcme:uofuhealth:84258": {
+  "declined": "2026-10-27",
+  "name": "66th WINO",
+  "reason": "unmappable - no description or specialty published, cannot assign one of the 46 confidently"
+ },
+ "cloudcme:upenn:102096": {
+  "declined": "2026-10-27",
+  "name": "Ring the Bell: Inaugural Medical Education Conference",
+  "reason": "medical-education conference, i.e. faculty development"
+ },
+ "cloudcme:upenn:102489": {
+  "declined": "2026-09-28",
+  "name": "Presentation Mastery for Healthcare Professionals Fall",
+  "reason": "presentation-skills training, not a conference"
+ },
+ "cloudcme:uva:32896": {
+  "declined": "2026-11-09",
+  "name": "Effective Coping and Communication Skills (ECCS) 2027",
+  "reason": "remedial/behavioural programme for referred clinicians, not a conference — $6,000, enrolment eligibility screened by the director, relapse-prevention content"
+ },
+ "cloudcme:uw:17846": {
+  "declined": "2026-10-20",
+  "name": "DC2706: 2026 Pacific Northwest Head & Neck Cancer Symposium",
+  "reason": "title says 2026 but the listing dates it 2027-02-05 - one of the two is wrong; needs a direct check before adding"
+ },
+ "cloudcme:vcu:41776": {
+  "declined": "2026-10-20",
+  "name": "49th Annual Bunts Hackler Lecture - 2027",
+  "reason": "a single named lecture, not a conference"
+ },
+ "cloudcme:vumc:112759": {
+  "declined": "2026-09-09",
+  "name": "ACGME-VUMC Developing Faculty Competencies in Assessment -",
+  "reason": "faculty development, not a conference"
+ },
+ "cloudcme:vumc:125496": {
+  "declined": "2026-10-20",
+  "name": "Fundamentals of ECMO for Cardiac and Respiratory Failure",
+  "reason": "hands-on skills course, not a conference"
+ },
+ "cloudcme:vumc:125653": {
+  "declined": "2026-09-09",
+  "name": "Promoting Professionalism: Addressing Behaviors that Under",
+  "reason": "remedial behavioural programme"
+ },
+ "cloudcme:vumc:125931": {
+  "declined": "2026-09-09",
+  "name": "LifeFlight Critical Care Transport Simulation - 10/22/2026",
+  "reason": "simulation training"
+ },
+ "cloudcme:vumc:125981": {
+  "declined": "2026-09-14",
+  "name": "Maintaining Professional Boundaries - 11/4/2026 CME",
+  "reason": "remedial behavioural programme, not a conference"
+ },
+ "cloudcme:vumc:126007": {
+  "declined": "2026-10-20",
+  "name": "Point of Care Ultrasound Half-Day in Person CELA Workshop",
+  "reason": "half-day skills workshop"
+ },
+ "cloudcme:washu:65164": {
+  "declined": "2026-09-09",
+  "name": "2026 Clinical Research Education & Statistics Training (CR",
+  "reason": "research methods training course"
+ },
+ "cloudcme:washu:72281": {
+  "declined": "2026-10-20",
+  "name": "3rd Annual Midwest Critical Appraisal Workshop",
+  "reason": "research-methods workshop, not a clinical conference"
+ },
+ "cloudcme:yale:59051": {
+  "declined": "2026-09-09",
+  "name": "11th Annual Connecticut Mandates Symposium",
+  "reason": "state licensure-mandate training, not a specialty conference"
+ }
 }

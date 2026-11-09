@@ -22,6 +22,11 @@ const FILE = path.join(ROOT, "conferences.js");
 const args = process.argv.slice(2);
 const tsv = args.find((a) => !a.startsWith("--"));
 const dry = args.includes("--dry-run");
+// Rules 2 and 3 are heuristics over titles; they cannot tell "the same course re-added under
+// a new name" from "a second course the same institute runs in the same year". When a row has
+// been checked against the source by hand, --force skips them. Rule 1 (same deep link) is the
+// only unambiguous duplicate test and is never skipped.
+const force = args.includes("--force");
 const coordsArg = (() => {
   const i = args.indexOf("--coords");
   return i > -1 ? JSON.parse(fs.readFileSync(args[i + 1], "utf8")) : {};
@@ -50,6 +55,17 @@ const BOILER = new Set(["annual","meeting","congress","conference","society","as
   "medicine","surgery","surgical"]);
 const words = (s) => new Set((s.toLowerCase().match(/[a-z]{5,}/g) || []).filter((w) => !BOILER.has(w)));
 const overlap = (a, b) => { const B = words(b); let n = 0; for (const w of words(a)) if (B.has(w)) n++; return n; };
+// A CloudCME tenant puts its own name in most of its course titles, so the institution's
+// words are boilerplate *for that host*: "Cedars-Sinai Southern California ECMO Simulation
+// Conference" and "2027 Cedars-Sinai International Endoscopy Symposium" share {cedars,
+// sinai} and nothing else, which cleared the 2-word bar and silently dropped a good entry.
+// Subtract the organiser's own words before judging whether two titles are the same event.
+const overlapOutside = (a, b, ...orgs) => {
+  const skip = new Set(); orgs.forEach((o) => words(o || "").forEach((w) => skip.add(w)));
+  const B = words(b); let n = 0;
+  for (const w of words(a)) if (B.has(w) && !skip.has(w)) n++;
+  return n;
+};
 
 // Providers that run one course title in many cities. Their names carry no identifying
 // information, so only the URL can tell two editions apart.
@@ -69,7 +85,7 @@ for (const [specialty, name, startDate, endDate, city, country, organizer, url, 
   if (EXISTING.some((c) => c.url === url)) { dropped.push([name, "same url"]); continue; }
   // 2. A city+date clash is NOT a duplicate on its own: unrelated societies meet in one
   //    city on one day constantly. Require the organiser or a distinctive title match too.
-  const clash = EXISTING.filter((c) => c.city === city && c.startDate === startDate);
+  const clash = force ? [] : EXISTING.filter((c) => c.city === city && c.startDate === startDate);
   // A shared organiser is a weak signal, not proof: a large CME office runs several
   // unrelated courses in its own city on one day (UCSF ran Pediatric Sports Medicine and
   // a Diabetes Update on the same March morning). Demand title evidence either way.
@@ -81,8 +97,9 @@ for (const [specialty, name, startDate, endDate, city, country, organizer, url, 
   //    Primary Care: <topics>", so "internal" and "primary" alone clear the bar and two
   //    genuinely new Bar Harbor dates were rejected as duplicates of a Cardiology edition.
   //    update-prompt.md is explicit that MER dedupes on the URL, which rule 1 already does.
-  if (!SERIES_HOSTS.has(host(url))) {
-    const hostHit = (byHost.get(host(url)) || []).find((c) => c.year === +startDate.slice(0, 4) && overlap(name, c.name) >= 2);
+  if (!force && !SERIES_HOSTS.has(host(url))) {
+    const hostHit = (byHost.get(host(url)) || []).find((c) =>
+      c.year === +startDate.slice(0, 4) && overlapOutside(name, c.name, organizer, c.organizer, host(url)) >= 2);
     if (hostHit) { dropped.push([name, `dup@host "${hostHit.name.slice(0, 40)}"`]); continue; }
   }
 

@@ -73,6 +73,7 @@ let DECLINED = {};
 try {
   DECLINED = JSON.parse(fs.readFileSync(path.join(ROOT, "marketing", "source-diff-ignore.json"), "utf8"));
 } catch (e) { /* no ignore file yet */ }
+const declinedHits = new Set();
 
 const byKey = new Map();
 const byNameDate = new Map();
@@ -331,7 +332,7 @@ const SOURCES = { cloudcme: fetchCloudCME, mer: fetchMER };
     const held = exact || fuzzyHeld(r.name, r.startDate);
     if (!held) {
       // Only surface plausible additions, else the report is mostly noise.
-      if (DECLINED[r.key]) continue;
+      if (DECLINED[r.key]) { declinedHits.add(r.key); continue; }
       if (r.online || r.junk || !r.cat1) continue;
       if (r.hours != null && r.hours < 4) continue;
       isNew.push(r);
@@ -435,7 +436,11 @@ const SOURCES = { cloudcme: fetchCloudCME, mer: fetchMER };
       L.push(`- \`${u}\` — ${names.length} entr${names.length === 1 ? "y" : "ies"}: ${names.slice(0, 3).map(n => n.slice(0, 44)).join("; ")}${names.length > 3 ? " …" : ""}`);
   });
 
-  const declinedN = Object.keys(DECLINED).length;
+  // Count the declines that actually MATCHED something this run, not the file's length.
+  // The file briefly used a 2-part key ("cloudcme:<eid>") while the scanner generated a
+  // 3-part one, so 13 entries could never match and the report still claimed them as
+  // suppressed — a number that was reassuring and wrong.
+  const declinedN = declinedHits.size;
   if (declinedN) { L.push(`_${declinedN} previously reviewed candidate(s) suppressed — see marketing/source-diff-ignore.json._`); L.push(""); }
   if (emptySources.length) sec("Scraper failures", emptySources.length, () => {
     L.push("**A source returned nothing.** This is almost always a markup change, not mass cancellation. Fix the scraper before trusting anything else in this report.");
