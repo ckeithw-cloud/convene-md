@@ -75,11 +75,29 @@ Ask for "the weekly report and scan". That means:
 ```
 node scripts/traffic-report.js     # traffic + dataset movement + deploy state
 node scripts/diff-sources.js       # CloudCME + mer.org diff -> marketing/source-diff/<date>.md
+node scripts/recheck-expired.js    # expired entries whose next edition is announced
 ```
 
 then triage the diff's candidates by hand (see `scripts/update-prompt.md` for the rules,
 `scripts/add-conferences.js` to append, and `marketing/source-diff-ignore.json` to record
 declines so they stop resurfacing), and finally `git push` once the result has been read.
+
+`recheck-expired.js` covers the leak the diff cannot see. `diff-sources.js` watches a list
+derived from LIVE entries, so a row leaves its view the moment it expires -- and expiry is
+the dataset's biggest drain (90 expired against 10 found on 9 Nov 2026). The recheck asks
+the opposite question: of the conferences that have already ended, which have announced the
+next one? Triage its report the same way, recording dead ends in
+`marketing/recurrence-ignore.json`.
+
+Two outcomes, and the second is not an append:
+
+- the society publishes a **new address per edition** (`events.aats.org/am26`) -> ordinary
+  `add-conferences.js` row.
+- the society publishes **one evergreen address** (`aphrs.org`, `dubaiderma.com`) that now
+  describes next year -> `node scripts/roll-forward.js <tsv>` updates that record in place.
+  `add-conferences.js` cannot do this: rule 1 refuses a duplicate url, and it should, because
+  `diff-sources.js` keys every source by url. Rolling forward REPLACES the previous edition's
+  row, so the dataset keeps describing where that link actually leads.
 
 `com.medconf.subscribers` (monthly, 1st at 08:40) is still loaded.
 

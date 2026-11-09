@@ -1026,18 +1026,18 @@ const CONFERENCES = [
     description: "Annual Swedish surgery week held in Gothenburg (week 34; exact dates to be confirmed by organizers)."
   },
   {
-    name: "ASGBI International Surgical Congress 2026",
+    name: "ASGBI International Surgical Congress 2027",
     specialty: "General Surgery",
-    year: 2026,
-    startDate: "2026-05-12",
-    endDate: "2026-05-14",
-    city: "Brighton",
+    year: 2027,
+    startDate: "2027-05-21",
+    endDate: "2027-05-23",
+    city: "Manchester",
     country: "UK",
-    lat: 50.8225,
-    lng: -0.1372,
+    lat: 53.4808,
+    lng: -2.2426,
     url: "https://www.asgbi.org.uk/",
     organizer: "Association of Surgeons of Great Britain and Ireland",
-    description: "Flagship UK/Ireland general surgery congress at the Brighton Centre."
+    description: "At Manchester Central; the association's flagship annual congress."
   },
   {
     name: "DCK 2026 — 143rd Deutscher Chirurgie Kongress",
@@ -1306,18 +1306,18 @@ const CONFERENCES = [
     description: "82nd Annual Clinical Congress at the EDSA Shangri-La Manila, Mandaluyong City."
   },
   {
-    name: "CSAMM 52nd Annual Scientific Congress 2026",
+    name: "CSAMM 53rd Annual Scientific Meeting 2027",
     specialty: "General Surgery",
-    year: 2026,
-    startDate: "2026-06-12",
-    endDate: "2026-06-14",
-    city: "Kuala Lumpur",
+    year: 2027,
+    startDate: "2027-07-09",
+    endDate: "2027-07-11",
+    city: "Penang",
     country: "Malaysia",
-    lat: 3.1390,
-    lng: 101.6869,
+    lat: 5.4141,
+    lng: 100.3288,
     url: "https://csamm.org.my/",
     organizer: "College of Surgeons, Academy of Medicine of Malaysia",
-    description: "52nd Annual Scientific Congress at Shangri-La Kuala Lumpur."
+    description: "At the Setia SPICE Convention Centre; the College of Surgeons' annual scientific meeting."
   },
   {
     name: "2026 TSA Annual Meeting & International Joint Surgical Conference",
@@ -2329,18 +2329,18 @@ const CONFERENCES = [
     description: "The AAP's flagship national pediatrics conference."
   },
   {
-    name: "AAFP FMX 2026 — Family Medicine Experience",
+    name: "AAFP FMX 2027 — Family Medicine Experience",
     specialty: "Family Medicine",
-    year: 2026,
-    startDate: "2026-10-20",
-    endDate: "2026-10-24",
-    city: "Nashville",
+    year: 2027,
+    startDate: "2027-09-20",
+    endDate: "2027-09-24",
+    city: "San Diego",
     country: "USA",
-    lat: 36.1627,
-    lng: -86.7816,
+    lat: 32.7157,
+    lng: -117.1611,
     url: "https://www.aafp.org/cme-and-events/in-person/fmx",
     organizer: "American Academy of Family Physicians",
-    description: "AAFP's premier family medicine conference, at Music City Center, Nashville."
+    description: "At the San Diego Convention Center; the AAFP's flagship annual family medicine meeting."
   },
   {
     name: "ACOG 2027 Annual Clinical & Scientific Meeting",
@@ -2357,18 +2357,18 @@ const CONFERENCES = [
     description: "ACOG's annual clinical and scientific meeting."
   },
   {
-    name: "CSANZ 2026 — 74th Annual Scientific Meeting",
+    name: "CSANZ 2027 — 75th Annual Scientific Meeting",
     specialty: "Cardiology",
-    year: 2026,
-    startDate: "2026-08-06",
-    endDate: "2026-08-09",
-    city: "Sydney",
-    country: "Australia",
-    lat: -33.8688,
-    lng: 151.2093,
+    year: 2027,
+    startDate: "2027-08-05",
+    endDate: "2027-08-08",
+    city: "Auckland",
+    country: "New Zealand",
+    lat: -36.8485,
+    lng: 174.7633,
     url: "https://www.csanzasm.com/",
     organizer: "Cardiac Society of Australia and New Zealand",
-    description: "The premier cardiovascular meeting for Australia and New Zealand, at ICC Sydney."
+    description: "At the New Zealand International Convention Centre, held with the 21st ANZET meeting."
   },
   {
     name: "RANZCR ASM 2026 — Radiology & Radiation Oncology",
@@ -2525,18 +2525,18 @@ const CONFERENCES = [
     description: "Asia-Pacific's regional cardiology congress, held jointly with Japan's national meeting at Pacifico Yokohama."
   },
   {
-    name: "APHRS 2026 — 19th Asia Pacific Heart Rhythm Society Scientific Sessions",
+    name: "APHRS 2027 — 20th Asia Pacific Heart Rhythm Society Scientific Session",
     specialty: "Cardiology",
-    year: 2026,
-    startDate: "2026-10-21",
-    endDate: "2026-10-24",
-    city: "Busan",
-    country: "South Korea",
-    lat: 35.1796,
-    lng: 129.0756,
+    year: 2027,
+    startDate: "2027-10-20",
+    endDate: "2027-10-24",
+    city: "Taipei",
+    country: "Taiwan",
+    lat: 25.033,
+    lng: 121.5654,
     url: "https://www.aphrs.org/",
     organizer: "Asia Pacific Heart Rhythm Society",
-    description: "Cardiac electrophysiology and heart rhythm sessions at BEXCO, held with the Korean Heart Rhythm Society."
+    description: "The society's 20th annual scientific session."
   },
   {
     name: "CSICON 2026 — 78th Annual Conference of the Cardiological Society of India",
@@ -3015,18 +3015,18 @@ const CONFERENCES = [
     description: "The largest annual gathering of dermatologists in the US, with clinical sessions, symposia and a major exhibition."
   },
   {
-    name: "ASDS 2026 — American Society for Dermatologic Surgery Annual Meeting",
+    name: "ASDS 2027 — American Society for Dermatologic Surgery Annual Meeting",
     specialty: "Dermatology",
-    year: 2026,
-    startDate: "2026-11-05",
-    endDate: "2026-11-08",
-    city: "San Diego",
+    year: 2027,
+    startDate: "2027-10-14",
+    endDate: "2027-10-17",
+    city: "Chicago",
     country: "USA",
-    lat: 32.7157,
-    lng: -117.1611,
+    lat: 41.8781,
+    lng: -87.6298,
     url: "https://www.asds.net/Medical-Professionals/Annual-Meeting",
     organizer: "American Society for Dermatologic Surgery",
-    description: "Dermatologic surgery, cosmetic and skin cancer procedures, at the Marriott Marquis San Diego Marina."
+    description: "At the Hyatt Regency Chicago."
   },
   {
     name: "AAO 2026 — American Academy of Ophthalmology Annual Meeting",
@@ -4499,18 +4499,18 @@ const CONFERENCES = [
     description: "The largest European dermatology congress, drawing over 20,000 delegates."
   },
   {
-    name: "ESMRMB 2026 — 42nd Annual Scientific Meeting",
+    name: "ESMRMB 2027 — 43rd Annual Scientific Meeting",
     specialty: "Radiology",
-    year: 2026,
-    startDate: "2026-09-30",
-    endDate: "2026-10-03",
-    city: "Girona",
-    country: "Spain",
-    lat: 41.9794,
-    lng: 2.8214,
+    year: 2027,
+    startDate: "2027-10-13",
+    endDate: "2027-10-16",
+    city: "Florence",
+    country: "Italy",
+    lat: 43.7696,
+    lng: 11.2558,
     url: "https://www.esmrmb.org/",
     organizer: "European Society for Magnetic Resonance in Medicine and Biology",
-    description: "Annual European meeting on MRI physics, methodology and clinical applications."
+    description: "The European Society for Magnetic Resonance in Medicine and Biology's annual congress."
   },
   {
     name: "ECNP 2026 — 39th Congress of the European College of Neuropsychopharmacology",
@@ -5636,8 +5636,8 @@ const CONFERENCES = [
     name: "23rd Arab Association of Urology Conference 2026",
     specialty: "Urology",
     year: 2026,
-    startDate: "2026-11-04",
-    endDate: "2026-11-07",
+    startDate: "2026-12-03",
+    endDate: "2026-12-05",
     city: "Jeddah",
     country: "Saudi Arabia",
     lat: 21.4858,
@@ -5829,18 +5829,18 @@ const CONFERENCES = [
     description: "Saudi Arabia's national cardiovascular conference, at the Crowne Plaza RDC Riyadh."
   },
   {
-    name: "Dubai Derma 2026 — 25th Dubai World Dermatology and Laser Conference",
+    name: "Dubai Derma 2027 — 26th Dubai World Dermatology and Laser Conference",
     specialty: "Dermatology",
-    year: 2026,
-    startDate: "2026-09-08",
-    endDate: "2026-09-10",
+    year: 2027,
+    startDate: "2027-04-06",
+    endDate: "2027-04-08",
     city: "Dubai",
     country: "United Arab Emirates",
-    lat: 25.2226,
-    lng: 55.3533,
+    lat: 25.2048,
+    lng: 55.2708,
     url: "https://dubaiderma.com/",
     organizer: "Dubai Derma",
-    description: "The leading dermatology and aesthetics event for the Middle East, at Dubai World Trade Centre."
+    description: "At the Dubai World Trade Centre, with CME accreditation for the conference programme."
   },
   {
     name: "SOS 2026 — Saudi Ophthalmology Society Conference",
@@ -18100,8 +18100,8 @@ const CONFERENCES = [
     endDate: "2026-12-04",
     city: "Cambridge",
     country: "UK",
-    lat: 42.3736,
-    lng: -71.1097,
+    lat: 52.2053,
+    lng: 0.1218,
     url: "https://www.baps.org.uk/events/winter-meeting-2026/",
     organizer: "British Association of Paediatric Surgeons",
     description: "Special interest group sessions on 3 December followed by the Winter Meeting, at the Moller Institute."
@@ -18786,8 +18786,8 @@ const CONFERENCES = [
     endDate: "2027-06-29",
     city: "Manchester",
     country: "UK",
-    lat: 43.1637,
-    lng: -73.0723,
+    lat: 53.4808,
+    lng: -2.2426,
     url: "https://bomss.org/asm-2027/",
     organizer: "British Obesity and Metabolic Specialist Society",
     description: "At Manchester Central."
@@ -19094,8 +19094,8 @@ const CONFERENCES = [
     endDate: "2027-05-11",
     city: "Newport",
     country: "UK",
-    lat: 41.4901,
-    lng: -71.3128,
+    lat: 51.5842,
+    lng: -2.9977,
     url: "https://associationofbreastsurgery.org.uk/abs-conference/abs-conference-2027/",
     organizer: "Association of Breast Surgery",
     description: "The association's annual conference at ICC Wales."
@@ -20207,18 +20207,18 @@ const CONFERENCES = [
     description: "The association's annual technology-focused meeting."
   },
   {
-    name: "ESID 2026 22nd Biennial Meeting",
+    name: "ESID 2028 23rd Biennial Meeting",
     specialty: "Allergy & Immunology",
-    year: 2026,
-    startDate: "2026-10-14",
-    endDate: "2026-10-17",
-    city: "Maastricht",
-    country: "Netherlands",
-    lat: 50.8514,
-    lng: 5.691,
+    year: 2028,
+    startDate: "2028-10-18",
+    endDate: "2028-10-21",
+    city: "Basel",
+    country: "Switzerland",
+    lat: 47.5596,
+    lng: 7.5886,
     url: "https://esidmeeting.org/",
     organizer: "European Society for Immunodeficiencies",
-    description: "At the Maastricht Exhibition and Conference Centre, with INGID and IPOPI; up to 23.5 CME credits."
+    description: "The European Society for Immunodeficiencies' biennial meeting."
   },
   {
     name: "36 Congreso SEAIC 2026",
@@ -21460,8 +21460,8 @@ const CONFERENCES = [
     endDate: "2026-11-17",
     city: "Manchester",
     country: "UK",
-    lat: 43.1637,
-    lng: -73.0723,
+    lat: 53.4808,
+    lng: -2.2426,
     url: "https://www.bsg.org.uk/events/bsg-esegh-exam-masterclass-2026",
     organizer: "British Society of Gastroenterology",
     description: "At voco Manchester City Centre, Portland Street."
@@ -21740,8 +21740,8 @@ const CONFERENCES = [
     endDate: "2026-11-18",
     city: "Manchester",
     country: "UK",
-    lat: 43.1637,
-    lng: -73.0723,
+    lat: 53.4808,
+    lng: -2.2426,
     url: "https://www.ukkidney.org/health-professionals/events/kidney-supportive-care-2026-meeting",
     organizer: "UK Kidney Association",
     description: "At The Studio, The Hive, Lever Street."
@@ -21852,8 +21852,8 @@ const CONFERENCES = [
     endDate: "2027-06-09",
     city: "Newport",
     country: "UK",
-    lat: 41.4901,
-    lng: -71.3128,
+    lat: 51.5842,
+    lng: -2.9977,
     url: "https://www.ukkw.org",
     organizer: "UK Kidney Association",
     description: "At ICC Wales."
@@ -23168,8 +23168,8 @@ const CONFERENCES = [
     endDate: "2027-04-15",
     city: "Manchester",
     country: "UK",
-    lat: 43.1637,
-    lng: -73.0723,
+    lat: 53.4808,
+    lng: -2.2426,
     url: "https://rcem.ac.uk/annual-conference-2027/",
     organizer: "Royal College of Emergency Medicine",
     description: "At Manchester Central; 17 CPD points."
@@ -24344,8 +24344,8 @@ const CONFERENCES = [
     endDate: "2027-05-07",
     city: "Manchester",
     country: "UK",
-    lat: 43.1637,
-    lng: -73.0723,
+    lat: 53.4808,
+    lng: -2.2426,
     url: "https://europeanherniasociety.eu/ehs-advanced-mis-laparoscopic-cadaveric-hernia-course-manchester-united-kingdom-2027/",
     organizer: "European Hernia Society",
     description: "At the Manchester Surgical Skills and Simulation Centre, Stopford Building; EACCME accreditation applied for."
@@ -24442,8 +24442,8 @@ const CONFERENCES = [
     endDate: "2026-11-13",
     city: "Newport",
     country: "UK",
-    lat: 41.4901,
-    lng: -71.3128,
+    lat: 51.5842,
+    lng: -2.9977,
     url: "https://www.das2026.co.uk/",
     organizer: "Difficult Airway Society",
     description: "At ICC Wales; up to 16 CPD credits accredited by the Royal College of Anaesthetists."
@@ -25072,8 +25072,8 @@ const CONFERENCES = [
     endDate: "2027-07-23",
     city: "Manchester",
     country: "UK",
-    lat: 43.1637,
-    lng: -73.0723,
+    lat: 53.4808,
+    lng: -2.2426,
     url: "https://sport-science.org/ecss-manchester-2027/",
     organizer: "European College of Sport Science",
     description: "At Manchester Central, hosted by Manchester Metropolitan University."
@@ -26052,8 +26052,8 @@ const CONFERENCES = [
     endDate: "2027-04-20",
     city: "Manchester",
     country: "UK",
-    lat: 43.1637,
-    lng: -73.0723,
+    lat: 53.4808,
+    lng: -2.2426,
     url: "https://bshconferences.co.uk/",
     organizer: "British Society for Haematology",
     description: "At Manchester Central."

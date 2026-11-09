@@ -36,9 +36,24 @@ if (!tsv) { console.error("usage: add-conferences.js <file.tsv> [--coords coords
 const src = fs.readFileSync(FILE, "utf8");
 const EXISTING = eval("(function(){" + src + "\nreturn CONFERENCES;})()").filter(Boolean);
 
+// Coordinates are keyed by city AND country. Keying on the city alone silently plotted
+// 11 British conferences in New England: the dataset holds both a US and a UK "Manchester",
+// "Newport" and "Cambridge", and the first occurrence in file order won, so every later UK
+// row inherited Vermont's or Rhode Island's coordinates. The map showed Manchester Central
+// in Vermont and ICC Wales in Rhode Island until 2026-11-09. A city name is not a location.
+// --coords accepts either "City|Country" (preferred) or bare "City" (applies to any country).
+const ckey = (city, country) => `${city}|${country}`;
 const cityCoords = {};
-for (const c of EXISTING) if (c.city && !(c.city in cityCoords)) cityCoords[c.city] = [c.lat, c.lng];
-Object.assign(cityCoords, coordsArg);
+for (const c of EXISTING) {
+  const k = ckey(c.city, c.country);
+  if (c.city && !(k in cityCoords)) cityCoords[k] = [c.lat, c.lng];
+}
+const looseCoords = {};
+for (const [k, v] of Object.entries(coordsArg)) {
+  if (k.includes("|")) cityCoords[k] = v; else looseCoords[k] = v;
+}
+const coordsFor = (city, country) =>
+  cityCoords[ckey(city, country)] || looseCoords[city] || null;
 
 const host = (u) => { const m = /^https?:\/\/([^/]+)/.exec(u || ""); return m ? m[1].toLowerCase().replace(/^www\./, "") : ""; };
 const byHost = new Map();
@@ -75,8 +90,12 @@ const rows = fs.readFileSync(tsv, "utf8").split("\n").filter((l) => l.trim()).ma
 const bad = rows.filter((r) => r.length !== 9);
 if (bad.length) { console.error(`malformed row(s): ${bad.length}, first: ${bad[0].slice(0,2).join(" | ")}`); process.exit(1); }
 
-const missing = [...new Set(rows.map((r) => r[4]).filter((c) => !(c in cityCoords)))];
-if (missing.length) { console.error("no coordinates for: " + missing.join(", ")); process.exit(1); }
+const missing = [...new Set(rows.filter((r) => !coordsFor(r[4], r[5])).map((r) => `${r[4]}, ${r[5]}`))];
+if (missing.length) {
+  console.error("no coordinates for: " + missing.join("; "));
+  console.error('supply them with --coords {"City|Country": [lat, lng]}');
+  process.exit(1);
+}
 
 const added = [], dropped = [];
 const blocks = [];
@@ -103,7 +122,7 @@ for (const [specialty, name, startDate, endDate, city, country, organizer, url, 
     if (hostHit) { dropped.push([name, `dup@host "${hostHit.name.slice(0, 40)}"`]); continue; }
   }
 
-  const [lat, lng] = cityCoords[city];
+  const [lat, lng] = coordsFor(city, country);
   const f = (v) => JSON.stringify(v);
   blocks.push("  {\n" + [
     `    name: ${f(name)}`, `    specialty: ${f(specialty)}`, `    year: ${+startDate.slice(0, 4)}`,

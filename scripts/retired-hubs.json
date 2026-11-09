@@ -3,10 +3,6 @@
     "to": "/country/turkey/",
     "retired": "2026-11-04"
   },
-  "/city/auckland/": {
-    "to": "/country/new-zealand/",
-    "retired": "2026-10-28"
-  },
   "/city/bariloche/": {
     "to": "/country/argentina/",
     "retired": "2026-10-20"
@@ -75,10 +71,6 @@
     "to": "/country/germany/",
     "retired": "2026-11-09"
   },
-  "/city/dubai/": {
-    "to": "/country/united-arab-emirates/",
-    "retired": "2026-10-20"
-  },
   "/city/durham/": {
     "to": "/country/usa/",
     "retired": "2026-11-02"
@@ -110,10 +102,6 @@
   "/city/jaipur/": {
     "to": "/country/india/",
     "retired": "2026-10-28"
-  },
-  "/city/jeddah/": {
-    "to": "/country/saudi-arabia/",
-    "retired": "2026-11-09"
   },
   "/city/johannesburg/": {
     "to": "/country/south-africa/",
@@ -185,10 +173,6 @@
   },
   "/city/palo-alto/": {
     "to": "/country/usa/",
-    "retired": "2026-10-20"
-  },
-  "/city/penang/": {
-    "to": "/country/malaysia/",
     "retired": "2026-10-20"
   },
   "/city/riyadh/": {
