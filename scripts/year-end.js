@@ -9,8 +9,12 @@
 // It lives in its own module because build-seo.js runs its build at import time — requiring it
 // from build-hubs.js would re-run the whole SEO build as a side effect.
 
+const { conferenceDay } = require("./day.js");
+
 function yearEndCounts(upcoming) {
-  const today = new Date().toISOString().slice(0, 10);
+  // conferenceDay(), not the UTC date: the UTC rollover used to flip the year a day
+  // early, so on 31 December local evening everything looked like next year already.
+  const today = conferenceDay();
   const year = today.slice(0, 4);
   const rest = upcoming.filter((c) => c.startDate >= today && c.startDate <= year + "-12-31");
   const dec = rest.filter((c) => c.startDate >= year + "-12-01");

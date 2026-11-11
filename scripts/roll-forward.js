@@ -27,6 +27,7 @@
 //   - city+country must already have coordinates, or be supplied in --coords
 const fs = require("fs");
 const path = require("path");
+const { conferenceDay } = require("./day.js");
 
 const ROOT = path.join(__dirname, "..");
 const FILE = path.join(ROOT, "conferences.js");
@@ -39,7 +40,7 @@ const coordsArg = (() => {
 })();
 if (!tsv) { console.error("usage: roll-forward.js <file.tsv> [--coords coords.json] [--dry-run]"); process.exit(1); }
 
-const TODAY = new Date().toISOString().slice(0, 10);
+const TODAY = conferenceDay();  // event cutoff -- see scripts/day.js
 let src = fs.readFileSync(FILE, "utf8");
 const EXISTING = eval("(function(){" + src + "\nreturn CONFERENCES;})()").filter(Boolean);
 

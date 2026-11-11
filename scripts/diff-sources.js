@@ -24,6 +24,7 @@
 const fs = require("fs");
 const path = require("path");
 const { execFileSync } = require("child_process");
+const { conferenceDay, localDay } = require("./day.js");
 
 const ROOT = path.join(__dirname, "..");
 const OUTDIR = path.join(ROOT, "marketing", "source-diff");
@@ -38,7 +39,8 @@ const ONLY = arg("--source", null);
 const CONFERENCES = eval(
   "(function(){" + fs.readFileSync(path.join(ROOT, "conferences.js"), "utf8") + "\nreturn CONFERENCES;})()"
 );
-const TODAY = new Date().toISOString().slice(0, 10);
+const TODAY = conferenceDay();      // event cutoff: "is this conference over?"
+const REPORT_DAY = localDay();      // this report's own date, as the wall calendar has it
 
 const norm = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, "");
 
@@ -386,7 +388,7 @@ const SOURCES = { cloudcme: fetchCloudCME, mer: fetchMER };
 
   // ------------------------------------------------------------- report
   const L = [];
-  L.push(`# Source diff — ${TODAY}`);
+  L.push(`# Source diff — ${REPORT_DAY}`);
   L.push("");
   L.push(`Machine-readable sources checked in full: **${cloudcmeHosts().length} CloudCME instances + mer.org**.`);
   L.push(`Live records fetched: **${live.length}**. Dataset entries on those hosts: **${CONFERENCES.filter(c => { let h=""; try{h=new URL(c.url).host.toLowerCase()}catch(e){} return coveredHosts.has(h) && c.endDate >= TODAY; }).length}**.`);
@@ -450,7 +452,7 @@ const SOURCES = { cloudcme: fetchCloudCME, mer: fetchMER };
   if (errors.length) sec("Fetch errors", errors.length, () => errors.forEach((e) => L.push(`- ${e}`)));
 
   fs.mkdirSync(OUTDIR, { recursive: true });
-  const out = path.join(OUTDIR, `${TODAY}.md`);
+  const out = path.join(OUTDIR, `${REPORT_DAY}.md`);
   fs.writeFileSync(out, L.join("\n") + "\n");
 
   console.log(`diff-sources: ${out}`);

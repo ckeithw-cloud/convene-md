@@ -19,6 +19,7 @@ const path = require("path");
 
 const { signupBlock } = require("./signup-block");
 const { yearEndCallout } = require("./year-end");
+const { conferenceDay, localDay } = require("./day.js");
 
 // The site's single piece of commercial content, under the signup block on hub pages.
 // Built as a card so it sits in the same visual family as the newsletter box rather than
@@ -81,7 +82,7 @@ function fmtRange(start, end) {
   return `${MONTHS[s.getMonth()]} ${s.getDate()} – ${MONTHS[e.getMonth()]} ${e.getDate()}, ${e.getFullYear()}`;
 }
 
-function todayIso() { return new Date().toISOString().slice(0, 10); }
+function todayIso() { return conferenceDay(); }  // conference cutoff -- see scripts/day.js
 
 function yearSpan(list) {
   const ys = [...new Set(list.map(c => c.year))].sort();
@@ -427,7 +428,7 @@ function main() {
       const target = path.join(dir, slug_);
       if (!fs.statSync(target).isDirectory()) continue;
       fs.rmSync(target, { recursive: true, force: true });
-      retired[url] = { to: retireTarget(group, slug_), retired: new Date().toISOString().slice(0, 10) };
+      retired[url] = { to: retireTarget(group, slug_), retired: localDay() };
       warn.push(`pruned stale hub ${url} -> 301 ${retired[url].to}`);
       pruned++;
     }

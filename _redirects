@@ -21,6 +21,7 @@
 # Hub pages that no longer have enough upcoming conferences to exist, 301'd to the
 # nearest live page so indexed URLs consolidate instead of 404ing.
 /city/antalya/                      /country/turkey/            301
+/city/auckland/                     /country/new-zealand/       301
 /city/bariloche/                    /country/argentina/         301
 /city/batam/                        /country/indonesia/         301
 /city/beachwood/                    /country/usa/               301
@@ -87,5 +88,4 @@
 /country/serbia/                    /browse/                    301
 /country/sri-lanka/                 /browse/                    301
 /country/uruguay/                   /browse/                    301
-/city/auckland/                     /country/new-zealand/       301
 # BUILD:RETIRED-HUBS:END

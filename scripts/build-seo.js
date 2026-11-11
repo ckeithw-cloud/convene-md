@@ -10,6 +10,7 @@ const path = require("path");
 
 const { signupBlock } = require("./signup-block");
 const { yearEndSentence, yearEndCallout } = require("./year-end");
+const { conferenceDay } = require("./day.js");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://convene.md";
@@ -21,7 +22,8 @@ function loadConferences() {
 }
 
 function todayIso() {
-  return new Date().toISOString().slice(0, 10);
+  // Conference cutoff, not the UTC clock -- see scripts/day.js.
+  return conferenceDay();
 }
 
 function fmtRange(start, end) {

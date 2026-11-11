@@ -20,6 +20,7 @@
 //   node scripts/recheck-expired.js --worklist-only # skip fetching, just list the gaps
 const fs = require("fs");
 const path = require("path");
+const { conferenceDay, localDay } = require("./day.js");
 
 const ROOT = path.join(__dirname, "..");
 const OUTDIR = path.join(ROOT, "marketing", "recurrence");
@@ -29,7 +30,8 @@ const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
 const arg = (f, d) => { const i = process.argv.indexOf(f); return i > -1 ? process.argv[i + 1] : d; };
 const LIMIT = +arg("--limit", 0) || 0;
 const WORKLIST_ONLY = process.argv.includes("--worklist-only");
-const TODAY = new Date().toISOString().slice(0, 10);
+const TODAY = conferenceDay();      // event cutoff: "is this conference over?"
+const REPORT_DAY = localDay();      // this report's own date
 
 const CONFERENCES = eval(
   "(function(){" + fs.readFileSync(path.join(ROOT, "conferences.js"), "utf8") + "\nreturn CONFERENCES;})()");
@@ -98,7 +100,7 @@ const monthNum = (w) => {
   let i = MONTHS.indexOf(s); if (i > -1) return i + 1;
   i = MON3.indexOf(s.slice(0, 3)); return i > -1 ? i + 1 : 0;
 };
-const MAXDATE = new Date(Date.now() + 30 * 30.5 * 86400000).toISOString().slice(0, 10);
+const MAXDATE = conferenceDay(Date.now() + 30 * 30.5 * 86400000);
 
 // Page furniture that carries a timestamp but never an event date. The visitor-counter
 // widget on thairheumatology.org was the worst case: it printed today's date next to the
@@ -210,7 +212,7 @@ function nextYearUrls(url, year) {
   rows.sort((a, b) => tier(a) - tier(b) || a.c.name.localeCompare(b.c.name));
 
   const L = [];
-  L.push(`# Expired-conference recurrence check — ${TODAY}`, "");
+  L.push(`# Expired-conference recurrence check — ${REPORT_DAY}`, "");
   L.push(`Expired rows in dataset: **${past.length}**`);
   L.push(`Expired with a successor already held: **${past.length - gaps.length - declinedHits.size}**`);
   L.push(`Previously declined, suppressed this run: **${declinedHits.size}**`);
@@ -253,7 +255,7 @@ function nextYearUrls(url, year) {
       "The society may have moved domains. Only chase these if the meeting matters.");
   }
 
-  const out = path.join(OUTDIR, `${TODAY}.md`);
+  const out = path.join(OUTDIR, `${REPORT_DAY}.md`);
   fs.writeFileSync(out, L.join("\n") + "\n");
   console.log(`recheck-expired: ${gaps.length} gap(s), ${declinedHits.size} suppressed → ${path.relative(ROOT, out)}`);
   if (!WORKLIST_ONLY) {

@@ -15,6 +15,7 @@
 const fs = require("fs");
 const path = require("path");
 const { execFileSync } = require("child_process");
+const { localDay } = require("./day.js");
 
 const ACCOUNT_TAG = "86e2df40100c00350328477fcccf8a31";
 const SITE_TAG = "f52c7677238046e6a6e393db9609d308";
@@ -271,6 +272,8 @@ function table(rows, label) {
   const token = tokenOrDie();
   if (process.argv.includes("--probe")) return probe(token);
   if (process.argv.includes("--probe-dims")) return probeDims(token);
+  // Deliberately UTC: Cloudflare buckets its analytics by UTC day, so the window and its
+  // label have to be UTC too. Only the report's own date (below) is local.
   const end = new Date(day(new Date()) + "T00:00:00Z");         // midnight UTC today
   const start = new Date(end.getTime() - argDays * 86400000);
   const prevStart = new Date(start.getTime() - argDays * 86400000);
@@ -291,7 +294,7 @@ function table(rows, label) {
 
   let md = `# convene.md traffic — ${label}\n\n`;
   md += `_${argDays}-day window, compared with the ${argDays} days before it. `;
-  md += `Generated ${day(new Date())} from Cloudflare Web Analytics._\n\n`;
+  md += `Generated ${localDay()} from Cloudflare Web Analytics._\n\n`;
 
   // Asked first, not last: this is the one thing in the report that needs a decision, and
   // burying it under the stats is exactly how 600 conferences stayed unpublished once.
@@ -400,7 +403,7 @@ function table(rows, label) {
   }
 
   fs.mkdirSync(OUT_DIR, { recursive: true });
-  const outFile = path.join(OUT_DIR, `${day(new Date())}.md`);
+  const outFile = path.join(OUT_DIR, `${localDay()}.md`);
   fs.writeFileSync(outFile, md);
 
   if (!fs.existsSync(HISTORY)) {
@@ -408,10 +411,10 @@ function table(rows, label) {
   }
   // One row per generated day: a manual re-run after a bad automated run replaces its
   // row rather than leaving both in the series.
-  const row = [day(new Date()), day(start), day(new Date(end.getTime() - 86400000)), argDays,
+  const row = [localDay(), day(start), day(new Date(end.getTime() - 86400000)), argDays,
      views, visits, externalTotal, refs.direct, refs.internal].join(",");
   const lines = fs.readFileSync(HISTORY, "utf8").split("\n").filter(Boolean);
-  const kept = lines.filter((l, i) => i === 0 || !l.startsWith(day(new Date()) + "," + day(start) + ","));
+  const kept = lines.filter((l, i) => i === 0 || !l.startsWith(localDay() + "," + day(start) + ","));
   fs.writeFileSync(HISTORY, kept.concat(row).join("\n") + "\n");
 
   console.log(`traffic-report: ${outFile}`);

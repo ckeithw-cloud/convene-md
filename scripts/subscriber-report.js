@@ -15,6 +15,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { localDay } = require("./day.js");
 
 const ROOT = path.join(__dirname, "..");
 const OUT_DIR = path.join(ROOT, "marketing", "subscribers");
@@ -33,7 +34,6 @@ function tokenOrDie() {
   process.exit(1);
 }
 
-const day = (d) => d.toISOString().slice(0, 10);
 const monthOf = (iso) => String(iso || "").slice(0, 7);
 
 async function fetchAll(token) {
@@ -102,8 +102,10 @@ function previousSnapshot() {
     return;
   }
 
+  // localDay(): "this month" and the report's date follow the wall calendar, not UTC --
+  // a run late on the 31st used to file itself under the next month.
   const today = new Date();
-  const thisMonth = monthOf(day(today));
+  const thisMonth = monthOf(localDay(today));
 
   const byStatus = tally(rows, statusOf);
   const active = rows.filter((r) => /regular|active/i.test(statusOf(r)));
@@ -113,7 +115,7 @@ function previousSnapshot() {
   const prev = previousSnapshot();
   const delta = prev ? rows.length - prev.total : null;
 
-  let md = `# convene.md subscribers — ${day(today)}\n\n`;
+  let md = `# convene.md subscribers — ${localDay(today)}\n\n`;
 
   if (rows.length === 0) {
     md += `**No subscribers yet.**\n\n`;
@@ -157,14 +159,14 @@ function previousSnapshot() {
   }
 
   fs.mkdirSync(OUT_DIR, { recursive: true });
-  const outFile = path.join(OUT_DIR, `${day(today)}.md`);
+  const outFile = path.join(OUT_DIR, `${localDay(today)}.md`);
   fs.writeFileSync(outFile, md);
 
   if (!fs.existsSync(HISTORY)) {
     fs.writeFileSync(HISTORY, "generated,total,active,unactivated,joined_this_month\n");
   }
   fs.appendFileSync(HISTORY,
-    [day(today), rows.length, active.length, unactivated.length, joinedThisMonth.length].join(",") + "\n");
+    [localDay(today), rows.length, active.length, unactivated.length, joinedThisMonth.length].join(",") + "\n");
 
   console.log(`subscriber-report: ${outFile}`);
   console.log(`  ${rows.length} total / ${active.length} active` +

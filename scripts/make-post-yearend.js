@@ -12,6 +12,7 @@
 
 const fs = require("fs"), path = require("path");
 const { yearEndCounts } = require("./year-end");
+const { conferenceDay } = require("./day.js");
 
 const ROOT = path.resolve(__dirname, "..");
 const outDir = process.argv[2] || "marketing/posts/yearend";
@@ -19,7 +20,7 @@ fs.mkdirSync(outDir, { recursive: true });
 
 const src = fs.readFileSync(path.join(ROOT, "conferences.js"), "utf8");
 const CONFERENCES = eval("(function(){" + src + "\nreturn CONFERENCES;})()");
-const today = new Date().toISOString().slice(0, 10);
+const today = conferenceDay();
 const upcoming = CONFERENCES.filter((c) => c.endDate >= today);
 const N = yearEndCounts(upcoming);
 const NEXT = upcoming.filter((c) => c.year >= Number(N.year) + 1).length;
