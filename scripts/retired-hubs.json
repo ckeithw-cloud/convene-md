@@ -3,6 +3,10 @@
     "to": "/country/turkey/",
     "retired": "2026-11-04"
   },
+  "/city/auckland/": {
+    "to": "/country/new-zealand/",
+    "retired": "2026-11-11"
+  },
   "/city/bariloche/": {
     "to": "/country/argentina/",
     "retired": "2026-10-20"

@@ -1707,7 +1707,7 @@ const CONFERENCES = [
     country: "Samoa",
     lat: -14.0170,
     lng: -171.5300,
-    url: "https://surfersmedicalassociation.org/conferences/",
+    url: "https://surfersmedicalassociation.org/product/salani-surf-resort-samoa-feb-7-13-2026/",
     organizer: "Surfers Medical Association",
     description: "Destination CME on ocean, surf, and wilderness medicine at Salani Surf Resort, Samoa."
   },
@@ -1721,7 +1721,7 @@ const CONFERENCES = [
     country: "USA",
     lat: 21.3069,
     lng: -157.8583,
-    url: "https://surfersmedicalassociation.org/conferences/",
+    url: "https://surfersmedicalassociation.org/product/honolulu-conference-march-5-7-2026/",
     organizer: "Surfers Medical Association",
     description: "Surf and ocean medicine CME conference in Honolulu."
   },
@@ -1735,7 +1735,7 @@ const CONFERENCES = [
     country: "Mexico",
     lat: 24.6167,
     lng: -112.1000,
-    url: "https://surfersmedicalassociation.org/conferences/",
+    url: "https://surfersmedicalassociation.org/product/mag-bay-mexico-july-31-to-aug-6-2021-offshore-winds-and-no-crowds/",
     organizer: "Surfers Medical Association",
     description: "Week-long surf medicine CME at Magdalena Bay, Baja California Sur."
   },
@@ -1749,7 +1749,7 @@ const CONFERENCES = [
     country: "Nicaragua",
     lat: 11.4500,
     lng: -86.1000,
-    url: "https://surfersmedicalassociation.org/conferences/",
+    url: "https://surfersmedicalassociation.org/product/sma-nicaragua-sept-3-10-2026/",
     organizer: "Surfers Medical Association",
     description: "Surf and wilderness medicine CME on Nicaragua's Pacific surf coast."
   },
@@ -1763,7 +1763,7 @@ const CONFERENCES = [
     country: "Portugal",
     lat: 38.9631,
     lng: -9.4158,
-    url: "https://surfersmedicalassociation.org/conferences/",
+    url: "https://surfersmedicalassociation.org/product/portugal-10-10-26-10-17-26/",
     organizer: "Surfers Medical Association",
     description: "Surf medicine CME conference on Portugal's Atlantic surf coast."
   },
