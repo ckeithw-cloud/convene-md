@@ -219,10 +219,6 @@
     "to": "/browse/",
     "retired": "2026-10-20"
   },
-  "/city/shanghai/": {
-    "to": "/country/china/",
-    "retired": "2026-10-20"
-  },
   "/city/southampton/": {
     "to": "/country/uk/",
     "retired": "2026-11-09"
