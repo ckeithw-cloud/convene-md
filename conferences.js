@@ -27947,5 +27947,19 @@ const CONFERENCES = [
     url: "https://www.symposiamedicus.org/ConferenceDetail?Conf=1799",
     organizer: "Symposia Medicus",
     description: "Destination obstetrics and gynecology CME at the JW Marriott Guanacaste Resort & Spa, Hacienda Pinilla, offering 18 AMA PRA Category 1 Credits."
+  },
+  {
+    name: "ACC Latin America 2027",
+    specialty: "Cardiology",
+    year: 2027,
+    startDate: "2027-09-16",
+    endDate: "2027-09-18",
+    city: "Lima",
+    country: "Peru",
+    lat: -12.0464,
+    lng: -77.0428,
+    url: "https://www.acc.org/LatinAmerica2027",
+    organizer: "American College of Cardiology with the Sociedad Peruana de Cardiología",
+    description: "The ACC's regional Latin American cardiology meeting, held with the ACC Peru Chapter and the Sociedad Peruana de Cardiología."
   }
 ];
