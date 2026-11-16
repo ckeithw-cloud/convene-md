@@ -76,6 +76,7 @@ Ask for "the weekly report and scan". That means:
 node scripts/traffic-report.js     # traffic + dataset movement + deploy state
 node scripts/diff-sources.js       # CloudCME + mer.org diff -> marketing/source-diff/<date>.md
 node scripts/recheck-expired.js    # expired entries whose next edition is announced
+node scripts/scan-sciconf.js       # Chinese society congresses -> marketing/sciconf/<date>.md
 ```
 
 then triage the diff's candidates by hand (see `scripts/update-prompt.md` for the rules,
@@ -88,6 +89,21 @@ the dataset's biggest drain (90 expired against 10 found on 9 Nov 2026). The rec
 the opposite question: of the conferences that have already ended, which have announced the
 next one? Triage its report the same way, recording dead ends in
 `marketing/recurrence-ignore.json`.
+
+`scan-sciconf.js` covers China, which neither of the other two scanners can reach. On
+16 Nov 2026 `/country/china/` was the third-most-visited page on the site -- 50 views in a
+week -- with four upcoming conferences, three of them expiring that same week. The whole
+Chinese catalogue was 22 Chinese Medical Association national congresses whose 2026 editions
+had all run, and all 22 of their 2027 subdomains exist but serve "under construction"
+placeholders, so there was nothing to roll forward to. sciconf.cn (Medcon) is the platform
+the CMA and the provincial medical associations host their own congress sites on, which makes
+`<acronym><year>.sciconf.cn` a primary source in exactly the way CloudCME and mer.org are,
+and its directory lists ~1,050 meetings. The script ranks the few dozen that are plausible
+physician congresses and, separately, flags **date drift**: sciconf urls we already hold
+whose dates disagree with the platform. That section is why it exists as much as discovery
+is -- it caught the 27th CMA National Congress of Internal Medicine holding 17-19 September
+when its own site said 4-6 December, so the row had expired two months early and was hiding
+a live conference. Record declines in `marketing/sciconf-ignore.json`.
 
 Two outcomes, and the second is not an append:
 

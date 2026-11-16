@@ -27905,5 +27905,19 @@ const CONFERENCES = [
     url: "https://cmacso2026.sciconf.cn/",
     organizer: "Chinese Medical Association",
     description: "Hosted by Zhongshan Hospital, Fudan University, at the Shanghai International Convention Center."
+  },
+  {
+    name: "APHRS Summit 2027 — Arrhythmia Symposium",
+    specialty: "Cardiology",
+    year: 2027,
+    startDate: "2027-02-20",
+    endDate: "2027-02-20",
+    city: "Shenzhen",
+    country: "China",
+    lat: 22.5431,
+    lng: 114.0579,
+    url: "https://www.aphrs.org/meetings/aphrs-summit-meeting-arrhythmia-symposium/701-aphrs-summit-2027-shenzhen-china",
+    organizer: "Asia Pacific Heart Rhythm Society",
+    description: "A one-day arrhythmia symposium held in conjunction with CardioRhythm 2027."
   }
 ];
