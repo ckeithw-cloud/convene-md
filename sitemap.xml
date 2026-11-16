@@ -409,6 +409,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://convene.md/city/guanacaste/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://convene.md/city/half-moon-bay/</loc>
     <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>

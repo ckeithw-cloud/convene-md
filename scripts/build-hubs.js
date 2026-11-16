@@ -48,6 +48,12 @@ const SITE = "https://convene.md";
 // and description, and "medical conferences in <city>" is a query nobody owns.
 // Single-conference cities are left out — that page would just restate one row.
 const MIN_CITY = 2;
+
+// "1 specialties and 1 cities" shipped in ~50 hub META DESCRIPTIONS -- which is the text
+// Google prints in the SERP snippet, so the one place the sloppiness is most visible. The
+// country lede right beside it had been fixed with an inline ternary and the description
+// next to it was missed, which is the argument for writing it once rather than per string.
+const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
 function loadConferences() {
@@ -259,10 +265,10 @@ function main() {
     write(`specialty/${s}`, page({
       url: `/specialty/${s}/`,
       title: `${spec} Conferences ${span} — Dates, Locations & Venues | convene.md`,
-      description: `Every upcoming ${spec.toLowerCase()} conference worldwide (${span}) — ${list.length} meetings across ${countries.length} countries, with verified dates, host cities and links to each organising society.`,
+      description: `Every upcoming ${spec.toLowerCase()} conference worldwide (${span}) — ${plural(list.length, "meeting", "meetings")} across ${plural(countries.length, "country", "countries")}, with verified dates, host cities and links to each organising society.`,
       h1: `${spec} Conferences ${span}`,
       crumbs: `<a href="/">Home</a> › <a href="/browse/">Browse</a> › ${esc(spec)}`,
-      lede: `${list.length} upcoming ${esc(spec.toLowerCase())} conferences in ${countries.length} countries. Dates and host cities are verified against each organising society's own website. Use the <a href="/">interactive map</a> to see them by location.`,
+      lede: `${plural(list.length, "upcoming " + esc(spec.toLowerCase()) + " conference", "upcoming " + esc(spec.toLowerCase()) + " conferences")} in ${plural(countries.length, "country", "countries")}. Dates and host cities are verified against each organising society's own website. Use the <a href="/">interactive map</a> to see them by location.`,
       list,
       selfSpecialty: spec,
       related: relatedBlock("Browse other specialties",
@@ -283,10 +289,10 @@ function main() {
     write(`country/${s}`, page({
       url: `/country/${s}/`,
       title: `Medical Conferences in ${country} ${span} — Full Calendar | convene.md`,
-      description: `${list.length} upcoming medical conferences in ${country} (${span}) across ${specs.length} specialties and ${cities.length} cities, with verified dates and links to each organising society.`,
+      description: `${plural(list.length, "upcoming medical conference", "upcoming medical conferences")} in ${country} (${span}) across ${plural(specs.length, "specialty", "specialties")} and ${plural(cities.length, "city", "cities")}, with verified dates and links to each organising society.`,
       h1: `Medical Conferences in ${country}`,
       crumbs: `<a href="/">Home</a> › <a href="/browse/">Browse</a> › ${esc(country)}`,
-      lede: `${list.length} upcoming medical conferences in ${esc(country)}, spanning ${specs.length} specialties across ${cities.length} ${cities.length === 1 ? "city" : "cities"}. Planning CME travel? See them all on the <a href="/">map</a>.`,
+      lede: `${plural(list.length, "upcoming medical conference", "upcoming medical conferences")} in ${esc(country)}, spanning ${plural(specs.length, "specialty", "specialties")} across ${plural(cities.length, "city", "cities")}. Planning CME travel? See them all on the <a href="/">map</a>.`,
       list,
       related: relatedBlock("Conferences in other countries",
         countryLinks.filter(l => l.label !== country))
@@ -333,10 +339,10 @@ function main() {
     write(`city/${s}`, page({
       url: `/city/${s}/`,
       title: `Medical Conferences in ${city}, ${country} ${span} | convene.md`,
-      description: `${list.length} upcoming medical conferences in ${city}, ${country} (${span}) across ${specs.length} specialties — verified dates, venues and organising societies.`,
+      description: `${plural(list.length, "upcoming medical conference", "upcoming medical conferences")} in ${city}, ${country} (${span}) across ${plural(specs.length, "specialty", "specialties")} — verified dates, venues and organising societies.`,
       h1: `Medical Conferences in ${city}`,
       crumbs: `<a href="/">Home</a> › <a href="/browse/">Browse</a> › <a href="/country/${slug(country)}/">${esc(country)}</a> › ${esc(city)}`,
-      lede: `${list.length} upcoming conferences in ${esc(city)}, ${esc(country)} across ${specs.length} specialties. See more in <a href="/country/${slug(country)}/">${esc(country)}</a> or on the <a href="/">map</a>.`,
+      lede: `${plural(list.length, "upcoming conference", "upcoming conferences")} in ${esc(city)}, ${esc(country)} across ${plural(specs.length, "specialty", "specialties")}. See more in <a href="/country/${slug(country)}/">${esc(country)}</a> or on the <a href="/">map</a>.`,
       list,
       related: relatedBlock("Other conference cities",
         cityLinks.filter(l => l.label !== city).slice(0, 60))
@@ -353,10 +359,10 @@ function main() {
     write(`year/${year}`, page({
       url: `/year/${year}/`,
       title: `Medical Conferences ${year} — Worldwide Calendar | convene.md`,
-      description: `Every medical conference scheduled for ${year}: ${list.length} meetings across ${specs.length} specialties and ${countries.length} countries, with verified dates and host cities.`,
+      description: `Every medical conference scheduled for ${year}: ${plural(list.length, "meeting", "meetings")} across ${plural(specs.length, "specialty", "specialties")} and ${plural(countries.length, "country", "countries")}, with verified dates and host cities.`,
       h1: `Medical Conferences ${year}`,
       crumbs: `<a href="/">Home</a> › <a href="/browse/">Browse</a> › ${year}`,
-      lede: `${list.length} conferences scheduled for ${year} across ${specs.length} specialties and ${countries.length} countries.`,
+      lede: `${plural(list.length, "conference", "conferences")} scheduled for ${year} across ${plural(specs.length, "specialty", "specialties")} and ${plural(countries.length, "country", "countries")}.`,
       list,
       related: relatedBlock("Other years", yearLinks.filter(l => l.label !== year))
     }));
@@ -377,7 +383,7 @@ function main() {
     description: `Browse ${upcoming.length} upcoming medical conferences worldwide by specialty, country, city or year — verified dates and links to every organising society.`,
     h1: "Browse medical conferences",
     crumbs: `<a href="/">Home</a> › Browse`,
-    lede: `${upcoming.length} upcoming conferences across ${bySpecialty.size} specialties and ${byCountry.size} countries. Pick a specialty, country, city or year — or explore them all on the <a href="/">map</a>.`,
+    lede: `${plural(upcoming.length, "upcoming conference", "upcoming conferences")} across ${plural(bySpecialty.size, "specialty", "specialties")} and ${plural(byCountry.size, "country", "countries")}. Pick a specialty, country, city or year — or explore them all on the <a href="/">map</a>.`,
     list: null,
     extraBody: browseBody
   }));

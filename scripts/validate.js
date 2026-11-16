@@ -155,6 +155,32 @@ for (let i = 0; i < CONFERENCES.length; i++) {
   }
 }
 
+// One city spelled two ways inside one country. Costa Rica held "San José" and "San Jose"
+// at IDENTICAL coordinates until 2026-11-16, which is worse than cosmetic: build-hubs.js
+// groups by the city STRING, so the two events counted as one each and neither reached
+// MIN_CITY, silently suppressing a city hub that the pair had earned. slug() strips accents,
+// so both would also have competed for the same /city/san-jose/ path. The dataset's
+// convention is to KEEP the accent (Córdoba, São Paulo, Medellín and 14 more), so the
+// unaccented variant is the one to fix. Same root cause as the Manila / Mandaluyong City and
+// Lexington KY/MA confusions: compare coordinates and slugs, never names alone.
+const citySlug = (x) => String(x).toLowerCase().normalize("NFD")
+  .replace(/[\u0300-\u036f]/g, "").replace(/['\u2019.]/g, "").replace(/[^a-z0-9]+/g, "-")
+  .replace(/^-|-$/g, "");
+const bySlugCountry = new Map();
+for (const c of CONFERENCES.filter(Boolean)) {
+  if (!c.city || !c.country) continue;
+  const k = `${citySlug(c.city)}|${c.country}`;
+  if (!bySlugCountry.has(k)) bySlugCountry.set(k, new Set());
+  bySlugCountry.get(k).add(c.city);
+}
+for (const [k, names] of bySlugCountry) {
+  if (names.size > 1) {
+    warnings.push(`one city spelled ${names.size} ways in ${k.split("|")[1]}: ` +
+      `${[...names].map((n) => JSON.stringify(n)).join(" vs ")} — pick one (keep the accent) ` +
+      `or they will not group, and a city hub can be suppressed`);
+  }
+}
+
 const specialties = new Set(CONFERENCES.filter(Boolean).map((c) => c.specialty));
 const missing = [...VALID_SPECIALTIES].filter((s) => !specialties.has(s));
 if (missing.length) warnings.push(`specialties with no conferences: ${missing.join(", ")}`);
