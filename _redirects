@@ -29,8 +29,10 @@
 /city/belfast/                      /country/uk/                301
 /city/belo-horizonte/               /country/brazil/            301
 /city/brisbane/                     /country/australia/         301
+/city/budapest/                     /country/hungary/           301
 /city/busan/                        /country/south-korea/       301
 /city/cairns/                       /country/australia/         301
+/city/cannes/                       /country/france/            301
 /city/cartagena/                    /country/colombia/          301
 /city/chongqing/                    /country/china/             301
 /city/christchurch/                 /country/new-zealand/       301
@@ -43,6 +45,7 @@
 /city/florianopolis/                /country/brazil/            301
 /city/frankfurt/                    /country/germany/           301
 /city/guangzhou/                    /country/china/             301
+/city/hobart/                       /country/australia/         301
 /city/hyderabad/                    /country/india/             301
 /city/isle-of-palms/                /country/usa/               301
 /city/jaipur/                       /country/india/             301
@@ -51,9 +54,12 @@
 /city/kaohsiung/                    /country/taiwan/            301
 /city/king-of-prussia/              /country/usa/               301
 /city/la-jolla/                     /country/usa/               301
+/city/little-rock/                  /country/usa/               301
 /city/machu-picchu/                 /country/peru/              301
 /city/mackinac-island/              /country/usa/               301
+/city/madrid/                       /country/spain/             301
 /city/mandaluyong-city/             /country/philippines/       301
+/city/merida/                       /country/mexico/            301
 /city/murcia/                       /country/spain/             301
 /city/nagasaki/                     /country/japan/             301
 /city/napa/                         /country/usa/               301
@@ -83,16 +89,10 @@
 /country/croatia/                   /browse/                    301
 /country/dominican-republic/        /browse/                    301
 /country/georgia/                   /browse/                    301
+/country/ireland/                   /browse/                    301
 /country/nicaragua/                 /browse/                    301
 /country/serbia/                    /browse/                    301
 /country/sri-lanka/                 /browse/                    301
-/country/uruguay/                   /browse/                    301
-/country/ireland/                   /browse/                    301
 /country/tunisia/                   /browse/                    301
-/city/budapest/                     /country/hungary/           301
-/city/cannes/                       /country/france/            301
-/city/hobart/                       /country/australia/         301
-/city/little-rock/                  /country/usa/               301
-/city/madrid/                       /country/spain/             301
-/city/merida/                       /country/mexico/            301
+/country/uruguay/                   /browse/                    301
 # BUILD:RETIRED-HUBS:END

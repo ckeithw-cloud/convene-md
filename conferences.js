@@ -2413,18 +2413,18 @@ const CONFERENCES = [
     description: "Europe's flagship radiology congress, held annually in Vienna."
   },
   {
-    name: "UEG Week 2026 — United European Gastroenterology",
+    name: "UEG Week 2027 — United European Gastroenterology",
     specialty: "Gastroenterology",
-    year: 2026,
-    startDate: "2026-10-17",
-    endDate: "2026-10-20",
-    city: "Barcelona",
-    country: "Spain",
-    lat: 41.3851,
-    lng: 2.1734,
+    year: 2027,
+    startDate: "2027-10-16",
+    endDate: "2027-10-19",
+    city: "Copenhagen",
+    country: "Denmark",
+    lat: 55.6761,
+    lng: 12.5683,
     url: "https://ueg.eu/week",
     organizer: "United European Gastroenterology",
-    description: "Europe's largest gastroenterology meeting, at Fira Barcelona Gran Via."
+    description: "At the Bella Center Copenhagen."
   },
   {
     name: "ERS Congress 2026 — European Respiratory Society",
@@ -3337,18 +3337,18 @@ const CONFERENCES = [
     description: "The AHA's flagship cardiovascular science conference at McCormick Place."
   },
   {
-    name: "TCT 2026 — Transcatheter Cardiovascular Therapeutics",
+    name: "TCT 2027 — Transcatheter Cardiovascular Therapeutics",
     specialty: "Cardiology",
-    year: 2026,
-    startDate: "2026-10-31",
-    endDate: "2026-11-03",
-    city: "San Diego",
+    year: 2027,
+    startDate: "2027-10-18",
+    endDate: "2027-10-21",
+    city: "San Francisco",
     country: "USA",
-    lat: 32.7157,
-    lng: -117.1611,
+    lat: 37.7749,
+    lng: -122.4194,
     url: "https://www.tctconference.com/",
     organizer: "Cardiovascular Research Foundation",
-    description: "The annual scientific symposium for interventional cardiology, at the San Diego Convention Center."
+    description: "At the Moscone Center; the Cardiovascular Research Foundation's annual interventional cardiology meeting."
   },
   {
     name: "ACNP 2027 — 65th Annual Meeting of the American College of Neuropsychopharmacology",
