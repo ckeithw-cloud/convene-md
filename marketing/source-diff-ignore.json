@@ -338,5 +338,10 @@
   "declined": "2026-09-09",
   "name": "11th Annual Connecticut Mandates Symposium",
   "reason": "state licensure-mandate training, not a specialty conference"
+ },
+ "cloudcme:chop:22943": {
+  "declined": "2026-11-16",
+  "name": "2027 Short Course on Multilingual Approaches to Research",
+  "reason": "research-skills short course, not clinical CME: teaches multilingual research methods, audience listed as Family Medicine/Nursing/Pediatrics/Psychiatry. Same class as the research-ethics and study-development patterns already in JUNK."
  }
 }

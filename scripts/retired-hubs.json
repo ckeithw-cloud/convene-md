@@ -35,6 +35,10 @@
     "to": "/country/australia/",
     "retired": "2026-11-02"
   },
+  "/city/budapest/": {
+    "to": "/country/hungary/",
+    "retired": "2026-11-16"
+  },
   "/city/busan/": {
     "to": "/country/south-korea/",
     "retired": "2026-10-28"
@@ -43,12 +47,12 @@
     "to": "/country/australia/",
     "retired": "2026-10-20"
   },
+  "/city/cannes/": {
+    "to": "/country/france/",
+    "retired": "2026-11-16"
+  },
   "/city/cartagena/": {
     "to": "/country/colombia/",
-    "retired": "2026-11-09"
-  },
-  "/city/charlottesville/": {
-    "to": "/country/usa/",
     "retired": "2026-11-09"
   },
   "/city/chongqing/": {
@@ -95,6 +99,10 @@
     "to": "/country/china/",
     "retired": "2026-10-20"
   },
+  "/city/hobart/": {
+    "to": "/country/australia/",
+    "retired": "2026-11-16"
+  },
   "/city/hyderabad/": {
     "to": "/country/india/",
     "retired": "2026-10-28"
@@ -127,6 +135,10 @@
     "to": "/country/usa/",
     "retired": "2026-10-20"
   },
+  "/city/little-rock/": {
+    "to": "/country/usa/",
+    "retired": "2026-11-16"
+  },
   "/city/machu-picchu/": {
     "to": "/country/peru/",
     "retired": "2026-10-20"
@@ -135,9 +147,17 @@
     "to": "/country/usa/",
     "retired": "2026-10-20"
   },
+  "/city/madrid/": {
+    "to": "/country/spain/",
+    "retired": "2026-11-16"
+  },
   "/city/mandaluyong-city/": {
     "to": "/country/philippines/",
     "retired": "2026-10-20"
+  },
+  "/city/merida/": {
+    "to": "/country/mexico/",
+    "retired": "2026-11-16"
   },
   "/city/murcia/": {
     "to": "/country/spain/",
@@ -224,7 +244,7 @@
     "retired": "2026-10-28"
   },
   "/city/tunis/": {
-    "to": "/country/tunisia/",
+    "to": "/browse/",
     "retired": "2026-10-20"
   },
   "/city/visegrad/": {
@@ -255,6 +275,10 @@
     "to": "/browse/",
     "retired": "2026-11-02"
   },
+  "/country/ireland/": {
+    "to": "/browse/",
+    "retired": "2026-11-16"
+  },
   "/country/nicaragua/": {
     "to": "/browse/",
     "retired": "2026-10-20"
@@ -266,6 +290,10 @@
   "/country/sri-lanka/": {
     "to": "/browse/",
     "retired": "2026-11-02"
+  },
+  "/country/tunisia/": {
+    "to": "/browse/",
+    "retired": "2026-11-16"
   },
   "/country/uruguay/": {
     "to": "/browse/",

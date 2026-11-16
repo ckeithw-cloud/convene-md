@@ -75,6 +75,15 @@ let DECLINED = {};
 try {
   DECLINED = JSON.parse(fs.readFileSync(path.join(ROOT, "marketing", "source-diff-ignore.json"), "utf8"));
 } catch (e) { /* no ignore file yet */ }
+// A "gone" flag that has been checked by hand and found to be a delisting, not a
+// cancellation, otherwise resurfaces in every single weekly report. Viva la Vida was
+// hand-verified four weeks running -- the Hopkins page live each time with our exact dates --
+// which is four checks spent re-learning one fact, and the noise buries the flags that matter.
+// This file acknowledges the DELISTING, not the conference: if the page later dies or starts
+// saying "withdrawn", that is new information and the entry surfaces again.
+const GONE_ACK_FILE = path.join(ROOT, "marketing", "source-gone-ack.json");
+let GONE_ACK = {};
+try { GONE_ACK = JSON.parse(fs.readFileSync(GONE_ACK_FILE, "utf8")); } catch (e) { GONE_ACK = {}; }
 const declinedHits = new Set();
 
 const byKey = new Map();
@@ -386,6 +395,16 @@ const SOURCES = { cloudcme: fetchCloudCME, mer: fetchMER };
     }
   }
 
+  // Suppress only the ones already confirmed as delisted-but-live. An acknowledged entry whose
+  // page has since died or been withdrawn is NOT suppressed: that is the change worth seeing.
+  const goneAcked = [];
+  const goneOpen = [];
+  for (const c of gone) {
+    const ack = GONE_ACK[datasetKey(c.url) || ""];
+    if (ack && /page still live/.test(c.__alive || "")) goneAcked.push({ c, ack });
+    else goneOpen.push(c);
+  }
+
   // ------------------------------------------------------------- report
   const L = [];
   L.push(`# Source diff — ${REPORT_DAY}`);
@@ -406,16 +425,27 @@ const SOURCES = { cloudcme: fetchCloudCME, mer: fetchMER };
       L.push(`| ${held.name.slice(0, 60)} | ${diffs.join("; ")} | [${r.source}](${r.url}) |`);
   });
 
-  sec("Gone from source", gone.length, () => {
-    if (!gone.length) return L.push("_None._");
+  sec("Gone from source", goneOpen.length, () => {
+    if (!goneOpen.length) {
+      L.push("_None._");
+      if (goneAcked.length) {
+        L.push("");
+        L.push(`_${goneAcked.length} previously confirmed delisted-but-live, suppressed — see marketing/source-gone-ack.json._`);
+      }
+      return;
+    }
     L.push("Dropped out of the provider's live listing. That is NOT the same as cancelled — a course");
     L.push("often leaves the listing simply because registration closed, while its own page stays up.");
     L.push("The `page` column separates the two. Verify before changing anything.");
     L.push("");
     L.push("| Conference | Dates | Page | URL |");
     L.push("| --- | --- | --- | --- |");
-    for (const c of gone.sort((a, b) => a.startDate < b.startDate ? -1 : 1))
+    for (const c of goneOpen.sort((a, b) => a.startDate < b.startDate ? -1 : 1))
       L.push(`| ${c.name.slice(0, 56)} | ${c.startDate} → ${c.endDate} | ${c.__alive} | ${c.url} |`);
+    if (goneAcked.length) {
+      L.push("");
+      L.push(`_Plus ${goneAcked.length} previously confirmed delisted-but-live, suppressed — see marketing/source-gone-ack.json._`);
+    }
   });
 
   sec("New candidates", isNew.length, () => {
@@ -456,9 +486,12 @@ const SOURCES = { cloudcme: fetchCloudCME, mer: fetchMER };
   fs.writeFileSync(out, L.join("\n") + "\n");
 
   console.log(`diff-sources: ${out}`);
-  console.log(`  ${live.length} live records | changed ${changed.length} | gone ${gone.length} | new ${isNew.length} | no-deep-link ${badLink.length}${errors.length ? ` | errors ${errors.length}` : ""}`);
+  // Count what the report actually asks for action on. The console used to print the
+  // pre-suppression total, which is the same mismatch that had an earlier version claiming
+  // "67 suppressed" every week regardless of how many declines matched anything.
+  console.log(`  ${live.length} live records | changed ${changed.length} | gone ${goneOpen.length}${goneAcked.length ? ` (+${goneAcked.length} ack'd)` : ""} | new ${isNew.length} | no-deep-link ${badLink.length}${errors.length ? ` | errors ${errors.length}` : ""}`);
   if (!QUIET && (changed.length || gone.length)) {
     for (const { held, diffs } of changed) console.log(`  CHANGED  ${held.name.slice(0, 56)} — ${diffs.join("; ")}`);
-    for (const c of gone) console.log(`  GONE     ${c.name.slice(0, 56)} (${c.startDate})`);
+    for (const c of goneOpen) console.log(`  GONE     ${c.name.slice(0, 56)} (${c.startDate})`);
   }
 })().catch((e) => { console.error("diff-sources failed:", e); process.exit(1); });

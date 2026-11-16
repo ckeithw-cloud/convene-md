@@ -32,7 +32,6 @@
 /city/busan/                        /country/south-korea/       301
 /city/cairns/                       /country/australia/         301
 /city/cartagena/                    /country/colombia/          301
-/city/charlottesville/              /country/usa/               301
 /city/chongqing/                    /country/china/             301
 /city/christchurch/                 /country/new-zealand/       301
 /city/da-nang/                      /country/vietnam/           301
@@ -76,7 +75,7 @@
 /city/surabaya/                     /country/indonesia/         301
 /city/the-woodlands/                /country/usa/               301
 /city/tucson/                       /country/usa/               301
-/city/tunis/                        /country/tunisia/           301
+/city/tunis/                        /browse/                    301
 /city/visegrad/                     /country/hungary/           301
 /city/wuhan/                        /country/china/             301
 /city/xian/                         /country/china/             301
@@ -88,4 +87,12 @@
 /country/serbia/                    /browse/                    301
 /country/sri-lanka/                 /browse/                    301
 /country/uruguay/                   /browse/                    301
+/country/ireland/                   /browse/                    301
+/country/tunisia/                   /browse/                    301
+/city/budapest/                     /country/hungary/           301
+/city/cannes/                       /country/france/            301
+/city/hobart/                       /country/australia/         301
+/city/little-rock/                  /country/usa/               301
+/city/madrid/                       /country/spain/             301
+/city/merida/                       /country/mexico/            301
 # BUILD:RETIRED-HUBS:END
