@@ -57,11 +57,16 @@ const HELD = new Set();
 // postal address is used instead (Walt Disney World -> Lake Buena Vista, Yellowstone ->
 // Big Sky, Zion -> Springdale, and so on).
 const LOC = {
+  "New York, Lake George": ["Lake George", "USA", 43.4275, -73.7126],
+  "Switzerland , Lucerne": ["Lucerne", "Switzerland", 47.0502, 8.3093],
+  "Croatia, Dubrovnik": ["Dubrovnik", "Croatia", 42.6507, 18.0944],
+  "Thailand, Bangkok": ["Bangkok", "Thailand", 13.7563, 100.5018],
+  "Germany, Cologne": ["Cologne", "Germany", 50.9375, 6.9603],
   "Hawaii, Maui, Ka'anapali": ["Lahaina", "USA", 20.9250, -156.6950],
   "California, San Diego": ["Coronado", "USA", 32.6803, -117.1783],
   "Bahamas, Nassau": ["Nassau", "Bahamas", 25.0839, -77.3200],
   "Montana, Yellowstone": ["Big Sky", "USA", 45.2841, -111.4014],
-  "United Kingdom, London": ["London", "United Kingdom", 51.5074, -0.1278],
+  "United Kingdom, London": ["London", "UK", 51.5074, -0.1278],
   "South Carolina, Hilton Head Island": ["Hilton Head Island", "USA", 32.1896, -80.7521],
   "Nevada, Las Vegas": ["Las Vegas", "USA", 36.1147, -115.1728],
   "Virginia, Charlottesville": ["Charlottesville", "USA", 38.0293, -78.4767],
@@ -106,7 +111,7 @@ const LOC = {
   "Florida, Clearwater": ["Clearwater Beach", "USA", 27.9775, -82.8270],
   "South Carolina, Isle of Palms": ["Isle of Palms", "USA", 32.7866, -79.7770],
   "Colorado, Breckenridge": ["Breckenridge", "USA", 39.4817, -106.0384],
-  "District of Columbia, Washington D.C.": ["Washington", "USA", 38.8977, -77.0290],
+  "District of Columbia, Washington D.C.": ["Washington, DC", "USA", 38.8977, -77.0290],
   "Netherlands, Amsterdam": ["Amsterdam", "Netherlands", 52.3702, 4.8952],
   "Hawaii, Hawaii, Waimea": ["Waimea", "USA", 19.9330, -155.8630],
   "Utah, Zion": ["Springdale", "USA", 37.1889, -112.9983],

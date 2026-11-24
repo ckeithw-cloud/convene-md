@@ -28,6 +28,7 @@
 /city/beijing/                      /country/china/             301
 /city/belfast/                      /country/uk/                301
 /city/belo-horizonte/               /country/brazil/            301
+/city/bengaluru/                    /country/india/             301
 /city/brisbane/                     /country/australia/         301
 /city/budapest/                     /country/hungary/           301
 /city/busan/                        /country/south-korea/       301
@@ -44,7 +45,9 @@
 /city/estes-park/                   /country/usa/               301
 /city/florianopolis/                /country/brazil/            301
 /city/frankfurt/                    /country/germany/           301
+/city/guanacaste/                   /country/costa-rica/        301
 /city/hobart/                       /country/australia/         301
+/city/hong-kong/                    /country/hong-kong-sar/     301
 /city/hyderabad/                    /country/india/             301
 /city/isle-of-palms/                /country/usa/               301
 /city/jaipur/                       /country/india/             301
@@ -62,18 +65,25 @@
 /city/murcia/                       /country/spain/             301
 /city/nagasaki/                     /country/japan/             301
 /city/napa/                         /country/usa/               301
+/city/newcastle/                    /country/uk/                301
 /city/newport-usa/                  /country/usa/               301
+/city/nijmegen/                     /country/netherlands/       301
 /city/nusa-dua/                     /country/indonesia/         301
 /city/oak-brook/                    /country/usa/               301
 /city/oceanside/                    /country/usa/               301
 /city/olympic-valley/               /country/usa/               301
 /city/oslo/                         /country/norway/            301
 /city/palo-alto/                    /country/usa/               301
+/city/penang/                       /country/malaysia/          301
+/city/portland/                     /country/usa/               301
+/city/rimini/                       /country/italy/             301
+/city/rio-de-janeiro/               /country/brazil/            301
 /city/riyadh/                       /country/saudi-arabia/      301
 /city/salvador/                     /country/brazil/            301
 /city/santiago/                     /country/chile/             301
 /city/sao-paulo/                    /country/brazil/            301
 /city/seattle-washington/           /browse/                    301
+/city/sonoma/                       /country/usa/               301
 /city/southampton/                  /country/uk/                301
 /city/stanford/                     /country/usa/               301
 /city/surabaya/                     /country/indonesia/         301
@@ -84,7 +94,6 @@
 /city/wuhan/                        /country/china/             301
 /city/xian/                         /country/china/             301
 /country/botswana/                  /browse/                    301
-/country/croatia/                   /browse/                    301
 /country/dominican-republic/        /browse/                    301
 /country/georgia/                   /browse/                    301
 /country/ireland/                   /browse/                    301
@@ -93,14 +102,4 @@
 /country/sri-lanka/                 /browse/                    301
 /country/tunisia/                   /browse/                    301
 /country/uruguay/                   /browse/                    301
-/city/bengaluru/                    /country/india/             301
-/city/guanacaste/                   /country/costa-rica/        301
-/city/hong-kong/                    /country/hong-kong-sar/     301
-/city/newcastle/                    /country/uk/                301
-/city/nijmegen/                     /country/netherlands/       301
-/city/penang/                       /country/malaysia/          301
-/city/portland/                     /country/usa/               301
-/city/rimini/                       /country/italy/             301
-/city/rio-de-janeiro/               /country/brazil/            301
-/city/sonoma/                       /country/usa/               301
 # BUILD:RETIRED-HUBS:END

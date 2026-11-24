@@ -1,253 +1,5 @@
 [
  {
-  "url": "https://www.mer.org/conference//MTI5Nw==",
-  "name": "Internal Medicine for Primary Care: Addiction/Endo/Ortho",
-  "dates": "Sep 02-04, 2026",
-  "loc": "Maine, Bar Harbor",
-  "venue": "Harborside Hotel, Spa, & Marina",
-  "credits": "12"
- },
- {
-  "url": "https://www.mer.org/conference//MTIyNQ==",
-  "name": "Internal Medicine for Primary Care: Endo/ENT/Neuro",
-  "dates": "Sep 04-06, 2026",
-  "loc": "New Mexico, Santa Fe",
-  "venue": "La Fonda on the Plaza",
-  "credits": "12"
- },
- {
-  "url": "https://www.mer.org/conference//MTIyNg==",
-  "name": "Cardiology & Pulmonology for Primary Care",
-  "dates": "Sep 04-06, 2026",
-  "loc": "Florida, Walt Disney World® Resort",
-  "venue": "Disney's Grand Floridian Resort & Spa",
-  "credits": "12"
- },
- {
-  "url": "https://www.mer.org/conference//MTI5MA==",
-  "name": "Internal Medicine for Primary Care: Cardio/Geri/Pain",
-  "dates": "Sep 04-06, 2026",
-  "loc": "Montana, Glacier National Park",
-  "venue": "Grouse Mountain Lodge",
-  "credits": "12"
- },
- {
-  "url": "https://www.mer.org/conference//MTIyOQ==",
-  "name": "Infectious Diseases for Primary Care",
-  "dates": "Sep 11-13, 2026",
-  "loc": "California, Yosemite",
-  "venue": "Tenaya Lodge at Yosemite",
-  "credits": "12"
- },
- {
-  "url": "https://www.mer.org/conference//MTIzMA==",
-  "name": "Women's Health for Primary Care: Endo/Gyn/Psych",
-  "dates": "Sep 11-13, 2026",
-  "loc": "Nevada, Las Vegas",
-  "venue": "Caesars Palace",
-  "credits": "12"
- },
- {
-  "url": "https://www.mer.org/conference//MTMyOQ==",
-  "name": "Pediatric & Adolescent Medicine for Primary Care: Derm/Ortho/Psych",
-  "dates": "Sep 11-13, 2026",
-  "loc": "South Carolina, Charleston",
-  "venue": "Francis Marion Hotel",
-  "credits": "12"
- },
- {
-  "url": "https://www.mer.org/conference//MTI3Mw==",
-  "name": "Internal Medicine for Primary Care: Gastro/Geri/ID/Ortho",
-  "dates": "Sep 13-17, 2026",
-  "loc": "Hawaii, Maui, Wailea",
-  "venue": "Andaz Maui at Wailea Resort",
-  "credits": "20"
- },
- {
-  "url": "https://www.mer.org/conference//MTMwNA==",
-  "name": "Internal Medicine for Primary Care: Cardio/Endo/Nephro",
-  "dates": "Sep 18-20, 2026",
-  "loc": "California, Laguna Beach",
-  "venue": "The Ritz-Carlton, Laguna Niguel",
-  "credits": "12"
- },
- {
-  "url": "https://www.mer.org/conference//MTIzMg==",
-  "name": "Internal Medicine for Primary Care: Geri/Neuro/Rheum",
-  "dates": "Sep 25-27, 2026",
-  "loc": "Nevada, Las Vegas",
-  "venue": "Wynn Las Vegas",
-  "credits": "12"
- },
- {
-  "url": "https://www.mer.org/conference//MTIzMw==",
-  "name": "Internal Medicine for Primary Care: Addiction/Pulm/Rheum",
-  "dates": "Sep 25-27, 2026",
-  "loc": "Vermont, Manchester",
-  "venue": "The Equinox Golf Resort & Spa",
-  "credits": "12"
- },
- {
-  "url": "https://www.mer.org/conference//MTM0Ng==",
-  "name": "Internal Medicine for Primary Care: ENT/Geri/Rheum",
-  "dates": "Sep 25-27, 2026",
-  "loc": "Florida, Walt Disney World® Resort",
-  "venue": "Disney's Yacht & Beach Club Resorts",
-  "credits": "12"
- },
- {
-  "url": "https://www.mer.org/conference//MTMwNw==",
-  "name": "Internal Medicine for Primary Care: Derm/ID/Ortho/Pain",
-  "dates": "Sep 28 - Oct 01, 2026",
-  "loc": "Greece, Crete",
-  "venue": "InterContinental Crete",
-  "credits": "16"
- },
- {
-  "url": "https://www.mer.org/conference//MTIzNw==",
-  "name": "Internal Medicine for Primary Care: Derm/Gastro/Onc",
-  "dates": "Oct 02-04, 2026",
-  "loc": "Colorado, Rocky Mountain National Park",
-  "venue": "Holiday Inn Estes Park",
-  "credits": "12"
- },
- {
-  "url": "https://www.mer.org/conference//MTMzNw==",
-  "name": "Endocrinology for Primary Care",
-  "dates": "Oct 02-04, 2026",
-  "loc": "Georgia, Savannah",
-  "venue": "JW Marriott Savannah Plant Riverside District",
-  "credits": "12"
- },
- {
-  "url": "https://www.mer.org/conference//MTMyMQ==",
-  "name": "Internal Medicine for Primary Care: Geri/Neuro/Obesity",
-  "dates": "Oct 02-04, 2026",
-  "loc": "California, Santa Barbara",
-  "venue": "Mar Monte Hotel",
-  "credits": "12"
- },
- {
-  "url": "https://www.mer.org/conference//MTI3NQ==",
-  "name": "Internal Medicine for Primary Care: ENT/Gyn/Neuro/Pulm",
-  "dates": "Oct 04-08, 2026",
-  "loc": "Hawaii, Kauai, Poipu",
-  "venue": "Grand Hyatt Kauai Resort & Spa",
-  "credits": "20"
- },
- {
-  "url": "https://www.mer.org/conference//MTI0Mw==",
-  "name": "Internal Medicine for Primary Care: Gyn/Neuro/Pulm",
-  "dates": "Oct 06-08, 2026",
-  "loc": "Nevada, Las Vegas",
-  "venue": "The Cosmopolitan",
-  "credits": "12"
- },
- {
-  "url": "https://www.mer.org/conference//MTIzOA==",
-  "name": "Internal Medicine for Primary Care: Gastro/ Medicolegal/Pain/Psych",
-  "dates": "Oct 08-11, 2026",
-  "loc": "Cayman Islands, Grand Cayman",
-  "venue": "The Westin Grand Cayman Seven Mile Beach Resort & Spa",
-  "credits": "16"
- },
- {
-  "url": "https://www.mer.org/conference//MTI5MQ==",
-  "name": "Neurology & Psychiatry for Primary Care",
-  "dates": "Oct 09-11, 2026",
-  "loc": "California, San Diego",
-  "venue": "Hotel del Coronado",
-  "credits": "12"
- },
- {
-  "url": "https://www.mer.org/conference//MTIzOQ==",
-  "name": "Internal Medicine for Primary Care: ID/Onc/Ortho/Psych",
-  "dates": "Oct 11-15, 2026",
-  "loc": "Florida, Walt Disney World® Resort",
-  "venue": "Disney's Contemporary Resort",
-  "credits": "20"
- },
- {
-  "url": "https://www.mer.org/conference//MTMwOA==",
-  "name": "Internal Medicine for Primary Care: Allergy & Immuno/Cardio/Neuro/Psych",
-  "dates": "Oct 12-15, 2026",
-  "loc": "France, Paris",
-  "venue": "Paris Marriott Opera Ambassador Hotel",
-  "credits": "16"
- },
- {
-  "url": "https://www.mer.org/conference//MTI0MQ==",
-  "name": "Internal Medicine for Primary Care: Addiction/Gyn/Neuro",
-  "dates": "Oct 16-18, 2026",
-  "loc": "Florida, Walt Disney World® Resort",
-  "venue": "Disney's Contemporary Resort",
-  "credits": "12"
- },
- {
-  "url": "https://www.mer.org/conference//MTMxMQ==",
-  "name": "Internal Medicine for Primary Care: Cannabis/Derm/Emergency",
-  "dates": "Oct 16-18, 2026",
-  "loc": "New York, New York",
-  "venue": "New York Marriott Marquis",
-  "credits": "12"
- },
- {
-  "url": "https://www.mer.org/conference//MTI0MA==",
-  "name": "Infectious Diseases for Primary Care",
-  "dates": "Oct 16-18, 2026",
-  "loc": "California, Napa/Sonoma",
-  "venue": "Napa Valley Marriott Hotel & Spa",
-  "credits": "12"
- },
- {
-  "url": "https://www.mer.org/conference//MTI0Mg==",
-  "name": "Men's & Women's Health for Primary Care: Cardio/Endo/Gyn/Men's Uro",
-  "dates": "Oct 22-25, 2026",
-  "loc": "California, Disneyland® Resort",
-  "venue": "Disney's Grand Californian Hotel & Spa",
-  "credits": "16"
- },
- {
-  "url": "https://www.mer.org/conference//MTMzMA==",
-  "name": "Office Orthopedics for Primary Care",
-  "dates": "Oct 23-25, 2026",
-  "loc": "South Carolina, Charleston",
-  "venue": "Francis Marion Hotel",
-  "credits": "12"
- },
- {
-  "url": "https://www.mer.org/conference//MTI0Ng==",
-  "name": "Internal Medicine for Primary Care: Gastro/Neck & Spine/Neuro/Psych",
-  "dates": "Oct 29 - Nov 01, 2026",
-  "loc": "Bahamas, Nassau",
-  "venue": "Grand Hyatt Baha Mar",
-  "credits": "16"
- },
- {
-  "url": "https://www.mer.org/conference//MTI0Nw==",
-  "name": "Internal Medicine for Primary Care: ID/Ophth/Pulm",
-  "dates": "Oct 30 - Nov 01, 2026",
-  "loc": "Nevada, Las Vegas",
-  "venue": "Waldorf Astoria Las Vegas",
-  "credits": "12"
- },
- {
-  "url": "https://www.mer.org/conference//MTI0OA==",
-  "name": "Internal Medicine for Primary Care: Derm/Nephro/Ortho",
-  "dates": "Oct 30 - Nov 01, 2026",
-  "loc": "Texas, San Antonio",
-  "venue": "The Westin Riverwalk, San Antonio",
-  "credits": "12"
- },
- {
-  "url": "https://www.mer.org/conference//MTI0OQ==",
-  "name": "Internal Medicine for Primary Care: Derm/Ortho/Pulm",
-  "dates": "Oct 30 - Nov 01, 2026",
-  "loc": "Louisiana, New Orleans",
-  "venue": "JW Marriott New Orleans",
-  "credits": "12"
- },
- {
   "url": "https://www.mer.org/conference//MTI3Nw==",
   "name": "Internal Medicine for Primary Care: Cardio/Geri/Gyn/Tox",
   "dates": "Nov 01-05, 2026",
@@ -561,7 +313,7 @@
  },
  {
   "url": "https://www.mer.org/conference//MTM0Nw==",
-  "name": "Internal Medicine for Primary Care: Cannabis/Derm/Endo",
+  "name": "Internal Medicine for Primary Care: Cannabis/Derm/Endo/Pulm",
   "dates": "Feb 04-07, 2027",
   "loc": "Florida, Key Largo",
   "venue": "Reefhouse Resort & Marina",
@@ -809,7 +561,7 @@
  },
  {
   "url": "https://www.mer.org/conference//MTM0Mg==",
-  "name": "Pediatric & Adolescent Medicine for Primary Care: Derm/ENT/Sports Med",
+  "name": "Pediatric & Adolescent Medicine for Primary Care: Cannabis/ENT/Sports Med",
   "dates": "Apr 09-11, 2027",
   "loc": "Arizona, Phoenix",
   "venue": "JW Marriott Phoenix Desert Ridge Resort & Spa",
@@ -961,7 +713,7 @@
  },
  {
   "url": "https://www.mer.org/conference//MTQ1MA==",
-  "name": "Internal Medicine for Primary Care: Cardio/Geri/ Palliative/Reproductive",
+  "name": "Internal Medicine for Primary Care: Cardio/Geri/Psych/ Reproductive",
   "dates": "Jun 03-06, 2027",
   "loc": "Aruba, Palm Beach",
   "venue": "Hyatt Regency Aruba Resort Spa & Casino",
@@ -981,6 +733,14 @@
   "dates": "Jun 04-06, 2027",
   "loc": "Arizona, Sedona",
   "venue": "Hilton Sedona Resort at Bell Rock",
+  "credits": "12"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ2Mw==",
+  "name": "Internal Medicine for Primary Care: Derm/Endo/Psych",
+  "dates": "Jun 04-06, 2027",
+  "loc": "New York, Lake George",
+  "venue": "The Sagamore Resort",
   "credits": "12"
  },
  {
@@ -1024,14 +784,6 @@
   "credits": "16"
  },
  {
-  "url": "https://www.mer.org/conference//MTM1Ng==",
-  "name": "Internal Medicine for Primary Care: Addiction/Gyn/Vasc",
-  "dates": "Jun 18-20, 2027",
-  "loc": "Colorado, Colorado Springs",
-  "venue": "The Broadmoor",
-  "credits": "12"
- },
- {
   "url": "https://www.mer.org/conference//MTM1Nw==",
   "name": "Office Orthopedics for Primary Care",
   "dates": "Jun 18-20, 2027",
@@ -1053,6 +805,14 @@
   "dates": "Jun 18-20, 2027",
   "loc": "Wyoming, Jackson Hole",
   "venue": "Hotel Terra",
+  "credits": "12"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTM1Ng==",
+  "name": "Internal Medicine for Primary Care: Addiction/Gyn/Vasc",
+  "dates": "Jun 18-20, 2027",
+  "loc": "Colorado, Colorado Springs",
+  "venue": "The Broadmoor",
   "credits": "12"
  },
  {
@@ -1088,6 +848,14 @@
   "credits": "12"
  },
  {
+  "url": "https://www.mer.org/conference//MTQ4NA==",
+  "name": "Internal Medicine for Primary Care: Derm/ID/Neuro/Ophth",
+  "dates": "Jul 01-04, 2027",
+  "loc": "Cayman Islands, Grand Cayman",
+  "venue": "The Westin Grand Cayman Seven Mile Beach Resort & Spa",
+  "credits": "16"
+ },
+ {
   "url": "https://www.mer.org/conference//MTM2MA==",
   "name": "Cardiology & Pulmonology for Primary Care",
   "dates": "Jul 02-04, 2027",
@@ -1104,6 +872,14 @@
   "credits": "12"
  },
  {
+  "url": "https://www.mer.org/conference//MTQ1OQ==",
+  "name": "Internal Medicine for Primary Care: Cardio/Nephro/Pain/Psych",
+  "dates": "Jul 05-08, 2027",
+  "loc": "Switzerland , Lucerne",
+  "venue": "Radisson Blu Hotel Lucerne",
+  "credits": "16"
+ },
+ {
   "url": "https://www.mer.org/conference//MTM2MQ==",
   "name": "Internal Medicine for Primary Care: Cardio/Endo/Palliative/Pulm",
   "dates": "Jul 08-11, 2027",
@@ -1117,6 +893,14 @@
   "dates": "Jul 09-11, 2027",
   "loc": "Florida, Walt Disney World® Resort",
   "venue": "Disney's Yacht & Beach Club Resorts",
+  "credits": "12"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ3Mw==",
+  "name": "Internal Medicine for Primary Care: Gastro/Geri/Rheum",
+  "dates": "Jul 09-11, 2027",
+  "loc": "Maine, Bar Harbor",
+  "venue": "Harborside Hotel, Spa, & Marina",
   "credits": "12"
  },
  {
@@ -1152,6 +936,14 @@
   "credits": "12"
  },
  {
+  "url": "https://www.mer.org/conference//MTQ1Ng==",
+  "name": "Internal Medicine for Primary Care: Cardio/Gyn/ID",
+  "dates": "Jul 16-18, 2027",
+  "loc": "New York, New York",
+  "venue": "Kimpton Hotel Eventi",
+  "credits": "12"
+ },
+ {
   "url": "https://www.mer.org/conference//MTM3NQ==",
   "name": "Internal Medicine for Primary Care: Derm/Gastro/Onc/Pulm",
   "dates": "Jul 22-25, 2027",
@@ -1176,12 +968,20 @@
   "credits": "16"
  },
  {
-  "url": "https://www.mer.org/conference//MTQyNg==",
-  "name": "Neurology & Psychiatry for Primary Care",
+  "url": "https://www.mer.org/conference//MTQ3Ng==",
+  "name": "Internal Medicine for Primary Care: Derm/Endo/Pain/Psych",
   "dates": "Aug 05-08, 2027",
-  "loc": "California, Disneyland® Resort",
-  "venue": "Disney's Grand Californian Hotel & Spa",
-  "credits": "12"
+  "loc": "District of Columbia, Washington D.C.",
+  "venue": "JW Marriott Washington, DC",
+  "credits": "16"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ4MA==",
+  "name": "Internal Medicine for Primary Care: Cardio/Geri/Men's Uro/Onc",
+  "dates": "Aug 05-08, 2027",
+  "loc": "Bahamas, Nassau",
+  "venue": "Atlantis Paradise Island Resort",
+  "credits": "16"
  },
  {
   "url": "https://www.mer.org/conference//MTM4NQ==",
@@ -1189,6 +989,14 @@
   "dates": "Aug 06-08, 2027",
   "loc": "Florida, Walt Disney World® Resort",
   "venue": "Disney's Yacht & Beach Club Resorts",
+  "credits": "12"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQyNg==",
+  "name": "Neurology & Psychiatry for Primary Care",
+  "dates": "Aug 06-08, 2027",
+  "loc": "California, Disneyland® Resort",
+  "venue": "Disney's Grand Californian Hotel & Spa",
   "credits": "12"
  },
  {
@@ -1246,6 +1054,22 @@
   "loc": "South Carolina, Charleston",
   "venue": "Francis Marion Hotel",
   "credits": "12"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ3NA==",
+  "name": "Internal Medicine for Primary Care: Gyn/ID/Vasc",
+  "dates": "Sep 01-03, 2027",
+  "loc": "Maine, Bar Harbor",
+  "venue": "Harborside Hotel, Spa, & Marina",
+  "credits": "12"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ4OQ==",
+  "name": "Internal Medicine for Primary Care: Nutrition/Obesity/Psych/Vasc",
+  "dates": "Sep 06-09, 2027",
+  "loc": "Croatia, Dubrovnik",
+  "venue": "Sheraton Dubrovnik Riviera",
+  "credits": "16"
  },
  {
   "url": "https://www.mer.org/conference//MTQwNg==",
@@ -1312,6 +1136,14 @@
   "credits": "12"
  },
  {
+  "url": "https://www.mer.org/conference//MTQ2MA==",
+  "name": "Internal Medicine for Primary Care: Neuro/Reproductive/Rheum",
+  "dates": "Sep 17-19, 2027",
+  "loc": "Nevada, Las Vegas",
+  "venue": "Caesars Palace",
+  "credits": "12"
+ },
+ {
   "url": "https://www.mer.org/conference//MTQxMg==",
   "name": "Pediatric & Adolescent Medicine for Primary Care: Gyn/ID/Rheum",
   "dates": "Sep 24-26, 2027",
@@ -1368,6 +1200,14 @@
   "credits": "20"
  },
  {
+  "url": "https://www.mer.org/conference//MTQ5MQ==",
+  "name": "Internal Medicine for Primary Care: Gastro/ID/Pulm/Risk Mgmt",
+  "dates": "Oct 11-14, 2027",
+  "loc": "France, Paris",
+  "venue": "Paris Marriott Opera Ambassador Hotel",
+  "credits": "16"
+ },
+ {
   "url": "https://www.mer.org/conference//MTQyNw==",
   "name": "Cardiology & Pulmonology for Primary Care",
   "dates": "Oct 15-17, 2027",
@@ -1389,6 +1229,22 @@
   "dates": "Oct 15-17, 2027",
   "loc": "New York, New York",
   "venue": "New York Marriott Marquis",
+  "credits": "12"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ1Nw==",
+  "name": "Internal Medicine for Primary Care: Endo/Gyn/Psych",
+  "dates": "Oct 15-17, 2027",
+  "loc": "Nevada, Las Vegas",
+  "venue": "Paris Las Vegas Hotel & Casino",
+  "credits": "12"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ1OA==",
+  "name": "Internal Medicine for Primary Care: Derm/ID/Neuro",
+  "dates": "Oct 15-17, 2027",
+  "loc": "California, Santa Barbara",
+  "venue": "Mar Monte Hotel",
   "credits": "12"
  },
  {
@@ -1456,12 +1312,28 @@
   "credits": "12"
  },
  {
-  "url": "https://www.mer.org/conference//MTQzNg==",
+  "url": "https://www.mer.org/conference//MTQ3Nw==",
   "name": "Internal Medicine for Primary Care: Geri/Gyn/ID",
-  "dates": "Nov 12-14, 2027",
+  "dates": "Nov 05-07, 2027",
   "loc": "California, San Diego",
   "venue": "Hotel del Coronado",
   "credits": "12"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ5MA==",
+  "name": "Internal Medicine for Primary Care: Cardio/Derm/Geri/Psych",
+  "dates": "Nov 09-12, 2027",
+  "loc": "Thailand, Bangkok",
+  "venue": "The Peninsula Bangkok",
+  "credits": "16"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ4MQ==",
+  "name": "Internal Medicine for Primary Care: Cardio/Genetics/Pulm/Tox",
+  "dates": "Nov 11-14, 2027",
+  "loc": "Bahamas, Nassau",
+  "venue": "Atlantis Paradise Island Resort",
+  "credits": "16"
  },
  {
   "url": "https://www.mer.org/conference//MTQzNw==",
@@ -1472,12 +1344,12 @@
   "credits": "12"
  },
  {
-  "url": "https://www.mer.org/conference//MTQ0Mw==",
+  "url": "https://www.mer.org/conference//MTQ5Mg==",
   "name": "Internal Medicine for Primary Care: Ortho/Pulm/Rheum/Tox",
   "dates": "Nov 14-18, 2027",
   "loc": "Hawaii, Maui, Ka'anapali",
-  "venue": "",
-  "credits": ""
+  "venue": "The Westin Maui Resort & Spa Kaanapali",
+  "credits": "20"
  },
  {
   "url": "https://www.mer.org/conference//MTQ0NA==",
@@ -1512,6 +1384,14 @@
   "credits": "12"
  },
  {
+  "url": "https://www.mer.org/conference//MTQ3OA==",
+  "name": "Internal Medicine for Primary Care: Allergy & Immuno/Gastro/Pulm",
+  "dates": "Nov 19-21, 2027",
+  "loc": "California, San Diego",
+  "venue": "Hotel del Coronado",
+  "credits": "12"
+ },
+ {
   "url": "https://www.mer.org/conference//MTQ0Nw==",
   "name": "Cardiology & Pulmonology for Primary Care",
   "dates": "Nov 22-24, 2027",
@@ -1529,10 +1409,170 @@
  },
  {
   "url": "https://www.mer.org/conference//MTQ1Mw==",
-  "name": "Internal Medicine for Primary Care: Cardio/Derm/Nephro/Palliative",
+  "name": "Internal Medicine for Primary Care: Cardio/Derm/Nephro/ Palliative",
   "dates": "Dec 02-05, 2027",
   "loc": "Florida, Key West",
   "venue": "Opal Key Resort & Marina",
+  "credits": "16"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ4Mg==",
+  "name": "Internal Medicine for Primary Care: Gastro/Ortho/Pain/Pulm",
+  "dates": "Dec 09-12, 2027",
+  "loc": "Bahamas, Nassau",
+  "venue": "Atlantis Paradise Island Resort",
+  "credits": "16"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ2MQ==",
+  "name": "Cardiology & Pulmonology for Primary Care",
+  "dates": "Dec 10-12, 2027",
+  "loc": "Arizona, Scottsdale",
+  "venue": "Fairmont Princess Scottsdale",
+  "credits": "12"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ2Mg==",
+  "name": "Internal Medicine for Primary Care: Derm/ID/Rheum",
+  "dates": "Dec 10-12, 2027",
+  "loc": "Florida, Walt Disney World® Resort",
+  "venue": "Disney's Yacht & Beach Club Resorts",
+  "credits": "12"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ2NA==",
+  "name": "Internal Medicine for Primary Care: Derm/Geri/Neuro",
+  "dates": "Dec 10-12, 2027",
+  "loc": "North Carolina, Asheville",
+  "venue": "The Omni Grove Park Inn",
+  "credits": "12"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ2NQ==",
+  "name": "Internal Medicine for Primary Care: Endo/Men's Uro/Psych",
+  "dates": "Dec 10-12, 2027",
+  "loc": "California, San Diego",
+  "venue": "Hotel del Coronado",
+  "credits": "12"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ2Ng==",
+  "name": "Internal Medicine for Primary Care: Geri/Nephro/Obesity/Sleep",
+  "dates": "Dec 11-14, 2027",
+  "loc": "Costa Rica, Peninsula Papagayo",
+  "venue": "Four Seasons Resort Costa Rica at Peninsula Papagayo",
+  "credits": "16"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ2Nw==",
+  "name": "Internal Medicine for Primary Care: ID/Neck & Spine/Pain/Pulm",
+  "dates": "Dec 12-16, 2027",
+  "loc": "Hawaii, Oahu, Ko Olina",
+  "venue": "Aulani, A Disney Resort & Spa",
+  "credits": "20"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ4Ng==",
+  "name": "Internal Medicine for Primary Care: Cardio/Derm/Endo/ID",
+  "dates": "Dec 13-16, 2027",
+  "loc": "Germany, Cologne",
+  "venue": "Cologne Marriott Hotel",
+  "credits": "16"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ4Mw==",
+  "name": "Internal Medicine for Primary Care: Cannabis/Endo/Neuro/Psych",
+  "dates": "Dec 16-19, 2027",
+  "loc": "Cayman Islands, Grand Cayman",
+  "venue": "The Westin Grand Cayman Seven Mile Beach Resort & Spa",
+  "credits": "16"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ2OA==",
+  "name": "Internal Medicine for Primary Care: Derm/Endo/Lifestyle",
+  "dates": "Dec 17-19, 2027",
+  "loc": "Nevada, Las Vegas",
+  "venue": "The Venetian",
+  "credits": "12"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ2OQ==",
+  "name": "Internal Medicine for Primary Care: Endo/Ortho/Psych",
+  "dates": "Dec 17-19, 2027",
+  "loc": "California, Disneyland® Resort",
+  "venue": "Disney's Grand Californian Hotel & Spa",
+  "credits": "12"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ3MA==",
+  "name": "Internal Medicine for Primary Care: Geri/ID/Neuro",
+  "dates": "Dec 17-19, 2027",
+  "loc": "New York, New York",
+  "venue": "New York Marriott Marquis",
+  "credits": "12"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ3MQ==",
+  "name": "Internal Medicine for Primary Care: Addiction/Gyn/Men's Uro/Neuro",
+  "dates": "Dec 26-30, 2027",
+  "loc": "Florida, Walt Disney World® Resort",
+  "venue": "Disney's Grand Floridian Resort & Spa",
+  "credits": "20"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ3Mg==",
+  "name": "Internal Medicine for Primary Care: Cardio/Geri/Gyn",
+  "dates": "Dec 29-31, 2027",
+  "loc": "Nevada, Las Vegas",
+  "venue": "Caesars Palace",
+  "credits": "12"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ3NQ==",
+  "name": "Internal Medicine for Primary Care: Geri/Men's Uro/Ortho",
+  "dates": "Jan 14-16, 2028",
+  "loc": "California, Palm Springs",
+  "venue": "Grand Hyatt Indian Wells Resort & Villas",
+  "credits": "12"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ3OQ==",
+  "name": "Internal Medicine for Primary Care: Endo/ENT/Neck & Spine/Pulm",
+  "dates": "Jan 20-23, 2028",
+  "loc": "Florida, Key West",
+  "venue": "Opal Key Resort & Marina",
+  "credits": "16"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ4NQ==",
+  "name": "Internal Medicine for Primary Care: Cannabis/Nephro/Neuro/Psych",
+  "dates": "Jan 30 - Feb 03, 2028",
+  "loc": "Hawaii, Maui, Kapalua",
+  "venue": "The Ritz-Carlton, Kapalua",
+  "credits": "20"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ4Nw==",
+  "name": "Internal Medicine for Primary Care: Endo/Gastro/Gyn",
+  "dates": "Feb 04-06, 2028",
+  "loc": "Colorado, Breckenridge",
+  "venue": "Hotel Alpenrock",
+  "credits": "12"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ4OA==",
+  "name": "Internal Medicine for Primary Care: Geri/Gyn/Lifestyle Med/Ortho",
+  "dates": "Feb 06-10, 2028",
+  "loc": "Hawaii, Kauai, Poipu",
+  "venue": "Grand Hyatt Kauai Resort & Spa",
+  "credits": "20"
+ },
+ {
+  "url": "https://www.mer.org/conference//MTQ1NQ==",
+  "name": "Internal Medicine for Primary Care: Endo/Geri/Psych/Vasc",
+  "dates": "Apr 27-30, 2028",
+  "loc": "Florida, Clearwater",
+  "venue": "Opal Sol",
   "credits": "16"
  }
 ]
