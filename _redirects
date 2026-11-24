@@ -44,7 +44,6 @@
 /city/estes-park/                   /country/usa/               301
 /city/florianopolis/                /country/brazil/            301
 /city/frankfurt/                    /country/germany/           301
-/city/guangzhou/                    /country/china/             301
 /city/hobart/                       /country/australia/         301
 /city/hyderabad/                    /country/india/             301
 /city/isle-of-palms/                /country/usa/               301
@@ -94,4 +93,14 @@
 /country/sri-lanka/                 /browse/                    301
 /country/tunisia/                   /browse/                    301
 /country/uruguay/                   /browse/                    301
+/city/bengaluru/                    /country/india/             301
+/city/guanacaste/                   /country/costa-rica/        301
+/city/hong-kong/                    /country/hong-kong-sar/     301
+/city/newcastle/                    /country/uk/                301
+/city/nijmegen/                     /country/netherlands/       301
+/city/penang/                       /country/malaysia/          301
+/city/portland/                     /country/usa/               301
+/city/rimini/                       /country/italy/             301
+/city/rio-de-janeiro/               /country/brazil/            301
+/city/sonoma/                       /country/usa/               301
 # BUILD:RETIRED-HUBS:END

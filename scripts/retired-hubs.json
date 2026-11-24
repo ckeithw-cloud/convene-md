@@ -31,6 +31,10 @@
     "to": "/country/brazil/",
     "retired": "2026-10-20"
   },
+  "/city/bengaluru/": {
+    "to": "/country/india/",
+    "retired": "2026-11-23"
+  },
   "/city/brisbane/": {
     "to": "/country/australia/",
     "retired": "2026-11-02"
@@ -95,13 +99,17 @@
     "to": "/country/germany/",
     "retired": "2026-11-09"
   },
-  "/city/guangzhou/": {
-    "to": "/country/china/",
-    "retired": "2026-10-20"
+  "/city/guanacaste/": {
+    "to": "/country/costa-rica/",
+    "retired": "2026-11-23"
   },
   "/city/hobart/": {
     "to": "/country/australia/",
     "retired": "2026-11-16"
+  },
+  "/city/hong-kong/": {
+    "to": "/country/hong-kong-sar/",
+    "retired": "2026-11-23"
   },
   "/city/hyderabad/": {
     "to": "/country/india/",
@@ -171,9 +179,17 @@
     "to": "/country/usa/",
     "retired": "2026-10-20"
   },
+  "/city/newcastle/": {
+    "to": "/country/uk/",
+    "retired": "2026-11-23"
+  },
   "/city/newport-usa/": {
     "to": "/country/usa/",
     "retired": "2026-10-20"
+  },
+  "/city/nijmegen/": {
+    "to": "/country/netherlands/",
+    "retired": "2026-11-23"
   },
   "/city/nusa-dua/": {
     "to": "/country/indonesia/",
@@ -199,6 +215,22 @@
     "to": "/country/usa/",
     "retired": "2026-10-20"
   },
+  "/city/penang/": {
+    "to": "/country/malaysia/",
+    "retired": "2026-11-23"
+  },
+  "/city/portland/": {
+    "to": "/country/usa/",
+    "retired": "2026-11-23"
+  },
+  "/city/rimini/": {
+    "to": "/country/italy/",
+    "retired": "2026-11-23"
+  },
+  "/city/rio-de-janeiro/": {
+    "to": "/country/brazil/",
+    "retired": "2026-11-23"
+  },
   "/city/riyadh/": {
     "to": "/country/saudi-arabia/",
     "retired": "2026-10-20"
@@ -218,6 +250,10 @@
   "/city/seattle-washington/": {
     "to": "/browse/",
     "retired": "2026-10-20"
+  },
+  "/city/sonoma/": {
+    "to": "/country/usa/",
+    "retired": "2026-11-23"
   },
   "/city/southampton/": {
     "to": "/country/uk/",

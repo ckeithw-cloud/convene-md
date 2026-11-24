@@ -1796,18 +1796,18 @@ const CONFERENCES = [
     description: "Extreme and adventure sports medicine congress at Montage Deer Valley, Park City."
   },
   {
-    name: "World Extreme Medicine Conference 2026",
+    name: "World Extreme Medicine Conference 2027",
     specialty: "Sports & Wilderness Medicine",
-    year: 2026,
-    startDate: "2026-11-14",
-    endDate: "2026-11-16",
+    year: 2027,
+    startDate: "2027-11-13",
+    endDate: "2027-11-15",
     city: "Edinburgh",
     country: "UK",
     lat: 55.9533,
     lng: -3.1883,
     url: "https://worldextrememedicine.com/world-extreme-medicine-conference/",
     organizer: "World Extreme Medicine",
-    description: "Expedition, extreme, and humanitarian medicine conference at Dynamic Earth, Edinburgh."
+    description: "Annual extreme and expedition medicine conference, at Dynamic Earth."
   },
   {
     name: "ASSH 81st Annual Meeting 2026 — American Society for Surgery of the Hand",
@@ -2062,18 +2062,18 @@ const CONFERENCES = [
     description: "2nd Swiss NeuroWeek — joint neurosurgery and neuroscience meeting at the SwissTech Convention Center, Lausanne."
   },
   {
-    name: "DKOU 2026 — Deutscher Kongress für Orthopädie und Unfallchirurgie",
+    name: "DKOU 2027 — Deutscher Kongress für Orthopädie und Unfallchirurgie",
     specialty: "Orthopedic Surgery",
-    year: 2026,
-    startDate: "2026-10-20",
-    endDate: "2026-10-23",
+    year: 2027,
+    startDate: "2027-10-19",
+    endDate: "2027-10-22",
     city: "Berlin",
     country: "Germany",
-    lat: 52.5200,
-    lng: 13.4050,
+    lat: 52.52,
+    lng: 13.405,
     url: "https://dkou.org/en/",
     organizer: "DGOU / DGOOC / BVOU",
-    description: "Europe's largest orthopaedics and trauma surgery congress, at the CityCube Berlin. Motto: 'Neue Wege gehen' (Breaking New Ground)."
+    description: "Joint annual congress of the German orthopaedic and trauma surgery societies."
   },
   {
     name: "78th DGU Congress 2026 — German Society of Urology",
@@ -4177,18 +4177,18 @@ const CONFERENCES = [
     description: "The WPA's flagship world congress, themed 'Guided by compassion, grounded in science'."
   },
   {
-    name: "UICC World Cancer Congress 2026",
+    name: "UICC World Cancer Congress 2028",
     specialty: "Medical Oncology",
-    year: 2026,
-    startDate: "2026-09-24",
-    endDate: "2026-09-26",
-    city: "Hong Kong",
-    country: "Hong Kong SAR",
-    lat: 22.3193,
-    lng: 114.1694,
+    year: 2028,
+    startDate: "2028-10-24",
+    endDate: "2028-10-26",
+    city: "Geneva",
+    country: "Switzerland",
+    lat: 46.2044,
+    lng: 6.1432,
     url: "https://www.worldcancercongress.org/",
     organizer: "Union for International Cancer Control",
-    description: "The biennial global cancer-control congress, at the Hong Kong Convention and Exhibition Centre."
+    description: "Biennial congress of the Union for International Cancer Control, at Palexpo."
   },
   {
     name: "WCOG 2026 — World Congress of Gastroenterology",
@@ -5817,16 +5817,16 @@ const CONFERENCES = [
   {
     name: "SHA37 — 37th Annual Conference of the Saudi Heart Association",
     specialty: "Cardiology",
-    year: 2026,
-    startDate: "2026-10-15",
-    endDate: "2026-10-17",
+    year: 2027,
+    startDate: "2027-03-25",
+    endDate: "2027-03-27",
     city: "Riyadh",
     country: "Saudi Arabia",
     lat: 24.7136,
     lng: 46.6753,
     url: "https://conference.saudi-heart.com/",
     organizer: "Saudi Heart Association",
-    description: "Saudi Arabia's national cardiovascular conference, at the Crowne Plaza RDC Riyadh."
+    description: "Annual conference of the Saudi Heart Association, at the Crowne Plaza RDC."
   },
   {
     name: "Dubai Derma 2027 — 26th Dubai World Dermatology and Laser Conference",
@@ -20991,18 +20991,18 @@ const CONFERENCES = [
     description: "At the Data Technology Hub, Tseung Kwan O."
   },
   {
-    name: "STSA 73rd Annual Meeting",
+    name: "STSA 74th Annual Meeting",
     specialty: "Cardiothoracic Surgery",
-    year: 2026,
-    startDate: "2026-11-05",
-    endDate: "2026-11-07",
-    city: "Lake Buena Vista",
+    year: 2027,
+    startDate: "2027-11-11",
+    endDate: "2027-11-14",
+    city: "Cedar Creek",
     country: "USA",
-    lat: 28.3852,
-    lng: -81.5639,
+    lat: 30.0802,
+    lng: -97.4989,
     url: "https://stsa.org/meeting",
     organizer: "Southern Thoracic Surgical Association",
-    description: "At Disney's Yacht Club Hotel, Epcot Resorts Boulevard; 22.25 AMA PRA Category 1 Credits via CineMed."
+    description: "Annual meeting of the Southern Thoracic Surgical Association, at the Hyatt Regency Lost Pines."
   },
   {
     name: "79th Annual Meeting of the Japanese Association for Thoracic Surgery",
@@ -24141,18 +24141,18 @@ const CONFERENCES = [
     description: "At the Westin Kierland Resort and Spa."
   },
   {
-    name: "SDBP 2026 Annual Meeting",
+    name: "SDBP 2027 Annual Meeting",
     specialty: "Pediatrics",
-    year: 2026,
-    startDate: "2026-10-24",
-    endDate: "2026-10-27",
-    city: "New Orleans",
+    year: 2027,
+    startDate: "2027-09-22",
+    endDate: "2027-09-26",
+    city: "Washington, DC",
     country: "USA",
-    lat: 29.9511,
-    lng: -90.0715,
+    lat: 38.9072,
+    lng: -77.0369,
     url: "https://sdbp.org/annual-meeting/",
     organizer: "Society for Developmental and Behavioral Pediatrics",
-    description: "At the Sheraton New Orleans, with Research Scholars symposia from 23 October."
+    description: "Annual meeting of the Society for Developmental and Behavioral Pediatrics."
   },
   {
     name: "Pediatric Academic Societies Meeting 2027",
@@ -27961,5 +27961,131 @@ const CONFERENCES = [
     url: "https://www.acc.org/LatinAmerica2027",
     organizer: "American College of Cardiology with the Sociedad Peruana de Cardiología",
     description: "The ACC's regional Latin American cardiology meeting, held with the ACC Peru Chapter and the Sociedad Peruana de Cardiología."
+  },
+  {
+    name: "ACRSICON 2027 — 50th Annual Conference of the Association of Colon & Rectal Surgeons of India",
+    specialty: "Colorectal Surgery",
+    year: 2027,
+    startDate: "2027-09-17",
+    endDate: "2027-09-19",
+    city: "New Delhi",
+    country: "India",
+    lat: 28.6139,
+    lng: 77.209,
+    url: "https://acrsicon2027.com/",
+    organizer: "Association of Colon & Rectal Surgeons of India",
+    description: "Golden Jubilee edition of the Indian colorectal surgery society's annual conference, at Aerocity."
+  },
+  {
+    name: "ECNP 2027 — 40th Congress of the European College of Neuropsychopharmacology",
+    specialty: "Psychiatry",
+    year: 2027,
+    startDate: "2027-09-25",
+    endDate: "2027-09-28",
+    city: "Barcelona",
+    country: "Spain",
+    lat: 41.3851,
+    lng: 2.1734,
+    url: "https://www.ecnp.eu/congress2027/",
+    organizer: "European College of Neuropsychopharmacology",
+    description: "Fortieth-anniversary edition of Europe's principal neuropsychopharmacology congress."
+  },
+  {
+    name: "EuGMS 2027 — 23rd Congress of the European Geriatric Medicine Society",
+    specialty: "Geriatrics",
+    year: 2027,
+    startDate: "2027-09-22",
+    endDate: "2027-09-24",
+    city: "Florence",
+    country: "Italy",
+    lat: 43.7696,
+    lng: 11.2558,
+    url: "https://eugms2027.com/",
+    organizer: "European Geriatric Medicine Society",
+    description: "Annual congress of the European Geriatric Medicine Society."
+  },
+  {
+    name: "SAGES 2027 Annual Meeting",
+    specialty: "General Surgery",
+    year: 2027,
+    startDate: "2027-04-06",
+    endDate: "2027-04-09",
+    city: "Las Vegas",
+    country: "USA",
+    lat: 36.1699,
+    lng: -115.1398,
+    url: "https://www.sages2027.org/",
+    organizer: "Society of American Gastrointestinal and Endoscopic Surgeons",
+    description: "Annual meeting of the American minimally invasive surgery society, at the Rio Las Vegas."
+  },
+  {
+    name: "SITC 2027 — 42nd Annual Meeting",
+    specialty: "Medical Oncology",
+    year: 2027,
+    startDate: "2027-11-03",
+    endDate: "2027-11-07",
+    city: "National Harbor",
+    country: "USA",
+    lat: 38.7826,
+    lng: -77.0161,
+    url: "https://www.sitcancer.org/2027/home",
+    organizer: "Society for Immunotherapy of Cancer",
+    description: "Annual meeting of the Society for Immunotherapy of Cancer, at the Gaylord National Resort."
+  },
+  {
+    name: "LM2027 — Lifestyle Medicine Conference",
+    specialty: "Lifestyle & Preventive Medicine",
+    year: 2027,
+    startDate: "2027-09-26",
+    endDate: "2027-09-29",
+    city: "Fort Worth",
+    country: "USA",
+    lat: 32.7555,
+    lng: -97.3308,
+    url: "https://lifestylemedicine.org/conference-events/lm2027/",
+    organizer: "American College of Lifestyle Medicine",
+    description: "Annual conference of the American College of Lifestyle Medicine, in person and online."
+  },
+  {
+    name: "AAAP 38th Annual Meeting and Scientific Symposium",
+    specialty: "Psychiatry",
+    year: 2027,
+    startDate: "2027-11-11",
+    endDate: "2027-11-14",
+    city: "Washington, DC",
+    country: "USA",
+    lat: 38.9072,
+    lng: -77.0369,
+    url: "https://www.aaap.org/training-events/annual-meeting/",
+    organizer: "American Academy of Addiction Psychiatry",
+    description: "Annual meeting of the American Academy of Addiction Psychiatry, at the JW Marriott."
+  },
+  {
+    name: "XLVII Congresso Nacional de Cirurgia 2027",
+    specialty: "General Surgery",
+    year: 2027,
+    startDate: "2027-03-11",
+    endDate: "2027-03-12",
+    city: "Lagoa",
+    country: "Portugal",
+    lat: 37.1372,
+    lng: -8.4537,
+    url: "https://congresso.spcir.com/2027/",
+    organizer: "Sociedade Portuguesa de Cirurgia",
+    description: "National surgical congress of the Portuguese Society of Surgery, at the Centro de Congressos de Lagoa."
+  },
+  {
+    name: "SEC2027 — 20th South China Vascular Congress",
+    specialty: "Vascular Surgery",
+    year: 2027,
+    startDate: "2027-07-15",
+    endDate: "2027-07-18",
+    city: "Guangzhou",
+    country: "China",
+    lat: 23.1291,
+    lng: 113.2644,
+    url: "https://sec2027.sciconf.cn",
+    organizer: "South China Vascular Congress",
+    description: "Twentieth edition of the South China vascular congress, at the Guangzhou Baiyun International Convention Center."
   }
 ];
